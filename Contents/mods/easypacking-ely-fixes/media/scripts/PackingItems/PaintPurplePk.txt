@@ -1,0 +1,39 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 4pkPaintPurple
+	{
+		Weight			= 10.0,
+		Type			= Normal,
+		DisplayName		= 4 x Purple Paint,
+		Icon			= PkPaintPurpleBox,
+		WorldStaticModel= BigPaintPurple
+	}
+
+	recipe Pack 4
+	{
+		destroy PaintPurple=4,
+		
+		Result:4pkPaintPurple,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 4
+	{
+		destroy 4pkPaintPurple,
+		
+		Result:PaintPurple,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:50.0,
+		Category:Storage,
+	}
+
+}

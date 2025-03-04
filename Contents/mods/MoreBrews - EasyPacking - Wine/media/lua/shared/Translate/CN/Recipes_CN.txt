@@ -1,0 +1,28 @@
+Recipes_CN = {
+	Recipe_Pack_Wine_Making_Skill_Books		= "包 装酿酒书籍",
+	Recipe_Unpack_Wine_Making_Skill_Books 	= "打开包装 装酿酒书籍",
+	Recipe_Pack_5 							= "包 5",
+	Recipe_Unpack_5 						= "打开包装 5",
+	Recipe_Pack_6 							= "包 6",
+	Recipe_Unpack_6 						= "打开包装 6",
+	Recipe_Pack_10 							= "包 10",
+	Recipe_Unpack_10 						= "打开包装 10",
+	Recipe_Pack_12 							= "包 12",
+	Recipe_Unpack_12 						= "打开包装 12",
+	Recipe_Pack_24 							= "包 24",
+	Recipe_Unpack_24 						= "打开包装 24",
+	Recipe_Pack_50 							= "包 50",
+	Recipe_Unpack_50 						= "打开包装 50",
+	Recipe_Put_Together 					= "放在一起",
+	Recipe_Split 							= "分裂",
+	Recipe_Split_into_2 					= "分成2份",
+	Recipe_Split_into_5 					= "分成5份",
+	Recipe_Split_into_10 					= "分成10份",
+	Recipe_Rope_4							= "绳子4",
+	Recipe_Unrope_4							= "解开绳索 4",
+} 
+
+
+
+
+

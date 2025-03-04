@@ -1,0 +1,28 @@
+Recipes_RU = {
+	Recipe_Pack_Wine_Making_Skill_Books		= "упаковать книги по виноделию",
+	Recipe_Unpack_Wine_Making_Skill_Books 	= "Распаковать книги по виноделию",
+	Recipe_Pack_5 							= "Пакет 5",
+	Recipe_Unpack_5 						= "Распаковать 5",
+	Recipe_Pack_6 							= "Пакет 6",
+	Recipe_Unpack_6 						= "Распаковать 6",
+	Recipe_Pack_10 							= "Пакет 10",
+	Recipe_Unpack_10 						= "Распаковать 10",
+	Recipe_Pack_12 							= "Пакет 12",
+	Recipe_Unpack_12 						= "Распаковать 12",
+	Recipe_Pack_24 							= "Пакет 24",
+	Recipe_Unpack_24 						= "Распаковать 24",
+	Recipe_Pack_50 							= "Пакет 50",
+	Recipe_Unpack_50 						= "Распаковать 50",
+	Recipe_Put_Together 					= "Put Together",
+	Recipe_Split 							= "Расколоть",
+	Recipe_Split_into_2 					= "Разделиться на 2",
+	Recipe_Split_into_5 					= "Разделиться на 5",
+	Recipe_Split_into_10 					= "Разделиться на 10",
+	Recipe_Rope_4							= "Веревка 4",
+	Recipe_Unrope_4							= "развязать веревку 4",
+} 
+
+
+
+
+

@@ -1,0 +1,79 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 20pkYarn
+	{
+		Weight			= 1.0,
+		Type			= Normal,
+		DisplayName		= 20 x Yarn,
+		Icon			= PkYarnMediumBox,
+		WorldStaticModel= MediumYarn
+	}
+	
+	item 100pkYarn
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 100 x Yarn,
+		Icon			= PkYarnBigBox,
+		WorldStaticModel= BigYarn
+	}
+
+	recipe Pack 20
+	{
+		destroy Yarn=20,
+		
+		Result:20pkYarn,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 20
+	{
+		destroy 20pkYarn,
+		
+		Result:Yarn=20,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 100
+	{
+		destroy Yarn=100,
+		
+		Result:100pkYarn,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 100
+	{
+		destroy 100pkYarn,
+		
+		Result:Yarn=100,
+		Time:25.0,
+		Category:Storage,
+	}
+	
+
+	recipe Put Together
+	{
+		20pkYarn=5,
+		
+		Result:100pkYarn=1,
+		Time:30.0,
+	}
+
+	recipe Split in Five
+	{
+		100pkYarn=1,
+		Result:20pkYarn=5,
+		Time:30.0,
+	}
+}

@@ -1,0 +1,39 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 4pkPaintTurquoise
+	{
+		Weight			= 10.0,
+		Type			= Normal,
+		DisplayName		= 4 x Turquoise Paint,
+		Icon			= PkPaintTurquoiseBox,
+		WorldStaticModel= BigPaintTurquoise
+	}
+
+	recipe Pack 4
+	{
+		destroy PaintTurquoise=4,
+		
+		Result:4pkPaintTurquoise,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 4
+	{
+		destroy 4pkPaintTurquoise,
+		
+		Result:PaintTurquoise,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:50.0,
+		Category:Storage,
+	}
+
+}

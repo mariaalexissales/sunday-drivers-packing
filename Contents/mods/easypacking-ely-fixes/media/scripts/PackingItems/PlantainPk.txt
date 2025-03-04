@@ -1,0 +1,79 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkPlantain
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Plantain,
+		Icon			= PkPlantainSmallBox,
+		WorldStaticModel= SmallPlantain
+	}
+	
+	item 40pkPlantain
+	{
+		Weight			= 2.8,
+		Type			= Normal,
+		DisplayName		= 40 x Plantain,
+		Icon			= PkPlantainMediumBox,
+		WorldStaticModel= MediumPlantain
+	}
+	
+	recipe Pack 10
+	{
+		destroy Plantain=10,
+		
+		Result:10pkPlantain,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:45.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkPlantain,
+		
+		Result:Plantain=10,
+		Time:45.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 40
+	{
+		destroy Plantain=40,
+		
+		Result:40pkPlantain,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:22.5,
+		Category:Storage,
+	}
+	
+	recipe Unpack 40
+	{
+		destroy 40pkPlantain,
+		
+		Result:Plantain=40,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkPlantain=4,
+		
+		Result:40pkPlantain=1,
+		Time:7.5,
+	}
+
+	recipe Split in Four
+	{
+		40pkPlantain=1,
+		
+		Result:10pkPlantain=4,
+		Time:7.5,
+	}
+}

@@ -1,0 +1,6 @@
+version=1
+title=Easy Packing Fixes for Sunday Drivers by Elyxaria
+description=attempt at fixing chunk rot
+description=mentally and physically need help atm
+tags=
+visibility=public

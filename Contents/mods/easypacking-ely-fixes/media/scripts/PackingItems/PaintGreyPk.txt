@@ -1,0 +1,39 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 4pkPaintGrey
+	{
+		Weight			= 10.0,
+		Type			= Normal,
+		DisplayName		= 4 x Grey Paint,
+		Icon			= PkPaintGreyBox,
+		WorldStaticModel= BigPaintGrey
+	}
+
+	recipe Pack 4
+	{
+		destroy PaintGrey=4,
+		
+		Result:4pkPaintGrey,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 4
+	{
+		destroy 4pkPaintGrey,
+		
+		Result:PaintGrey,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:50.0,
+		Category:Storage,
+	}
+
+}

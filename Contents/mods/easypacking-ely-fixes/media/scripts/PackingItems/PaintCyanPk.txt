@@ -1,0 +1,39 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 4pkPaintCyan
+	{
+		Weight			= 10.0,
+		Type			= Normal,
+		DisplayName		= 4 x Cyan Paint,
+		Icon			= PkPaintCyanBox,
+		WorldStaticModel= BigPaintCyan
+	}
+
+	recipe Pack 4
+	{
+		destroy PaintCyan=4,
+		
+		Result:4pkPaintCyan,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 4
+	{
+		destroy 4pkPaintCyan,
+		
+		Result:PaintCyan,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:50.0,
+		Category:Storage,
+	}
+
+}

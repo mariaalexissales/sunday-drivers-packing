@@ -1,0 +1,3094 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+
+	/******************************  BOOKS  ******************************/
+
+	recipe Pack Wine Making Skill Books
+	{
+		MoreBrews.BookWineMaking1,
+		MoreBrews.BookWineMaking2,
+		MoreBrews.BookWineMaking3,
+		MoreBrews.BookWineMaking4,
+		MoreBrews.BookWineMaking5,
+		
+		Result				:pkWineMaking,
+		Time				:150.0,
+		Category			:Storage,
+	}
+	
+	recipe Unpack Wine Making Skill Books
+	{
+		pkWineMaking,
+		
+		Result				:MoreBrews.BookWineMaking1,
+		OnCreate			:Recipe.OnCreate.UnpackWineMakingSkillBook,
+		Time				:100.0,
+		Category			:Storage,
+	}
+
+	/******************************  WINE BOTTLES  ******************************/
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.RedWine=6,
+		
+		Result				:6pkRedWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkRedWine,
+		
+		Result				:MoreBrews.RedWine=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy MoreBrews.RedWine=12,
+		
+		Result				:12pkRedWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkRedWine,
+		
+		Result				:MoreBrews.RedWine=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkRedWine=2,
+		
+		Result				:12pkRedWine,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		12pkRedWine,
+		
+		Result				:6pkRedWine=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.RedWineAged=6,
+		
+		Result				:6pkRedWineAged,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkRedWineAged,
+		
+		Result				:MoreBrews.RedWineAged=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy MoreBrews.RedWineAged=12,
+		
+		Result				:12pkRedWineAged,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkRedWineAged,
+		
+		Result				:MoreBrews.RedWineAged=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkRedWineAged=2,
+		
+		Result				:12pkRedWineAged,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		12pkRedWineAged,
+		
+		Result				:6pkRedWineAged=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.RedWineAgedFully=6,
+		
+		Result				:6pkRedWineAgedFully,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkRedWineAgedFully,
+		
+		Result				:MoreBrews.RedWineAgedFully=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy MoreBrews.RedWineAgedFully=12,
+		
+		Result				:12pkRedWineAgedFully,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkRedWineAgedFully,
+		
+		Result				:MoreBrews.RedWineAgedFully=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkRedWineAgedFully=2,
+		
+		Result				:12pkRedWineAgedFully,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		12pkRedWineAgedFully,
+		
+		Result				:6pkRedWineAgedFully=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.WhiteWine=6,
+		
+		Result				:6pkWhiteWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkWhiteWine,
+		
+		Result				:MoreBrews.WhiteWine=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy MoreBrews.WhiteWine=12,
+		
+		Result				:12pkWhiteWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkWhiteWine,
+		
+		Result				:MoreBrews.WhiteWine=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkWhiteWine=2,
+		
+		Result				:12pkWhiteWine,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		12pkWhiteWine,
+		
+		Result				:6pkWhiteWine=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.WhiteWineAged=6,
+		
+		Result				:6pkWhiteWineAged,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkWhiteWineAged,
+		
+		Result				:MoreBrews.WhiteWineAged=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy MoreBrews.WhiteWineAged=12,
+		
+		Result				:12pkWhiteWineAged,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkWhiteWineAged,
+		
+		Result				:MoreBrews.WhiteWineAged=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkWhiteWineAged=2,
+		
+		Result				:12pkWhiteWineAged,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		12pkWhiteWineAged,
+		
+		Result				:6pkWhiteWineAged=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.WhiteWineAgedFully=6,
+		
+		Result				:6pkWhiteWineAgedFully,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkWhiteWineAgedFully,
+		
+		Result				:MoreBrews.WhiteWineAgedFully=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy MoreBrews.WhiteWineAgedFully=12,
+		
+		Result				:12pkWhiteWineAgedFully,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkWhiteWineAgedFully,
+		
+		Result				:MoreBrews.WhiteWineAgedFully=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkWhiteWineAgedFully=2,
+		
+		Result				:12pkWhiteWineAgedFully,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		12pkWhiteWineAgedFully,
+		
+		Result				:6pkWhiteWineAgedFully=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.WildBerryWine=6,
+		
+		Result				:6pkWildBerryWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkWildBerryWine,
+		
+		Result				:MoreBrews.WildBerryWine=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy MoreBrews.WildBerryWine=12,
+		
+		Result				:12pkWildBerryWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkWildBerryWine,
+		
+		Result				:MoreBrews.WildBerryWine=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkWildBerryWine=2,
+		
+		Result				:12pkWildBerryWine,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		12pkWildBerryWine,
+		
+		Result				:6pkWildBerryWine=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+		recipe Pack 6
+	{
+		destroy MoreBrews.RosehipWine=6,
+		
+		Result				:6pkRosehipWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkRosehipWine,
+		
+		Result				:MoreBrews.RosehipWine=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy MoreBrews.RosehipWine=12,
+		
+		Result				:12pkRosehipWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkRosehipWine,
+		
+		Result				:MoreBrews.RosehipWine=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkRosehipWine=2,
+		
+		Result				:12pkRosehipWine,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		12pkRosehipWine,
+		
+		Result				:6pkRosehipWine=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.PineappleWine=6,
+		
+		Result				:6pkPineappleWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkPineappleWine,
+		
+		Result				:MoreBrews.PineappleWine=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy MoreBrews.PineappleWine=12,
+		
+		Result				:12pkPineappleWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkPineappleWine,
+		
+		Result				:MoreBrews.PineappleWine=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkPineappleWine=2,
+		
+		Result				:12pkPineappleWine,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		12pkPineappleWine,
+		
+		Result				:6pkPineappleWine=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.StrawberryWine=6,
+		
+		Result				:6pkStrawberryWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkStrawberryWine,
+		
+		Result				:MoreBrews.StrawberryWine=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy MoreBrews.StrawberryWine=12,
+		
+		Result				:12pkStrawberryWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkStrawberryWine,
+		
+		Result				:MoreBrews.StrawberryWine=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkStrawberryWine=2,
+		
+		Result				:12pkStrawberryWine,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		12pkStrawberryWine,
+		
+		Result				:6pkStrawberryWine=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.PeachWine=6,
+		
+		Result				:6pkPeachWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkPeachWine,
+		
+		Result				:MoreBrews.PeachWine=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy MoreBrews.PeachWine=12,
+		
+		Result				:12pkPeachWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkPeachWine,
+		
+		Result				:MoreBrews.PeachWine=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkPeachWine=2,
+		
+		Result				:12pkPeachWine,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		12pkPeachWine,
+		
+		Result				:6pkPeachWine=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.PearWine=6,
+		
+		Result				:6pkPearWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkPearWine,
+		
+		Result				:MoreBrews.PearWine=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy MoreBrews.PearWine=12,
+		
+		Result				:12pkPearWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkPearWine,
+		
+		Result				:MoreBrews.PearWine=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkPearWine=2,
+		
+		Result				:12pkPearWine,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		12pkPearWine,
+		
+		Result				:6pkPearWine=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BananaWine=6,
+		
+		Result				:6pkBananaWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBananaWine,
+		
+		Result				:MoreBrews.BananaWine=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy MoreBrews.BananaWine=12,
+		
+		Result				:12pkBananaWine,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkBananaWine,
+		
+		Result				:MoreBrews.BananaWine=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBananaWine=2,
+		
+		Result				:12pkBananaWine,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		12pkBananaWine,
+		
+		Result				:6pkBananaWine=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.HoneyMead=6,
+		
+		Result				:6pkHoneyMead,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkHoneyMead,
+		
+		Result				:MoreBrews.HoneyMead=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy MoreBrews.HoneyMead=12,
+		
+		Result				:12pkHoneyMead,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkHoneyMead,
+		
+		Result				:MoreBrews.HoneyMead=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkHoneyMead=2,
+		
+		Result				:12pkHoneyMead,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		12pkHoneyMead,
+		
+		Result				:6pkHoneyMead=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.HardCider=6,
+		
+		Result				:6pkHardCider,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkHardCider,
+		
+		Result				:MoreBrews.HardCider=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy MoreBrews.HardCider=12,
+		
+		Result				:12pkHardCider,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkHardCider,
+		
+		Result				:MoreBrews.HardCider=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkHardCider=2,
+		
+		Result				:12pkHardCider,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		12pkHardCider,
+		
+		Result				:6pkHardCider=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	/******************************  WINE BOXES  ******************************/
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.WineBoxSmall1=6,
+		
+		Result				:6pkWineBoxSmall1,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkWineBoxSmall1,
+		
+		Result				:MoreBrews.WineBoxSmall1=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.WineBoxSmall1=24,
+		
+		Result				:24pkWineBoxSmall1,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkWineBoxSmall1,
+		
+		Result				:MoreBrews.WineBoxSmall1=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkWineBoxSmall1=4,
+		
+		Result				:24pkWineBoxSmall1,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		24pkWineBoxSmall1,
+		
+		Result				:6pkWineBoxSmall1=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.WineBoxSmall2=6,
+		
+		Result				:6pkWineBoxSmall2,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkWineBoxSmall2,
+		
+		Result				:MoreBrews.WineBoxSmall2=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.WineBoxSmall2=24,
+		
+		Result				:24pkWineBoxSmall2,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkWineBoxSmall2,
+		
+		Result				:MoreBrews.WineBoxSmall2=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkWineBoxSmall2=4,
+		
+		Result				:24pkWineBoxSmall2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		24pkWineBoxSmall2,
+		
+		Result				:6pkWineBoxSmall2=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.WineBoxSmall3=6,
+		
+		Result				:6pkWineBoxSmall3,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkWineBoxSmall3,
+		
+		Result				:MoreBrews.WineBoxSmall3=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.WineBoxSmall3=24,
+		
+		Result				:24pkWineBoxSmall3,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkWineBoxSmall3,
+		
+		Result				:MoreBrews.WineBoxSmall3=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkWineBoxSmall3=4,
+		
+		Result				:24pkWineBoxSmall3,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		24pkWineBoxSmall3,
+		
+		Result				:6pkWineBoxSmall3=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.WineBoxSmall4=6,
+		
+		Result				:6pkWineBoxSmall4,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkWineBoxSmall4,
+		
+		Result				:MoreBrews.WineBoxSmall4=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.WineBoxSmall4=24,
+		
+		Result				:24pkWineBoxSmall4,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkWineBoxSmall4,
+		
+		Result				:MoreBrews.WineBoxSmall4=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkWineBoxSmall4=4,
+		
+		Result				:24pkWineBoxSmall4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		24pkWineBoxSmall4,
+		
+		Result				:6pkWineBoxSmall4=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.WineBoxSmall5=6,
+		
+		Result				:6pkWineBoxSmall5,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkWineBoxSmall5,
+		
+		Result				:MoreBrews.WineBoxSmall5=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.WineBoxSmall5=24,
+		
+		Result				:24pkWineBoxSmall5,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkWineBoxSmall5,
+		
+		Result				:MoreBrews.WineBoxSmall5=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkWineBoxSmall5=4,
+		
+		Result				:24pkWineBoxSmall5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		24pkWineBoxSmall5,
+		
+		Result				:6pkWineBoxSmall5=4,
+		Time				:75.0,
+		Category			:Storage,
+	}	
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.WineBoxSmall6=6,
+		
+		Result				:6pkWineBoxSmall6,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkWineBoxSmall6,
+		
+		Result				:MoreBrews.WineBoxSmall6=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.WineBoxSmall6=24,
+		
+		Result				:24pkWineBoxSmall6,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkWineBoxSmall6,
+		
+		Result				:MoreBrews.WineBoxSmall6=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkWineBoxSmall6=4,
+		
+		Result				:24pkWineBoxSmall6,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split 
+	{
+		24pkWineBoxSmall6,
+		
+		Result				:6pkWineBoxSmall6=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	/******************************  DRIED YEAST  ******************************/
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.DriedFruitYeast=5,
+		
+		Result				:5pkDriedFruitYeast,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkDriedFruitYeast,
+		
+		Result				:MoreBrews.DriedFruitYeast=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.DriedFruitYeast=10,
+		
+		Result				:10pkDriedFruitYeast,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkDriedFruitYeast,
+		
+		Result				:MoreBrews.DriedFruitYeast=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.DriedFruitYeast=50,
+		
+		Result				:50pkDriedFruitYeast,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkDriedFruitYeast,
+		
+		Result				:MoreBrews.DriedFruitYeast=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkDriedFruitYeast=2,
+		
+		Result				:10pkDriedFruitYeast,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkDriedFruitYeast,
+		
+		Result				:5pkDriedFruitYeast=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkDriedFruitYeast=5,
+		
+		Result				:50pkDriedFruitYeast,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkDriedFruitYeast,
+		
+		Result				:10pkDriedFruitYeast=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.DriedPotatoYeast=5,
+		
+		Result				:5pkDriedPotatoYeast,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkDriedPotatoYeast,
+		
+		Result				:MoreBrews.DriedPotatoYeast=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.DriedPotatoYeast=10,
+		
+		Result				:10pkDriedPotatoYeast,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkDriedPotatoYeast,
+		
+		Result				:MoreBrews.DriedPotatoYeast=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.DriedPotatoYeast=50,
+		
+		Result				:50pkDriedPotatoYeast,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkDriedPotatoYeast,
+		
+		Result				:MoreBrews.DriedPotatoYeast=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkDriedPotatoYeast=2,
+		
+		Result				:10pkDriedPotatoYeast,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkDriedPotatoYeast,
+		
+		Result				:5pkDriedPotatoYeast=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkDriedPotatoYeast=5,
+		
+		Result				:50pkDriedPotatoYeast,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkDriedPotatoYeast,
+		
+		Result				:10pkDriedPotatoYeast=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.DriedWildPlantsYeast=5,
+		
+		Result				:5pkDriedWildPlantsYeast,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkDriedWildPlantsYeast,
+		
+		Result				:MoreBrews.DriedWildPlantsYeast=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.DriedWildPlantsYeast=10,
+		
+		Result				:10pkDriedWildPlantsYeast,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkDriedWildPlantsYeast,
+		
+		Result				:MoreBrews.DriedWildPlantsYeast=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.DriedWildPlantsYeast=50,
+		
+		Result				:50pkDriedWildPlantsYeast,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkDriedWildPlantsYeast,
+		
+		Result				:MoreBrews.DriedWildPlantsYeast=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkDriedWildPlantsYeast=2,
+		
+		Result				:10pkDriedWildPlantsYeast,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkDriedWildPlantsYeast,
+		
+		Result				:5pkDriedWildPlantsYeast=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkDriedWildPlantsYeast=5,
+		
+		Result				:50pkDriedWildPlantsYeast,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkDriedWildPlantsYeast,
+		
+		Result				:10pkDriedWildPlantsYeast=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	/******************************  CARBOYS AND SMALL BARRELS  ******************************/
+
+	recipe Rope 4
+	{
+		destroy MoreBrews.EmptyBarrelDispenserSmall=4,
+		Rope=1,
+
+		Result				:4pkEmptyBarrelDispenserSmall,
+		Time				:100.0,
+		Category			:Storage,
+		CanBeDoneFromFloor	:true,
+	}
+
+	recipe Unrope 4
+	{
+		destroy 4pkEmptyBarrelDispenserSmall,
+		
+		Result				:MoreBrews.EmptyBarrelDispenserSmall=4,
+		Time				:100.0,
+		Category			:Storage,
+		CanBeDoneFromFloor	:true,
+		OnCreate			:Recipe.OnCreate.Unpack1Rope,
+	}
+
+	recipe Rope 4
+	{
+		destroy MoreBrews.EmptyCarboy=4,
+		Rope=1,
+
+		Result				:4pkEmptyCarboy,
+		Time				:100.0,
+		Category			:Storage,
+		CanBeDoneFromFloor	:true,
+	}
+
+	recipe Unrope 4
+	{
+		destroy 4pkEmptyCarboy,
+		
+		Result				:MoreBrews.EmptyCarboy=4,
+		Time				:100.0,
+		Category			:Storage,
+		CanBeDoneFromFloor	:true,
+		OnCreate			:Recipe.OnCreate.Unpack1Rope,
+	}
+
+	recipe Rope 4
+	{
+		destroy MoreBrews.EmptyGallonCarboy=4,
+		Rope=1,
+
+		Result				:4pkEmptyGallonCarboy,
+		Time				:100.0,
+		Category			:Storage,
+		CanBeDoneFromFloor	:true,
+	}
+
+	recipe Unrope 4
+	{
+		destroy 4pkEmptyGallonCarboy,
+		
+		Result				:MoreBrews.EmptyGallonCarboy=4,
+		Time				:100.0,
+		Category			:Storage,
+		CanBeDoneFromFloor	:true,
+		OnCreate			:Recipe.OnCreate.Unpack1Rope,
+	}
+
+	/******************************  BASE MATERIALS  ******************************/
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.RedWineBase=5,
+		
+		Result				:5pkRedWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkRedWineBase,
+		
+		Result				:MoreBrews.RedWineBase=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.RedWineBase=10,
+		
+		Result				:10pkRedWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkRedWineBase,
+		
+		Result				:MoreBrews.RedWineBase=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.RedWineBase=50,
+		
+		Result				:50pkRedWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkRedWineBase,
+		
+		Result				:MoreBrews.RedWineBase=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkRedWineBase=2,
+		
+		Result				:10pkRedWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkRedWineBase,
+		
+		Result				:5pkRedWineBase=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkRedWineBase=5,
+		
+		Result				:50pkRedWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkRedWineBase,
+		
+		Result				:10pkRedWineBase=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.WhiteWineBase=5,
+		
+		Result				:5pkWhiteWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkWhiteWineBase,
+		
+		Result				:MoreBrews.WhiteWineBase=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.WhiteWineBase=10,
+		
+		Result				:10pkWhiteWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkWhiteWineBase,
+		
+		Result				:MoreBrews.WhiteWineBase=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.WhiteWineBase=50,
+		
+		Result				:50pkWhiteWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkWhiteWineBase,
+		
+		Result				:MoreBrews.WhiteWineBase=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkWhiteWineBase=2,
+		
+		Result				:10pkWhiteWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkWhiteWineBase,
+		
+		Result				:5pkWhiteWineBase=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkWhiteWineBase=5,
+		
+		Result				:50pkWhiteWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkWhiteWineBase,
+		
+		Result				:10pkWhiteWineBase=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.WildBerryWineBase=5,
+		
+		Result				:5pkWildBerryWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkWildBerryWineBase,
+		
+		Result				:MoreBrews.WildBerryWineBase=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.WildBerryWineBase=10,
+		
+		Result				:10pkWildBerryWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkWildBerryWineBase,
+		
+		Result				:MoreBrews.WildBerryWineBase=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.WildBerryWineBase=50,
+		
+		Result				:50pkWildBerryWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkWildBerryWineBase,
+		
+		Result				:MoreBrews.WildBerryWineBase=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkWildBerryWineBase=2,
+		
+		Result				:10pkWildBerryWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkWildBerryWineBase,
+		
+		Result				:5pkWildBerryWineBase=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkWildBerryWineBase=5,
+		
+		Result				:50pkWildBerryWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkWildBerryWineBase,
+		
+		Result				:10pkWildBerryWineBase=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.RosehipWineBase=5,
+		
+		Result				:5pkRosehipWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkRosehipWineBase,
+		
+		Result				:MoreBrews.RosehipWineBase=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.RosehipWineBase=10,
+		
+		Result				:10pkRosehipWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkRosehipWineBase,
+		
+		Result				:MoreBrews.RosehipWineBase=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.RosehipWineBase=50,
+		
+		Result				:50pkRosehipWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkRosehipWineBase,
+		
+		Result				:MoreBrews.RosehipWineBase=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkRosehipWineBase=2,
+		
+		Result				:10pkRosehipWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkRosehipWineBase,
+		
+		Result				:5pkRosehipWineBase=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkRosehipWineBase=5,
+		
+		Result				:50pkRosehipWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkRosehipWineBase,
+		
+		Result				:10pkRosehipWineBase=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.PineappleWineBase=5,
+		
+		Result				:5pkPineappleWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkPineappleWineBase,
+		
+		Result				:MoreBrews.PineappleWineBase=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.PineappleWineBase=10,
+		
+		Result				:10pkPineappleWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkPineappleWineBase,
+		
+		Result				:MoreBrews.PineappleWineBase=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.PineappleWineBase=50,
+		
+		Result				:50pkPineappleWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkPineappleWineBase,
+		
+		Result				:MoreBrews.PineappleWineBase=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkPineappleWineBase=2,
+		
+		Result				:10pkPineappleWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkPineappleWineBase,
+		
+		Result				:5pkPineappleWineBase=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkPineappleWineBase=5,
+		
+		Result				:50pkPineappleWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkPineappleWineBase,
+		
+		Result				:10pkPineappleWineBase=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.StrawberryWineBase=5,
+		
+		Result				:5pkStrawberryWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkStrawberryWineBase,
+		
+		Result				:MoreBrews.StrawberryWineBase=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.StrawberryWineBase=10,
+		
+		Result				:10pkStrawberryWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkStrawberryWineBase,
+		
+		Result				:MoreBrews.StrawberryWineBase=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.StrawberryWineBase=50,
+		
+		Result				:50pkStrawberryWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkStrawberryWineBase,
+		
+		Result				:MoreBrews.StrawberryWineBase=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkStrawberryWineBase=2,
+		
+		Result				:10pkStrawberryWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkStrawberryWineBase,
+		
+		Result				:5pkStrawberryWineBase=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkStrawberryWineBase=5,
+		
+		Result				:50pkStrawberryWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkStrawberryWineBase,
+		
+		Result				:10pkStrawberryWineBase=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.PeachWineBase=5,
+		
+		Result				:5pkPeachWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkPeachWineBase,
+		
+		Result				:MoreBrews.PeachWineBase=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.PeachWineBase=10,
+		
+		Result				:10pkPeachWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkPeachWineBase,
+		
+		Result				:MoreBrews.PeachWineBase=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.PeachWineBase=50,
+		
+		Result				:50pkPeachWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkPeachWineBase,
+		
+		Result				:MoreBrews.PeachWineBase=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkPeachWineBase=2,
+		
+		Result				:10pkPeachWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkPeachWineBase,
+		
+		Result				:5pkPeachWineBase=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkPeachWineBase=5,
+		
+		Result				:50pkPeachWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkPeachWineBase,
+		
+		Result				:10pkPeachWineBase=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.PearWineBase=5,
+		
+		Result				:5pkPearWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkPearWineBase,
+		
+		Result				:MoreBrews.PearWineBase=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.PearWineBase=10,
+		
+		Result				:10pkPearWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkPearWineBase,
+		
+		Result				:MoreBrews.PearWineBase=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.PearWineBase=50,
+		
+		Result				:50pkPearWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkPearWineBase,
+		
+		Result				:MoreBrews.PearWineBase=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkPearWineBase=2,
+		
+		Result				:10pkPearWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkPearWineBase,
+		
+		Result				:5pkPearWineBase=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkPearWineBase=5,
+		
+		Result				:50pkPearWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkPearWineBase,
+		
+		Result				:10pkPearWineBase=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.BananaWineBase=5,
+		
+		Result				:5pkBananaWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkBananaWineBase,
+		
+		Result				:MoreBrews.BananaWineBase=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.BananaWineBase=10,
+		
+		Result				:10pkBananaWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkBananaWineBase,
+		
+		Result				:MoreBrews.BananaWineBase=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.BananaWineBase=50,
+		
+		Result				:50pkBananaWineBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkBananaWineBase,
+		
+		Result				:MoreBrews.BananaWineBase=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkBananaWineBase=2,
+		
+		Result				:10pkBananaWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkBananaWineBase,
+		
+		Result				:5pkBananaWineBase=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkBananaWineBase=5,
+		
+		Result				:50pkBananaWineBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkBananaWineBase,
+		
+		Result				:10pkBananaWineBase=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.HoneyMeadBase=5,
+		
+		Result				:5pkHoneyMeadBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkHoneyMeadBase,
+		
+		Result				:MoreBrews.HoneyMeadBase=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.HoneyMeadBase=10,
+		
+		Result				:10pkHoneyMeadBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkHoneyMeadBase,
+		
+		Result				:MoreBrews.HoneyMeadBase=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.HoneyMeadBase=50,
+		
+		Result				:50pkHoneyMeadBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkHoneyMeadBase,
+		
+		Result				:MoreBrews.HoneyMeadBase=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkHoneyMeadBase=2,
+		
+		Result				:10pkHoneyMeadBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkHoneyMeadBase,
+		
+		Result				:5pkHoneyMeadBase=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkHoneyMeadBase=5,
+		
+		Result				:50pkHoneyMeadBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkHoneyMeadBase,
+		
+		Result				:10pkHoneyMeadBase=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.HardCiderBase=5,
+		
+		Result				:5pkHardCiderBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkHardCiderBase,
+		
+		Result				:MoreBrews.HardCiderBase=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.HardCiderBase=10,
+		
+		Result				:10pkHardCiderBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkHardCiderBase,
+		
+		Result				:MoreBrews.HardCiderBase=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.HardCiderBase=50,
+		
+		Result				:50pkHardCiderBase,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkHardCiderBase,
+		
+		Result				:MoreBrews.HardCiderBase=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkHardCiderBase=2,
+		
+		Result				:10pkHardCiderBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkHardCiderBase,
+		
+		Result				:5pkHardCiderBase=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkHardCiderBase=5,
+		
+		Result				:50pkHardCiderBase,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	/******************************  RUBBER BANDS AND CORKS  ******************************/
+
+	recipe Split into 5
+	{
+		50pkHardCiderBase,
+		
+		Result				:10pkHardCiderBase=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.CorksBag=5,
+		
+		Result				:5pkCorksBag,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkCorksBag,
+		
+		Result				:MoreBrews.CorksBag=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.CorksBag=10,
+		
+		Result				:10pkCorksBag,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkCorksBag,
+		
+		Result				:MoreBrews.CorksBag=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.CorksBag=50,
+		
+		Result				:50pkCorksBag,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkCorksBag,
+		
+		Result				:MoreBrews.CorksBag=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkCorksBag=2,
+		
+		Result				:10pkCorksBag,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkCorksBag,
+		
+		Result				:5pkCorksBag=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkCorksBag=5,
+		
+		Result				:50pkCorksBag,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkCorksBag,
+		
+		Result				:10pkCorksBag=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.RubberBandsBag=5,
+		
+		Result				:5pkRubberBandsBag,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkRubberBandsBag,
+		
+		Result				:MoreBrews.RubberBandsBag=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.RubberBandsBag=10,
+		
+		Result				:10pkRubberBandsBag,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkRubberBandsBag,
+		
+		Result				:MoreBrews.RubberBandsBag=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.RubberBandsBag=50,
+		
+		Result				:50pkRubberBandsBag,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkRubberBandsBag,
+		
+		Result				:MoreBrews.RubberBandsBag=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkRubberBandsBag=2,
+		
+		Result				:10pkRubberBandsBag,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkRubberBandsBag,
+		
+		Result				:5pkRubberBandsBag=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkRubberBandsBag=5,
+		
+		Result				:50pkRubberBandsBag,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkRubberBandsBag,
+		
+		Result				:10pkRubberBandsBag=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	/******************************  EMPTY WINE BOTTLES  ******************************/
+	recipe Pack 5
+	{
+		destroy [Recipe.GetItemTypes.EmptyWineBottle]=5,
+		
+		Result				:5pkWineEmpty,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkWineEmpty,
+		
+		Result				:WineEmpty=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy [Recipe.GetItemTypes.EmptyWineBottle]=5,
+		destroy [Recipe.GetItemTypes.EmptyWineBottle]=5,
+		
+		Result				:10pkWineEmpty,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkWineEmpty,
+		
+		Result				:WineEmpty=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+		recipe Put Together
+	{
+		5pkWineEmpty=2,
+		
+		Result				:10pkWineEmpty,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkWineEmpty,
+		
+		Result				:5pkWineEmpty=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkWineEmpty=5,
+		
+		Result				:50pkWineEmpty,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkWineEmpty,
+		
+		Result				:10pkWineEmpty=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		50pkWineEmpty=2,
+		
+		Result				:100pkWineEmpty,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 2
+	{
+		100pkWineEmpty,
+		
+		Result				:50pkWineEmpty=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkWineEmpty=10,
+		
+		Result				:100pkWineEmpty,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 10
+	{
+		100pkWineEmpty,
+		
+		Result				:10pkWineEmpty=10,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	/******************************  EMPTY WINE BOXES  ******************************/
+
+	recipe Pack 5
+	{
+		destroy [Recipe.GetItemTypes.EmptyWineBox]=5,
+		
+		Result				:5pkWineBoxEmpty,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkWineBoxEmpty,
+		
+		Result				:MoreBrews.EmptyWineBoxSmall=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy [Recipe.GetItemTypes.EmptyWineBox]=5,
+		destroy [Recipe.GetItemTypes.EmptyWineBox]=5,
+		
+		Result				:10pkWineBoxEmpty,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkWineBoxEmpty,
+		
+		Result				:MoreBrews.EmptyWineBoxSmall=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+		recipe Put Together
+	{
+		5pkWineBoxEmpty=2,
+		
+		Result				:10pkWineBoxEmpty,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkWineBoxEmpty,
+		
+		Result				:5pkWineBoxEmpty=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkWineBoxEmpty=5,
+		
+		Result				:50pkWineBoxEmpty,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkWineBoxEmpty,
+		
+		Result				:10pkWineBoxEmpty=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		50pkWineBoxEmpty=2,
+		
+		Result				:100pkWineBoxEmpty,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 2
+	{
+		100pkWineBoxEmpty,
+		
+		Result				:50pkWineBoxEmpty=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkWineBoxEmpty=10,
+		
+		Result				:100pkWineBoxEmpty,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 10
+	{
+		100pkWineBoxEmpty,
+		
+		Result				:10pkWineBoxEmpty=10,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+}

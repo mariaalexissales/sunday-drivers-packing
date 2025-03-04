@@ -1,0 +1,9 @@
+name=More Brews Easy Packing Wine Me Up Add On Ely Fix
+id=MoreBrewsEasyPackingWineEly
+description=An add on to build off of the work done on the Easy Packing Mod created by GoldBar. This will add in a wide range of packing items, condense things, box them up, and save on some weight.
+
+icon=logo_mini.png
+poster=Preview1.png
+require=MoreBrewsWineMeUp
+
+

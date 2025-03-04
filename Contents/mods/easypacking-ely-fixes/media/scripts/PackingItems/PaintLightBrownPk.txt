@@ -1,0 +1,39 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 4pkPaintLightBrown
+	{
+		Weight			= 10.0,
+		Type			= Normal,
+		DisplayName		= 4 x LightBrown Paint,
+		Icon			= PkPaintLightBrownBox,
+		WorldStaticModel= BigPaintLightBrown
+	}
+
+	recipe Pack 4
+	{
+		destroy PaintLightBrown=4,
+		
+		Result:4pkPaintLightBrown,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 4
+	{
+		destroy 4pkPaintLightBrown,
+		
+		Result:PaintLightBrown,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:50.0,
+		Category:Storage,
+	}
+
+}

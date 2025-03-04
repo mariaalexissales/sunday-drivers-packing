@@ -1,0 +1,891 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+
+	/******************************  BOOKS  ******************************/
+
+	item pkBrewing
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2,
+		Type				= Normal,
+		DisplayName			= Bundle of Brewing Books,
+		Icon				= PackBrewingBook,
+		WorldStaticModel	= PackBrewingBook,
+	}	
+
+	/******************************  BEERS  ******************************/
+
+	item 6pkBeerCanAmericanLager
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.25,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Can American Lager,
+		Icon				= Pack6pkBeerCanAmericanLager,
+		WorldStaticModel	= 6pkBeerCanAmericanLager,
+	}
+
+	item 24pkBeerCanAmericanLager
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 3.6,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Can American Lager,
+		Icon				= Pack24pkBeerAmericanLager,
+		WorldStaticModel	= 24pkBeerCanAmericanLager,
+	}
+
+	item 6pkBeerBottleAmericanLager
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.6,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Bottle American Lager,
+		Icon				= Pack6pkBeerBottleAmericanLager,
+		WorldStaticModel	= 6pkBeerBottleAmericanLager,
+	}
+
+	item 24pkBeerBottleAmericanLager
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.75,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Bottle American Lager,
+		Icon				= Pack24pkBeerAmericanLager,
+		WorldStaticModel	= 24pkBeerBottleAmericanLager,
+	}
+
+	item 6pkBeerCanAPA1
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.25,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Can Dark American Pale Ale,
+		Icon				= Pack6pkBeerCanAPA1,
+		WorldStaticModel	= 6pkBeerCanAPA1,
+	}
+
+	item 24pkBeerCanAPA1
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 3.6,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Can Dark American Pale Ale,
+		Icon				= Pack24pkBeerAPA1,
+		WorldStaticModel	= 24pkBeerCanAPA1,
+	}
+
+	item 6pkBeerBottleAPA1
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.6,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Bottle Dark American Pale Ale,
+		Icon				= Pack6pkBeerBottleAPA1,
+		WorldStaticModel	= 6pkBeerBottleAPA1,
+	}
+
+	item 24pkBeerBottleAPA1
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.75,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Bottle Dark American Pale Ale,
+		Icon				= Pack24pkBeerAPA1,
+		WorldStaticModel	= 24pkBeerBottleAPA1,
+	}
+
+	item 6pkBeerCanAPA2
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.25,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Can Light American Pale Ale,
+		Icon				= Pack6pkBeerCanAPA2,
+		WorldStaticModel	= 6pkBeerCanAPA2,
+	}
+
+	item 24pkBeerCanAPA2
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 3.6,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Can Light American Pale Ale,
+		Icon				= Pack24pkBeerAPA2,
+		WorldStaticModel	= 24pkBeerCanAPA2,
+	}
+
+	item 6pkBeerBottleAPA2
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.6,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Bottle Light American Pale Ale,
+		Icon				= Pack6pkBeerBottleAPA2,
+		WorldStaticModel	= 6pkBeerBottleAPA2,
+	}
+
+	item 24pkBeerBottleAPA2
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.75,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Bottle Light American Pale Ale,
+		Icon				= Pack24pkBeerAPA2,
+		WorldStaticModel	= 24pkBeerBottleAPA2,
+	}
+
+	item 6pkBeerCanIPA1
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.25,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Can Light India Pale Ale,
+		Icon				= Pack6pkBeerCanIPA1,
+		WorldStaticModel	= 6pkBeerCanIPA1,
+	}
+
+	item 24pkBeerCanIPA1
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 3.6,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Can Light India Pale Ale,
+		Icon				= Pack24pkBeerIPA1,
+		WorldStaticModel	= 24pkBeerCanIPA1,
+	}
+
+	item 6pkBeerBottleIPA1
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.6,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Bottle Light India Pale Ale,
+		Icon				= Pack6pkBeerBottleIPA1,
+		WorldStaticModel	= 6pkBeerBottleIPA1,
+	}
+
+	item 24pkBeerBottleIPA1
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.75,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Bottle Light India Pale Ale,
+		Icon				= Pack24pkBeerIPA1,
+		WorldStaticModel	= 24pkBeerBottleIPA1,
+	}
+
+	item 6pkBeerCanIPA2
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.25,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Can Dark India Pale Ale,
+		Icon				= Pack6pkBeerCanIPA2,
+		WorldStaticModel	= 6pkBeerCanIPA2,
+	}
+
+	item 24pkBeerCanIPA2
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 3.6,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Can Dark India Pale Ale,
+		Icon				= Pack24pkBeerIPA2,
+		WorldStaticModel	= 24pkBeerCanIPA2,
+	}
+
+	item 6pkBeerBottleIPA2
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.6,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Bottle Dark India Pale Ale,
+		Icon				= Pack6pkBeerBottleIPA2,
+		WorldStaticModel	= 6pkBeerBottleIPA2,
+	}
+
+	item 24pkBeerBottleIPA2
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.75,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Bottle Dark India Pale Ale,
+		Icon				= Pack24pkBeerIPA2,
+		WorldStaticModel	= 24pkBeerBottleIPA2,
+	}
+
+	item 6pkBeerCanLightLager
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.25,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Can Light Lager,
+		Icon				= Pack6pkBeerCanLightLager,
+		WorldStaticModel	= 6pkBeerCanLightLager,
+	}
+
+	item 24pkBeerCanLightLager
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 3.6,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Can Light Lager,
+		Icon				= Pack24pkBeerLightLager,
+		WorldStaticModel	= 24pkBeerCanLightLager,
+	}
+
+	item 6pkBeerBottleLightLager
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.6,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Bottle Light Lager,
+		Icon				= Pack6pkBeerBottleLightLager,
+		WorldStaticModel	= 6pkBeerBottleLightLager,
+	}
+
+	item 24pkBeerBottleLightLager
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.75,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Bottle Light Lager,
+		Icon				= Pack24pkBeerLightLager,
+		WorldStaticModel	= 24pkBeerBottleLightLager,
+	}
+
+	item 6pkBeerCanPilsner
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.25,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Can Pilsner,
+		Icon				= Pack6pkBeerCanPilsner,
+		WorldStaticModel	= 6pkBeerCanPilsner,
+	}
+
+	item 24pkBeerCanPilsner
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 3.6,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Can Pilsner,
+		Icon				= Pack24pkBeerPilsner,
+		WorldStaticModel	= 24pkBeerCanPilsner,
+	}
+
+	item 6pkBeerBottlePilsner
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.6,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Bottle Pilsner,
+		Icon				= Pack6pkBeerBottlePilsner,
+		WorldStaticModel	= 6pkBeerBottlePilsner,
+	}
+
+	item 24pkBeerBottlePilsner
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.75,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Bottle Pilsner,
+		Icon				= Pack24pkBeerPilsner,
+		WorldStaticModel	= 24pkBeerBottlePilsner,
+	}
+
+	item 6pkBeerCanPorter
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.25,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Can Porter,
+		Icon				= Pack6pkBeerCanPorter,
+		WorldStaticModel	= 6pkBeerCanPorter,
+	}
+
+	item 24pkBeerCanPorter
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 3.6,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Can Porter,
+		Icon				= Pack24pkBeerPorter,
+		WorldStaticModel	= 24pkBeerCanPorter,
+	}
+
+	item 6pkBeerBottlePorter
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.6,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Bottle Porter,
+		Icon				= Pack6pkBeerBottlePorter,
+		WorldStaticModel	= 6pkBeerBottlePorter,
+	}
+
+	item 24pkBeerBottlePorter
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.75,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Bottle Porter,
+		Icon				= Pack24pkBeerPorter,
+		WorldStaticModel	= 24pkBeerBottlePorter,
+	}
+
+	item 6pkBeerCanStout
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.25,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Can Stout,
+		Icon				= Pack6pkBeerCanStout,
+		WorldStaticModel	= 6pkBeerCanStout,
+	}
+
+	item 24pkBeerCanStout
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 3.6,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Can Stout,
+		Icon				= Pack24pkBeerStout,
+		WorldStaticModel	= 24pkBeerCanStout,
+	}
+
+	item 6pkBeerBottleStout
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.6,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Bottle Stout,
+		Icon				= Pack6pkBeerBottleStout,
+		WorldStaticModel	= 6pkBeerBottleStout,
+	}
+
+	item 24pkBeerBottleStout
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.75,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Bottle Stout,
+		Icon				= Pack24pkBeerStout,
+		WorldStaticModel	= 24pkBeerBottleStout,
+	}
+
+	item 6pkBeerCanSkunked
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.25,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Can Skunked,
+		Icon				= Pack6pkBeerCanSkunked,
+		WorldStaticModel	= 6pkBeerCanSkunked,
+	}
+
+	item 24pkBeerCanSkunked
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 3.6,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Can Skunked,
+		Icon				= Pack24pkBeerSkunked,
+		WorldStaticModel	= 24pkBeerCanSkunked,
+	}
+
+	item 6pkBeerBottleSkunked
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.6,
+		Type				= Normal,
+		DisplayName			= 6 x Beer Bottle Skunked,
+		Icon				= Pack6pkBeerBottleSkunked,
+		WorldStaticModel	= 6pkBeerBottleSkunked,
+	}
+
+	item 24pkBeerBottleSkunked
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.75,
+		Type				= Normal,
+		DisplayName			= 24 x Beer Bottle Skunked,
+		Icon				= Pack24pkBeerSkunked,
+		WorldStaticModel	= 24pkBeerBottleSkunked,
+	}
+
+	/******************************  KEGS & CARBOYS  ******************************/
+
+	item 4pkEmptyKeg
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4,
+		Type				= Normal,
+		DisplayName			= 4 x Empty Kegs,
+		Icon				= PackEmptyKeg,
+		WorldStaticModel	= PackEmptyKeg,
+	}
+
+	item 4pkEmptyCarboy
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2,
+		Type				= Normal,
+		DisplayName			= 4 x Empty Carboy,
+		Icon				= PackEmptyCarboy,
+		WorldStaticModel	= PackEmptyCarboy,
+	}
+
+	/******************************  MALT EXTRACT  ******************************/	
+
+	item 5pkMaltExtractDark
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.35,
+		Type				= Normal,
+		DisplayName			= 5 x Malt Extract Dark,
+		Icon				= PackMaltExtractDark,
+		WorldStaticModel	= PackMaltExtractDark,
+	}
+
+	item 10pkMaltExtractDark
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Malt Extract Dark,
+		Icon				= PackMaltExtractDark,
+		WorldStaticModel	= PackMaltExtractDark,
+	}
+
+	item 50pkMaltExtractDark
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,
+		Type				= Normal,
+		DisplayName			= 50 x Malt Extract Dark,
+		Icon				= PackMaltExtractDark,
+		WorldStaticModel	= PackMaltExtractDark,
+	}
+
+	item 5pkMaltExtractLight
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.35,
+		Type				= Normal,
+		DisplayName			= 5 x Malt Extract Light,
+		Icon				= PackMaltExtractLight,
+		WorldStaticModel	= PackMaltExtractLight,
+	}
+
+	item 10pkMaltExtractLight
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Malt Extract Light,
+		Icon				= PackMaltExtractLight,
+		WorldStaticModel	= PackMaltExtractLight,
+	}
+
+	item 50pkMaltExtractLight
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,
+		Type				= Normal,
+		DisplayName			= 50 x Malt Extract Light,
+		Icon				= PackMaltExtractLight,
+		WorldStaticModel	= PackMaltExtractLight,
+	}
+
+	/******************************  BOTTLE CAPS  ******************************/
+
+	item 5pkBottleCapsBag
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.35,
+		Type				= Normal,
+		DisplayName			= 5 x Bottle Caps Bag,
+		Icon				= PackBottleCapsBag,
+		WorldStaticModel	= PackBottleCapsBag,
+	}
+
+	item 10pkBottleCapsBag
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Bottle Caps Bag,
+		Icon				= PackBottleCapsBag,
+		WorldStaticModel	= PackBottleCapsBag,
+	}
+
+	item 50pkBottleCapsBag
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,
+		Type				= Normal,
+		DisplayName			= 50 x Bottle Caps Bag,
+		Icon				= PackBottleCapsBag,
+		WorldStaticModel	= PackBottleCapsBag,
+	}
+
+	/******************************  HOPS  ******************************/
+
+	item 5pkHopsCascade
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.35,
+		Type				= Normal,
+		DisplayName			= 5 x Hops Cascade,
+		Icon				= PackHopsRed,
+		WorldStaticModel	= PackHopsRed,
+	}
+
+	item 10pkHopsCascade
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Hops Cascade,
+		Icon				= PackHopsRed,
+		WorldStaticModel	= PackHopsRed,
+	}
+
+	item 50pkHopsCascade
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,,
+		Type				= Normal,
+		DisplayName			= 50 x Hops Cascade,
+		Icon				= PackHopsRed,
+		WorldStaticModel	= PackHopsRed,
+	}
+
+	item 5pkHopsCentennial
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.35,
+		Type				= Normal,
+		DisplayName			= 5 x Hops Centennial,
+		Icon				= PackHopsWhite,
+		WorldStaticModel	= PackHopsWhite,
+	}
+
+	item 10pkHopsCentennial
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Hops Centennial,
+		Icon				= PackHopsWhite,
+		WorldStaticModel	= PackHopsWhite,
+	}
+
+	item 50pkHopsCentennial
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,,
+		Type				= Normal,
+		DisplayName			= 50 x Hops Centennial,
+		Icon				= PackHopsWhite,
+		WorldStaticModel	= PackHopsWhite,
+	}
+
+	item 5pkHopsCitra
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.35,
+		Type				= Normal,
+		DisplayName			= 5 x Hops Citra,
+		Icon				= PackHopsGreen,
+		WorldStaticModel	= PackHopsGreen,
+	}
+
+	item 10pkHopsCitra
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Hops Citra,
+		Icon				= PackHopsGreen,
+		WorldStaticModel	= PackHopsGreen,
+	}
+
+	item 50pkHopsCitra
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,,
+		Type				= Normal,
+		DisplayName			= 50 x Hops Citra,
+		Icon				= PackHopsGreen,
+		WorldStaticModel	= PackHopsGreen,
+	}
+
+	item 5pkHopsGolding
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.35,
+		Type				= Normal,
+		DisplayName			= 5 x Hops Golding,
+		Icon				= PackHopsRed,
+		WorldStaticModel	= PackHopsRed,
+	}
+
+	item 10pkHopsGolding
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Hops Golding,
+		Icon				= PackHopsRed,
+		WorldStaticModel	= PackHopsRed,
+	}
+
+	item 50pkHopsGolding
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,,
+		Type				= Normal,
+		DisplayName			= 50 x Hops Golding,
+		Icon				= PackHopsRed,
+		WorldStaticModel	= PackHopsRed,
+	}
+
+	item 5pkHopsHallertau
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.35,
+		Type				= Normal,
+		DisplayName			= 5 x Hops Hallertau,
+		Icon				= PackHopsWhite,
+		WorldStaticModel	= PackHopsWhite,
+	}
+
+	item 10pkHopsHallertau
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Hops Hallertau,
+		Icon				= PackHopsWhite,
+		WorldStaticModel	= PackHopsWhite,
+	}
+
+	item 50pkHopsHallertau
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,,
+		Type				= Normal,
+		DisplayName			= 50 x Hops Hallertau,
+		Icon				= PackHopsWhite,
+		WorldStaticModel	= PackHopsWhite,
+	}
+
+	item 5pkHopsMosaic
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.35,
+		Type				= Normal,
+		DisplayName			= 5 x Hops Mosaic,
+		Icon				= PackHopsWhite,
+		WorldStaticModel	= PackHopsWhite,
+	}
+
+	item 10pkHopsMosaic
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Hops Mosaic,
+		Icon				= PackHopsWhite,
+		WorldStaticModel	= PackHopsWhite,
+	}
+
+	item 50pkHopsMosaic
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,,
+		Type				= Normal,
+		DisplayName			= 50 x Hops Mosaic,
+		Icon				= PackHopsWhite,
+		WorldStaticModel	= PackHopsWhite,
+	}
+
+	item 5pkHopsNugget
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.35,
+		Type				= Normal,
+		DisplayName			= 5 x Hops Nugget,
+		Icon				= PackHopsGreen,
+		WorldStaticModel	= PackHopsGreen,
+	}
+
+	item 10pkHopsNugget
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Hops Nugget,
+		Icon				= PackHopsGreen,
+		WorldStaticModel	= PackHopsGreen,
+	}
+
+	item 50pkHopsNugget
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,,
+		Type				= Normal,
+		DisplayName			= 50 x Hops Nugget,
+		Icon				= PackHopsGreen,
+		WorldStaticModel	= PackHopsGreen,
+	}
+
+	item 5pkHopsSaaz
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.35,
+		Type				= Normal,
+		DisplayName			= 5 x Hops Saaz,
+		Icon				= PackHopsGreen,
+		WorldStaticModel	= PackHopsGreen,
+	}
+
+	item 10pkHopsSaaz
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Hops Saaz,
+		Icon				= PackHopsGreen,
+		WorldStaticModel	= PackHopsGreen,
+	}
+
+	item 50pkHopsSaaz
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,,
+		Type				= Normal,
+		DisplayName			= 50 x Hops Saaz,
+		Icon				= PackHopsGreen,
+		WorldStaticModel	= PackHopsGreen,
+	}
+
+	item 5pkHopsSimcoe
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.35,
+		Type				= Normal,
+		DisplayName			= 5 x Hops Simcoe,
+		Icon				= PackHopsRed,
+		WorldStaticModel	= PackHopsRed,
+	}
+
+	item 10pkHopsSimcoe
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Hops Simcoe,
+		Icon				= PackHopsRed,
+		WorldStaticModel	= PackHopsRed,
+	}
+
+	item 50pkHopsSimcoe
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,,
+		Type				= Normal,
+		DisplayName			= 50 x Hops Simcoe,
+		Icon				= PackHopsRed,
+		WorldStaticModel	= PackHopsRed,
+	}
+
+	/******************************  EMPTY CANS & BOTTLES  ******************************/
+
+	item 5pkEmptyBeerCans
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.35,
+		Type				= Normal,
+		DisplayName			= 5 x Empty Beer Cans,
+		Icon				= PackEmptyBeerCans,
+		WorldStaticModel	= PackEmptyBeerCansSmall,
+	}
+
+	item 10pkEmptyBeerCans
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Empty Beer Cans,
+		Icon				= PackEmptyBeerCans,
+		WorldStaticModel	= PackEmptyBeerCansSmall,
+	}
+
+	item 50pkEmptyBeerCans
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,
+		Type				= Normal,
+		DisplayName			= 50 x Empty Beer Cans,
+		Icon				= PackEmptyBeerCans,
+		WorldStaticModel	= PackEmptyBeerCansLarge,
+	}
+
+	item 100pkEmptyBeerCans
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4,
+		Type				= Normal,
+		DisplayName			= 100 x Empty Beer Cans,
+		Icon				= PackEmptyBeerCans,
+		WorldStaticModel	= PackEmptyBeerCansLarge,
+	}
+
+	item 5pkEmptyBeerBottles
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.35,
+		Type				= Normal,
+		DisplayName			= 5 x Empty Beer Bottles,
+		Icon				= PackEmptyBeerBottles,
+		WorldStaticModel	= PackEmptyBeerBottlesSmall,
+	}
+
+	item 10pkEmptyBeerBottles
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Empty Beer Bottles,
+		Icon				= PackEmptyBeerBottles,
+		WorldStaticModel	= PackEmptyBeerBottlesSmall,
+	}
+
+	item 50pkEmptyBeerBottles
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,
+		Type				= Normal,
+		DisplayName			= 50 x Empty Beer Bottles,
+		Icon				= PackEmptyBeerBottles,
+		WorldStaticModel	= PackEmptyBeerBottlesLarge,
+	}
+
+	item 100pkEmptyBeerBottles
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4,
+		Type				= Normal,
+		DisplayName			= 100 x Empty Beer Bottles,
+		Icon				= PackEmptyBeerBottles,
+		WorldStaticModel	= PackEmptyBeerBottlesLarge,
+	}
+}

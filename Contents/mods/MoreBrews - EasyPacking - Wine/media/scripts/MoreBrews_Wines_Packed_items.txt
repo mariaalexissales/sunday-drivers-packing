@@ -1,0 +1,1054 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+
+	/******************************  BOOKS  ******************************/
+
+	item pkWineMaking
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2,
+		Type				= Normal,
+		DisplayName			= Bundle of Wine Making Books,
+		Icon				= PackWineMakingBook,
+		WorldStaticModel	= PackWineMakingBook,
+	}	
+
+	/****************************** BOTTLED WINE  ******************************/
+
+	item 6pkRedWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.2,
+		Type				= Normal,
+		DisplayName			= 6 x Wine [Pinot Noir],
+		Icon				= Pack6pkRedWine,
+		WorldStaticModel	= Pack6pkRedWine,
+	}
+
+	item 12pkRedWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 12 x Wine [Pinot Noir],
+		Icon				= Pack12pkRedWine,
+		WorldStaticModel	= Pack12pkRedWine,
+	}
+
+	item 6pkRedWineAged
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.2,
+		Type				= Normal,
+		DisplayName			= 6 x Wine [Merlot],
+		Icon				= Pack6pkRedWineAged,
+		WorldStaticModel	= Pack6pkRedWineAged,
+	}
+
+	item 12pkRedWineAged
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 12 x Wine [Merlot],
+		Icon				= Pack12pkRedWineAged,
+		WorldStaticModel	= Pack12pkRedWineAged,
+	}
+
+	item 6pkRedWineAgedFully
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.2,
+		Type				= Normal,
+		DisplayName			= 6 x Wine [Cabernet Sauvignon],
+		Icon				= Pack6pkRedWineAgedFully,
+		WorldStaticModel	= Pack6pkRedWineAgedFully,
+	}
+
+	item 12pkRedWineAgedFully
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 12 x Wine [Cabernet Sauvignon],
+		Icon				= Pack12pkRedWineAgedFully,
+		WorldStaticModel	= Pack12pkRedWineAgedFully,
+	}
+
+	item 6pkWhiteWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.2,
+		Type				= Normal,
+		DisplayName			= 6 x Wine [Pinot Grigio],
+		Icon				= Pack6pkWhiteWine,
+		WorldStaticModel	= Pack6pkWhiteWine,
+	}
+
+	item 12pkWhiteWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 12 x Wine [Pinot Grigio],
+		Icon				= Pack12pkWhiteWine,
+		WorldStaticModel	= Pack12pkWhiteWine,
+	}
+
+	item 6pkWhiteWineAged
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.2,
+		Type				= Normal,
+		DisplayName			= 6 x Wine [Riesling],
+		Icon				= Pack6pkWhiteWineAged,
+		WorldStaticModel	= Pack6pkWhiteWineAged,
+	}
+
+	item 12pkWhiteWineAged
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 12 x Wine [Riesling],
+		Icon				= Pack12pkWhiteWineAged,
+		WorldStaticModel	= Pack12pkWhiteWineAged,
+	}
+
+	item 6pkWhiteWineAgedFully
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.2,
+		Type				= Normal,
+		DisplayName			= 6 x Wine [Sauvignon Blanc],
+		Icon				= Pack6pkWhiteWineAgedFully,
+		WorldStaticModel	= Pack6pkWhiteWineAgedFully,
+	}
+
+	item 12pkWhiteWineAgedFully
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 12 x Wine [Sauvignon Blanc],
+		Icon				= Pack12pkWhiteWineAgedFully,
+		WorldStaticModel	= Pack12pkWhiteWineAgedFully,
+	}
+
+	item 6pkWildBerryWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.2,
+		Type				= Normal,
+		DisplayName			= 6 x Wine [Wild Berry],
+		Icon				= Pack6pkWildBerryWine,
+		WorldStaticModel	= Pack6pkWildBerryWine,
+	}
+
+	item 12pkWildBerryWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 12 x Wine [Wild Berry],
+		Icon				= Pack12pkWildBerryWine,
+		WorldStaticModel	= Pack12pkWildBerryWine,
+	}
+
+	item 6pkRosehipWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.2,
+		Type				= Normal,
+		DisplayName			= 6 x Wine [Rosehip],
+		Icon				= Pack6pkRosehipWine,
+		WorldStaticModel	= Pack6pkRosehipWine,
+	}
+
+	item 12pkRosehipWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 12 x Wine [Rosehip],
+		Icon				= Pack12pkRosehipWine,
+		WorldStaticModel	= Pack12pkRosehipWine,
+	}
+
+	item 6pkPineappleWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.2,
+		Type				= Normal,
+		DisplayName			= 6 x Wine [Pineapple],
+		Icon				= Pack6pkPineappleWine,
+		WorldStaticModel	= Pack6pkPineappleWine,
+	}
+
+	item 12pkPineappleWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 12 x Wine [Pineapple],
+		Icon				= Pack12pkPineappleWine,
+		WorldStaticModel	= Pack12pkPineappleWine,
+	}
+
+	item 6pkStrawberryWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.2,
+		Type				= Normal,
+		DisplayName			= 6 x Wine [Strawberry],
+		Icon				= Pack6pkStrawberryWine,
+		WorldStaticModel	= Pack6pkStrawberryWine,
+	}
+
+	item 12pkStrawberryWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 12 x Wine [Strawberry],
+		Icon				= Pack12pkStrawberryWine,
+		WorldStaticModel	= Pack12pkStrawberryWine,
+	}
+
+	item 6pkPeachWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.2,
+		Type				= Normal,
+		DisplayName			= 6 x Wine [Peach],
+		Icon				= Pack6pkPeachWine,
+		WorldStaticModel	= Pack6pkPeachWine,
+	}
+
+	item 12pkPeachWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 12 x Wine [Peach],
+		Icon				= Pack12pkPeachWine,
+		WorldStaticModel	= Pack12pkPeachWine,
+	}
+
+	item 6pkPearWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.2,
+		Type				= Normal,
+		DisplayName			= 6 x Wine [Pear],
+		Icon				= Pack6pkPearWine,
+		WorldStaticModel	= Pack6pkPearWine,
+	}
+
+	item 12pkPearWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 12 x Wine [Pear],
+		Icon				= Pack12pkPearWine,
+		WorldStaticModel	= Pack12pkPearWine,
+	}
+
+	item 6pkBananaWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.2,
+		Type				= Normal,
+		DisplayName			= 6 x Wine [Banana],
+		Icon				= Pack6pkBananaWine,
+		WorldStaticModel	= Pack6pkBananaWine,
+	}
+
+	item 12pkBananaWine
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 12 x Wine [Banana],
+		Icon				= Pack12pkBananaWine,
+		WorldStaticModel	= Pack12pkBananaWine,
+	}
+
+	item 6pkHoneyMead
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.2,
+		Type				= Normal,
+		DisplayName			= 6 x Honey Mead,
+		Icon				= Pack6pkHoneyMead,
+		WorldStaticModel	= Pack6pkHoneyMead,
+	}
+
+	item 12pkHoneyMead
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 12 x Honey Mead,
+		Icon				= Pack12pkHoneyMead,
+		WorldStaticModel	= Pack12pkHoneyMead,
+	}
+
+	item 6pkHardCider
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4.2,
+		Type				= Normal,
+		DisplayName			= 6 x Hard Cider,
+		Icon				= Pack6pkHardCider,
+		WorldStaticModel	= Pack6pkHardCider,
+	}
+
+	item 12pkHardCider
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 12 x Hard Cider,
+		Icon				= Pack12pkHardCider,
+		WorldStaticModel	= Pack12pkHardCider,
+	}
+
+	/******************************  BOXED WINE  ******************************/
+
+	item 6pkWineBoxSmall1
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.1,
+		Type				= Normal,
+		DisplayName			= 6 x Wine Box [Pinot Noir],
+		Icon				= PackWineBox1,
+		WorldStaticModel	= 6pkWineBoxSmall1,
+	}
+
+	item 24pkWineBoxSmall1
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 24 x Wine Box [Pinot Noir],
+		Icon				= PackWineBox1,
+		WorldStaticModel	= 24pkWineBoxSmall1,
+	}
+
+	item 6pkWineBoxSmall2
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.1,
+		Type				= Normal,
+		DisplayName			= 6 x Wine Box [Merlot],
+		Icon				= PackWineBox2,
+		WorldStaticModel	= 6pkWineBoxSmall2,
+	}
+
+	item 24pkWineBoxSmall2
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 24 x Wine Box [Merlot],
+		Icon				= PackWineBox2,
+		WorldStaticModel	= 24pkWineBoxSmall2,
+	}
+
+	item 6pkWineBoxSmall3
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.1,
+		Type				= Normal,
+		DisplayName			= 6 x Wine Box [Cabernet Sauvignon],
+		Icon				= PackWineBox3,
+		WorldStaticModel	= 6pkWineBoxSmall3,
+	}
+
+	item 24pkWineBoxSmall3
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 24 x Wine Box [Cabernet Sauvignon],
+		Icon				= PackWineBox3,
+		WorldStaticModel	= 24pkWineBoxSmall3,
+	}
+
+	item 6pkWineBoxSmall4
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.1,
+		Type				= Normal,
+		DisplayName			= 6 x Wine Box [Pinot Grigio],
+		Icon				= PackWineBox4,
+		WorldStaticModel	= 6pkWineBoxSmall4,
+	}
+
+	item 24pkWineBoxSmall4
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 24 x Wine Box [Pinot Grigio],
+		Icon				= PackWineBox4,
+		WorldStaticModel	= 24pkWineBoxSmall4,
+	}
+
+	item 6pkWineBoxSmall5
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.1,
+		Type				= Normal,
+		DisplayName			= 6 x Wine Box [Riesling],
+		Icon				= PackWineBox5,
+		WorldStaticModel	= 6pkWineBoxSmall5,
+	}
+
+	item 24pkWineBoxSmall5
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 24 x Wine Box [Riesling],
+		Icon				= PackWineBox5,
+		WorldStaticModel	= 24pkWineBoxSmall5,
+	}
+
+	item 6pkWineBoxSmall6
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.1,
+		Type				= Normal,
+		DisplayName			= 6 x Wine Box [Sauvignon Blanc],
+		Icon				= PackWineBox6,
+		WorldStaticModel	= 6pkWineBoxSmall6,
+	}
+
+	item 24pkWineBoxSmall6
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 6,
+		Type				= Normal,
+		DisplayName			= 24 x Wine Box [Sauvignon Blanc],
+		Icon				= PackWineBox6,
+		WorldStaticModel	= 24pkWineBoxSmall6,
+	}
+
+	/******************************  DRIED YEAST  ******************************/
+
+	item 5pkDriedFruitYeast
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.1,
+		Type				= Normal,
+		DisplayName			= 5 x Dried Yeast [Fruit],
+		Icon				= PackFruitYeastStarter,
+		WorldStaticModel	= PackFruitYeastStarter,
+	}
+
+	item 10pkDriedFruitYeast
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.8,
+		Type				= Normal,
+		DisplayName			= 10 x Dried Yeast [Fruit],
+		Icon				= PackFruitYeastStarter,
+		WorldStaticModel	= PackFruitYeastStarter,
+	}
+
+	item 50pkDriedFruitYeast
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 7.5,
+		Type				= Normal,
+		DisplayName			= 50 x Dried Yeast [Fruit],
+		Icon				= PackFruitYeastStarter,
+		WorldStaticModel	= PackFruitYeastStarter,
+	}
+
+	item 5pkDriedPotatoYeast
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.1,
+		Type				= Normal,
+		DisplayName			= 5 x Dried Yeast [Potato],
+		Icon				= PackPotatoYeastStarter,
+		WorldStaticModel	= PackPotatoYeastStarter,
+	}
+
+	item 10pkDriedPotatoYeast
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.8,
+		Type				= Normal,
+		DisplayName			= 10 x Dried Yeast [Potato],
+		Icon				= PackPotatoYeastStarter,
+		WorldStaticModel	= PackPotatoYeastStarter,
+	}
+
+	item 50pkDriedPotatoYeast
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 7.5,
+		Type				= Normal,
+		DisplayName			= 50 x Dried Yeast [Potato],
+		Icon				= PackPotatoYeastStarter,
+		WorldStaticModel	= PackPotatoYeastStarter,
+	}
+
+	item 5pkDriedWildPlantsYeast
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.1,
+		Type				= Normal,
+		DisplayName			= 5 x Dried Yeast [Wild Plants],
+		Icon				= PackWildPlantsYeastStarter,
+		WorldStaticModel	= PackWildPlantsYeastStarter,
+	}
+
+	item 10pkDriedWildPlantsYeast
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.8,
+		Type				= Normal,
+		DisplayName			= 10 x Dried Yeast [Wild Plants],
+		Icon				= PackWildPlantsYeastStarter,
+		WorldStaticModel	= PackWildPlantsYeastStarter,
+	}
+
+	item 50pkDriedWildPlantsYeast
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 7.5,
+		Type				= Normal,
+		DisplayName			= 50 x Dried Yeast [Wild Plants],
+		Icon				= PackWildPlantsYeastStarter,
+		WorldStaticModel	= PackWildPlantsYeastStarter,
+	}
+
+	/******************************  CORKS AND BANDS  ******************************/
+
+	item 5pkRubberBandsBag
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.75,
+		Type				= Normal,
+		DisplayName			= 5 x Bag of Rubber Bands,
+		Icon				= PackRubberBandsBag,
+		WorldStaticModel	= PackRubberBandsBag,
+	}
+
+	item 10pkRubberBandsBag
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 3,
+		Type				= Normal,
+		DisplayName			= 10 x Bag of Rubber Bands,
+		Icon				= PackRubberBandsBag,
+		WorldStaticModel	= PackRubberBandsBag,
+	}
+
+	item 50pkRubberBandsBag
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 12.5,
+		Type				= Normal,
+		DisplayName			= 50 x Bag of Rubber Bands,
+		Icon				= PackRubberBandsBag,
+		WorldStaticModel	= PackRubberBandsBag,
+	}
+
+	item 5pkCorksBag
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.75,
+		Type				= Normal,
+		DisplayName			= 5 x Bag of Corks,
+		Icon				= PackCorksBag,
+		WorldStaticModel	= PackCorksBag,
+	}
+
+	item 10pkCorksBag
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 3,
+		Type				= Normal,
+		DisplayName			= 10 x Bag of Corks,
+		Icon				= PackCorksBag,
+		WorldStaticModel	= PackCorksBag,
+	}
+
+	item 50pkCorksBag
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 12.5,
+		Type				= Normal,
+		DisplayName			= 50 x Bag of Corks,
+		Icon				= PackCorksBag,
+		WorldStaticModel	= PackCorksBag,
+	}
+
+	/******************************  EMPTY CONTAINERS ******************************/
+
+	item 4pkEmptyBarrelDispenserSmall
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4,
+		Type				= Normal,
+		DisplayName			= 4 x Empty Barrel Dispenser Small,
+		Icon				= PackBarrelDispenser,
+		WorldStaticModel	= PackBarrelDispenser,
+	}
+
+	item 4pkEmptyCarboy
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2,
+		Type				= Normal,
+		DisplayName			= 4 x Empty Carboy,
+		Icon				= PackEmptyCarboy,
+		WorldStaticModel	= PackEmptyCarboy,
+	}
+
+	item 4pkEmptyGallonCarboy
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1,
+		Type				= Normal,
+		DisplayName			= 4 x Gallon Carboy [Empty],
+		Icon				= PackGallonCarboys,
+		WorldStaticModel	= PackGallonCarboys,
+	}
+
+	/******************************  EMPTY BASE MATERIALS  ******************************/
+
+	item 5pkRedWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.3,
+		Type				= Normal,
+		DisplayName			= 5 x Base Ingredients [Red Wine],
+		Icon				= PackRedWineBase,
+		WorldStaticModel	= PackRedWineBase,
+	}
+
+	item 10pkRedWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Base Ingredients [Red Wine],
+		Icon				= PackRedWineBase,
+		WorldStaticModel	= PackRedWineBase,
+	}
+
+	item 50pkRedWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,
+		Type				= Normal,
+		DisplayName			= 50 x Base Ingredients [Red Wine],
+		Icon				= PackRedWineBase,
+		WorldStaticModel	= PackRedWineBase,
+	}
+
+	item 5pkWhiteWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.3,
+		Type				= Normal,
+		DisplayName			= 5 x Base Ingredients [White Wine],
+		Icon				= PackWhiteWineBase,
+		WorldStaticModel	= PackWhiteWineBase,
+	}
+
+	item 10pkWhiteWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Base Ingredients [White Wine],
+		Icon				= PackWhiteWineBase,
+		WorldStaticModel	= PackWhiteWineBase,
+	}
+
+	item 50pkWhiteWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,
+		Type				= Normal,
+		DisplayName			= 50 x Base Ingredients [White Wine],
+		Icon				= PackWhiteWineBase,
+		WorldStaticModel	= PackWhiteWineBase,
+	}
+
+	item 5pkWildBerryWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.3,
+		Type				= Normal,
+		DisplayName			= 5 x Base Ingredients [Wild Berry Wine],
+		Icon				= PackWildBerryWineBase,
+		WorldStaticModel	= PackWildBerryWineBase,
+	}
+
+	item 10pkWildBerryWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Base Ingredients [Wild Berry Wine],
+		Icon				= PackWildBerryWineBase,
+		WorldStaticModel	= PackWildBerryWineBase,
+	}
+
+	item 50pkWildBerryWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,
+		Type				= Normal,
+		DisplayName			= 50 x Base Ingredients [Wild Berry Wine],
+		Icon				= PackWildBerryWineBase,
+		WorldStaticModel	= PackWildBerryWineBase,
+	}
+
+    item 5pkRosehipWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.3,
+		Type				= Normal,
+		DisplayName			= 5 x Base Ingredients [Rosehip Wine],
+		Icon				= PackRosehipWineBase,
+		WorldStaticModel	= PackRosehipWineBase,
+	}
+
+	item 10pkRosehipWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Base Ingredients [Rosehip Wine],
+		Icon				= PackRosehipWineBase,
+		WorldStaticModel	= PackRosehipWineBase,
+	}
+
+	item 50pkRosehipWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,
+		Type				= Normal,
+		DisplayName			= 50 x Base Ingredients [Rosehip Wine],
+		Icon				= PackRosehipWineBase,
+		WorldStaticModel	= PackRosehipWineBase,
+	}
+
+    item 5pkPineappleWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.3,
+		Type				= Normal,
+		DisplayName			= 5 x Base Ingredients [Pineapple Wine],
+		Icon				= PackPineappleWineBase,
+		WorldStaticModel	= PackPineappleWineBase,
+	}
+
+	item 10pkPineappleWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Base Ingredients [Pineapple Wine],
+		Icon				= PackPineappleWineBase,
+		WorldStaticModel	= PackPineappleWineBase,
+	}
+
+	item 50pkPineappleWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,
+		Type				= Normal,
+		DisplayName			= 50 x Base Ingredients [Pineapple Wine],
+		Icon				= PackPineappleWineBase,
+		WorldStaticModel	= PackPineappleWineBase,
+	}
+
+    item 5pkStrawberryWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.3,
+		Type				= Normal,
+		DisplayName			= 5 x Base Ingredients [Strawberry Wine],
+		Icon				= PackStrawberryWineBase,
+		WorldStaticModel	= PackStrawberryWineBase,
+	}
+
+	item 10pkStrawberryWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Base Ingredients [Strawberry Wine],
+		Icon				= PackStrawberryWineBase,
+		WorldStaticModel	= PackStrawberryWineBase,
+	}
+
+	item 50pkStrawberryWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,
+		Type				= Normal,
+		DisplayName			= 50 x Base Ingredients [Strawberry Wine],
+		Icon				= PackStrawberryWineBase,
+		WorldStaticModel	= PackStrawberryWineBase,
+	}
+
+    item 5pkPeachWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.3,
+		Type				= Normal,
+		DisplayName			= 5 x Base Ingredients [Peach Wine],
+		Icon				= PackPeachWineBase,
+		WorldStaticModel	= PackPeachWineBase,
+	}
+
+	item 10pkPeachWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Base Ingredients [Peach Wine],
+		Icon				= PackPeachWineBase,
+		WorldStaticModel	= PackPeachWineBase,
+	}
+
+	item 50pkPeachWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,
+		Type				= Normal,
+		DisplayName			= 50 x Base Ingredients [Peach Wine],
+		Icon				= PackPeachWineBase,
+		WorldStaticModel	= PackPeachWineBase,
+	}
+
+    item 5pkPearWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.3,
+		Type				= Normal,
+		DisplayName			= 5 x Base Ingredients [Pear Wine],
+		Icon				= PackPearWineBase,
+		WorldStaticModel	= PackPearWineBase,
+	}
+
+	item 10pkPearWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Base Ingredients [Pear Wine],
+		Icon				= PackPearWineBase,
+		WorldStaticModel	= PackPearWineBase,
+	}
+
+	item 50pkPearWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,
+		Type				= Normal,
+		DisplayName			= 50 x Base Ingredients [Pear Wine],
+		Icon				= PackPearWineBase,
+		WorldStaticModel	= PackPearWineBase,
+	}
+
+    item 5pkBananaWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.3,
+		Type				= Normal,
+		DisplayName			= 5 x Base Ingredients [Banana Wine],
+		Icon				= PackBananaWineBase,
+		WorldStaticModel	= PackBananaWineBase,
+	}
+
+	item 10pkBananaWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Base Ingredients [Banana Wine],
+		Icon				= PackBananaWineBase,
+		WorldStaticModel	= PackBananaWineBase,
+	}
+
+	item 50pkBananaWineBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,
+		Type				= Normal,
+		DisplayName			= 50 x Base Ingredients [Banana Wine],
+		Icon				= PackBananaWineBase,
+		WorldStaticModel	= PackBananaWineBase,
+	}
+
+    item 5pkHoneyMeadBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.3,
+		Type				= Normal,
+		DisplayName			= 5 x Base Ingredients [Honey Mead],
+		Icon				= PackHoneyMeadBase,
+		WorldStaticModel	= PackHoneyMeadBase,
+	}
+
+	item 10pkHoneyMeadBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Base Ingredients [Honey Mead],
+		Icon				= PackHoneyMeadBase,
+		WorldStaticModel	= PackHoneyMeadBase,
+	}
+
+	item 50pkHoneyMeadBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,
+		Type				= Normal,
+		DisplayName			= 50 x Base Ingredients [Honey Mead],
+		Icon				= PackHoneyMeadBase,
+		WorldStaticModel	= PackHoneyMeadBase,
+	}
+
+    item 5pkHardCiderBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.3,
+		Type				= Normal,
+		DisplayName			= 5 x Base Ingredients [Hard Cider],
+		Icon				= PackHardCiderBase,
+		WorldStaticModel	= PackHardCiderBase,
+	}
+
+	item 10pkHardCiderBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 10 x Base Ingredients [Hard Cider],
+		Icon				= PackHardCiderBase,
+		WorldStaticModel	= PackHardCiderBase,
+	}
+
+	item 50pkHardCiderBase
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,
+		Type				= Normal,
+		DisplayName			= 50 x Base Ingredients [Hard Cider],
+		Icon				= PackHardCiderBase,
+		WorldStaticModel	= PackHardCiderBase,
+	}
+
+	/******************************  EMPTY WINE BOTTLES & BOXES  ******************************/
+
+	item 5pkWineEmpty
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.7,
+		Type				= Normal,
+		DisplayName			= 5 x Empty Wine Bottles,
+		Icon				= PackWineEmpty,
+		WorldStaticModel	= PackWineEmptySmall,
+	}
+
+	item 10pkWineEmpty
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1.2,
+		Type				= Normal,
+		DisplayName			= 10 x Empty Wine Bottles,
+		Icon				= PackWineEmpty,
+		WorldStaticModel	= PackWineEmptySmall,
+	}
+
+	item 50pkWineEmpty
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 5,
+		Type				= Normal,
+		DisplayName			= 50 x Empty Wine Bottles,
+		Icon				= PackWineEmpty,
+		WorldStaticModel	= PackWineEmptyLarge,
+	}
+
+	item 100pkWineEmpty
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 8,
+		Type				= Normal,
+		DisplayName			= 100 x Empty Wine Bottles,
+		Icon				= PackWineEmpty,
+		WorldStaticModel	= PackWineEmptyLarge,
+	}
+
+	item 5pkWineBoxEmpty
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 0.5,
+		Type				= Normal,
+		DisplayName			= 5 x Empty Wine Boxes,
+		Icon				= PackWineBoxEmpty,
+		WorldStaticModel	= PackWineBoxEmptySmall,
+	}
+
+	item 10pkWineBoxEmpty
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 1,
+		Type				= Normal,
+		DisplayName			= 10 x Empty Wine Boxes,
+		Icon				= PackWineBoxEmpty,
+		WorldStaticModel	= PackWineBoxEmptySmall,
+	}
+
+	item 50pkWineBoxEmpty
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2.5,
+		Type				= Normal,
+		DisplayName			= 50 x Empty Wine Boxes,
+		Icon				= PackWineBoxEmpty,
+		WorldStaticModel	= PackWineBoxEmptyLarge,
+	}
+
+	item 100pkWineBoxEmpty
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 4,
+		Type				= Normal,
+		DisplayName			= 100 x Empty Wine Boxes,
+		Icon				= PackWineBoxEmpty,
+		WorldStaticModel	= PackWineBoxEmptyLarge,
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
