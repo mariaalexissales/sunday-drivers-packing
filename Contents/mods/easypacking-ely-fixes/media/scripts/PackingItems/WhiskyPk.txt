@@ -50,7 +50,7 @@ module Packing
 		destroy WhiskeyFull=5,
 		
 		Result:5pkWhiskey,
-		OnTest:Recipe.OnTest.WholeFood,
+		OnTest:Recipe.OnTest.Full,
 		Time:75.0,
 		Category:Storage,
 	}
