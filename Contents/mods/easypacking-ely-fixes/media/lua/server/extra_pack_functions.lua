@@ -45,31 +45,6 @@ function Recipe.OnCreate.LoadUsesOneRope(items, result, player)
 	Recipe.OnCreate.Unpack1Rope(items, result, player)
 end
 
-function Recipe.OnCreate.LoadUsesTwoRope(items, result, player)
-    Recipe.OnCreate.LoadUses(items, result, player)
-	Recipe.OnCreate.Unpack2Rope(items, result, player)
-end
-
-function Recipe.OnCreate.LoadUsesOneSheetRope(items, result, player)
-    Recipe.OnCreate.LoadUses(items, result, player)
-	Recipe.OnCreate.Unpack1SheetRope(items, result, player)
-end
-
-function Recipe.OnCreate.LoadUsesTwoSheetRope(items, result, player)
-    Recipe.OnCreate.LoadUses(items, result, player)
-	Recipe.OnCreate.Unpack2SheetRope(items, result, player)
-end
-
-function Recipe.OnCreate.LoadUsesOneWoodenContainer(items, result, player)
-    Recipe.OnCreate.LoadUses(items, result, player)
-	Recipe.OnCreate.Unpack1WoodenContainer(items, result, player)
-end
-
-function Recipe.OnCreate.LoadUsesTwoWoodenContainer(items, result, player)
-    Recipe.OnCreate.LoadUses(items, result, player)
-	Recipe.OnCreate.Unpack2WoodenContainer(items, result, player)
-end
-
 function Recipe.OnCreate.MergeUses(items, result, player)
     local toMerge = {}
     for i=0,items:size()-1 do
@@ -149,4 +124,55 @@ local function saveItemAmounts()
     end
 end
 
+/*** DEBUG ***/
+
+local function logLoadedRecipes()
+    local scriptManager = ScriptManager.instance
+    local recipes = scriptManager:getAllRecipes()
+    
+    print("===== Loaded Recipes =====")
+    for i = 0, recipes:size() - 1 do
+        ---@type Recipe
+        local recipe = recipes:get(i)
+        local recipeName = recipe:getName()
+        local recipeResult = recipe:getResult():getFullType()
+        print(string.format("Recipe: %s -> %s", recipeName, recipeResult))
+    end
+    print("=========================")
+end
+
+local function validateRecipes()
+    local scriptManager = ScriptManager.instance
+    local recipes = scriptManager:getAllRecipes()
+
+    print("===== Validating Recipes =====")
+    for i = 0, recipes:size() - 1 do
+        ---@type Recipe
+        local recipe = recipes:get(i)
+        local recipeName = recipe:getName()
+        local recipeResult = recipe:getResult()
+        local sources = recipe:getSource()
+        
+        -- Check if result exists
+        if not recipeResult then
+            print("ERROR: Recipe '" .. recipeName .. "' has NO result!")
+        else
+            print("Recipe Loaded: " .. recipeName .. " -> " .. recipeResult:getFullType())
+        end
+
+        -- Check if required ingredients exist
+        for j = 0, sources:size() - 1 do
+            local source = sources:get(j)
+            local itemName = source:getOnlyItem()
+            if not scriptManager:FindItem(itemName) then
+                print("ERROR: Missing ingredient '" .. itemName .. "' in recipe '" .. recipeName .. "'")
+            end
+        end
+    end
+    print("=============================")
+end
+
+-- Run the function when the game starts
+Events.OnInitGlobalModData.Add(validateRecipes)
+Events.OnInitGlobalModData.Add(logLoadedRecipes)
 Events.OnInitGlobalModData.Add(saveItemAmounts)

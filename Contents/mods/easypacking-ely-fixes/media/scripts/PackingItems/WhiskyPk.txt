@@ -67,7 +67,7 @@ module Packing
 
 	recipe Put Together
 	{
-		5pkWhiskey=2,
+		destroy 5pkWhiskey=2,
 		
 		Result:10pkWhiskey=1,
 		Time:40.0,
@@ -75,7 +75,7 @@ module Packing
 
 	recipe Split in Two
 	{
-		10pkWhiskey=1,
+		destroy 10pkWhiskey=1,
 		
 		CanBeDoneFromFloor:true,
 		Result:5pkWhiskey=2,
