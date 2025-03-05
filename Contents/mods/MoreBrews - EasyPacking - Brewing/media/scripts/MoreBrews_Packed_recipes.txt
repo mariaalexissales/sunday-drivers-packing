@@ -37,7 +37,7 @@ module Packing
 		destroy MoreBrews.BeerCanAmericanLager=6,
 		
 		Result				:6pkBeerCanAmericanLager,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -57,7 +57,7 @@ module Packing
 		destroy MoreBrews.BeerCanAmericanLager=24,
 		
 		Result				:24pkBeerCanAmericanLager,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -95,7 +95,7 @@ module Packing
 		destroy MoreBrews.BeerBottleAmericanLager=6,
 		
 		Result				:6pkBeerBottleAmericanLager,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -115,7 +115,7 @@ module Packing
 		destroy MoreBrews.BeerBottleAmericanLager=24,
 		
 		Result				:24pkBeerBottleAmericanLager,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -153,7 +153,7 @@ module Packing
 		destroy MoreBrews.BeerCanAPA1=6,
 		
 		Result				:6pkBeerCanAPA1,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -173,7 +173,7 @@ module Packing
 		destroy MoreBrews.BeerCanAPA1=24,
 		
 		Result				:24pkBeerCanAPA1,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -211,7 +211,7 @@ module Packing
 		destroy MoreBrews.BeerBottleAPA1=6,
 		
 		Result				:6pkBeerBottleAPA1,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -231,7 +231,7 @@ module Packing
 		destroy MoreBrews.BeerBottleAPA1=24,
 		
 		Result				:24pkBeerBottleAPA1,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -269,7 +269,7 @@ module Packing
 		destroy MoreBrews.BeerCanAPA2=6,
 		
 		Result				:6pkBeerCanAPA2,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -289,7 +289,7 @@ module Packing
 		destroy MoreBrews.BeerCanAPA2=24,
 		
 		Result				:24pkBeerCanAPA2,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -327,7 +327,7 @@ module Packing
 		destroy MoreBrews.BeerBottleAPA2=6,
 		
 		Result				:6pkBeerBottleAPA2,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -347,7 +347,7 @@ module Packing
 		destroy MoreBrews.BeerBottleAPA2=24,
 		
 		Result				:24pkBeerBottleAPA2,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -385,7 +385,7 @@ module Packing
 		destroy MoreBrews.BeerCanIPA1=6,
 		
 		Result				:6pkBeerCanIPA1,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -405,7 +405,7 @@ module Packing
 		destroy MoreBrews.BeerCanIPA1=24,
 		
 		Result				:24pkBeerCanIPA1,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -443,7 +443,7 @@ module Packing
 		destroy MoreBrews.BeerBottleIPA1=6,
 		
 		Result				:6pkBeerBottleIPA1,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -463,7 +463,7 @@ module Packing
 		destroy MoreBrews.BeerBottleIPA1=24,
 		
 		Result				:24pkBeerBottleIPA1,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -501,7 +501,7 @@ module Packing
 		destroy MoreBrews.BeerCanIPA2=6,
 		
 		Result				:6pkBeerCanIPA2,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -521,7 +521,7 @@ module Packing
 		destroy MoreBrews.BeerCanIPA2=24,
 		
 		Result				:24pkBeerCanIPA2,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -559,7 +559,7 @@ module Packing
 		destroy MoreBrews.BeerBottleIPA2=6,
 		
 		Result				:6pkBeerBottleIPA2,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -579,7 +579,7 @@ module Packing
 		destroy MoreBrews.BeerBottleIPA2=24,
 		
 		Result				:24pkBeerBottleIPA2,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -617,7 +617,7 @@ module Packing
 		destroy MoreBrews.BeerCanLightLager=6,
 		
 		Result				:6pkBeerCanLightLager,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -637,7 +637,7 @@ module Packing
 		destroy MoreBrews.BeerCanLightLager=24,
 		
 		Result				:24pkBeerCanLightLager,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -675,7 +675,7 @@ module Packing
 		destroy MoreBrews.BeerBottleLightLager=6,
 		
 		Result				:6pkBeerBottleLightLager,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -695,7 +695,7 @@ module Packing
 		destroy MoreBrews.BeerBottleLightLager=24,
 		
 		Result				:24pkBeerBottleLightLager,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -733,7 +733,7 @@ module Packing
 		destroy MoreBrews.BeerCanPilsner=6,
 		
 		Result				:6pkBeerCanPilsner,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -753,7 +753,7 @@ module Packing
 		destroy MoreBrews.BeerCanPilsner=24,
 		
 		Result				:24pkBeerCanPilsner,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -791,7 +791,7 @@ module Packing
 		destroy MoreBrews.BeerBottlePilsner=6,
 		
 		Result				:6pkBeerBottlePilsner,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -811,7 +811,7 @@ module Packing
 		destroy MoreBrews.BeerBottlePilsner=24,
 		
 		Result				:24pkBeerBottlePilsner,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -849,7 +849,7 @@ module Packing
 		destroy MoreBrews.BeerCanPorter=6,
 		
 		Result				:6pkBeerCanPorter,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -869,7 +869,7 @@ module Packing
 		destroy MoreBrews.BeerCanPorter=24,
 		
 		Result				:24pkBeerCanPorter,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -907,7 +907,7 @@ module Packing
 		destroy MoreBrews.BeerBottlePorter=6,
 		
 		Result				:6pkBeerBottlePorter,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -927,7 +927,7 @@ module Packing
 		destroy MoreBrews.BeerBottlePorter=24,
 		
 		Result				:24pkBeerBottlePorter,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -965,7 +965,7 @@ module Packing
 		destroy MoreBrews.BeerCanStout=6,
 		
 		Result				:6pkBeerCanStout,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -985,7 +985,7 @@ module Packing
 		destroy MoreBrews.BeerCanStout=24,
 		
 		Result				:24pkBeerCanStout,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1023,7 +1023,7 @@ module Packing
 		destroy MoreBrews.BeerBottleStout=6,
 		
 		Result				:6pkBeerBottleStout,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1043,7 +1043,7 @@ module Packing
 		destroy MoreBrews.BeerBottleStout=24,
 		
 		Result				:24pkBeerBottleStout,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1081,7 +1081,7 @@ module Packing
 		destroy MoreBrews.BeerCanSkunked=6,
 		
 		Result				:6pkBeerCanSkunked,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1101,7 +1101,7 @@ module Packing
 		destroy MoreBrews.BeerCanSkunked=24,
 		
 		Result				:24pkBeerCanSkunked,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1139,7 +1139,7 @@ module Packing
 		destroy MoreBrews.BeerBottleSkunked=6,
 		
 		Result				:6pkBeerBottleSkunked,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1159,7 +1159,7 @@ module Packing
 		destroy MoreBrews.BeerBottleSkunked=24,
 		
 		Result				:24pkBeerBottleSkunked,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1245,7 +1245,7 @@ module Packing
 		destroy MoreBrews.MaltExtractDark=5,
 		
 		Result				:5pkMaltExtractDark,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1265,7 +1265,7 @@ module Packing
 		destroy MoreBrews.MaltExtractDark=10,
 		
 		Result				:10pkMaltExtractDark,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1285,7 +1285,7 @@ module Packing
 		destroy MoreBrews.MaltExtractDark=50,
 		
 		Result				:50pkMaltExtractDark,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1341,7 +1341,7 @@ module Packing
 		destroy MoreBrews.MaltExtractLight=5,
 		
 		Result				:5pkMaltExtractLight,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1361,7 +1361,7 @@ module Packing
 		destroy MoreBrews.MaltExtractLight=10,
 		
 		Result				:10pkMaltExtractLight,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1381,7 +1381,7 @@ module Packing
 		destroy MoreBrews.MaltExtractLight=50,
 		
 		Result				:50pkMaltExtractLight,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1439,7 +1439,7 @@ module Packing
 		destroy MoreBrews.BottleCapsBag=5,
 		
 		Result				:5pkBottleCapsBag,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1459,7 +1459,7 @@ module Packing
 		destroy MoreBrews.BottleCapsBag=10,
 		
 		Result				:10pkBottleCapsBag,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1479,7 +1479,7 @@ module Packing
 		destroy MoreBrews.BottleCapsBag=50,
 		
 		Result				:50pkBottleCapsBag,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1537,7 +1537,7 @@ module Packing
 		destroy MoreBrews.HopsCascade=5,
 		
 		Result				:5pkHopsCascade,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1557,7 +1557,7 @@ module Packing
 		destroy MoreBrews.HopsCascade=10,
 		
 		Result				:10pkHopsCascade,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1577,7 +1577,7 @@ module Packing
 		destroy MoreBrews.HopsCascade=50,
 		
 		Result				:50pkHopsCascade,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1633,7 +1633,7 @@ module Packing
 		destroy MoreBrews.HopsCentennial=5,
 		
 		Result				:5pkHopsCentennial,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1653,7 +1653,7 @@ module Packing
 		destroy MoreBrews.HopsCentennial=10,
 		
 		Result				:10pkHopsCentennial,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1673,7 +1673,7 @@ module Packing
 		destroy MoreBrews.HopsCentennial=50,
 		
 		Result				:50pkHopsCentennial,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1729,7 +1729,7 @@ module Packing
 		destroy MoreBrews.HopsCitra=5,
 		
 		Result				:5pkHopsCitra,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1749,7 +1749,7 @@ module Packing
 		destroy MoreBrews.HopsCitra=10,
 		
 		Result				:10pkHopsCitra,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1769,7 +1769,7 @@ module Packing
 		destroy MoreBrews.HopsCitra=50,
 		
 		Result				:50pkHopsCitra,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1825,7 +1825,7 @@ module Packing
 		destroy MoreBrews.HopsGolding=5,
 		
 		Result				:5pkHopsGolding,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1845,7 +1845,7 @@ module Packing
 		destroy MoreBrews.HopsGolding=10,
 		
 		Result				:10pkHopsGolding,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1865,7 +1865,7 @@ module Packing
 		destroy MoreBrews.HopsGolding=50,
 		
 		Result				:50pkHopsGolding,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1921,7 +1921,7 @@ module Packing
 		destroy MoreBrews.HopsHallertau=5,
 		
 		Result				:5pkHopsHallertau,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1941,7 +1941,7 @@ module Packing
 		destroy MoreBrews.HopsHallertau=10,
 		
 		Result				:10pkHopsHallertau,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -1961,7 +1961,7 @@ module Packing
 		destroy MoreBrews.HopsHallertau=50,
 		
 		Result				:50pkHopsHallertau,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -2017,7 +2017,7 @@ module Packing
 		destroy MoreBrews.HopsMosaic=5,
 		
 		Result				:5pkHopsMosaic,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -2037,7 +2037,7 @@ module Packing
 		destroy MoreBrews.HopsMosaic=10,
 		
 		Result				:10pkHopsMosaic,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -2057,7 +2057,7 @@ module Packing
 		destroy MoreBrews.HopsMosaic=50,
 		
 		Result				:50pkHopsMosaic,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -2113,7 +2113,7 @@ module Packing
 		destroy MoreBrews.HopsNugget=5,
 		
 		Result				:5pkHopsNugget,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -2133,7 +2133,7 @@ module Packing
 		destroy MoreBrews.HopsNugget=10,
 		
 		Result				:10pkHopsNugget,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -2153,7 +2153,7 @@ module Packing
 		destroy MoreBrews.HopsNugget=50,
 		
 		Result				:50pkHopsNugget,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -2209,7 +2209,7 @@ module Packing
 		destroy MoreBrews.HopsSaaz=5,
 		
 		Result				:5pkHopsSaaz,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -2229,7 +2229,7 @@ module Packing
 		destroy MoreBrews.HopsSaaz=10,
 		
 		Result				:10pkHopsSaaz,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -2249,7 +2249,7 @@ module Packing
 		destroy MoreBrews.HopsSaaz=50,
 		
 		Result				:50pkHopsSaaz,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -2305,7 +2305,7 @@ module Packing
 		destroy MoreBrews.HopsSimcoe=5,
 		
 		Result				:5pkHopsSimcoe,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -2325,7 +2325,7 @@ module Packing
 		destroy MoreBrews.HopsSimcoe=10,
 		
 		Result				:10pkHopsSimcoe,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -2345,7 +2345,7 @@ module Packing
 		destroy MoreBrews.HopsSimcoe=50,
 		
 		Result				:50pkHopsSimcoe,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -2403,7 +2403,7 @@ module Packing
 		destroy BeerCanEmpty/[Recipe.GetItemTypes.EmptyBeerCan]=5,
 		
 		Result				:5pkEmptyBeerCans,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -2424,7 +2424,7 @@ module Packing
 		destroy BeerCanEmpty/[Recipe.GetItemTypes.EmptyBeerCan]=5,
 		
 		Result				:10pkEmptyBeerCans,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -2516,7 +2516,7 @@ module Packing
 		destroy BeerEmpty/[Recipe.GetItemTypes.EmptyBeerBottle]=5,
 		
 		Result				:5pkEmptyBeerBottles,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
@@ -2537,7 +2537,7 @@ module Packing
 		destroy BeerEmpty/[Recipe.GetItemTypes.EmptyBeerBottle]=5,
 		
 		Result				:10pkEmptyBeerBottles,
-		OnTest				:Recipe.OnTest.IsFavorite && Recipe.OnTest.Full,
+		OnTest				:Recipe.OnTest.IsFavorite,
 		Time				:75.0,
 		Category			:Storage,
 	}
