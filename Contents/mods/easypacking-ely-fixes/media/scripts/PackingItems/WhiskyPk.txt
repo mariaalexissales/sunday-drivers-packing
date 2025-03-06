@@ -9,7 +9,7 @@ module Packing
 	{
 		Weight			= 3.5,
 		Type			= Normal,
-		DisplayName		= 10 x Whiskey,
+		DisplayName		= 10 x Bourbon,
 		DisplayCategory = Food,
 		Icon			= PWhiskey,
 		WorldStaticModel= WoodenBoxOfWhiskey,
@@ -19,7 +19,7 @@ module Packing
 	{
 		Weight			= 2.45,
 		Type			= Normal,
-		DisplayName		= 5 x Whiskey,
+		DisplayName		= 5 x Bourbon,
 		DisplayCategory = Food,
 		Icon			= PWhiskey,
 		WorldStaticModel= WoodenBoxOfWhiskey,
@@ -30,6 +30,7 @@ module Packing
 		destroy WhiskeyFull=10,
 		
 		Result:10pkWhiskey,
+		OnCreate:Recipe.OnCreate.SaveHunger,
 		OnTest:Recipe.OnTest.IsFavorite,
 		Time:100.0,
 		Category:Storage,
@@ -40,6 +41,7 @@ module Packing
 		destroy 10pkWhiskey,
 		
 		Result:WhiskeyFull=10,
+		OnCreate:Recipe.OnCreate.LoadHunger,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		Time:75.0,
 		Category:Storage,
@@ -50,6 +52,7 @@ module Packing
 		destroy WhiskeyFull=5,
 		
 		Result:5pkWhiskey,
+		OnCreate:Recipe.OnCreate.SaveHunger,
 		OnTest:Recipe.OnTest.IsFavorite,
 		Time:75.0,
 		Category:Storage,
@@ -60,6 +63,7 @@ module Packing
 		destroy 5pkWhiskey,
 		
 		Result:WhiskeyFull=5,
+		OnCreate:Recipe.OnCreate.LoadHunger,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		Time:50.0,
 		Category:Storage,
