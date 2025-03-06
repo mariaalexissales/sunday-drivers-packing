@@ -172,8 +172,7 @@ local function saveItemHungerValues()
             local itemName = recipeSource:getOnlyItem()
 
             -- Check if the item is food (to avoid errors)
-            local item = scriptManager:FindItem(itemName)
-            if item and item:getTypeString() == "Food" then
+            if scriptManager:FindItem(itemName):getTypeString() == "Food" then
                 local hungerValue = item:getHungerChange()
                 local recipeResult = recipe:getResult():getFullType()
                 defaultItemHungerValues[recipeResult] = hungerValue
