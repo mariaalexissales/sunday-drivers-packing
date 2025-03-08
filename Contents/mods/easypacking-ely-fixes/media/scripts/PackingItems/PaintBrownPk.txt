@@ -29,7 +29,7 @@ module Packing
 	{
 		destroy 4pkPaintBrown,
 		
-		Result:PaintBrown,
+		Result:Base.PaintBrown=4,
 		OnCreate:Recipe.OnCreate.LoadUses,
 		RemoveResultItem:true,
 		Time:50.0,

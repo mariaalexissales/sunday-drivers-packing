@@ -57,7 +57,7 @@ AdjustWeight("Packing.4pkGreenPaint","Base.GreenPaint",4,0.5)
 AdjustWeight("Packing.4pkGreyPaint","Base.GreyPaint",4,0.5)
 AdjustWeight("Packing.4pkLightBluePaint","Base.LightBluePaint",4,0.5)
 AdjustWeight("Packing.4pkLightBrownPaint","Base.LightBrownPaint",4,0.5)
-AdjustWeight("Packing.4pkPinkaint","Base.PinkPaint",4,0.5)
+AdjustWeight("Packing.4pkPinkPaint","Base.PinkPaint",4,0.5)
 AdjustWeight("Packing.4pkPurplePaint","Base.PurplePaint",4,0.5)
 AdjustWeight("Packing.4pkRedPaint","Base.RedPaint",4,0.5)
 AdjustWeight("Packing.4pkTurquoisePaint","Base.TurquoisePaint",4,0.5)
@@ -87,9 +87,6 @@ AdjustWeight("Packing.20pkRadioReceiver","Base.RadioReceiver",20,0.5)
 AdjustWeight("Packing.20pkRadioTransmitter","Base.RadioTransmitter",20,0.5)
 AdjustWeight("Packing.10pkStone","Base.Stone",10,0.5)
 AdjustWeight("Packing.10pkSharpedStone","Base.SharpedStone",10,0.5)
-
-
-/* test items */
 AdjustWeight("Packing.10pkWhiskey","Base.WhiskeyFull",10,0.5)
 AdjustWeight("Packing.5pkWhiskey","Base.WhiskeyFull",5,0.7)
 

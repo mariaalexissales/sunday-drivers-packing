@@ -9,6 +9,7 @@ module Packing
 	{
 		Weight			= 10.0,
 		Type			= Normal,
+		DisplayCategory	= Paint,
 		DisplayName		= 4 x Orange Paint,
 		Icon			= PkPaintOrangeBox,
 		WorldStaticModel= BigPaintOrange
@@ -29,7 +30,7 @@ module Packing
 	{
 		destroy 4pkPaintOrange,
 		
-		Result:PaintOrange,
+		Result:Base.PaintOrange=4,
 		OnCreate:Recipe.OnCreate.LoadUses,
 		RemoveResultItem:true,
 		Time:50.0,
