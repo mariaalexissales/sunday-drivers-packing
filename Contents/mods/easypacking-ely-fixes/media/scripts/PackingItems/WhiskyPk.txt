@@ -30,7 +30,7 @@ module Packing
 		destroy WhiskeyFull=10,
 		
 		Result:10pkWhiskey,
-		OnCreate:Recipe.OnCreate.SaveHunger,
+		OnCreate:Recipe.OnCreate.SaveFood,
 		OnTest:Recipe.OnTest.IsFavorite,
 		Time:100.0,
 		Category:Storage,
@@ -41,7 +41,7 @@ module Packing
 		destroy 10pkWhiskey,
 		
 		Result:WhiskeyFull=10,
-		OnCreate:Recipe.OnCreate.LoadHunger,
+		OnCreate:Recipe.OnCreate.LoadFood,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		Time:75.0,
 		Category:Storage,
@@ -52,7 +52,7 @@ module Packing
 		destroy WhiskeyFull=5,
 		
 		Result:5pkWhiskey,
-		OnCreate:Recipe.OnCreate.SaveHunger,
+		OnCreate:Recipe.OnCreate.SaveFood,
 		OnTest:Recipe.OnTest.IsFavorite,
 		Time:75.0,
 		Category:Storage,
@@ -63,7 +63,7 @@ module Packing
 		destroy 5pkWhiskey,
 		
 		Result:WhiskeyFull=5,
-		OnCreate:Recipe.OnCreate.LoadHunger,
+		OnCreate:Recipe.OnCreate.LoadFood,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		Time:50.0,
 		Category:Storage,

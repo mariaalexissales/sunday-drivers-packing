@@ -38,3 +38,6 @@ function Recipe.OnTest.WholeItem(item)
 	local maxItemCondition = item:getConditionMax()
 	return item:getCondition() == maxItemCondition
 end
+
+-- addendum
+
