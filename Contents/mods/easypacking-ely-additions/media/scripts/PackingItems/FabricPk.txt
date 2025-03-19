@@ -1,0 +1,33 @@
+module Packing
+{
+    imports
+    {
+        Base,
+    }
+
+    item 500pkLeather
+    {
+        Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 500 x Leather Strips,
+		DisplayCategory = Household,
+		Icon			= PRag,
+		WorldStaticModel= StripRollSheet,
+    }
+
+    item 500pkRag
+    {
+        Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 500 x Ripped Sheets,
+		DisplayCategory = Household,
+		Icon			= PRag,
+		WorldStaticModel= StripRollSheet,
+    }
+
+    item 500pk
+    {
+        
+    }
+
+}

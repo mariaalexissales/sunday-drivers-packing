@@ -1,0 +1,72 @@
+module Packing
+{
+    imports
+    {
+        Base,
+        CDCRR
+    }
+
+    item 5pkBitezapro
+    {
+        Weight          = 0.5,
+        Type            = Normal,
+        DisplayName     = 5 x Bitezapro,
+        Icon            = PillSet5_CDCRR,
+        WorldStaticModel= Bitezapro,
+        DisplayCategory = FirstAid
+    }
+
+    item 10pkBitezapro
+    {
+        Weight          = 1.0,
+        Type            = Normal,
+        DisplayName     = 10 x Bitezapro,
+        Icon            = PillSet5_CDCRR,
+        WorldStaticModel= Bitezapro,
+        DisplayCategory = FirstAid
+    }
+
+    recipe Pack 5
+    {
+        destroy Bitezapro=5,
+
+        Result  :5pkBitezapro,
+        OnCreate:Recipe.OnCreate.SaveUses,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :75.0,
+        Category:Storage,
+    }
+
+    recipe Unpack 5
+    {
+        5pkBitezapro,
+
+        Result          :Bitezapro,
+        OnCreate        :Recipe.OnCreate.LoadUses,
+        RemoveResultItem:true,
+        Time            :120.0,
+        Category        :Storage,
+    }
+
+    recipe Pack 10
+    {
+        destroy Bitezapro=10,
+
+        Result  :10pkBitezapro,
+        OnCreate:Recipe.OnCreate.SaveUses,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :75.0,
+        Category:Storage,
+    }
+
+    recipe Unpack 10
+    {
+        10pkBitezapro,
+
+        Result          :Bitezapro,
+        OnCreate        :Recipe.OnCreate.LoadUses,
+        RemoveResultItem:true,
+        Time            :120.0,
+        Category        :Storage,
+    }
+}

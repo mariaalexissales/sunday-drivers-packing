@@ -1,0 +1,72 @@
+module Packing
+{
+    imports
+    {
+        Base,
+        CDRR
+    }
+
+    item 5pkSalivix
+    {
+        Weight              = 0.5,
+        Type                = Normal,
+        DisplayName         = 5 x Salivix,
+        Icon                = PillSet2_CDCRR,
+        WorldStaticModel 	= Salivix,
+        DisplayCategory     = FirstAid
+    }
+
+    item 10pkSalivix
+    {
+        Weight              = 1.0,
+        Type                = Normal,
+        DisplayName         = 10 x Salivix,
+        Icon                = PillSet2_CDCRR,
+        WorldStaticModel 	= Salivix,
+        DisplayCategory     = FirstAid
+    }
+
+    recipe Pack 5
+    {
+        destroy Salivix=5,
+
+        Result      :5pkSalivix,
+        OnCreate    :Recipe.OnCreate.SaveUses,
+        OnTest      :Recipe.OnTest.IsFavorite,
+        Time        :75.0,
+        Category    :Storage,
+    }
+
+    recipe Unpack 5
+    {
+        5pkSalivix,
+
+        Result          :Salivix,
+        OnCreate        :Recipe.OnCreate.LoadUses,
+        RemoveResultItem:true,
+        Time            :120.0,
+        Category        :Storage,
+    }
+
+    recipe Pack 10
+    {
+        destroy Salivix=10,
+
+        Result      :10pkSalivix,
+        OnCreate    :Recipe.OnCreate.SaveUses,
+        OnTest      :Recipe.OnTest.IsFavorite,
+        Time        :75.0,
+        Category    :Storage,
+    }
+
+    recipe Unpack 10
+    {
+        10pkSalivix,
+
+        Result          :Salivix,
+        OnCreate        :Recipe.OnCreate.LoadUses,
+        RemoveResultItem:true,
+        Time            :120.0,
+        Category        :Storage,
+    }
+}

@@ -1,0 +1,72 @@
+module Packing
+{
+    imports
+    {
+        Base,
+        CDRR
+    }
+
+    item 5pkHumanox
+    {
+        Weight              = 0.5,
+        Type                = Normal,
+        DisplayName         = 5 x Humanox,
+        Icon                = PillSet1_CDCRR,
+        WorldStaticModel 	= Humanox,
+        DisplayCategory     = FirstAid
+    }
+
+    item 10pkHumanox
+    {
+        Weight              = 1.0,
+        Type                = Normal,
+        DisplayName         = 10 x Humanox,
+        Icon                = PillSet1_CDCRR,
+        WorldStaticModel 	= Humanox,
+        DisplayCategory     = FirstAid
+    }
+
+    recipe Pack 5
+    {
+        destroy Humanox=5,
+
+        Result:5pkHumanox,
+        OnCreate:Recipe.OnCreate.SaveUses,
+        OnTest:Recipe.OnTest.IsFavorite,
+        Time:75.0,
+        Category:Storage,
+    }
+
+    recipe Unpack 5
+    {
+        5pkHumanox,
+
+        Result:Humanox,
+        OnCreate:Recipe.OnCreate.LoadUses,
+        RemoveResultItem:true,
+        Time:120.0,
+        Category:Storage,
+    }
+
+    recipe Pack 10
+    {
+        destroy Humanox=10,
+
+        Result:10pkHumanox,
+        OnCreate:Recipe.OnCreate.SaveUses,
+        OnTest:Recipe.OnTest.IsFavorite,
+        Time:75.0,
+        Category:Storage,
+    }
+
+    recipe Unpack 10
+    {
+        10pkHumanox,
+
+        Result:Humanox,
+        OnCreate:Recipe.OnCreate.LoadUses,
+        RemoveResultItem:true,
+        Time:120.0,
+        Category:Storage,
+    }
+}
