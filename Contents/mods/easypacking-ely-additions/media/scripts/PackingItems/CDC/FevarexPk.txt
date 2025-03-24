@@ -6,7 +6,7 @@ module Packing
         CDCRR
     }
 
-    tem 5pkFevarax
+    item 5pkFevarax
     {
         Weight              = 0.5,
         Type                = Normal,
