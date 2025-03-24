@@ -60,9 +60,9 @@ module Packing
     {
         10pkSovextin,
 
-        Result          :Sovextin=10,
-        Time            :120.0,
-        Category        :Storage,
+        Result  :Sovextin=10,
+        Time    :120.0,
+        Category:Storage,
     }
 
     recipe Put Together
