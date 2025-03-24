@@ -28,6 +28,7 @@ module Packing
 		destroy BlackSage=10,
 		
 		Result	:10pkBlackSage,
+		OnCreate:Recipe.OnCreate.SaveFood,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:45.0,
 		Category:Storage,
@@ -38,6 +39,7 @@ module Packing
 		destroy 10pkBlackSage,
 		
 		Result	:BlackSage=10,
+		OnCreate:Recipe.OnCreate.LoadFood,
 		Time	:45.0,
 		Category:Storage,
 	}
@@ -47,6 +49,7 @@ module Packing
 		destroy BlackSage=40,
 		
 		Result	:40pkBlackSage,
+		OnCreate:Recipe.OnCreate.SaveFood,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:22.5,
 		Category:Storage,
@@ -57,6 +60,7 @@ module Packing
 		destroy 40pkBlackSage,
 		
 		Result	:BlackSage=40,
+		OnCreate:Recipe.OnCreate.LoadFood,
 		Time	:22.5,
 		Category:Storage,
 	}
