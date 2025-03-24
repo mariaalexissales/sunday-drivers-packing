@@ -19,7 +19,7 @@ module Packing
     item 10pkPearBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Pear Seeds Packet,
+        DisplayName         = 10 x Pear Seeds Packet,
         Icon                = SeedPacketPear,
         Weight              = 0.5,
         SurvivalGear        = True,

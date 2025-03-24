@@ -30,10 +30,10 @@ module Packing
     {
         destroy Humanox=5,
 
-        Result:5pkHumanox,
+        Result  :5pkHumanox,
         OnCreate:Recipe.OnCreate.SaveUses,
-        OnTest:Recipe.OnTest.IsFavorite,
-        Time:75.0,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :75.0,
         Category:Storage,
     }
 
@@ -41,21 +41,21 @@ module Packing
     {
         5pkHumanox,
 
-        Result:Humanox,
-        OnCreate:Recipe.OnCreate.LoadUses,
+        Result          :Humanox,
+        OnCreate        :Recipe.OnCreate.LoadUses,
         RemoveResultItem:true,
-        Time:120.0,
-        Category:Storage,
+        Time            :75.0,
+        Category        :Storage,
     }
 
     recipe Pack 10
     {
         destroy Humanox=10,
 
-        Result:10pkHumanox,
+        Result  :10pkHumanox,
         OnCreate:Recipe.OnCreate.SaveUses,
-        OnTest:Recipe.OnTest.IsFavorite,
-        Time:75.0,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :120.0,
         Category:Storage,
     }
 
@@ -63,10 +63,26 @@ module Packing
     {
         10pkHumanox,
 
-        Result:Humanox,
-        OnCreate:Recipe.OnCreate.LoadUses,
+        Result          :Humanox,
+        OnCreate        :Recipe.OnCreate.LoadUses,
         RemoveResultItem:true,
-        Time:120.0,
-        Category:Storage,
+        Time            :120.0,
+        Category        :Storage,
+    }
+
+    recipe Put Together
+    {
+        5pkHumanox=2,
+
+        Result  :10pkHumanox,
+        Time    :75.0
+    }
+
+    recipe Split in Two
+    {
+        10pkHumanox,
+
+        Result  :5pkHumanox=2,
+        Time    :75.0
     }
 }

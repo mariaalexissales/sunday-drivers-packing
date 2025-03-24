@@ -19,7 +19,7 @@ module Packing
     item 10pkPepperJalapenoBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x PepperJalapeno Seeds Packet,
+        DisplayName         = 10 x PepperJalapeno Seeds Packet,
         Icon                = SeedPacketPepperJalapeno,
         Weight              = 0.5,
         SurvivalGear        = True,

@@ -19,7 +19,7 @@ module Packing
     item 10pkZucchiniBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Zucchini Seeds Packet,
+        DisplayName         = 10 x Zucchini Seeds Packet,
         Icon                = SeedPacketZucchini,
         Weight              = 0.5,
         SurvivalGear        = True,

@@ -19,7 +19,7 @@ module Packing
     item 10pkGrapeBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Grape Seeds Packet,
+        DisplayName         = 10 x Grape Seeds Packet,
         Icon                = SeedPacketGrapes,
         Weight              = 0.5,
         SurvivalGear        = True,

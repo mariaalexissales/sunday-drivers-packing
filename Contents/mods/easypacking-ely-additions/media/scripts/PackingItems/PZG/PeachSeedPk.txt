@@ -19,7 +19,7 @@ module Packing
     item 10pkPeachBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Peach Seeds Packet,
+        DisplayName         = 10 x Peach Seeds Packet,
         Icon                = SeedPacketPeach,
         Weight              = 0.5,
         SurvivalGear        = True,

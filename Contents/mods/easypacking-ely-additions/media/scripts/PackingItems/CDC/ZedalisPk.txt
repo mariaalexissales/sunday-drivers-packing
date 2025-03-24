@@ -44,7 +44,7 @@ module Packing
         Result          :Zedalis,
         OnCreate        :Recipe.OnCreate.LoadUses,
         RemoveResultItem:true,
-        Time            :120.0,
+        Time            :75.0,
         Category        :Storage,
     }
 
@@ -55,18 +55,34 @@ module Packing
         Result      :10pkZedalis,
         OnCreate    :Recipe.OnCreate.SaveUses,
         OnTest      :Recipe.OnTest.IsFavorite,
-        Time        :75.0,
-    Category        :Storage,
+        Time        :120.0,
+        Category    :Storage,
     }
 
     recipe Unpack 10
     {
         10pkZedalis,
 
-        Result:Zedalis,
-        OnCreate:Recipe.OnCreate.LoadUses,
+        Result          :Zedalis,
+        OnCreate        :Recipe.OnCreate.LoadUses,
         RemoveResultItem:true,
-        Time:120.0,
-        Category:Storage,
+        Time            :120.0,
+        Category        :Storage,
+    }
+
+    recipe Put Together
+    {
+        5pkZedalis=2,
+
+        Result  :10pkZedalis,
+        Time    :75.0
+    }
+
+    recipe Split in Two
+    {
+        10pkZedalis,
+
+        Result  :5pkZedalis=2,
+        Time    :75.0
     }
 }

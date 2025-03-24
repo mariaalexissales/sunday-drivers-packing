@@ -19,7 +19,7 @@ module Packing
     item 10pkPineappleBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Pineapple Seeds Packet,
+        DisplayName         = 10 x Pineapple Seeds Packet,
         Icon                = SeedPacketPineapple,
         Weight              = 0.5,
         SurvivalGear        = True,

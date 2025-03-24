@@ -19,7 +19,7 @@ module Packing
     item 10pkLeekBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Leek Seeds Packet,
+        DisplayName         = 10 x Leek Seeds Packet,
         Icon                = SeedPacketLeek,
         Weight              = 0.5,
         SurvivalGear        = True,

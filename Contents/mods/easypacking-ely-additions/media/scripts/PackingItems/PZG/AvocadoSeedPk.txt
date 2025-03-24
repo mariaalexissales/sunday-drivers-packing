@@ -19,7 +19,7 @@ module Packing
     item 10pkAvocadoBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Avocado Seeds Packet,
+        DisplayName         = 10 x Avocado Seeds Packet,
         Icon                = SeedPacketAvocado,
         Weight              = 0.5,
         SurvivalGear        = True,

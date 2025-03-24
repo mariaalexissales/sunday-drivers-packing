@@ -19,7 +19,7 @@ module Packing
     item 10pkCornBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Corn Seeds Packet,
+        DisplayName         = 10 x Corn Seeds Packet,
         Icon                = SeedPacketCorn,
         Weight              = 0.5,
         SurvivalGear        = True,

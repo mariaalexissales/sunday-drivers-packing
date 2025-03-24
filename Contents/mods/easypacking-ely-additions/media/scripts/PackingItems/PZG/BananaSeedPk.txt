@@ -19,7 +19,7 @@ module Packing
     item 10pkBananaBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Banana Seeds Packet,
+        DisplayName         = 10 x Banana Seeds Packet,
         Icon                = SeedPacketBanana,
         Weight              = 0.5,
         SurvivalGear        = True,

@@ -19,7 +19,7 @@ module Packing
     item 10pkBlackbeansBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Black Bean Seeds Packet,
+        DisplayName         = 10 x Black Bean Seeds Packet,
         Icon                = SeedPacketBlackbeans,
         Weight              = 0.5,
         SurvivalGear        = True,

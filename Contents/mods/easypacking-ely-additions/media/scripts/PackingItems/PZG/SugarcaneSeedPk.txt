@@ -19,7 +19,7 @@ module Packing
     item 10pkSugarcaneBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Sugarcane Seeds Packet,
+        DisplayName         = 10 x Sugarcane Seeds Packet,
         Icon                = SeedPacketSugarcane,
         Weight              = 0.5,
         SurvivalGear        = True,

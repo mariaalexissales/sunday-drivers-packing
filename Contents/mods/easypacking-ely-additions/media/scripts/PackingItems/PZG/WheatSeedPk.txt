@@ -19,7 +19,7 @@ module Packing
     item 10pkWheatBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Wheat Seeds Packet,
+        DisplayName         = 10 x Wheat Seeds Packet,
         Icon                = SeedPacketWheat,
         Weight              = 0.5,
         SurvivalGear        = True,

@@ -19,7 +19,7 @@ module Packing
     item 10pkCucumberBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Cucumber Seeds Packet,
+        DisplayName         = 10 x Cucumber Seeds Packet,
         Icon                = SeedPacketCucumber,
         Weight              = 0.5,
         SurvivalGear        = True,

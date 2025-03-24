@@ -19,7 +19,7 @@ module Packing
     item 10pkBlackberryBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Blackberry Seeds Packet,
+        DisplayName         = 10 x Blackberry Seeds Packet,
         Icon                = SeedPacketBlackberry,
         Weight              = 0.5,
         SurvivalGear        = True,

@@ -19,7 +19,7 @@ module Packing
     item 10pkMangoBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Mango Seeds Packet,
+        DisplayName         = 10 x Mango Seeds Packet,
         Icon                = SeedPacketMango,
         Weight              = 0.5,
         SurvivalGear        = True,

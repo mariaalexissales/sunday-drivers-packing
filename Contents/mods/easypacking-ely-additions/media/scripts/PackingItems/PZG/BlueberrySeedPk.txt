@@ -19,7 +19,7 @@ module Packing
     item 10pkBlueberryBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Blueberry Seeds Packet,
+        DisplayName         = 10 x Blueberry Seeds Packet,
         Icon                = SeedPacketBlueberry,
         Weight              = 0.5,
         SurvivalGear        = True,

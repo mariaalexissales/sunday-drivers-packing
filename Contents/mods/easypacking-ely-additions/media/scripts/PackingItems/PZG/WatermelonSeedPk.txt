@@ -19,7 +19,7 @@ module Packing
     item 10pkWatermelonBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Watermelon Seeds Packet,
+        DisplayName         = 10 x Watermelon Seeds Packet,
         Icon                = SeedPacketWatermelon,
         Weight              = 0.5,
         SurvivalGear        = True,

@@ -19,7 +19,7 @@ module Packing
     item 10pkDaikonBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Daikon Seeds Packet,
+        DisplayName         = 10 x Daikon Seeds Packet,
         Icon                = SeedPacketDaikon,
         Weight              = 0.5,
         SurvivalGear        = True,

@@ -19,7 +19,7 @@ module Packing
     item 10pkEdamameBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Edamame Seeds Packet,
+        DisplayName         = 10 x Edamame Seeds Packet,
         Icon                = SeedPacketEdamame,
         Weight              = 0.5,
         SurvivalGear        = True,

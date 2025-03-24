@@ -19,7 +19,7 @@ module Packing
     item 10pkLettuceBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Lettuce Seeds Packet,
+        DisplayName         = 10 x Lettuce Seeds Packet,
         Icon                = SeedPacketLettuce,
         Weight              = 0.5,
         SurvivalGear        = True,

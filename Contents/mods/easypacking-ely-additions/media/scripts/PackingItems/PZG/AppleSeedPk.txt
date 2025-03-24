@@ -19,7 +19,7 @@ module Packing
     item 10pkAppleBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Apple Seeds Packet,
+        DisplayName         = 10 x Apple Seeds Packet,
         Icon                = SeedPacketApple,
         Weight              = 0.5,
         SurvivalGear        = True,

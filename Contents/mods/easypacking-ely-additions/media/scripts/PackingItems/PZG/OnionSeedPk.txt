@@ -19,7 +19,7 @@ module Packing
     item 10pkOnionBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Onion Seeds Packet,
+        DisplayName         = 10 x Onion Seeds Packet,
         Icon                = SeedPacketOnion,
         Weight              = 0.5,
         SurvivalGear        = True,

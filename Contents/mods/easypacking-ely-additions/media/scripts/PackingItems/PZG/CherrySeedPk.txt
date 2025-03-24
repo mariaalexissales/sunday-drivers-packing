@@ -19,7 +19,7 @@ module Packing
     item 10pkCherryBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Cherry Seeds Packet,
+        DisplayName         = 10 x Cherry Seeds Packet,
         Icon                = SeedPacketCherry,
         Weight              = 0.5,
         SurvivalGear        = True,

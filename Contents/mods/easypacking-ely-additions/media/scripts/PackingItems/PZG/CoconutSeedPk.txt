@@ -19,7 +19,7 @@ module Packing
     item 10pkCoconutBagSeed
     {
         DisplayCategory     = Gardening,
-        DisplayName         = 5 x Coconut Seeds Packet,
+        DisplayName         = 10 x Coconut Seeds Packet,
         Icon                = SeedPacketCoconut,
         Weight              = 0.5,
         SurvivalGear        = True,
