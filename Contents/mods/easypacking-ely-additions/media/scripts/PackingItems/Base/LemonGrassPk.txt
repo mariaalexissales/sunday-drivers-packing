@@ -27,9 +27,10 @@ module Packing
 	{
 		destroy LemonGrass=10,
 		
-		Result:10pkLemonGrass,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:45.0,
+		Result	:10pkLemonGrass,
+		OnCreate:Recipe.OnCreate.SaveFood,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:45.0,
 		Category:Storage,
 	}
 	
@@ -37,8 +38,9 @@ module Packing
 	{
 		destroy 10pkLemonGrass,
 		
-		Result:LemonGrass=10,
-		Time:45.0,
+		Result	:LemonGrass=10,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		Time	:45.0,
 		Category:Storage,
 	}
 	
@@ -46,9 +48,10 @@ module Packing
 	{
 		destroy LemonGrass=40,
 		
-		Result:40pkLemonGrass,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:22.5,
+		Result	:40pkLemonGrass,
+		OnCreate:Recipe.OnCreate.SaveFood,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:22.5,
 		Category:Storage,
 	}
 	
@@ -56,8 +59,9 @@ module Packing
 	{
 		destroy 40pkLemonGrass,
 		
-		Result:LemonGrass=40,
-		Time:22.5,
+		Result	:LemonGrass=40,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		Time	:22.5,
 		Category:Storage,
 	}
 
@@ -65,15 +69,15 @@ module Packing
 	{
 		10pkLemonGrass=4,
 		
-		Result:40pkLemonGrass=1,
-		Time:7.5,
+		Result	:40pkLemonGrass=1,
+		Time	:7.5,
 	}
 
 	recipe Split in Four
 	{
 		40pkLemonGrass=1,
 		
-		Result:10pkLemonGrass=4,
-		Time:7.5,
+		Result	:10pkLemonGrass=4,
+		Time	:7.5,
 	}
 }
