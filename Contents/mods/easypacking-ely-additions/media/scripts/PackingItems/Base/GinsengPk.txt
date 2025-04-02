@@ -39,6 +39,7 @@ module Packing
 		destroy 10pkGinseng,
 		
 		Result	:Ginseng=10,
+		OnCreate:Recipe.OnCreate.LoadFood,
 		Time	:45.0,
 		Category:Storage,
 	}
@@ -48,6 +49,7 @@ module Packing
 		destroy Ginseng=40,
 		
 		Result	:40pkGinseng,
+		OnCreate:Recipe.OnCreate.SaveFood,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:22.5,
 		Category:Storage,
@@ -58,6 +60,7 @@ module Packing
 		destroy 40pkGinseng,
 		
 		Result	:Ginseng=40,
+		OnCreate:Recipe.OnCreate.LoadFood,
 		Time	:22.5,
 		Category:Storage,
 	}
