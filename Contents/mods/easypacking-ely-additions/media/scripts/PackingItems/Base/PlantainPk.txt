@@ -27,9 +27,10 @@ module Packing
 	{
 		destroy Plantain=10,
 		
-		Result:10pkPlantain,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:45.0,
+		Result	:10pkPlantain,
+		OnCreate:Recipe.OnCreate.SaveFood,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:45.0,
 		Category:Storage,
 	}
 	
@@ -37,8 +38,9 @@ module Packing
 	{
 		destroy 10pkPlantain,
 		
-		Result:Plantain=10,
-		Time:45.0,
+		Result	:Plantain=10,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		Time	:45.0,
 		Category:Storage,
 	}
 	
@@ -46,9 +48,10 @@ module Packing
 	{
 		destroy Plantain=40,
 		
-		Result:40pkPlantain,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:22.5,
+		Result	:40pkPlantain,
+		OnCreate:Recipe.OnCreate.SaveFood,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:22.5,
 		Category:Storage,
 	}
 	
@@ -56,8 +59,9 @@ module Packing
 	{
 		destroy 40pkPlantain,
 		
-		Result:Plantain=40,
-		Time:22.5,
+		Result	:Plantain=40,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		Time	:22.5,
 		Category:Storage,
 	}
 
@@ -65,15 +69,15 @@ module Packing
 	{
 		10pkPlantain=4,
 		
-		Result:40pkPlantain=1,
-		Time:7.5,
+		Result	:40pkPlantain=1,
+		Time	:7.5,
 	}
 
 	recipe Split in Four
 	{
 		40pkPlantain=1,
 		
-		Result:10pkPlantain=4,
-		Time:7.5,
+		Result	:10pkPlantain=4,
+		Time	:7.5,
 	}
 }
