@@ -10,7 +10,7 @@ module Packing
     {
         DisplayCategory     = FirstAid,
         Weight              = 0.05,
-        DisplayName         = 5 x Viazom Syrette,
+        DisplayName         = 5 x Viazom Inhalant,
         Icon                = Inhalant_CDCRR,
         WorldStaticModel    = Viazom,
         Tooltip             = Tooltip_CDCRR_Viazom
@@ -20,7 +20,7 @@ module Packing
     {
         DisplayCategory     = FirstAid,
         Weight              = 0.1,
-        DisplayName         = 10 x Viazom Syrette,
+        DisplayName         = 10 x Viazom Inhalant,
         Icon                = Inhalant_CDCRR,
         WorldStaticModel    = Viazom,
         Tooltip             = Tooltip_CDCRR_Viazom
@@ -41,7 +41,6 @@ module Packing
         5pkViazom,
 
         Result          :Viazom=5,
-        RemoveResultItem:true,
         Time            :75.0,
         Category        :Storage,
     }
