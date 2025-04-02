@@ -1,7 +1,7 @@
 version=1
-id=3438618912
-title=Easy Packing Fixes for Sunday Drivers by Elyxaria
+id=3456541999
+title=Easy Packing for Sunday Drivers by Elyxaria
 description=attempt at fixing chunk rot
 description=mentally and physically need help atm
-tags=
+tags=Build 40;Build 41;Balance;Multiplayer
 visibility=public
