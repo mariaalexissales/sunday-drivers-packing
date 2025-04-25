@@ -23,8 +23,9 @@ This mod extends the original **Easy Packing** framework with server-focused imp
 ---
 
 ### 🚧 TODO / Planned Features
-- [ ] Additional mod compatibility testing  
 - [ ] Configurable nutrition retention (optional toggle)
 - [ ] Sapph's Cooking Mod compatibility
+- [ ] SD Soulforged Items Compatibility
+- [ ] Firearm Kits Compatibility (Hayes Firearms)
 - [ ] Other item mod compatibility (leaning towards ammo and other food items)
 
