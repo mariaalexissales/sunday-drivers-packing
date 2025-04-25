@@ -1,0 +1,82 @@
+module Packing
+{
+    imports
+    {
+        Base,
+        SoulForge
+    }
+
+    item 5pkEnduranceMod
+    {
+        Weight          = 0.05
+        Type            = Normal,
+        DisplayName     = 5 x Augment Endurance Modifier,
+        Icon            = BusTicket,
+        WorldStaticModel= PaperNapkins_Ground,
+        DisplayCategory = SoulForge
+    }
+
+    item 10pkEnduranceMod
+    {
+        Weight          = 0.1
+        Type            = Normal,
+        DisplayName     = 10 x Augment Endurance Modifier,
+        Icon            = BusTicket,
+        WorldStaticModel= PaperNapkins_Ground,
+        DisplayCategory = SoulForge
+    }
+
+    recipe Pack 5
+    {
+        destroy EnduranceModTicket=5,
+    
+        Result  :5pkEnduranceMod,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :5.0,
+        Category:Storage
+    }
+
+    recipe Unpack 5
+    {
+        destroy 5pkEnduranceMod,
+
+        Result  :EnduranceModTicket=5,
+        Time    :5.0,
+        Category:Storage
+    }
+
+    recipe Pack 10
+    {
+        destroy EnduranceModTicket=10,
+
+        Result  :10pkEnduranceMod,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :10.0,
+        Category:Storage
+    }
+
+    recipe Unpack 10
+    {
+        destroy 10pkEnduranceMod,
+
+        Result  :EnduranceModTicket=10,
+        Time    :10.0,
+        Category:Storage
+    }
+
+    recipe Put Together
+    {
+        5pkEnduranceMod=2,
+
+        Result  :10pkEnduranceMod=1,
+        Time    :5.0
+    }
+
+    recipe Split
+    {
+        10pkEnduranceMod,
+
+        Result  :5pkEnduranceMod=2,
+        Time    :5.0
+    }
+}

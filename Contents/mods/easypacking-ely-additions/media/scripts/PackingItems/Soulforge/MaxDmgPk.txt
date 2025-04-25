@@ -1,0 +1,82 @@
+module Packing
+{
+    imports
+    {
+        Base,
+        SoulForge
+    }
+
+    item 5pkMaxDmg
+    {
+        Weight          = 0.05
+        Type            = Normal,
+        DisplayName     = 5 x Augment Maximum Damage,
+        Icon            = BusTicket,
+        WorldStaticModel= PaperNapkins_Ground,
+        DisplayCategory = SoulForge
+    }
+
+    item 10pkMaxDmg
+    {
+        Weight          = 0.1
+        Type            = Normal,
+        DisplayName     = 10 x Augment Maximum Damage,
+        Icon            = BusTicket,
+        WorldStaticModel= PaperNapkins_Ground,
+        DisplayCategory = SoulForge
+    }
+
+    recipe Pack 5
+    {
+        destroy MaxDmgTicket=5,
+    
+        Result  :5pkMaxDmg,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :5.0,
+        Category:Storage
+    }
+
+    recipe Unpack 5
+    {
+        destroy 5pkMaxDmg,
+
+        Result  :MaxDmgTicket=5,
+        Time    :5.0,
+        Category:Storage
+    }
+
+    recipe Pack 10
+    {
+        destroy MaxDmgTicket=10,
+
+        Result  :10pkMaxDmg,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :10.0,
+        Category:Storage
+    }
+
+    recipe Unpack 10
+    {
+        destroy 10pkMaxDmg,
+
+        Result  :MaxDmgTicket=10,
+        Time    :10.0,
+        Category:Storage
+    }
+
+    recipe Put Together
+    {
+        5pkMaxDmg=2,
+
+        Result  :10pkMaxDmg=1,
+        Time    :5.0
+    }
+
+    recipe Split
+    {
+        10pkMaxDmg,
+
+        Result  :5pkMaxDmg=2,
+        Time    :5.0
+    }
+}

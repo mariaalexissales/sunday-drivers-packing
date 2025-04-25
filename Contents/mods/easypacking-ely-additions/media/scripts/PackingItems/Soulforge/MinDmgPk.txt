@@ -1,0 +1,82 @@
+module Packing
+{
+    imports
+    {
+        Base,
+        SoulForge
+    }
+
+    item 5pkMinDmg
+    {
+        Weight          = 0.05
+        Type            = Normal,
+        DisplayName     = 5 x Augment Minimum Damage,
+        Icon            = BusTicket,
+        WorldStaticModel= PaperNapkins_Ground,
+        DisplayCategory = SoulForge
+    }
+
+    item 10pkMinDmg
+    {
+        Weight          = 0.1
+        Type            = Normal,
+        DisplayName     = 10 x Augment Minimum Damage,
+        Icon            = BusTicket,
+        WorldStaticModel= PaperNapkins_Ground,
+        DisplayCategory = SoulForge
+    }
+
+    recipe Pack 5
+    {
+        destroy MinDmgTicket=5,
+
+        Result  :5pkMinDmg,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :5.0,
+        Category:Storage
+    }
+
+    recipe Unpack 5
+    {
+        destroy 5pkMinDmg,
+
+        Result  :MinDmgTicket=5,
+        Time    :5.0,
+        Category:Storage
+    }
+
+    recipe Pack 10
+    {
+        destroy MinDmgTicket=10,
+
+        Result  :10pkMinDmg,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :10.0,
+        Category:Storage
+    }
+
+    recipe Unpack 10
+    {
+        destroy 10pkMinDmg,
+
+        Result  :MinDmgTicket=10,
+        Time    :10.0,
+        Category:Storage
+    }
+
+    recipe Put Together
+    {
+        5pkMinDmg=2,
+
+        Result  :10pkMinDmg=1,
+        Time    :5.0
+    }
+
+    recipe Split
+    {
+        10pkMinDmg,
+
+        Result  :5pkMinDmg=2,
+        Time    :5.0
+    }
+}

@@ -1,0 +1,82 @@
+module Packing
+{
+    imports
+    {
+        Base,
+        SoulForge
+    }
+
+    item 5pkCritChance
+    {
+        Weight          = 0.05
+        Type            = Normal,
+        DisplayName     = 5 x Augment Critical Chance,
+        Icon            = BusTicket,
+        WorldStaticModel= PaperNapkins_Ground,
+        DisplayCategory = SoulForge
+    }
+
+    item 10pkCritChance
+    {
+        Weight          = 0.1
+        Type            = Normal,
+        DisplayName     = 10 x Augment Critical Chance,
+        Icon            = BusTicket,
+        WorldStaticModel= PaperNapkins_Ground,
+        DisplayCategory = SoulForge
+    }
+
+    recipe Pack 5
+    {
+        destroy CritChanceTicket=5,
+    
+        Result  :5pkCritChance,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :5.0,
+        Category:Storage
+    }
+
+    recipe Unpack 5
+    {
+        destroy 5pkCritChance,
+
+        Result  :CritChanceTicket=5,
+        Time    :5.0,
+        Category:Storage
+    }
+
+    recipe Pack 10
+    {
+        destroy CritChanceTicket=10,
+
+        Result  :10pkCritChance,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :10.0,
+        Category:Storage
+    }
+
+    recipe Unpack 10
+    {
+        destroy 10pkCritChance,
+
+        Result  :CritChanceTicket=10,
+        Time    :10.0,
+        Category:Storage
+    }
+
+    recipe Put Together
+    {
+        5pkCritChance=2,
+
+        Result  :10pkCritChance=1,
+        Time    :5.0
+    }
+
+    recipe Split
+    {
+        10pkCritChance,
+
+        Result  :5pkCritChance=2,
+        Time    :5.0
+    }
+}
