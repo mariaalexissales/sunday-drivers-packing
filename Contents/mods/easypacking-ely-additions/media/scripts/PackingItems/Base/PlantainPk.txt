@@ -40,6 +40,7 @@ module Packing
 		
 		Result	:Plantain=10,
 		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
 		Time	:45.0,
 		Category:Storage,
 	}
@@ -61,6 +62,7 @@ module Packing
 		
 		Result	:Plantain=40,
 		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
 		Time	:22.5,
 		Category:Storage,
 	}

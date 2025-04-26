@@ -26,6 +26,16 @@ module Packing
         DisplayCategory = SoulForge
     }
 
+    item 50pkMinDmg
+    {
+        Weight          = 0.5
+        Type            = Normal,
+        DisplayName     = 50 x Augment Minimum Damage,
+        Icon            = BusTicket,
+        WorldStaticModel= PaperNapkins_Ground,
+        DisplayCategory = SoulForge
+    }
+
     recipe Pack 5
     {
         destroy MinDmgTicket=5,
@@ -61,6 +71,25 @@ module Packing
 
         Result  :MinDmgTicket=10,
         Time    :10.0,
+        Category:Storage
+    }
+
+    recipe Pack 50
+    {
+        destroy MinDmgTicket=50,
+
+        Result  :50pkMinDmg,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 50
+    {
+        destroy 50pkMinDmg,
+
+        Result  :MinDmgTicket=50,
+        Time    :50.0,
         Category:Storage
     }
 

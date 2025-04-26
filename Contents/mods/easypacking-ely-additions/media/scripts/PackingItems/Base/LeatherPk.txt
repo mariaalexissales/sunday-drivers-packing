@@ -11,8 +11,8 @@ module Packing
 		Type			= Normal,
 		DisplayName		= 500 x Leather Strips,
 		DisplayCategory = Household,
-		Icon			= PRag,
-		WorldStaticModel= StripRollSheet,
+		Icon			= PLeatherStrips,
+		WorldStaticModel= StripRollLeather,
     }
 
     recipe Pack 500
