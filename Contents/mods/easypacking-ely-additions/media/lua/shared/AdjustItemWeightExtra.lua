@@ -42,6 +42,7 @@ local function Perform()
         end
     end
 end
+
 --add for every packed item: Name, BaseName,Amount,Multiplier. Scroll up for for multiplier
 AdjustWeight("Packing.50pkleadpipe","Base.LeadPipe",50,0.5)
 AdjustWeight("Packing.10pkleadpipe","Base.LeadPipe",10,0.5)

@@ -11,8 +11,8 @@ module Packing
 		Type			= Normal,
 		DisplayName		= 500 x Ripped Sheets,
 		DisplayCategory = Household,
-		Icon			= PLeatherSTrips,
-		WorldStaticModel= StripRollLeather,
+		Icon			= PRag,
+		WorldStaticModel= StripRollSheet,
     }
 
     recipe Pack 500
