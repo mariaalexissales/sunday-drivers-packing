@@ -38,11 +38,11 @@ module Packing
 	{
 		destroy 10pkPlantain,
 		
-		Result	:Plantain=10,
-		OnCreate:Recipe.OnCreate.LoadFood,
+		Result			:Plantain=10,
+		OnCreate		:Recipe.OnCreate.LoadFood,
 		RemoveResultItem:true,
-		Time	:45.0,
-		Category:Storage,
+		Time			:45.0,
+		Category		:Storage,
 	}
 	
 	recipe Pack 40
@@ -60,11 +60,12 @@ module Packing
 	{
 		destroy 40pkPlantain,
 		
-		Result	:Plantain=40,
-		OnCreate:Recipe.OnCreate.LoadFood,
+		Result			:Plantain=40,
+		OnCreate		:Recipe.OnCreate.LoadFood,
 		RemoveResultItem:true,
-		Time	:22.5,
-		Category:Storage,
+		Time			:22.5,
+		Category		:Storage,
+
 	}
 
 	recipe Put Together
