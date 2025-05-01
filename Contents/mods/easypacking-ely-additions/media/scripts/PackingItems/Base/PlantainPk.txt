@@ -65,6 +65,7 @@ module Packing
 		RemoveResultItem:true,
 		Time			:22.5,
 		Category		:Storage,
+
 	}
 
 	recipe Put Together

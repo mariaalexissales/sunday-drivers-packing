@@ -62,6 +62,7 @@ module Packing
 		
 		Result	:CommonMallow=40,
 		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
 		Time	:22.5,
 		Category:Storage,
 	}

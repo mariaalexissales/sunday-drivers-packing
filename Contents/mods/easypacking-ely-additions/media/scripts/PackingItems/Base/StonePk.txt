@@ -31,7 +31,5 @@ module Packing
 		Result:Stone=10,
 		Time:45.0,
 		Category:Storage,
-	}
-	
-	
+	}	
 }

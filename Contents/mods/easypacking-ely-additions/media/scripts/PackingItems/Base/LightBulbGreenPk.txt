@@ -26,11 +26,10 @@ module Packing
 	
 	recipe Unpack 20
 	{
-		destroy 24pkLightBulbGreen,
+		destroy 20pkLightBulbGreen,
 		
 		Result:LightBulbGreen=20,
 		Time:40.0,
 		Category:Storage,
 	}
-
 }
