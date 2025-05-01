@@ -7,18 +7,18 @@ module Packing
 	
 	item 500pkScrapMetal
 	{
+		DisplayName		= 500 x ScrapMetal,
 		Weight			= 25.0,
 		Type			= Normal,
-		DisplayName		= 500 x ScrapMetal,
 		Icon			= PkScrapMetalBigBox,
 		WorldStaticModel= BigScrapMetal
 	}
 	
 	item 100pkScrapMetal
 	{
+		DisplayName		= 100 x ScrapMetal,
 		Weight			= 5.0,
 		Type			= Normal,
-		DisplayName		= 100 x ScrapMetal,
 		Icon			= PkScrapMetalMediumBox,
 		WorldStaticModel= MediumScrapMetal
 	}

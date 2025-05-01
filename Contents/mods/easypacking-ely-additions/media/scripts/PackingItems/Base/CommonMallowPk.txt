@@ -7,18 +7,18 @@ module Packing
 	
 	item 10pkCommonMallow
 	{
+		DisplayName		= 10 x CommonMallow,
 		Weight			= 0.5,
 		Type			= Normal,
-		DisplayName		= 10 x CommonMallow,
 		Icon			= PkCommonMallowSmallBox,
 		WorldStaticModel= SmallCommonMallow
 	}
 	
 	item 40pkCommonMallow
 	{
+		DisplayName		= 40 x CommonMallow,
 		Weight			= 2.8,
 		Type			= Normal,
-		DisplayName		= 40 x CommonMallow,
 		Icon			= PkCommonMallowMediumBox,
 		WorldStaticModel= MediumCommonMallow
 	}

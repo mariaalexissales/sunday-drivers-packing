@@ -8,9 +8,9 @@ module Packing
 
     item 5pkConsumerViralTest
     {
+        DisplayName         = 5 x KX93185 Test Kit - Pecker & Pecker,
         DisplayCategory     = FirstAid,
         Weight              = 0.05,
-        DisplayName         = 5 x KX93185 Test Kit - Pecker & Pecker,
         Icon                = TestKit1_CDCRR,
         WorldStaticModel    = ConsumerViralTest,
         Tooltip             = Tooltip_CDCRR_ConsumerViralTest
@@ -18,9 +18,9 @@ module Packing
 
     item 10pkConsumerViralTest
     {
+        DisplayName         = 10 x KX93185 Test Kit - Pecker & Pecker,
         DisplayCategory     = FirstAid,
         Weight              = 0.1,
-        DisplayName         = 10 x KX93185 Test Kit - Pecker & Pecker,
         Icon                = TestKit1_CDCRR,
         WorldStaticModel    = ConsumerViralTest,
         Tooltip             = Tooltip_CDCRR_ConsumerViralTest

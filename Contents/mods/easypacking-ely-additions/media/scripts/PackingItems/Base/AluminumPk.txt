@@ -7,9 +7,9 @@ module Packing
 	
 	item 25pkAluminum
 	{
+		DisplayName		= 25 x Aluminum,
 		Weight			= 1.25,
 		Type			= Normal,
-		DisplayName		= 25 x Aluminum,
 		Icon			= PkAluminumBox,
 		WorldStaticModel= MediumAluminum
 	}
@@ -32,5 +32,4 @@ module Packing
 		Time	:45.0,
 		Category:Storage,
 	}
-
 }

@@ -7,18 +7,18 @@ module Packing
 	
 	item 20pkWorm
 	{
+		DisplayName		= 20 x Worms,
 		Weight			= 0.10,
 		Type			= Normal,
-		DisplayName		= 20 x Worms,
 		Icon			= PkWormSmallBox,
 		WorldStaticModel= SmallWorm
 	}
 	
 	item 100pkWorm
 	{
+		DisplayName		= 100 x Worms,
 		Weight			= 0.5,
 		Type			= Normal,
-		DisplayName		= 100 x Worms,
 		Icon			= PkWormMediumBox,
 		WorldStaticModel= MediumWorm
 	}

@@ -7,20 +7,20 @@ module Packing
 	
 	item 10pkWhiskey
 	{
-		Weight			= 3.5,
-		Type			= Normal,
 		DisplayName		= 10 x Bourbon,
 		DisplayCategory = Food,
+		Weight			= 3.5,
+		Type			= Normal,
 		Icon			= PWhiskey,
 		WorldStaticModel= WoodenBoxOfWhiskey,
 	}
 	
 	item 5pkWhiskey
 	{
-		Weight			= 2.45,
-		Type			= Normal,
 		DisplayName		= 5 x Bourbon,
 		DisplayCategory = Food,
+		Weight			= 2.45,
+		Type			= Normal,
 		Icon			= PWhiskey,
 		WorldStaticModel= WoodenBoxOfWhiskey,
 	}

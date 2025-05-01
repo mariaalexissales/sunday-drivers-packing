@@ -7,18 +7,18 @@ module Packing
 	
 	item 10pkGinseng
 	{
+		DisplayName		= 10 x Ginseng,
 		Weight			= 0.5,
 		Type			= Normal,
-		DisplayName		= 10 x Ginseng,
 		Icon			= PkGinsengSmallBox,
 		WorldStaticModel= SmallGinseng
 	}
 	
 	item 40pkGinseng
 	{
+		DisplayName		= 40 x Ginseng,
 		Weight			= 2.8,
 		Type			= Normal,
-		DisplayName		= 40 x Ginseng,
 		Icon			= PkGinsengMediumBox,
 		WorldStaticModel= MediumGinseng
 	}

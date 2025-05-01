@@ -7,9 +7,9 @@ module Packing
 	
 	item 25pkAmplifier
 	{
+		DisplayName		= 25 x Amplifier,
 		Weight			= 3.75,
 		Type			= Normal,
-		DisplayName		= 25 x Amplifier,
 		Icon			= PkAmplifierBox,
 		WorldStaticModel= MediumAmplifier
 	}

@@ -3,34 +3,34 @@ module Packing
     imports
     {
         Base,
-        CDRR
+        CDCRR
     }
 
-    item 5pkHumanox
+    item 5pkBitezapro
     {
-        Weight              = 0.5,
-        Type                = Normal,
-        DisplayName         = 5 x Humanox,
-        Icon                = PillSet1_CDCRR,
-        WorldStaticModel 	= Humanox,
-        DisplayCategory     = FirstAid
+        DisplayName     = 5 x Bitezapro,
+        DisplayCategory = FirstAid,
+        Weight          = 0.5,
+        Type            = Normal,
+        Icon            = PillSet5_CDCRR,
+        WorldStaticModel= Bitezapro,
     }
 
-    item 10pkHumanox
+    item 10pkBitezapro
     {
-        Weight              = 1.0,
-        Type                = Normal,
-        DisplayName         = 10 x Humanox,
-        Icon                = PillSet1_CDCRR,
-        WorldStaticModel 	= Humanox,
-        DisplayCategory     = FirstAid
+        DisplayName     = 10 x Bitezapro,
+        DisplayCategory = FirstAid,
+        Weight          = 1.0,
+        Type            = Normal,
+        Icon            = PillSet5_CDCRR,
+        WorldStaticModel= Bitezapro,
     }
 
     recipe Pack 5
     {
-        destroy Humanox=5,
+        destroy Bitezapro=5,
 
-        Result  :5pkHumanox,
+        Result  :5pkBitezapro,
         OnCreate:Recipe.OnCreate.SaveUses,
         OnTest  :Recipe.OnTest.IsFavorite,
         Time    :75.0,
@@ -39,9 +39,9 @@ module Packing
 
     recipe Unpack 5
     {
-        5pkHumanox,
+        5pkBitezapro,
 
-        Result          :Humanox,
+        Result          :Bitezapro,
         OnCreate        :Recipe.OnCreate.LoadUses,
         RemoveResultItem:true,
         Time            :75.0,
@@ -50,9 +50,9 @@ module Packing
 
     recipe Pack 10
     {
-        destroy Humanox=10,
+        destroy Bitezapro=10,
 
-        Result  :10pkHumanox,
+        Result  :10pkBitezapro,
         OnCreate:Recipe.OnCreate.SaveUses,
         OnTest  :Recipe.OnTest.IsFavorite,
         Time    :120.0,
@@ -61,9 +61,9 @@ module Packing
 
     recipe Unpack 10
     {
-        10pkHumanox,
+        10pkBitezapro,
 
-        Result          :Humanox,
+        Result          :Bitezapro,
         OnCreate        :Recipe.OnCreate.LoadUses,
         RemoveResultItem:true,
         Time            :120.0,
@@ -72,17 +72,17 @@ module Packing
 
     recipe Put Together
     {
-        5pkHumanox=2,
+        5pkBitezapro=2,
 
-        Result  :10pkHumanox,
+        Result  :10pkBitezapro,
         Time    :75.0
     }
 
     recipe Split in Two
     {
-        10pkHumanox,
+        10pkBitezapro,
 
-        Result  :5pkHumanox=2,
+        Result  :5pkBitezapro=2,
         Time    :75.0
     }
 }

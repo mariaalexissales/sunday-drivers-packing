@@ -7,27 +7,27 @@ module Packing
 	
 	item 20pkYarn
 	{
+		DisplayName		= 20 x Yarn,
 		Weight			= 1.0,
 		Type			= Normal,
-		DisplayName		= 20 x Yarn,
 		Icon			= PkYarnMediumBox,
 		WorldStaticModel= MediumYarn
 	}
 	
 	item 100pkYarn
 	{
+		DisplayName		= 100 x Yarn,
 		Weight			= 5.0,
 		Type			= Normal,
-		DisplayName		= 100 x Yarn,
 		Icon			= PkYarnBigBox,
 		WorldStaticModel= BigYarn
 	}
 
 	item 500pkYarn
 	{
+		DisplayName		= 500 x Yarn,
 		Weight			= 10.0,
 		Type			= Normal,
-		DisplayName		= 500 x Yarn,
 		Icon			= PkYarnBigBox,
 		WorldStaticModel= BigYarn
 	}

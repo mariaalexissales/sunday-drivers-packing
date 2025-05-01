@@ -7,18 +7,18 @@ module Packing
 	
 	item 10pkComfrey
 	{
+		DisplayName		= 10 x Comfrey,
 		Weight			= 0.5,
 		Type			= Normal,
-		DisplayName		= 10 x Comfrey,
 		Icon			= PkComfreySmallBox,
 		WorldStaticModel= SmallComfrey
 	}
 	
 	item 40pkComfrey
 	{
+		DisplayName		= 40 x Comfrey,
 		Weight			= 2.8,
 		Type			= Normal,
-		DisplayName		= 40 x Comfrey,
 		Icon			= PkComfreyMediumBox,
 		WorldStaticModel= MediumComfrey
 	}

@@ -7,18 +7,18 @@ module Packing
 	
 	item 10pkLemonGrass
 	{
+		DisplayName		= 10 x LemonGrass,
 		Weight			= 0.5,
 		Type			= Normal,
-		DisplayName		= 10 x LemonGrass,
 		Icon			= PkLemonGrassSmallBox,
 		WorldStaticModel= SmallLemonGrass
 	}
 	
 	item 40pkLemonGrass
 	{
+		DisplayName		= 40 x LemonGrass,
 		Weight			= 2.8,
 		Type			= Normal,
-		DisplayName		= 40 x LemonGrass,
 		Icon			= PkLemonGrassMediumBox,
 		WorldStaticModel= MediumLemonGrass
 	}

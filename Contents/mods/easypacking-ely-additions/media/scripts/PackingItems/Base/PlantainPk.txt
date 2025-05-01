@@ -7,18 +7,18 @@ module Packing
 	
 	item 10pkPlantain
 	{
+		DisplayName		= 10 x Plantain,
 		Weight			= 0.5,
 		Type			= Normal,
-		DisplayName		= 10 x Plantain,
 		Icon			= PkPlantainSmallBox,
 		WorldStaticModel= SmallPlantain
 	}
 	
 	item 40pkPlantain
 	{
+		DisplayName		= 40 x Plantain,
 		Weight			= 2.8,
 		Type			= Normal,
-		DisplayName		= 40 x Plantain,
 		Icon			= PkPlantainMediumBox,
 		WorldStaticModel= MediumPlantain
 	}

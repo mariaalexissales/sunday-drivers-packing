@@ -10,9 +10,9 @@ module Packing
 		destroy JarLid=6,
 		destroy EmptyJar=6,
 		
-		Result:BoxOfJars,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:10.0,
+		Result	:BoxOfJars,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:10.0,
 		Category:Storage,
 	}
 

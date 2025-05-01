@@ -7,9 +7,9 @@ module Packing
 	
 	item 20pkRadioReceiver
 	{
+		DisplayName		= 20 x Radio Receivers,
 		Weight			= 1.0,
 		Type			= Normal,
-		DisplayName		= 20 x Radio Receivers,
 		Icon			= PkRadioReceiverBox,
 		WorldStaticModel= MediumRadioReceiver
 	}

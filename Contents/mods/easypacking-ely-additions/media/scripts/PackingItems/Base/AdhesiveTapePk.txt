@@ -1,0 +1,17 @@
+module Packing
+{
+    imports
+    {
+        Base,
+    }
+
+    item 5pkAdhesiveTape
+    {
+        DisplayName         = 5 x Adhesive Tape,
+        DisplayCategory     = Material,
+        Weight              = 1.5,
+        Type                = Normal,
+        Icon                = Scotchtape,
+        WorldStaticModel    = Scotchtape
+    }
+}
