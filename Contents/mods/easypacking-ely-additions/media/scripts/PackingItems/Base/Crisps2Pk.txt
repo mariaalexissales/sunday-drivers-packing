@@ -31,6 +31,7 @@ module Packing
 		
 		Result:10pkCrisp2,
 		OnTest:Recipe.OnTest.WholeFood,
+		OnCreate:Recipe.OnCreate.SaveFood,
 		Time:100.0,
 		Category:Storage,
 	}
@@ -51,6 +52,7 @@ module Packing
 		
 		Result:5pkCrisp2,
 		OnTest:Recipe.OnTest.WholeFood,
+		OnCreate:Recipe.OnCreate.SaveFood,
 		Time:75.0,
 		Category:Storage,
 	}
@@ -63,36 +65,6 @@ module Packing
 		OnGiveXP:Recipe.OnGiveXP.None,
 		Time:50.0,
 		Category:Storage,
-	}
-	
-	recipe Change to Type 1
-	{
-		destroy Crisps2,
-		
-		Result:Crisps=1,
-		OnTest:Recipe.OnTest.WholeFood,
-		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:25.0,
-	}
-	
-	recipe Change to Type 3
-	{
-		destroy Crisps2,
-		
-		Result:Crisps3=1,
-		OnTest:Recipe.OnTest.WholeFood,
-		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:25.0,
-	}
-	
-	recipe Change to Type 4
-	{
-		destroy Crisps2,
-		
-		Result:Crisps4=1,
-		OnTest:Recipe.OnTest.WholeFood,
-		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:25.0,
 	}
 
 	recipe Put Together
