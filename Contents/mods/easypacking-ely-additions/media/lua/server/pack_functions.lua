@@ -4,6 +4,11 @@ function Recipe.OnTest.IsFavorite(items, result)
 	return not items:isFavorite()
 end
 
+function Recipe.OnTest.IsHerb(items, result)
+    return items:getFoodType() == "Herb" or items:hasTag("HerbalTea")
+end
+
+
 function Recipe.OnCreate.SaveFood(items, result, player)
     local foodList = {};
     for i = 0, items:size() - 1 do
@@ -11,18 +16,26 @@ function Recipe.OnCreate.SaveFood(items, result, player)
         local food = items:get(i)
         if food and instanceof(food, "Food") then
             table.insert(foodList, {
-                type        = food:getFullType(), -- Save the item type
-                calories    = food:getCalories(), -- Save nutrition data
+                weight      = food:getActualWeight(),
+                base        = food:getBaseHunger(),
+                boredom     = food:getBoredomChange(),
+                calories    = food:getCalories(),
+                carbs       = food:getCarbohydrates(),
+                endurance   = food:getEnduranceChange(),
                 hunger      = food:getHungChange(),
+                lipids      = food:getLipids(),
+                pain        = food:getPainReduction(),
+                poison      = food:getPoisonPower(),
+                protein     = food:getProteins(),
+                name        = food:getName(),
                 thirst      = food:getThirstChange(),
                 stress      = food:getStressChange(),
-                boredom     = food:getBoredomChange(),
-                poison      = food:getPoisonPower(),
+                unhappy     = food:getUnhappyChange(),
                 age         = food:getAge(),
                 rotten      = food:isRotten(),
                 cooked      = food:isCooked(),
                 burnt       = food:isBurnt(),
-                name        = food:getName(), -- Saves custom names if applicable
+                type        = food:getFullType(),
             })
         end
     end
@@ -41,17 +54,26 @@ function Recipe.OnCreate.LoadFood(items, result, player)
             for k, savedFood in pairs(foodList) do
                 ---@type Food
                 local newItem = inventory:AddItem(itemToAdd)
+                newItem:setWeight(savedFood.weight)
+                newItem:SetBaseHunger(savedFood.base)
+                newItem:setBoredomChange(savedFood.boredom)
                 newItem:setCalories(savedFood.calories)
+                newItem:setCarbohydrates(savedFood.carbs)
+                newItem:setEnduranceChange(savedFood.endurance)
                 newItem:setHungChange(savedFood.hunger)
+                newItem:setLipids(savedFood.lipids)
+                newItem:setPainReduction(savedFood.pain)
+                newItem:setPoisonPower(savedFood.poison)
+                newItem:setProteins(savedFood.protein)
+                newItem:setName(savedFood.name)
                 newItem:setThirstChange(savedFood.thirst)
                 newItem:setStressChange(savedFood.stress)
-                newItem:setBoredomChange(savedFood.boredom)
-                newItem:setPoisonPower(savedFood.poison)
+                newItem:setUnhappyChange(savedFood.unhappy)
                 newItem:setAge(savedFood.age)
                 newItem:setRotten(savedFood.rotten)
                 newItem:setCooked(savedFood.cooked)
                 newItem:setBurnt(savedFood.burnt)
-                newItem:setName(savedFood.name)
+                newItem:setType(savedFood.type)
             end
         else
             local inventory = player:getInventory()

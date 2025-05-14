@@ -86,6 +86,43 @@ module Packing
         Category:Storage
     }
 
+    recipe Unpack 5
+    {
+        destroy 5pkPearBagSeed,
+
+        Result:PearBagSeed=5,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 10
+    {
+        destroy 10pkPearBagSeed,
+
+        Result:PearBagSeed=10,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 50
+    {
+        destroy 50pkPearBagSeed,
+
+        Result:PearBagSeed=50,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 100
+    {
+        destroy 100pkPearBagSeed,
+
+        Result:PearBagSeed=100,
+        Time:50.0,
+        Category:Storage
+    }
+
+
     recipe Put Together
     {
         5pkPearBagSeed=2,

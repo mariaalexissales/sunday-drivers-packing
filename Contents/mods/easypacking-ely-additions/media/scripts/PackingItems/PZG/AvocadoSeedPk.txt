@@ -133,4 +133,41 @@ module Packing
         Result  :50pkAvocadoBagSeed=2,
         Time    :40.0
     }
+
+    recipe Unpack 5
+    {
+        destroy 5pkAvocadoBagSeed,
+
+        Result:AvocadoBagSeed=5,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 10
+    {
+        destroy 10pkAvocadoBagSeed,
+
+        Result:AvocadoBagSeed=10,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 50
+    {
+        destroy 50pkAvocadoBagSeed,
+
+        Result:AvocadoBagSeed=50,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 100
+    {
+        destroy 100pkAvocadoBagSeed,
+
+        Result:AvocadoBagSeed=100,
+        Time:50.0,
+        Category:Storage
+    }
+
 }

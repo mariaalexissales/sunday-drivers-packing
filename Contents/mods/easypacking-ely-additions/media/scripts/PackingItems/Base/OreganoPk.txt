@@ -5,38 +5,38 @@ module Packing
 		Base,
 	}
 
-	item 5kpkComfrey
+	item 5kpkOregano
 	{
-		DisplayName		= 5 x Comfrey,
+		DisplayName		= 5 x Oregano,
 		Weight			= 0.25,
 		Type			= Normal,
-		Icon			= PkComfreySmallBox,
-		WorldStaticModel= SmallComfrey
+		Icon			= HerbOregano,
+		WorldStaticModel= HerbOregano_Ground,
 	}
 	
-	item 10pkComfrey
+	item 10pkOregano
 	{
-		DisplayName		= 10 x Comfrey,
+		DisplayName		= 10 x Oregano,
 		Weight			= 0.5,
 		Type			= Normal,
-		Icon			= PkComfreySmallBox,
-		WorldStaticModel= SmallComfrey
+		Icon			= HerbOregano,
+		WorldStaticModel= HerbOregano_Ground,
 	}
 	
-	item 40pkComfrey
+	item 40pkOregano
 	{
-		DisplayName		= 40 x Comfrey,
+		DisplayName		= 40 x Oregano,
 		Weight			= 2.8,
 		Type			= Normal,
-		Icon			= PkComfreyMediumBox,
-		WorldStaticModel= MediumComfrey
+		Icon			= HerbOregano,
+		WorldStaticModel= HerbOregano_Ground,
 	}
 
 	recipe Pack 5
 	{
-		destroy Comfrey=5,
+		destroy Oregano=5,
 
-		Result:5pkComfrey,
+		Result:5pkOregano,
 		OnCreate:Recipe.OnCreate.SaveFood,
 		OnTest	:Recipe.OnTest.IsHerb,
 		Time	:45.0,
@@ -45,9 +45,9 @@ module Packing
 	
 	recipe Pack 10
 	{
-		destroy Comfrey=10,
+		destroy Oregano=10,
 		
-		Result	:10pkComfrey,
+		Result	:10pkOregano,
 		OnCreate:Recipe.OnCreate.SaveFood,
 		OnTest	:Recipe.OnTest.IsHerb,
 		Time	:45.0,
@@ -56,9 +56,9 @@ module Packing
 	
 	recipe Unpack 10
 	{
-		destroy 10pkComfrey,
+		destroy 10pkOregano,
 		
-		Result	:Comfrey=10,
+		Result	:Oregano=10,
 		OnCreate:Recipe.OnCreate.LoadFood,
 		RemoveResultItem:true,
 		Time	:45.0,
@@ -67,9 +67,9 @@ module Packing
 	
 	recipe Pack 40
 	{
-		destroy Comfrey=40,
+		destroy Oregano=40,
 		
-		Result	:40pkComfrey,
+		Result	:40pkOregano,
 		OnCreate:Recipe.OnCreate.SaveFood,
 		OnTest	:Recipe.OnTest.IsHerb,
 		Time	:22.5,
@@ -78,9 +78,9 @@ module Packing
 	
 	recipe Unpack 40
 	{
-		destroy 40pkComfrey,
+		destroy 40pkOregano,
 		
-		Result	:Comfrey=40,
+		Result	:Oregano=40,
 		OnCreate:Recipe.OnCreate.LoadFood,
 		RemoveResultItem:true,
 		Time	:22.5,
@@ -89,17 +89,17 @@ module Packing
 
 	recipe Put Together
 	{
-		10pkComfrey=4,
+		10pkOregano=4,
 		
-		Result	:10pkComfrey=1,
+		Result	:10pkOregano=1,
 		Time	:7.5,
 	}
 
 	recipe Split in Four
 	{
-		40pkComfrey=1,
+		40pkOregano=1,
 		
-		Result	:10pkComfrey=4,
+		Result	:10pkOregano=4,
 		Time	:7.5,
 	}
 }

@@ -5,29 +5,29 @@ module Packing
 		Base,
 	}
 	
-	item 10pkGinseng
+	item 10pkNettles
 	{
-		DisplayName		= 10 x Ginseng,
+		DisplayName		= 10 x Nettles,
 		Weight			= 0.5,
 		Type			= Normal,
-		Icon			= PkGinsengSmallBox,
-		WorldStaticModel= SmallGinseng
+		Icon			= Nettle,
+		WorldStaticModel= Nettles_Ground
 	}
 	
-	item 40pkGinseng
+	item 40pkNettles
 	{
-		DisplayName		= 40 x Ginseng,
+		DisplayName		= 40 x Nettles,
 		Weight			= 2.8,
 		Type			= Normal,
-		Icon			= PkGinsengMediumBox,
-		WorldStaticModel= MediumGinseng
+		Icon			= Nettle,
+		WorldStaticModel= Nettles_Ground
 	}
 	
 	recipe Pack 10
 	{
-		destroy Ginseng=10,
+		destroy Nettles=10,
 		
-		Result	:10pkGinseng,
+		Result	:10pkNettles,
 		OnCreate:Recipe.OnCreate.SaveFood,
 		OnTest	:Recipe.OnTest.IsHerb,
 		Time	:45.0,
@@ -36,9 +36,9 @@ module Packing
 	
 	recipe Unpack 10
 	{
-		destroy 10pkGinseng,
+		destroy 10pkNettles,
 		
-		Result	:Ginseng=10,
+		Result	:Nettles=10,
 		OnCreate:Recipe.OnCreate.LoadFood,
 		RemoveResultItem:true,
 		Time	:45.0,
@@ -47,9 +47,9 @@ module Packing
 	
 	recipe Pack 40
 	{
-		destroy Ginseng=40,
+		destroy Nettles=40,
 		
-		Result	:40pkGinseng,
+		Result	:40pkNettles,
 		OnCreate:Recipe.OnCreate.SaveFood,
 		OnTest	:Recipe.OnTest.IsHerb,
 		Time	:22.5,
@@ -58,9 +58,9 @@ module Packing
 	
 	recipe Unpack 40
 	{
-		destroy 40pkGinseng,
+		destroy 40pkNettles,
 		
-		Result	:Ginseng=40,
+		Result	:Nettles=40,
 		OnCreate:Recipe.OnCreate.LoadFood,
 		RemoveResultItem:true,
 		Time	:22.5,
@@ -69,17 +69,17 @@ module Packing
 
 	recipe Put Together
 	{
-		10pkGinseng=4,
+		10pkNettles=4,
 		
-		Result	:40pkGinseng=1,
+		Result	:40pkNettles=1,
 		Time	:7.5,
 	}
 
 	recipe Split in Four
 	{
-		40pkGinseng=1,
+		40pkNettles=1,
 		
-		Result	:10pkGinseng=4,
+		Result	:10pkNettles=4,
 		Time	:7.5,
 	}
 }

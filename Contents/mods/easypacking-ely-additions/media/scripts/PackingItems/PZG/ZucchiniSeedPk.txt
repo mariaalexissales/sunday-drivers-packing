@@ -85,6 +85,42 @@ module Packing
         Time    :125.0,
         Category:Storage
     }
+    recipe Unpack 5
+    {
+        destroy 5pkZucchiniBagSeed,
+
+        Result:ZucchiniBagSeed=5,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 10
+    {
+        destroy 10pkZucchiniBagSeed,
+
+        Result:ZucchiniBagSeed=10,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 50
+    {
+        destroy 50pkZucchiniBagSeed,
+
+        Result:ZucchiniBagSeed=50,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 100
+    {
+        destroy 100pkZucchiniBagSeed,
+
+        Result:ZucchiniBagSeed=100,
+        Time:50.0,
+        Category:Storage
+    }
+
 
     recipe Put Together
     {
