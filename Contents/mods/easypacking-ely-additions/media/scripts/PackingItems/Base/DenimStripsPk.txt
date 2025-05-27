@@ -7,20 +7,20 @@ module Packing
 
     item 10pkDenim
     {
-        Weight			= 0.35,
-		Type			= Normal,
 		DisplayName		= 10 x Denim Strips,
 		DisplayCategory = Material,
+        Weight			= 0.35,
+		Type			= Normal,
 		Icon			= PDenimStrips,
 		WorldStaticModel= StripRollDenim,
     }
 
     item 500pkDenim
     {
-        Weight			= 7.5,
-		Type			= Normal,
 		DisplayName		= 500 x Denim Strips,
 		DisplayCategory = Material,
+        Weight			= 7.5,
+		Type			= Normal,
 		Icon			= PDenimStrips,
 		WorldStaticModel= StripRollDenim,
     }

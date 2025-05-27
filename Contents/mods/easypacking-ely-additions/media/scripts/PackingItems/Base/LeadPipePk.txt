@@ -7,20 +7,20 @@ module Packing
 	
 	item 10pkleadpipe
 	{
-		Weight			= 7.5,
-		Type			= Normal,
 		DisplayName		= 10 x Lead Pipes,
 		DisplayCategory = Ammo,
+		Weight			= 7.5,
+		Type			= Normal,
 		Icon			= PkLeadPipeMediumBox,
 		WorldStaticModel= MediumLeadPipe
 	}
 	
 	item 50pkleadpipe
 	{
-		Weight			= 32.5,
-		Type			= Normal,
 		DisplayName		= 50 x Lead Pipes,
 		DisplayCategory = Ammo,
+		Weight			= 32.5,
+		Type			= Normal,
 		Icon			= PkLeadPipeBigBox,
 		WorldStaticModel= BigLeadPipe
 	}

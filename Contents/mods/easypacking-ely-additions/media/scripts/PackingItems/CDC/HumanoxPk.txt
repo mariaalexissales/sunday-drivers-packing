@@ -3,34 +3,34 @@ module Packing
     imports
     {
         Base,
-        CDCRR
+        CDRR
     }
 
-    item 5pkFevarax
+    item 5pkHumanox
     {
+        DisplayName         = 5 x Humanox,
+        DisplayCategory     = FirstAid,
         Weight              = 0.5,
         Type                = Normal,
-        DisplayName         = 5 x Fevarax,
-        Icon                = PillSet6_CDCRR,
-        WorldStaticModel 	= Fevarax,
-        DisplayCategory     = FirstAid
+        Icon                = PillSet1_CDCRR,
+        WorldStaticModel 	= Humanox,
     }
 
-    item 10pkFevarax
+    item 10pkHumanox
     {
+        DisplayName         = 10 x Humanox,
+        DisplayCategory     = FirstAid,
         Weight              = 1.0,
         Type                = Normal,
-        DisplayName         = 10 x Fevarax,
-        Icon                = PillSet6_CDCRR,
-        WorldStaticModel 	= Fevarax,
-        DisplayCategory     = FirstAid
+        Icon                = PillSet1_CDCRR,
+        WorldStaticModel 	= Humanox,
     }
 
     recipe Pack 5
     {
-        destroy Fevarax=5,
+        destroy Humanox=5,
 
-        Result  :5pkFevarax,
+        Result  :5pkHumanox,
         OnCreate:Recipe.OnCreate.SaveUses,
         OnTest  :Recipe.OnTest.IsFavorite,
         Time    :75.0,
@@ -39,9 +39,9 @@ module Packing
 
     recipe Unpack 5
     {
-        5pkFevarax,
+        5pkHumanox,
 
-        Result          :Fevarax,
+        Result          :Humanox,
         OnCreate        :Recipe.OnCreate.LoadUses,
         RemoveResultItem:true,
         Time            :75.0,
@@ -50,9 +50,9 @@ module Packing
 
     recipe Pack 10
     {
-        destroy Fevarax=10,
+        destroy Humanox=10,
 
-        Result  :10pkFevarax,
+        Result  :10pkHumanox,
         OnCreate:Recipe.OnCreate.SaveUses,
         OnTest  :Recipe.OnTest.IsFavorite,
         Time    :120.0,
@@ -61,9 +61,9 @@ module Packing
 
     recipe Unpack 10
     {
-        10pkFevarax,
+        10pkHumanox,
 
-        Result          :Fevarax,
+        Result          :Humanox,
         OnCreate        :Recipe.OnCreate.LoadUses,
         RemoveResultItem:true,
         Time            :120.0,
@@ -72,17 +72,17 @@ module Packing
 
     recipe Put Together
     {
-        5pkFevarax=2,
+        5pkHumanox=2,
 
-        Result  :10pkFevarax,
+        Result  :10pkHumanox,
         Time    :75.0
     }
 
     recipe Split in Two
     {
-        10pkFevarax,
+        10pkHumanox,
 
-        Result  :5pkFevarax=2,
+        Result  :5pkHumanox=2,
         Time    :75.0
     }
 }

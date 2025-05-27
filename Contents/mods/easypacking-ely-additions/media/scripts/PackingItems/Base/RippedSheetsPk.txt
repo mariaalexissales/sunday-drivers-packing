@@ -7,10 +7,10 @@ module Packing
 
     item 500pkRag
     {
-        Weight			= 7.5,
-		Type			= Normal,
 		DisplayName		= 500 x Ripped Sheets,
 		DisplayCategory = Household,
+        Weight			= 7.5,
+		Type			= Normal,
 		Icon			= PRag,
 		WorldStaticModel= StripRollSheet,
     }

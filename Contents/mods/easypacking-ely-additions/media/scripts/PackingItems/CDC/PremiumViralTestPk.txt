@@ -8,9 +8,9 @@ module Packing
 
     item 5pkPremiumViralTest
     {
+        DisplayName         = 5 x KX93185 Test Kit - Bonger AG,
         DisplayCategory     = FirstAid,
         Weight              = 0.05,
-        DisplayName         = 5 x KX93185 Test Kit - Bonger AG,
         Icon                = TestKit2_CDCRR,
         WorldStaticModel    = PremiumViralTest,
         Tooltip             = Tooltip_CDCRR_PremiumViralTest
@@ -18,9 +18,9 @@ module Packing
 
     item 10pkPremiumViralTest
     {
+        DisplayName         = 10 x KX93185 Test Kit - Bonger AG,
         DisplayCategory     = FirstAid,
         Weight              = 0.1,
-        DisplayName         = 10 x KX93185 Test Kit - Bonger AG,
         Icon                = TestKit2_CDCRR,
         WorldStaticModel    = PremiumViralTest,
         Tooltip             = Tooltip_CDCRR_PremiumViralTest

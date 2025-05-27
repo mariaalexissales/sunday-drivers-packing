@@ -7,10 +7,10 @@ module Packing
 
     item 500pkLeather
     {
-        Weight			= 7.5,
-		Type			= Normal,
 		DisplayName		= 500 x Leather Strips,
 		DisplayCategory = Household,
+        Weight			= 7.5,
+		Type			= Normal,
 		Icon			= PLeatherStrips,
 		WorldStaticModel= StripRollLeather,
     }

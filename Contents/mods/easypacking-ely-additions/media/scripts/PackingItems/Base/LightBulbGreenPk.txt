@@ -7,9 +7,9 @@ module Packing
 	
 	item 20pkLightBulbGreen
 	{
+		DisplayName		= 20 x Green Light Bulbs,
 		Weight			= 1.0,
 		Type			= Normal,
-		DisplayName		= 20 x Green Light Bulbs,
 		Icon			= PkLightBulbGreenBox,
 		WorldStaticModel= MediumLightBulbGreen
 	}

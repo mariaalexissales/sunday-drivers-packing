@@ -6,31 +6,31 @@ module Packing
         CDCRR
     }
 
-    item 5pkSovextin
+    item 5pkGlobunex
     {
+        DisplayName         = 5 x Globunex Syrette,
         DisplayCategory     = FirstAid,
         Weight              = 0.05,
-        DisplayName         = 5 x Sovextin Syrette,
-        Icon                = Syrette1_CDCRR,
-        WorldStaticModel    = Sovextin,
-        Tooltip             = Tooltip_CDCRR_Sovextin
+        Icon                = Syrette2_CDCRR,
+        WorldStaticModel    = Globunex,
+        Tooltip             = Tooltip_CDCRR_Globunex
     }
 
-    item 10pkSovextin
+    item 10pkGlobunex
     {
+        DisplayName         = 10 x Globunex Syrette,
         DisplayCategory     = FirstAid,
         Weight              = 0.1,
-        DisplayName         = 10 x Sovextin Syrette,
-        Icon                = Syrette1_CDCRR,
-        WorldStaticModel    = Sovextin,
-        Tooltip             = Tooltip_CDCRR_Sovextin
+        Icon                = Syrette2_CDCRR,
+        WorldStaticModel    = Globunex,
+        Tooltip             = Tooltip_CDCRR_Globunex
     }
 
     recipe Pack 5
     {
-        destroy Sovextin=5,
+        destroy Globunex=5,
 
-        Result  :5pkSovextin,
+        Result  :5pkGlobunex,
         OnTest  :Recipe.OnTest.IsFavorite,
         Time    :75.0,
         Category:Storage,
@@ -38,9 +38,9 @@ module Packing
 
     recipe Unpack 5
     {
-        5pkSovextin,
+        5pkGlobunex,
 
-        Result          :Sovextin=5,
+        Result          :Globunex=5,
         RemoveResultItem:true,
         Time            :75.0,
         Category        :Storage,
@@ -48,9 +48,9 @@ module Packing
 
     recipe Pack 10
     {
-        destroy Sovextin=10,
+        destroy Globunex=10,
 
-        Result  :10pkSovextin,
+        Result  :10pkGlobunex,
         OnTest  :Recipe.OnTest.IsFavorite,
         Time    :120.0,
         Category:Storage,
@@ -58,27 +58,26 @@ module Packing
 
     recipe Unpack 10
     {
-        10pkSovextin,
+        10pkGlobunex,
 
-        Result          :Sovextin=10,
-        RemoveResultItem:true,
+        Result          :Globunex=10,
         Time            :120.0,
         Category        :Storage,
     }
 
     recipe Put Together
     {
-        5pkSovextin=2,
+        5pkGlobunex=2,
 
-        Result  :10pkSovextin,
+        Result  :10pkGlobunex,
         Time    :75.0
     }
 
     recipe Split in Two
     {
-        10pkSovextin,
+        10pkGlobunex,
 
-        Result  :5pkSovextin=2,
+        Result  :5pkGlobunex=2,
         Time    :75.0
     }
 }

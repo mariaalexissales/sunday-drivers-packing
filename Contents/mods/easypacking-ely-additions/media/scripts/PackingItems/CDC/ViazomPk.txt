@@ -8,9 +8,9 @@ module Packing
 
     item 5pkViazom
     {
+        DisplayName         = 5 x Viazom Inhalant,
         DisplayCategory     = FirstAid,
         Weight              = 0.05,
-        DisplayName         = 5 x Viazom Inhalant,
         Icon                = Inhalant_CDCRR,
         WorldStaticModel    = Viazom,
         Tooltip             = Tooltip_CDCRR_Viazom
@@ -18,9 +18,9 @@ module Packing
 
     item 10pkViazom
     {
+        DisplayName         = 10 x Viazom Inhalant,
         DisplayCategory     = FirstAid,
         Weight              = 0.1,
-        DisplayName         = 10 x Viazom Inhalant,
         Icon                = Inhalant_CDCRR,
         WorldStaticModel    = Viazom,
         Tooltip             = Tooltip_CDCRR_Viazom

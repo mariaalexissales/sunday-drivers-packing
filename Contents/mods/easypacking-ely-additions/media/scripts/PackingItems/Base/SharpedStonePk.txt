@@ -7,9 +7,9 @@ module Packing
 	
 	item 10pkSharpedStone
 	{
+		DisplayName		= 10 x Chipped Stones,
 		Weight			= 1.5,
 		Type			= Normal,
-		DisplayName		= 10 x Chipped Stones,
 		Icon			= PkSharpedStoneBox,
 		WorldStaticModel= MediumSharpedStone
 	}
