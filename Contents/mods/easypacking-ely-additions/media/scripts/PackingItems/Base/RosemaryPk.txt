@@ -1,0 +1,85 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkRosemary
+	{
+		DisplayName		= 10 x Rosemary,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= HerbRosemary,
+		WorldStaticModel= HerbRosemary_Ground
+	}
+	
+	item 50pkRosemary
+	{
+		DisplayName		= 50 x Rosemary,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= HerbRosemary,
+		WorldStaticModel= HerbRosemary_Ground
+	}
+	
+	recipe Pack 10
+	{
+		destroy Rosemary=10,
+		
+		Result	:10pkRosemary,
+		OnCreate:Recipe.OnCreate.SaveFood,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:45.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkRosemary,
+		
+		Result	:Rosemary=10,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
+		Time	:45.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 50
+	{
+		destroy Rosemary=50,
+		
+		Result	:50pkRosemary,
+		OnCreate:Recipe.OnCreate.SaveFood,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:22.5,
+		Category:Storage,
+	}
+	
+	recipe Unpack 50
+	{
+		destroy 50pkRosemary,
+		
+		Result	:Rosemary=50,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
+		Time	:22.5,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkRosemary=5,
+		
+		Result	:50pkRosemary=1,
+		Time	:7.5,
+	}
+
+	recipe Split in Five
+	{
+		50pkRosemary=1,
+		
+		Result	:10pkRosemary=5,
+		Time	:7.5,
+	}
+}

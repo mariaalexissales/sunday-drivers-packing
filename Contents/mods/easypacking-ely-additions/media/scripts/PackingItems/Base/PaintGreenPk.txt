@@ -7,9 +7,9 @@ module Packing
 	
 	item 4pkPaintGreen
 	{
+		DisplayName		= 4 x Green Paint,
 		Weight			= 10.0,
 		Type			= Normal,
-		DisplayName		= 4 x Green Paint,
 		Icon			= PkPaintGreenBox,
 		WorldStaticModel= BigPaintGreen
 	}

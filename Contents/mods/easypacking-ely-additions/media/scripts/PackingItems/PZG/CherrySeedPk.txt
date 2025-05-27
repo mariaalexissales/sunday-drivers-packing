@@ -46,6 +46,43 @@ module Packing
         WorldStaticModel    = SeedPacketCherry_Ground
     }
 
+    recipe Unpack 5
+    {
+        destroy 5pkCherryBagSeed,
+
+        Result:CherryBagSeed=5,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 10
+    {
+        destroy 10pkCherryBagSeed,
+
+        Result:CherryBagSeed=10,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 50
+    {
+        destroy 50pkCherryBagSeed,
+
+        Result:CherryBagSeed=50,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 100
+    {
+        destroy 100pkCherryBagSeed,
+
+        Result:CherryBagSeed=100,
+        Time:50.0,
+        Category:Storage
+    }
+
+
     recipe Pack 5
     {
         destroy CherryBagSeed=5,

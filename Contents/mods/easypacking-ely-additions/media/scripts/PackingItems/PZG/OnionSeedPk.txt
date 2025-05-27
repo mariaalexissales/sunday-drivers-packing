@@ -86,6 +86,43 @@ module Packing
         Category:Storage
     }
 
+    recipe Unpack 5
+    {
+        destroy 5pkOnionBagSeed,
+
+        Result:OnionBagSeed=5,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 10
+    {
+        destroy 10pkOnionBagSeed,
+
+        Result:OnionBagSeed=10,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 50
+    {
+        destroy 50pkOnionBagSeed,
+
+        Result:OnionBagSeed=50,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 100
+    {
+        destroy 100pkOnionBagSeed,
+
+        Result:OnionBagSeed=100,
+        Time:50.0,
+        Category:Storage
+    }
+
+
     recipe Put Together
     {
         5pkOnionBagSeed=2,

@@ -46,6 +46,42 @@ module Packing
         WorldStaticModel    = SeedPacketLemon_Ground
     }
 
+    recipe Unpack 5
+    {
+        destroy 5pkLemonBagSeed,
+
+        Result:LemonBagSeed=5,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 10
+    {
+        destroy 10pkLemonBagSeed,
+
+        Result:LemonBagSeed=10,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 50
+    {
+        destroy 50pkLemonBagSeed,
+
+        Result:LemonBagSeed=50,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 100
+    {
+        destroy 100pkLemonBagSeed,
+
+        Result:LemonBagSeed=100,
+        Time:50.0,
+        Category:Storage
+    }
+
     recipe Pack 5
     {
         destroy LemonBagSeed=5,

@@ -8,9 +8,9 @@ module Packing
 
     item 5pkRotomRNA
     {
+        DisplayName         = 5 x Roto-mRNA Syrette,
         DisplayCategory     = FirstAid,
         Weight              = 0.05,
-        DisplayName         = 5 x Roto-mRNA Syrette,
         Icon                = Syrette4_CDCRR,
         WorldStaticModel    = RotomRNA,
         Tooltip             = Tooltip_CDCRR_RotomRNA
@@ -18,9 +18,9 @@ module Packing
 
     item 10pkRotomRNA
     {
+        DisplayName         = 10 x Roto-mRNA Syrette,
         DisplayCategory     = FirstAid,
         Weight              = 0.1,
-        DisplayName         = 10 x Roto-mRNA Syrette,
         Icon                = Syrette4_CDCRR,
         WorldStaticModel    = RotomRNA,
         Tooltip             = Tooltip_CDCRR_RotomRNA

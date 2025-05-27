@@ -8,22 +8,22 @@ module Packing
 
     item 5pkZomboflex
     {
+        DisplayName         = 5 x Zomboflex,
+        DisplayCategory     = FirstAid,
         Weight              = 0.5,
         Type                = Normal,
-        DisplayName         = 5 x Zomboflex,
         Icon                = PillSet3_CDCRR,
         WorldStaticModel 	= Zomboflex,
-        DisplayCategory     = FirstAid
     }
 
     item 10pkZomboflex
     {
+        DisplayName         = 10 x Zomboflex,
+        DisplayCategory     = FirstAid,
         Weight              = 1.0,
         Type                = Normal,
-        DisplayName         = 10 x Zomboflex,
         Icon                = PillSet3_CDCRR,
         WorldStaticModel 	= Zomboflex,
-        DisplayCategory     = FirstAid
     }
 
     recipe Pack 5

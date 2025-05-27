@@ -1,0 +1,85 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkParsley
+	{
+		DisplayName		= 10 x Parsley,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= HerbParsley,
+		WorldStaticModel= HerbParsley_Ground
+	}
+	
+	item 50pkParsley
+	{
+		DisplayName		= 50 x Parsley,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= HerbParsley,
+		WorldStaticModel= HerbParsley_Ground
+	}
+	
+	recipe Pack 10
+	{
+		destroy Parsley=10,
+		
+		Result	:10pkParsley,
+		OnCreate:Recipe.OnCreate.SaveFood,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:45.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkParsley,
+		
+		Result	:Parsley=10,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
+		Time	:45.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 50
+	{
+		destroy Parsley=50,
+		
+		Result	:50pkParsley,
+		OnCreate:Recipe.OnCreate.SaveFood,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:22.5,
+		Category:Storage,
+	}
+	
+	recipe Unpack 50
+	{
+		destroy 50pkParsley,
+		
+		Result	:Parsley=50,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
+		Time	:22.5,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkParsley=5,
+		
+		Result	:50pkParsley=1,
+		Time	:7.5,
+	}
+
+	recipe Split in Five
+	{
+		50pkParsley=1,
+		
+		Result	:10pkParsley=5,
+		Time	:7.5,
+	}
+}

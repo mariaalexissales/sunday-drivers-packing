@@ -86,6 +86,43 @@ module Packing
         Category:Storage
     }
 
+    recipe Unpack 5
+    {
+        destroy 5pkPepperHabaneroBagSeed,
+
+        Result:PepperHabaneroBagSeed=5,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 10
+    {
+        destroy 10pkPepperHabaneroBagSeed,
+
+        Result:PepperHabaneroBagSeed=10,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 50
+    {
+        destroy 50pkPepperHabaneroBagSeed,
+
+        Result:PepperHabaneroBagSeed=50,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Unpack 100
+    {
+        destroy 100pkPepperHabaneroBagSeed,
+
+        Result:PepperHabaneroBagSeed=100,
+        Time:50.0,
+        Category:Storage
+    }
+
+
     recipe Put Together
     {
         5pkPepperHabaneroBagSeed=2,

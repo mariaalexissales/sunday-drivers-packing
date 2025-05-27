@@ -4,6 +4,11 @@ function Recipe.OnTest.IsFavorite(items, result)
 	return not items:isFavorite()
 end
 
+function Recipe.OnTest.IsFavorite(items, result)
+    return items:getFoodType() == "Herb" or items:hasTag("HerbalTea")
+end
+
+
 function Recipe.OnCreate.SaveFood(items, result, player)
     local foodList = {};
     for i = 0, items:size() - 1 do

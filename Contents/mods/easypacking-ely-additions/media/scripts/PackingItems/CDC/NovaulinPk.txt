@@ -6,31 +6,31 @@ module Packing
         CDCRR
     }
 
-    item 5pkKX9Spike
+    item 5pkNovaulin
     {
+        DisplayName         = 5 x Novaulin Syrette,
         DisplayCategory     = FirstAid,
         Weight              = 0.05,
-        DisplayName         = 5 x KX9Spike Syrette,
-        Icon                = Syrette5_CDCRR,
-        WorldStaticModel    = KX9Spike,
-        Tooltip             = Tooltip_CDCRR_KX9Spike
+        Icon                = Syrette3_CDCRR,
+        WorldStaticModel    = Novaulin,
+        Tooltip             = Tooltip_CDCRR_Novaulin
     }
 
-    item 10pkKX9Spike
+    item 10pkNovaulin
     {
+        DisplayName         = 10 x Novaulin Syrette,
         DisplayCategory     = FirstAid,
         Weight              = 0.1,
-        DisplayName         = 10 x KX9Spike Syrette,
-        Icon                = Syrette5_CDCRR,
-        WorldStaticModel    = KX9Spike,
-        Tooltip             = Tooltip_CDCRR_KX9Spike
+        Icon                = Syrette3_CDCRR,
+        WorldStaticModel    = Novaulin,
+        Tooltip             = Tooltip_CDCRR_Novaulin
     }
 
     recipe Pack 5
     {
-        destroy KX9Spike=5,
+        destroy Novaulin=5,
 
-        Result  :5pkKX9Spike,
+        Result  :5pkNovaulin,
         OnTest  :Recipe.OnTest.IsFavorite,
         Time    :75.0,
         Category:Storage,
@@ -38,9 +38,9 @@ module Packing
 
     recipe Unpack 5
     {
-        5pkKX9Spike,
+        5pkNovaulin,
 
-        Result          :KX9Spike=5,
+        Result          :Novaulin=5,
         RemoveResultItem:true,
         Time            :75.0,
         Category        :Storage,
@@ -48,9 +48,9 @@ module Packing
 
     recipe Pack 10
     {
-        destroy KX9Spike=10,
+        destroy Novaulin=10,
 
-        Result  :10pkKX9Spike,
+        Result  :10pkNovaulin,
         OnTest  :Recipe.OnTest.IsFavorite,
         Time    :120.0,
         Category:Storage,
@@ -58,26 +58,26 @@ module Packing
 
     recipe Unpack 10
     {
-        10pkKX9Spike,
+        10pkNovaulin,
 
-        Result          :KX9Spike=10,
+        Result          :Novaulin=10,
         Time            :120.0,
         Category        :Storage,
     }
 
     recipe Put Together
     {
-        5pkKX9Spike=2,
+        5pkNovaulin=2,
 
-        Result  :10pkKX9Spike,
+        Result  :10pkNovaulin,
         Time    :75.0
     }
 
     recipe Split in Two
     {
-        10pkKX9Spike,
+        10pkNovaulin,
 
-        Result  :5pkKX9Spike=2,
+        Result  :5pkNovaulin=2,
         Time    :75.0
     }
 }

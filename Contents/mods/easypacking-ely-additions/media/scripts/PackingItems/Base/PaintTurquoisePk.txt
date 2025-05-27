@@ -7,9 +7,9 @@ module Packing
 	
 	item 4pkPaintTurquoise
 	{
+		DisplayName		= 4 x Turquoise Paint,
 		Weight			= 10.0,
 		Type			= Normal,
-		DisplayName		= 4 x Turquoise Paint,
 		Icon			= PkPaintTurquoiseBox,
 		WorldStaticModel= BigPaintTurquoise
 	}

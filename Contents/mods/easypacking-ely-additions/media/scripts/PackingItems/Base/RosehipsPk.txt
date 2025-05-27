@@ -1,0 +1,85 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkRosehips
+	{
+		DisplayName		= 10 x Rosehips,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= Rosehips,
+		WorldStaticModel= RoseHips
+	}
+	
+	item 50pkRosehips
+	{
+		DisplayName		= 50 x Rosehips,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= Rosehips,
+		WorldStaticModel= RoseHips
+	}
+	
+	recipe Pack 10
+	{
+		destroy Rosehips=10,
+		
+		Result	:10pkRosehips,
+		OnCreate:Recipe.OnCreate.SaveFood,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:45.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkRosehips,
+		
+		Result	:Rosehips=10,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
+		Time	:45.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 50
+	{
+		destroy Rosehips=50,
+		
+		Result	:50pkRosehips,
+		OnCreate:Recipe.OnCreate.SaveFood,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:22.5,
+		Category:Storage,
+	}
+	
+	recipe Unpack 50
+	{
+		destroy 50pkRosehips,
+		
+		Result	:Rosehips=50,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
+		Time	:22.5,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkRosehips=5,
+		
+		Result	:50pkRosehips=1,
+		Time	:7.5,
+	}
+
+	recipe Split in Five
+	{
+		50pkRosehips=1,
+		
+		Result	:10pkRosehips=5,
+		Time	:7.5,
+	}
+}

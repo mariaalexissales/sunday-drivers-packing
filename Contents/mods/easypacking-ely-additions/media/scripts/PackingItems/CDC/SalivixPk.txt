@@ -3,34 +3,34 @@ module Packing
     imports
     {
         Base,
-        CDCRR
+        CDRR
     }
 
-    item 5pkZedalis
+    item 5pkSalivix
     {
+        DisplayName         = 5 x Salivix,
+        DisplayCategory     = FirstAid,
         Weight              = 0.5,
         Type                = Normal,
-        DisplayName         = 5 x Zedalis,
-        Icon                = PillSet4_CDCRR,
-        WorldStaticModel 	= Zedalis,
-        DisplayCategory     = FirstAid
+        Icon                = PillSet2_CDCRR,
+        WorldStaticModel 	= Salivix,
     }
 
-    item 10pkZedalis
+    item 10pkSalivix
     {
+        DisplayName         = 10 x Salivix,
+        DisplayCategory     = FirstAid,
         Weight              = 1.0,
         Type                = Normal,
-        DisplayName         = 10 x Zedalis,
-        Icon                = PillSet4_CDCRR,
-        WorldStaticModel 	= Zedalis,
-        DisplayCategory     = FirstAid
+        Icon                = PillSet2_CDCRR,
+        WorldStaticModel 	= Salivix,
     }
 
     recipe Pack 5
     {
-        destroy Zedalis=5,
+        destroy Salivix=5,
 
-        Result      :5pkZedalis,
+        Result      :5pkSalivix,
         OnCreate    :Recipe.OnCreate.SaveUses,
         OnTest      :Recipe.OnTest.IsFavorite,
         Time        :75.0,
@@ -39,9 +39,9 @@ module Packing
 
     recipe Unpack 5
     {
-        5pkZedalis,
+        5pkSalivix,
 
-        Result          :Zedalis,
+        Result          :Salivix,
         OnCreate        :Recipe.OnCreate.LoadUses,
         RemoveResultItem:true,
         Time            :75.0,
@@ -50,9 +50,9 @@ module Packing
 
     recipe Pack 10
     {
-        destroy Zedalis=10,
+        destroy Salivix=10,
 
-        Result      :10pkZedalis,
+        Result      :10pkSalivix,
         OnCreate    :Recipe.OnCreate.SaveUses,
         OnTest      :Recipe.OnTest.IsFavorite,
         Time        :120.0,
@@ -61,9 +61,9 @@ module Packing
 
     recipe Unpack 10
     {
-        10pkZedalis,
+        10pkSalivix,
 
-        Result          :Zedalis,
+        Result          :Salivix,
         OnCreate        :Recipe.OnCreate.LoadUses,
         RemoveResultItem:true,
         Time            :120.0,
@@ -72,17 +72,17 @@ module Packing
 
     recipe Put Together
     {
-        5pkZedalis=2,
+        5pkSalivix=2,
 
-        Result  :10pkZedalis,
+        Result  :10pkSalivix,
         Time    :75.0
     }
 
     recipe Split in Two
     {
-        10pkZedalis,
+        10pkSalivix,
 
-        Result  :5pkZedalis=2,
+        Result  :5pkSalivix=2,
         Time    :75.0
     }
 }
