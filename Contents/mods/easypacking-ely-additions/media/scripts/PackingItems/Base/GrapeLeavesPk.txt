@@ -5,29 +5,29 @@ module Packing
 		Base,
 	}
 	
-	item 10pkNettles
+	item 10pkGrapeLeaves
 	{
-		DisplayName		= 10 x Nettles,
+		DisplayName		= 10 x Grape Leaves,
 		Weight			= 0.5,
 		Type			= Normal,
-		Icon			= Nettle,
-		WorldStaticModel= Nettles_Ground
+		Icon			= GrapeLeaves,
+		WorldStaticModel= GrapeLeaves
 	}
 	
-	item 50pkNettles
+	item 50pkGrapeLeaves
 	{
-		DisplayName		= 50 x Nettles,
+		DisplayName		= 50 x Grape Leaves,
 		Weight			= 2.8,
 		Type			= Normal,
-		Icon			= Nettle,
-		WorldStaticModel= Nettles_Ground
+		Icon			= GrapeLeaves,
+		WorldStaticModel= GrapeLeaves
 	}
 	
 	recipe Pack 10
 	{
-		destroy Nettles=10,
+		destroy GrapeLeaves=10,
 		
-		Result	:10pkNettles,
+		Result	:10pkGrapeLeaves,
 		OnCreate:Recipe.OnCreate.SaveFood,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:45.0,
@@ -36,9 +36,9 @@ module Packing
 	
 	recipe Unpack 10
 	{
-		destroy 10pkNettles,
+		destroy 10pkGrapeLeaves,
 		
-		Result	:Nettles=10,
+		Result	:GrapeLeaves=10,
 		OnCreate:Recipe.OnCreate.LoadFood,
 		RemoveResultItem:true,
 		Time	:45.0,
@@ -47,9 +47,9 @@ module Packing
 	
 	recipe Pack 50
 	{
-		destroy Nettles=50,
+		destroy GrapeLeaves=50,
 		
-		Result	:50pkNettles,
+		Result	:50pkGrapeLeaves,
 		OnCreate:Recipe.OnCreate.SaveFood,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:22.5,
@@ -58,9 +58,9 @@ module Packing
 	
 	recipe Unpack 50
 	{
-		destroy 50pkNettles,
+		destroy 50pkGrapeLeaves,
 		
-		Result	:Nettles=50,
+		Result	:GrapeLeaves=50,
 		OnCreate:Recipe.OnCreate.LoadFood,
 		RemoveResultItem:true,
 		Time	:22.5,
@@ -69,17 +69,17 @@ module Packing
 
 	recipe Put Together
 	{
-		10pkNettles=5,
+		10pkGrapeLeaves=5,
 		
-		Result	:50pkNettles=1,
+		Result	:50pkGrapeLeaves=1,
 		Time	:7.5,
 	}
 
 	recipe Split in Five
 	{
-		50pkNettles=1,
+		50pkGrapeLeaves=1,
 		
-		Result	:10pkNettles=5,
+		Result	:10pkGrapeLeaves=5,
 		Time	:7.5,
 	}
 }

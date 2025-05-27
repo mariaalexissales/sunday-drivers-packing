@@ -23,9 +23,9 @@ module Packing
 		WorldStaticModel= SmallComfrey
 	}
 	
-	item 40pkComfrey
+	item 50pkComfrey
 	{
-		DisplayName		= 40 x Comfrey,
+		DisplayName		= 50 x Comfrey,
 		Weight			= 2.8,
 		Type			= Normal,
 		Icon			= PkComfreyMediumBox,
@@ -38,7 +38,7 @@ module Packing
 
 		Result:5pkComfrey,
 		OnCreate:Recipe.OnCreate.SaveFood,
-		OnTest	:Recipe.OnTest.IsHerb,
+		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:45.0,
 		Category:Storage,
 	}
@@ -49,7 +49,7 @@ module Packing
 		
 		Result	:10pkComfrey,
 		OnCreate:Recipe.OnCreate.SaveFood,
-		OnTest	:Recipe.OnTest.IsHerb,
+		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:45.0,
 		Category:Storage,
 	}
@@ -65,22 +65,22 @@ module Packing
 		Category:Storage,
 	}
 	
-	recipe Pack 40
+	recipe Pack 50
 	{
-		destroy Comfrey=40,
+		destroy Comfrey=50,
 		
-		Result	:40pkComfrey,
+		Result	:50pkComfrey,
 		OnCreate:Recipe.OnCreate.SaveFood,
-		OnTest	:Recipe.OnTest.IsHerb,
+		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:22.5,
 		Category:Storage,
 	}
 	
-	recipe Unpack 40
+	recipe Unpack 50
 	{
-		destroy 40pkComfrey,
+		destroy 50pkComfrey,
 		
-		Result	:Comfrey=40,
+		Result	:Comfrey=50,
 		OnCreate:Recipe.OnCreate.LoadFood,
 		RemoveResultItem:true,
 		Time	:22.5,
@@ -89,17 +89,17 @@ module Packing
 
 	recipe Put Together
 	{
-		10pkComfrey=4,
+		10pkComfrey=5,
 		
 		Result	:10pkComfrey=1,
 		Time	:7.5,
 	}
 
-	recipe Split in Four
+	recipe Split in Five
 	{
-		40pkComfrey=1,
+		50pkComfrey=1,
 		
-		Result	:10pkComfrey=4,
+		Result	:10pkComfrey=5,
 		Time	:7.5,
 	}
 }

@@ -14,9 +14,9 @@ module Packing
 		WorldStaticModel= SmallWildGarlic
 	}
 	
-	item 40pkWildGarlic
+	item 50pkWildGarlic
 	{
-		DisplayName		= 40 x Wild Garlic,
+		DisplayName		= 50 x Wild Garlic,
 		Weight			= 2.8,
 		Type			= Normal,
 		Icon			= PkWildGarlicMediumBox,
@@ -25,7 +25,7 @@ module Packing
 	
 	recipe Pack 10
 	{
-		destroy WildGarlic=10,
+		destroy WildGarlic2=10,
 		
 		Result	:10pkWildGarlic,
 		OnCreate:Recipe.OnCreate.SaveFood,
@@ -38,29 +38,29 @@ module Packing
 	{
 		destroy 10pkWildGarlic,
 		
-		Result			:WildGarlic=10,
+		Result			:WildGarlic2=10,
 		OnCreate		:Recipe.OnCreate.LoadFood,
 		RemoveResultItem:true,
 		Time			:45.0,
 		Category		:Storage,
 	}
 	
-	recipe Pack 40
+	recipe Pack 50
 	{
-		destroy WildGarlic=40,
+		destroy WildGarlic2=50,
 		
-		Result	:40pkWildGarlic,
+		Result	:50pkWildGarlic,
 		OnCreate:Recipe.OnCreate.SaveFood,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:22.5,
 		Category:Storage,
 	}
 	
-	recipe Unpack 40
+	recipe Unpack 50
 	{
-		destroy 40pkWildGarlic,
+		destroy 50pkWildGarlic,
 		
-		Result			:WildGarlic=40,
+		Result			:WildGarlic2=50,
 		OnCreate		:Recipe.OnCreate.LoadFood,
 		RemoveResultItem:true,
 		Time			:22.5,
@@ -69,17 +69,17 @@ module Packing
 
 	recipe Put Together
 	{
-		10pkWildGarlic=4,
+		10pkWildGarlic=5,
 		
-		Result	:40pkWildGarlic=1,
+		Result	:50pkWildGarlic=1,
 		Time	:7.5,
 	}
 
-	recipe Split in Four
+	recipe Split in Five
 	{
-		40pkWildGarlic=1,
+		50pkWildGarlic=1,
 		
-		Result	:10pkWildGarlic=4,
+		Result	:10pkWildGarlic=5,
 		Time	:7.5,
 	}
 }

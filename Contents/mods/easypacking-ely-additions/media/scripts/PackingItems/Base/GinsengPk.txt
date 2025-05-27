@@ -14,9 +14,9 @@ module Packing
 		WorldStaticModel= SmallGinseng
 	}
 	
-	item 40pkGinseng
+	item 50pkGinseng
 	{
-		DisplayName		= 40 x Ginseng,
+		DisplayName		= 50 x Ginseng,
 		Weight			= 2.8,
 		Type			= Normal,
 		Icon			= PkGinsengMediumBox,
@@ -29,7 +29,7 @@ module Packing
 		
 		Result	:10pkGinseng,
 		OnCreate:Recipe.OnCreate.SaveFood,
-		OnTest	:Recipe.OnTest.IsHerb,
+		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:45.0,
 		Category:Storage,
 	}
@@ -45,22 +45,22 @@ module Packing
 		Category:Storage,
 	}
 	
-	recipe Pack 40
+	recipe Pack 50
 	{
-		destroy Ginseng=40,
+		destroy Ginseng=50,
 		
-		Result	:40pkGinseng,
+		Result	:50pkGinseng,
 		OnCreate:Recipe.OnCreate.SaveFood,
-		OnTest	:Recipe.OnTest.IsHerb,
+		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:22.5,
 		Category:Storage,
 	}
 	
-	recipe Unpack 40
+	recipe Unpack 50
 	{
-		destroy 40pkGinseng,
+		destroy 50pkGinseng,
 		
-		Result	:Ginseng=40,
+		Result	:Ginseng=50,
 		OnCreate:Recipe.OnCreate.LoadFood,
 		RemoveResultItem:true,
 		Time	:22.5,
@@ -69,17 +69,17 @@ module Packing
 
 	recipe Put Together
 	{
-		10pkGinseng=4,
+		10pkGinseng=5,
 		
-		Result	:40pkGinseng=1,
+		Result	:50pkGinseng=1,
 		Time	:7.5,
 	}
 
-	recipe Split in Four
+	recipe Split in Five
 	{
-		40pkGinseng=1,
+		50pkGinseng=1,
 		
-		Result	:10pkGinseng=4,
+		Result	:10pkGinseng=5,
 		Time	:7.5,
 	}
 }
