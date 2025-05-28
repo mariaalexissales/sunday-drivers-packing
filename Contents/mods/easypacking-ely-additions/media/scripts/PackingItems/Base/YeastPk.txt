@@ -30,7 +30,7 @@ module Packing
         destroy Yeast=5,
 
         Result  :5pkYeast,
-        OnCreate:Recipe.OnCreate.SaveFood
+        OnCreate:Recipe.OnCreate.SaveUses
         OnTest  :Recipe.OnTest.IsFavorite,
         Time    :50.0,
         Category:Storage,
@@ -41,7 +41,7 @@ module Packing
         destroy 5pkYeast,
 
         Result          :Yeast=5,
-        OnCreate        :Recipe.OnCreate.LoadFood,
+        OnCreate        :Recipe.OnCreate.LoadUses,
         OnGiveXP        :Recipe.OnGiveXP.None,
         RemoveResultItem:true,
         Time            :50.0,
@@ -53,7 +53,7 @@ module Packing
         destroy Yeast=10,
 
         Result  :10pkYeast,
-        OnCreate:Recipe.OnCreate.SaveFood
+        OnCreate:Recipe.OnCreate.SaveUses
         OnTest  :Recipe.OnTest.IsFavorite,
         Time    :75.0,
         Category:Storage,
@@ -64,7 +64,7 @@ module Packing
         destroy 10pkYeast,
 
         Result          :Yeast=10,
-        OnCreate        :Recipe.OnCreate.LoadFood,
+        OnCreate        :Recipe.OnCreate.LoadUses,
         OnGiveXP        :Recipe.OnGiveXP.None,
         RemoveResultItem:true,
         Time            :50.0,

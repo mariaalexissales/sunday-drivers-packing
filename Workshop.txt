@@ -1,7 +1,6 @@
 version=1
 id=3456541999
 title=Easy Packing for Sunday Drivers by Elyxaria
-description=attempt at fixing chunk rot
-description=mentally and physically need help atm
+description=Packing mod for tackling chunk rot on the SD mp server.
 tags=Build 41;Balance;Multiplayer
 visibility=public
