@@ -1,0 +1,5 @@
+name=Simple Packing - Project Grub
+id=SimplePackingPZG
+description=Simple Packing recipes for Project Grub. (Seed compatibility only)
+poster=poster.png
+require=SimplePacking,projectgrubFarm
