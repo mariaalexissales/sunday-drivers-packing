@@ -1,7 +1,3 @@
-
--- simple_book_packing.lua
--- Contains only unpacking functions related to skill books
-
 function Recipe.OnCreate.UnpackCarpentrySkillBook(items, result, player)
     player:getInventory():AddItem("Base.BookCarpentry2");
     player:getInventory():AddItem("Base.BookCarpentry3");
