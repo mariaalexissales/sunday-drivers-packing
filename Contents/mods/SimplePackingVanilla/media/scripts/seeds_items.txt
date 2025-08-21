@@ -154,7 +154,7 @@ module SP
         DisplayName = 5x Strawberry Seeds,
         Weight = 0.05,
         Type = Normal,
-        Icon = StrawberrySeedPacket,
+        Icon = TZ_SeedpackStrewberries,
         WorldStaticModel = SeedPacket,
     }
 
@@ -163,7 +163,7 @@ module SP
         DisplayName = 10x Strawberry Seeds,
         Weight = 0.1,
         Type = Normal,
-        Icon = StrawberrySeedPacket,
+        Icon = TZ_SeedpackStrewberries,
         WorldStaticModel = SeedPacket,
     }
 
@@ -172,7 +172,7 @@ module SP
         DisplayName = 50x Strawberry Seeds,
         Weight = 0.5,
         Type = Normal,
-        Icon = StrawberrySeedPacket,
+        Icon = TZ_SeedpackStrewberries,
         WorldStaticModel = SeedPacket,
     }
 
@@ -181,7 +181,7 @@ module SP
         DisplayName = 100x Strawberry Seeds,
         Weight = 1.0,
         Type = Normal,
-        Icon = StrawberrySeedPacket,
+        Icon = TZ_SeedpackStrewberries,
         WorldStaticModel = SeedPacket,
     }
 
