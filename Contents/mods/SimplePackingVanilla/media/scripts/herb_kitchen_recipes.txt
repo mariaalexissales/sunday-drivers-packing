@@ -5,7 +5,7 @@ module SP
 		Base,
 	}
 
-// ===== Basil =====
+    /***** Basil *****/
 	recipe Pack 10
 	
 		destroy Basil=10,
@@ -65,7 +65,7 @@ module SP
 		Result	:10pkBasil=5,
 		Time	:7.5,
 
-// ===== Chives =====
+    /***** Chives *****/
 
 	recipe Pack 10
 	
@@ -126,7 +126,7 @@ module SP
 		Result	:10pkChives=5,
 		Time	:7.5,
 
-// ===== Cilantro =====
+    /***** Cilantro *****/
 
 	recipe Pack 10
 	
@@ -187,7 +187,7 @@ module SP
 		Result	:10pkCilantro=5,
 		Time	:7.5,
 	
-// ===== Oregano =====
+    /***** Oregano *****/
 
 	recipe Pack 5
 	
@@ -259,7 +259,7 @@ module SP
 		Result	:10pkOregano=5,
 		Time	:7.5,
 	
-// ===== Sage =====
+    /***** Sage *****/
 	
 	recipe Pack 10
 	
@@ -320,7 +320,7 @@ module SP
 		Result	:10pkSage=5,
 		Time	:7.5,
 
-// ===== Thyme =====
+    /***** Thyme *****/
 	
 	recipe Pack 10
 	

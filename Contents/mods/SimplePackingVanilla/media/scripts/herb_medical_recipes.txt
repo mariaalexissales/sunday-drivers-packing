@@ -5,9 +5,8 @@ module SP
 		Base,
 	}
 
-// ===== BlackSage =====
+    /***** BlackSage *****/
 
-	
 	recipe Pack 10
 	{
 		destroy BlackSage=10,
@@ -68,7 +67,7 @@ module SP
 		Time	:7.5,
 	}
 
-// ===== Comfrey =====
+    /***** Comfrey *****/
 
 	recipe Pack 5
 	{
@@ -141,7 +140,7 @@ module SP
 		Time	:7.5,
 	}
 
-// ===== LemonGrass =====
+    /***** LemonGrass *****/
 
 	recipe Pack 10
 	{
@@ -203,7 +202,7 @@ module SP
 		Time	:7.5,
 	}
 
-// ===== Nettle =====
+    /***** Nettle *****/
 	
 	recipe Pack 10
 	{

@@ -4370,8 +4370,6 @@ module SP
         Category:Storage
     }
 
-
-
     recipe Put Together
     {
         5pkWheatBagSeed=2,
@@ -4563,3 +4561,4 @@ module SP
         Time    :40.0
     }
 }
+
