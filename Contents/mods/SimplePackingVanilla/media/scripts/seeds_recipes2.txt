@@ -5,11 +5,12 @@ module SP
 		Base,
 	}
 
+    //TODO: Please merge later
+
     recipe Pack 5 Radish Seeds
     {
         destroy RadishBagSeed=5,
         Result:5pkRadishBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -18,7 +19,6 @@ module SP
     {
         destroy RadishBagSeed=10,
         Result:10pkRadishBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -27,7 +27,6 @@ module SP
     {
         destroy RadishBagSeed=50,
         Result:50pkRadishBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -36,7 +35,6 @@ module SP
     {
         destroy RadishBagSeed=100,
         Result:100pkRadishBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -139,7 +137,6 @@ module SP
     {
         destroy StrawberryBagSeed=5,
         Result:5pkStrawberryBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -148,7 +145,6 @@ module SP
     {
         destroy StrawberryBagSeed=10,
         Result:10pkStrawberryBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -157,7 +153,6 @@ module SP
     {
         destroy StrawberryBagSeed=50,
         Result:50pkStrawberryBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -166,7 +161,6 @@ module SP
     {
         destroy StrawberryBagSeed=100,
         Result:100pkStrawberryBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -269,7 +263,6 @@ module SP
     {
         destroy TomatoBagSeed=5,
         Result:5pkTomatoBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -278,7 +271,6 @@ module SP
     {
         destroy TomatoBagSeed=10,
         Result:10pkTomatoBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -287,7 +279,6 @@ module SP
     {
         destroy TomatoBagSeed=50,
         Result:50pkTomatoBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -296,7 +287,6 @@ module SP
     {
         destroy TomatoBagSeed=100,
         Result:100pkTomatoBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }

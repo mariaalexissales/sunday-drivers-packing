@@ -9,7 +9,6 @@ module SP
     {
         destroy CabbageBagSeed=5,
         Result:5pkCabbageBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -18,7 +17,6 @@ module SP
     {
         destroy CabbageBagSeed=10,
         Result:10pkCabbageBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -27,7 +25,6 @@ module SP
     {
         destroy CabbageBagSeed=50,
         Result:50pkCabbageBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -36,7 +33,6 @@ module SP
     {
         destroy CabbageBagSeed=100,
         Result:100pkCabbageBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -139,7 +135,6 @@ module SP
     {
         destroy CarrotsBagSeed=5,
         Result:5pkCarrotsBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -148,7 +143,6 @@ module SP
     {
         destroy CarrotsBagSeed=10,
         Result:10pkCarrotsBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -157,7 +151,6 @@ module SP
     {
         destroy CarrotsBagSeed=50,
         Result:50pkCarrotsBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -166,7 +159,6 @@ module SP
     {
         destroy CarrotsBagSeed=100,
         Result:100pkCarrotsBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -269,7 +261,6 @@ module SP
     {
         destroy PotatoBagSeed=5,
         Result:5pkPotatoBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -278,7 +269,6 @@ module SP
     {
         destroy PotatoBagSeed=10,
         Result:10pkPotatoBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -287,7 +277,6 @@ module SP
     {
         destroy PotatoBagSeed=50,
         Result:50pkPotatoBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -296,7 +285,6 @@ module SP
     {
         destroy PotatoBagSeed=100,
         Result:100pkPotatoBagSeed,
-        RemoveResultItem:true,
         Time:45.0,
         Category:Storage,
     }
@@ -392,6 +380,143 @@ module SP
         100pkPotatoBagSeed=1,
 
         Result  :50pkPotatoBagSeed=2,
+        Time    :40.0
+    }
+
+        recipe Pack 5
+    {
+        destroy PineappleBagSeed=5,
+
+        Result  :5pkPineappleBagSeed,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :50.0,
+        Category:Storage
+    }
+
+
+    recipe Pack 10
+    {
+        destroy PineappleBagSeed=10,
+
+        Result  :10pkPineappleBagSeed,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :75.0,
+        Category:Storage
+    }
+
+
+    recipe Pack 50
+    {
+        destroy PineappleBagSeed=50,
+
+        Result  :50pkPineappleBagSeed,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :100.0,
+        Category:Storage
+    }
+
+
+    recipe Pack 100
+    {
+        destroy PineappleBagSeed=100,
+
+        Result  :100pkPineappleBagSeed,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :125.0,
+        Category:Storage
+    }
+
+    recipe Unpack 5
+    {
+        destroy 5pkPineappleBagSeed,
+
+        Result:PineappleBagSeed=5,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 10
+    {
+        destroy 10pkPineappleBagSeed,
+
+        Result:PineappleBagSeed=10,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 50
+    {
+        destroy 50pkPineappleBagSeed,
+
+        Result:PineappleBagSeed=50,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 100
+    {
+        destroy 100pkPineappleBagSeed,
+
+        Result:PineappleBagSeed=100,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+
+    recipe Put Together
+    {
+        5pkPineappleBagSeed=2,
+
+        Result  :10pkPineappleBagSeed=1,
+        Time    :10.0
+    }
+
+
+    recipe Put Together
+    {
+        10pkPineappleBagSeed=5,
+
+        Result  :50pkPineappleBagSeed=1,
+        Time    :20.0
+    }
+
+
+    recipe Put Together
+    {
+        50pkPineappleBagSeed=2,
+
+        Result  :100pkPineappleBagSeed=1,
+        Time    :40.0
+    }
+
+
+    recipe Split in Two
+    {
+        10pkPineappleBagSeed=1,
+
+        Result  :5pkPineappleBagSeed=2,
+        Time    :10.0
+    }
+
+
+    recipe Split in Five
+    {
+        50pkPineappleBagSeed=1,
+
+        Result  :10pkPineappleBagSeed=5,
+        Time    :20.0
+    }
+
+
+    recipe Split in Two
+    {
+        100pkPineappleBagSeed=1,
+
+        Result  :50pkPineappleBagSeed=2,
         Time    :40.0
     }
 }
