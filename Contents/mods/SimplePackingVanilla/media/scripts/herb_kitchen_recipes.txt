@@ -27,7 +27,6 @@ module SP
 		Time	:45.0,
 		Category:Storage,
 	
-	
 	recipe Pack 50
 	
 		destroy Basil=50,
@@ -38,7 +37,6 @@ module SP
 		Time	:22.5,
 		Category:Storage,
 	
-	
 	recipe Unpack 50
 	
 		destroy 50pkBasil,
@@ -48,7 +46,6 @@ module SP
 		RemoveResultItem:true,
 		Time	:22.5,
 		Category:Storage,
-	
 
 	recipe Put Together
 	
@@ -66,7 +63,6 @@ module SP
 		Time	:7.5,
 
     /***** Chives *****/
-
 	recipe Pack 10
 	
 		destroy Chives=10,

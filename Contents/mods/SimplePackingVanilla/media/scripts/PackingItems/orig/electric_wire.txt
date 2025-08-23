@@ -1,0 +1,98 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkElectricWire
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Electric Wire,
+		DisplayCategory = Electronics,
+		Icon			= PWire,
+		ColorRed = 244,
+        ColorGreen = 164,
+        ColorBlue = 96,
+		WorldStaticModel= StackOfElectricWire,
+	}
+
+	item 5pkElectricWire
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Electric Wire,
+		DisplayCategory = Electronics,
+		Icon			= PWire,
+		ColorRed = 244,
+        ColorGreen = 164,
+        ColorBlue = 96,
+		WorldStaticModel= StackOfElectricWire,
+	}
+
+	recipe Pack 10
+	{
+		destroy ElectricWire=10,
+		
+		Result:10pkElectricWire,
+		OnTest:Recipe.OnTest.IsFavorite,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkElectricWire,
+		
+		Result:ElectricWire=10,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 5
+	{
+		destroy ElectricWire=5,
+		
+		Result:5pkElectricWire,
+		OnTest:Recipe.OnTest.IsFavorite,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 5
+	{
+		destroy 5pkElectricWire,
+		
+		Result:ElectricWire=5,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkElectricWire=2,
+		
+		Result:10pkElectricWire=1,
+		Time:30.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkElectricWire=1,
+		
+		Result:5pkElectricWire=2,
+		Time:30.0,
+	}
+
+	model StackOfElectricWire
+	{
+		mesh = WorldItems/stack_of_wire,
+		texture = WorldItems/ElectricWire,
+		scale = 1.0,
+	}
+}

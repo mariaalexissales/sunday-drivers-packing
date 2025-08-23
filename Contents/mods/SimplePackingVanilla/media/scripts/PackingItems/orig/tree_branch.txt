@@ -1,0 +1,269 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	/** Base Weight = 1.7 **/
+	item 10pkRopeTreeBranch
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 10 x Branch (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeBranch,
+		WorldStaticModel= StackOfTreeBranchesRoped,
+	}
+	
+	item 5pkRopeTreeBranch
+	{
+		Weight			= 1,
+		Type			= Normal,
+		DisplayName		= 5 x Branch (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeBranch,
+		WorldStaticModel= StackOfTreeBranchesRoped,
+	}
+	
+	item 10pkSheetRopeTreeBranch
+	{
+		Weight			= 2.5,
+		Type			= Normal,
+		DisplayName		= 10 x Branch (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeBranch,
+		WorldStaticModel= StackOfTreeBranchesSheetRoped,
+	}
+	
+	item 5pkSheetRopeTreeBranch
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 5 x Branch (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeBranch,
+		WorldStaticModel= StackOfTreeBranchesSheetRoped,
+	}
+
+	item 50pkWCTreeBranch
+	{
+		Weight			= 8.5,
+		Type			= Normal,
+		DisplayName		= 50 x Branch (Box),
+		DisplayCategory	= Material,
+		Icon			= WIP,
+		WorldStaticModel= WIP,
+	}
+
+	item 100pkWCTreeBranch
+	{
+		Weight			= 12.75,
+		Type			= Normal,
+		DisplayName		= 100 x Branch (Box),
+		DisplayCategory	= Material,
+		Icon			= WIP,
+		WorldStaticModel= WIP,
+	}
+
+	recipe Rope 10
+	{
+		destroy TreeBranch=10,
+		Rope=2,
+		
+		Result:10pkRopeTreeBranch,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:100.0,
+		Category:Storage,
+	}
+	
+	recipe Unrope 10
+	{
+		destroy 10pkRopeTreeBranch,
+		
+		Result:TreeBranch=10,
+		OnCreate:Recipe.OnCreate.Unpack2Rope,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Rope 5
+	{
+		destroy TreeBranch=5,
+		Rope,
+		
+		Result:5pkRopeTreeBranch,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unrope 5
+	{
+		destroy 5pkRopeTreeBranch,
+		
+		Result:TreeBranch=5,
+		OnCreate:Recipe.OnCreate.Unpack1Rope,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Rope 10
+	{
+		destroy TreeBranch=10,
+		SheetRope=2,
+		
+		Result:10pkSheetRopeTreeBranch,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:100.0,
+		Category:Storage,
+	}
+	
+	recipe Unrope 10
+	{
+		destroy 10pkSheetRopeTreeBranch,
+		
+		Result:TreeBranch=10,
+		OnCreate:Recipe.OnCreate.Unpack2SheetRope,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Rope 5
+	{
+		destroy TreeBranch=5,
+		SheetRope,
+		
+		Result:5pkSheetRopeTreeBranch,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unrope 5
+	{
+		destroy 5pkSheetRopeTreeBranch,
+		
+		Result:TreeBranch=5,
+		OnCreate:Recipe.OnCreate.Unpack1SheetRope,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy TreeBranch=50,
+		WoodenContainer=1,
+
+		Result:50pkWCTreeBranch,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:320.0,
+		Category:Storage,
+	}
+
+	recipe Pack 100
+	{
+		destroy TreeBranch=100,
+		WoodenContainer=2,
+
+		Result:100pkWCTreeBranch,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:370.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkWCTreeBranch,
+
+		Result:TreeBranch=50,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack1WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:160.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkWCTreeBranch,
+
+		Result:TreeBranch=100,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack2WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:185.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkRopeTreeBranch=2,
+		
+		Result:10pkRopeTreeBranch=1,
+		Time:30.0,
+	}
+
+	recipe Put Together
+	{
+		5pkSheetRopeTreeBranch=2,
+		
+		Result:10pkSheetRopeTreeBranch=1,
+		Time:30.0,
+	}
+
+	recipe Put Together
+	{
+		50pkWCTreeBranch=2,
+
+		Result:100pkWCTreeBranch=1,
+		CanBeDoneFromFloor:true,
+		Time:172.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkSheetRopeTreeBranch=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetRopeTreeBranch=2,
+		Time:30.0,
+	}
+	
+	recipe Split in Two
+	{
+		10pkRopeTreeBranch=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkRopeTreeBranch=2,
+		Time:30.0,
+	}
+
+	recipe Split in Two
+	{
+		100pkWCTreeBranch=1,
+
+		Result:50pkWCTreeBranch=2,
+		CanBeDoneFromFloor:true,
+		Time:172.0,
+	}
+
+	model StackOfTreeBranchesRoped
+	{
+		mesh = WorldItems/stack_of_tree_branches,
+		texture = WorldItems/StackOfTreeBranchRoped,
+		scale = 1.0,
+	}
+
+	model StackOfTreeBranchesSheetRoped
+	{
+		mesh = WorldItems/stack_of_tree_branches,
+		texture = WorldItems/StackOfTreeBranchSheetRoped,
+		scale = 1.0,
+	}
+}

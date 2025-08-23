@@ -1,0 +1,44 @@
+module GidOrganizedFood
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS6pkCannedTomato
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 6 x Canned Tomato,
+		DisplayCategory = Food,
+		Icon			= OS6pkCannedTomato,
+		WorldStaticModel= PackOfTomatoCan,
+	}
+	
+	recipe Pack 6
+	{
+		destroy CannedTomato2=6,
+
+		Result:OS6pkCannedTomato,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy OS6pkCannedTomato,
+
+		Result:CannedTomato2=6,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	model PackOfTomatoCan
+	{
+		mesh = WorldItems/pack_of_cans,
+		texture = WorldItems/TinnedTomatoes,
+		scale = 1.0,
+	}
+}

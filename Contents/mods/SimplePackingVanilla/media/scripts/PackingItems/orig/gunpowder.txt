@@ -1,0 +1,100 @@
+module Packing
+{
+    imports
+    {
+       Base,
+    }
+
+   /** ITEM: Gunpowder **/
+    item 10pkGunpowder
+    {
+        Weight          = 0.5,
+        Type            = Normal,
+        DisplayName     = 10 x Gunpowder,
+        Icon            = PGunpowder,
+        WorldStaticModel= 10pkGunpowder_ground,
+    }
+	
+	item 5pkGunpowder
+    {
+        Weight          = 0.35,
+        Type            = Normal,
+        DisplayName     = 5 x Gunpowder,
+        Icon            = PGunpowder,
+        WorldStaticModel= 10pkGunpowder_ground,
+    }
+
+    recipe Pack 10
+    {
+        destroy GunPowder=10,
+
+        Result:10pkGunpowder,
+		OnCreate:Recipe.OnCreate.SaveUses,
+        OnTest:Recipe.OnTest.IsFavorite,
+        Time:75.0,
+        Category:Storage,
+    }
+
+    recipe Unpack 10
+    {
+        destroy 10pkGunpowder,
+
+        Result:GunPowder=10,
+		OnCreate:Recipe.OnCreate.LoadUses,
+        OnGiveXP:Recipe.OnGiveXP.None,
+		RemoveResultItem:true,
+        Time:50.0,
+        Category:Storage,
+    }
+	
+	recipe Pack 5
+    {
+        destroy GunPowder=5,
+
+        Result:5pkGunpowder,
+        OnCreate:Recipe.OnCreate.SaveUses,
+        OnTest:Recipe.OnTest.IsFavorite,
+        Time:50.0,
+        Category:Storage,
+    }
+
+    recipe Unpack 5
+    {
+        destroy 5pkGunpowder,
+
+        Result:GunPowder=5,
+        OnCreate:Recipe.OnCreate.LoadUses,
+        OnGiveXP:Recipe.OnGiveXP.None,
+		RemoveResultItem:true,
+        Time:25.0,
+        Category:Storage,
+    }
+	
+	recipe Put Together
+	{
+		5pkGunpowder=2,
+		
+		Result:10pkGunpowder=1,
+		OnCreate:Recipe.OnCreate.MergeUses,
+		Time:30.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkGunpowder=1,
+		
+		Result:5pkGunpowder,
+		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
+		RemoveResultItem:true,
+		Time:30.0,
+	}
+
+    model 10pkGunpowder_ground
+    {
+        mesh = WorldItems/pack_of_gunpowder,
+        texture = WorldItems/GunpowderJar,
+        scale = 1.8,
+    }
+
+   /**END**/
+}

@@ -1,0 +1,44 @@
+module GidOrganizedFood
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS6pkCannedChili
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 6 x Canned Chili,
+		DisplayCategory = Food,
+		Icon			= OS6pkCannedChili,
+		WorldStaticModel= PackOfChiliCan,
+	}
+	
+	recipe Pack 6
+	{
+		destroy CannedChili=6,
+
+		Result:OS6pkCannedChili,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy OS6pkCannedChili,
+
+		Result:CannedChili=6,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	model PackOfChiliCan
+	{
+		mesh = WorldItems/pack_of_cans,
+		texture = WorldItems/TinnedChilli,
+		scale = 1.0,
+	}
+}

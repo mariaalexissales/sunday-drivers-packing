@@ -1,0 +1,29 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item WoodenContainer
+	{
+		Weight			= 1.0,
+		Type			= Normal,
+		DisplayName		= Wooden Container,
+		DisplayCategory = Material,
+		Icon			= PWoodenContainer,
+		WorldStaticModel= WIP,
+	}
+
+	recipe Make Wooden Container
+	{
+		Plank=1,
+		keep [Recipe.GetItemTypes.Saw],
+		keep [Recipe.GetItemTypes.Hammer],
+		
+		Result:WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:80.0,
+		Category:Storage,
+	}
+}

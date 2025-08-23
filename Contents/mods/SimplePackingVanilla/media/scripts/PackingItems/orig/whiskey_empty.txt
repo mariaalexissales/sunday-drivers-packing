@@ -1,0 +1,42 @@
+module GidOrganizedFood
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS8pkWhiskeyEmpty
+	{
+		Weight			= 1.2,
+		Type			= Normal,
+		DisplayName		= 8 x Empty Whiskey Bottles,
+		DisplayCategory = WaterContainer,
+		Icon			= OS8pkWhiskeyEmpty,
+		WorldStaticModel= WoodenBoxOfWhiskeyEmpty,
+	}
+	
+	recipe Pack 8
+	{
+		WhiskeyEmpty=8,
+
+		Result:OS8pkWhiskeyEmpty,
+		Time:120.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 8
+	{
+		OS8pkWhiskeyEmpty,
+
+		Result:WhiskeyEmpty=8,
+		Time:120.0,
+		Category:Storage,
+	}
+
+	model WoodenBoxOfWhiskeyEmpty
+	{
+		mesh = WorldItems/wooden_box_of_whiskey_bottles,
+		texture = WorldItems/WoodenBoxOfWhiskeyBottleEmpty,
+		scale = 1.0,
+	}
+}

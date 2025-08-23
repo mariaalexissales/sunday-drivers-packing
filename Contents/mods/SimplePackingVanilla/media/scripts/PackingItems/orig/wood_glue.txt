@@ -1,0 +1,97 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkWoodGlue
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Wood Glue,
+		DisplayCategory = Material,
+		Icon			= PWoodGlue,
+		WorldStaticModel= StackOfWoodGlue,
+	}
+	
+	item 5pkWoodGlue
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Wood Glue,
+		DisplayCategory = Material,
+		Icon			= PWoodGlue,
+		WorldStaticModel= StackOfWoodGlue,
+	}
+
+	recipe Pack 10
+	{
+		destroy Woodglue=10,
+		
+		Result:10pkWoodGlue,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkWoodGlue,
+		
+		Result:Woodglue,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 5
+	{
+		destroy Woodglue=5,
+		
+		Result:5pkWoodGlue,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 5
+	{
+		destroy 5pkWoodGlue,
+		
+		Result:Woodglue,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkWoodGlue=2,
+		
+		Result:10pkWoodGlue=1,
+		OnCreate:Recipe.OnCreate.MergeUses,
+		Time:30.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkWoodGlue=1,
+		
+		Result:5pkWoodGlue,
+		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
+		RemoveResultItem:true,
+		Time:30.0,
+	}
+
+	model StackOfWoodGlue
+	{
+		mesh = WorldItems/stack_of_wood_glue,
+		texture = WorldItems/WoodGlue,
+		scale = 1.0,
+	}
+}

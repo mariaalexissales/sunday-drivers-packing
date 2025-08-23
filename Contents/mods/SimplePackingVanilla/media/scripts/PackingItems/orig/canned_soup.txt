@@ -1,0 +1,44 @@
+module GidOrganizedFood
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS6pkCannedSoup
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 6 x Canned Soup,
+		DisplayCategory = Food,
+		Icon			= OS6pkCannedSoup,
+		WorldStaticModel= PackOfVeggieSoupCan,
+	}
+	
+	recipe Pack 6
+	{
+		destroy TinnedSoup=6,
+
+		Result:OS6pkCannedSoup,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy OS6pkCannedSoup,
+
+		Result:TinnedSoup=6,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	model PackOfVeggieSoupCan
+	{
+		mesh = WorldItems/pack_of_cans,
+		texture = WorldItems/TinnedSoup,
+		scale = 1.0,
+	}
+}

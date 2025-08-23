@@ -1,0 +1,88 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkPencil
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Pencil,
+		DisplayCategory = Household,
+		Icon			= PPencil,
+		WorldStaticModel= PackOfPencils,
+	}
+	
+	item 5pkPencil
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Pencil,
+		DisplayCategory = Household,
+		Icon			= PPencil,
+		WorldStaticModel= PackOfPencils,
+	}
+	
+	recipe Pack 10
+	{
+		destroy Pencil=10,
+		
+		Result:10pkPencil,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkPencil,
+		
+		Result:Pencil=10,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 5
+	{
+		destroy Pencil=5,
+		
+		Result:5pkPencil,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 5
+	{
+		destroy 5pkPencil,
+		
+		Result:Pencil=5,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkPencil=2,
+		
+		Result:10pkPencil=1,
+		Time:30.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkPencil=1,
+		
+		Result:5pkPencil=2,
+		Time:30.0,
+	}
+
+	model PackOfPencils
+	{
+		mesh = WorldItems/pack_of_pens,
+		texture = WorldItems/PackOfPencils,
+		scale = 1.0,
+	}
+}

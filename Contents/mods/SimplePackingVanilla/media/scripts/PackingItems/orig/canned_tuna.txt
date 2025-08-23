@@ -1,0 +1,44 @@
+module GidOrganizedFood
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS8pkCannedTuna
+	{
+		Weight			= 1.2,
+		Type			= Normal,
+		DisplayName		= 8 x Canned Tuna,
+		DisplayCategory = Food,
+		Icon			= OS8pkCannedTuna,
+		WorldStaticModel= PackOfTinnedTuna,
+	}
+	
+	recipe Pack 8
+	{
+		destroy TunaTin=8,
+
+		Result:OS8pkCannedTuna,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 8
+	{
+		destroy OS8pkCannedTuna,
+
+		Result:TunaTin=8,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	model PackOfTinnedTuna
+	{
+		mesh = WorldItems/pack_of_tinned_tuna,
+		texture = WorldItems/TinnedTuna,
+		scale = 1.0,
+	}
+}

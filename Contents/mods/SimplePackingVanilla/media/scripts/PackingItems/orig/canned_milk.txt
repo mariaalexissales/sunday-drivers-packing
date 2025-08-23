@@ -1,0 +1,44 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 6pkCannedMilk
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 6 x Canned Evaporated Milk,
+		DisplayCategory = Food,
+		Icon			= PCannedMilk,
+		WorldStaticModel= PackOfCondensedMilkCan,
+	}
+	
+	recipe Pack 6
+	{
+		destroy CannedMilk=6,
+		
+		Result:6pkCannedMilk,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:60.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 6
+	{
+		destroy 6pkCannedMilk,
+		
+		Result:CannedMilk=6,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:40.0,
+		Category:Storage,
+	}
+
+	model PackOfCondensedMilkCan
+	{
+		mesh = WorldItems/pack_of_cans,
+		texture = WorldItems/TinnedCondensedMilk,
+		scale = 1.0,
+	}
+}

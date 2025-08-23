@@ -1,0 +1,43 @@
+module GidOrganized
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS9pkBandagesDirty
+	{
+		Weight			= 0.3,
+		Type			= Normal,
+		DisplayName		= 9 x Dirty Bandages,
+		DisplayCategory = FirstAid,
+		Icon			= OS9pkBandagesDirty,
+		WorldStaticModel= PackOfDirtyBandages,
+	}
+	
+	recipe Pack 9
+	{
+		BandageDirty=9,
+
+		Result:OS9pkBandagesDirty,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 9
+	{
+		OS9pkBandagesDirty,
+
+		Result:BandageDirty=9,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	model PackOfDirtyBandages
+	{
+		mesh = WorldItems/pack_of_bandages,
+		texture = WorldItems/PackOfDirtyBandages,
+		scale = 1.0,
+	}
+}

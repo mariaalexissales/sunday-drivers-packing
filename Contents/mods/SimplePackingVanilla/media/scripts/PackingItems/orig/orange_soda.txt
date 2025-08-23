@@ -1,0 +1,91 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkOrangeSoda
+	{
+		Weight			= 4,
+		Type			= Normal,
+		DisplayName		= 10 x Orange Soda,
+		DisplayCategory = Food,
+		Icon			= POrangeSoda,
+		WorldStaticModel= PackOfPopBottles,
+	}
+	
+	item 5pkOrangeSoda
+	{
+		Weight			= 2.8,
+		Type			= Normal,
+		DisplayName		= 5 x Orange Soda,
+		DisplayCategory = Food,
+		Icon			= POrangeSoda,
+		WorldStaticModel= PackOfPopBottles,
+	}
+
+	recipe Pack 10
+	{
+		destroy PopBottle=10,
+		
+		Result:10pkOrangeSoda,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:100.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkOrangeSoda,
+		
+		Result:PopBottle=10,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 5
+	{
+		destroy PopBottle=5,
+		
+		Result:5pkOrangeSoda,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 5
+	{
+		destroy 5pkOrangeSoda,
+		
+		Result:PopBottle=5,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkOrangeSoda=2,
+		
+		Result:10pkOrangeSoda=1,
+		Time:40.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkOrangeSoda=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkOrangeSoda=2,
+		Time:40.0,
+	}
+
+	model PackOfPopBottles
+	{
+		mesh = WorldItems/pack_of_pop_bottles,
+		texture = PopBottle,
+		scale = 0.67,
+	}
+}

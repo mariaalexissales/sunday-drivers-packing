@@ -1,0 +1,65 @@
+module GidOrganizedFood
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS6pkPop
+	{
+		Weight			= 0.9,
+		Type			= Normal,
+		DisplayName		= 6 x Pop,
+		DisplayCategory = Food,
+		Icon			= OS6pkPop,
+		WorldStaticModel= PackOfPop,
+	}
+	
+	recipe Pack 6
+	{
+		destroy Pop2=6,
+
+		Result:OS6pkPop,
+		OnTest:Recipe.OnTest.WholeFood,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy OS6pkPop,
+
+		Result:Pop2=6,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:60.0,
+		Category:Storage,
+	}
+	
+	recipe Change to Type 1
+	{
+		destroy Pop2,
+		
+		Result:Pop=1,
+		OnTest:Recipe.OnTest.WholeFood,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:25.0,
+	}
+	
+	recipe Change to Type 3
+	{
+		destroy Pop2,
+		
+		Result:Pop3=1,
+		OnTest:Recipe.OnTest.WholeFood,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:25.0,
+	}
+
+	model PackOfPop
+	{
+		mesh = WorldItems/pack_of_pop,
+		texture = PopCanRed,
+		scale = 1.0,
+	}
+
+}

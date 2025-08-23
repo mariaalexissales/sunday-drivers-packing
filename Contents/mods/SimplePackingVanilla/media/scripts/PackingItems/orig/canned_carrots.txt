@@ -1,0 +1,44 @@
+module GidOrganizedFood
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS6pkCannedCarrots
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 6 x Canned Carrots,
+		DisplayCategory = Food,
+		Icon			= OS6pkCannedCarrots,
+		WorldStaticModel= PackOfCarrotsCan,
+	}
+	
+	recipe Pack 6
+	{
+		destroy CannedCarrots2=6,
+
+		Result:OS6pkCannedCarrots,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy OS6pkCannedCarrots,
+
+		Result:CannedCarrots2=6,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	model PackOfCarrotsCan
+	{
+		mesh = WorldItems/pack_of_cans,
+		texture = WorldItems/TinnedCarrots,
+		scale = 1.0,
+	}
+}

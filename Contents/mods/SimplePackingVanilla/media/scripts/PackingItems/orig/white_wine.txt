@@ -1,0 +1,91 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkWhiteWine
+	{
+		Weight			= 5,
+		Type			= Normal,
+		DisplayName		= 10 x Chardonnay,
+		DisplayCategory = Food,
+		Icon			= PWhiteWine,
+		WorldStaticModel= WoodenBoxOfWhiteWineBottle,
+	}
+	
+	item 5pkWhiteWine
+	{
+		Weight			= 3.5,
+		Type			= Normal,
+		DisplayName		= 5 x Chardonnay,
+		DisplayCategory = Food,
+		Icon			= PWhiteWine,
+		WorldStaticModel= WoodenBoxOfWhiteWineBottle,
+	}
+
+	recipe Pack 10
+	{
+		destroy Wine=10,
+		
+		Result:10pkWhiteWine,
+		OnTest:Recipe.OnTest.WholeFood,
+		Time:100.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkWhiteWine,
+		
+		Result:Wine=10,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 5
+	{
+		destroy Wine=5,
+		
+		Result:5pkWhiteWine,
+		OnTest:Recipe.OnTest.WholeFood,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 5
+	{
+		destroy 5pkWhiteWine,
+		
+		Result:Wine=5,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkWhiteWine=2,
+		
+		Result:10pkWhiteWine=1,
+		Time:40.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkWhiteWine=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkWhiteWine=2,
+		Time:40.0,
+	}
+
+	model WoodenBoxOfWhiteWineBottle
+	{
+		mesh = WorldItems/wooden_box_of_wine_bottles,
+		texture = WorldItems/WoodenBoxOfWhiteWineBottle,
+		scale = 1.0,
+	}
+}

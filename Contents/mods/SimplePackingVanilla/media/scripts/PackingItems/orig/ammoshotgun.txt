@@ -1,0 +1,87 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkShotgun
+	{
+		Weight			= 3.75,
+		Type			= Normal,
+		DisplayName		= 10 x Box of Shotgun Shells,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+	
+	item 5pkShotgun
+	{
+		Weight			= 2.625,
+		Type			= Normal,
+		DisplayName		= 5 x Box of Shotgun Shells,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+	
+	recipe Pack 10
+	{
+		destroy ShotgunShellsBox=10,
+		
+		Result:10pkShotgun,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:280.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkShotgun,
+		
+		Result:ShotgunShellsBox=10,
+		Time:280.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+	
+	recipe Pack 5
+	{
+		destroy ShotgunShellsBox=5,
+		
+		Result:5pkShotgun,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:200.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+	
+	recipe Unpack 5
+	{
+		destroy 5pkShotgun,
+		
+		Result:ShotgunShellsBox=5,
+		Time:200.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkShotgun=2,
+		
+		Result:10pkShotgun=1,
+		Time:140.0,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pkShotgun=1,
+		
+		Result:5pkShotgun=2,
+		Time:140.0,
+		Sound:AmmoCan_Storage,
+	}
+}

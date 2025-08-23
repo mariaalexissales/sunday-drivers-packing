@@ -1,0 +1,142 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkRadioReceiver
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 10 x Radio Receiver,
+		DisplayCategory = Electronics,
+		Icon			= Receiver,
+		ColorRed		= 65,
+        ColorGreen		= 105,
+        ColorBlue		= 225,
+		WorldStaticModel = WIP,
+	}
+	
+	item 50pkRadioReceiver
+	{
+		Weight			= 3.0,
+		Type			= Normal,
+		DisplayName		= 50 x Radio Receiver,
+		DisplayCategory = Electronics,
+		Icon			= Receiver,
+		ColorRed		= 65,
+        ColorGreen		= 105,
+        ColorBlue		= 225,
+		WorldStaticModel = WIP,
+	}
+	
+	item 100pkRadioReceiver
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 100 x Radio Receiver,
+		DisplayCategory = Electronics,
+		Icon			= Receiver,
+		ColorRed		= 65,
+        ColorGreen		= 105,
+        ColorBlue		= 225,
+		WorldStaticModel = WIP,
+	}
+
+	recipe Pack 10
+	{
+		destroy RadioReceiver=10,
+		
+		Result:10pkRadioReceiver=1,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkRadioReceiver,
+		
+		Result:RadioReceiver=10,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:25.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 50
+	{
+		destroy RadioReceiver=50,
+		
+		Result:50pkRadioReceiver=1,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 50
+	{
+		destroy 50pkRadioReceiver,
+		
+		Result:RadioReceiver=50,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 100
+	{
+		destroy RadioReceiver=100,
+		
+		Result:100pkRadioReceiver=1,
+		Time:100.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 100
+	{
+		destroy 100pkRadioReceiver,
+		
+		Result:RadioReceiver=100,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkRadioReceiver=5,
+		
+		Result:50pkRadioReceiver=1,
+		Time:40.0,
+	}
+	
+	recipe Put Together
+	{
+		50pkRadioReceiver=2,
+		
+		Result:100pkRadioReceiver=1,
+		Time:40.0,
+	}
+
+	recipe Split in Two
+	{
+		100pkRadioReceiver=1,
+		
+		Result:50pkRadioReceiver=2,
+		Time:40.0,
+	}
+
+	recipe Split in Five
+	{
+		50pkRadioReceiver=1,
+		
+		Result:10pkRadioReceiver=5,
+		Time:40.0,
+	}
+
+	model WIP
+	{
+		mesh = WorldItems/wip_model,
+		texture = WorldItems/WIP_Tex,
+		scale = 1.0,
+	}
+}
