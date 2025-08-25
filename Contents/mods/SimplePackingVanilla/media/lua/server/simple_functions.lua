@@ -1,7 +1,3 @@
--- ==========================
--- == Default Item Tables ==
--- ==========================
-
 local defaultItemAmounts = {}
 local defaultFoodItems = {}
 
@@ -10,13 +6,37 @@ local defaultFoodItems = {}
 -- ==========================
 
 function AMSI(item, count, player)
+    print("[EasyPacking][Debug] Adding", count + 1, item)
     for x = 0, count do
         player:getInventory():AddItem(item)
     end
 end
 
+function recipe_opencigpack(items, result, player)
+    AMSI("Base.Cigarettes", 0, player);
+end
+
+-- ==========================
+-- == Recipe OnTest ==
+-- ==========================
+
 function Recipe.OnTest.IsFavorite(items, result)
     return not items:isFavorite()
+end
+
+function Recipe.OnTest.FullAndNotTainted(items)
+    return items:getUsedDelta() == 1 and Recipe.OnTest.NotTaintedWater(items)
+end
+
+function Recipe.OnTest.WholeFood(item)
+    local baseHunger = math.abs(item:getBaseHunger())
+    local hungerChange = math.abs(item:getHungerChange())
+    if item:isFresh() then return not (baseHunger * 0.99 > hungerChange) end
+    return not (baseHunger * 0.99 > hungerChange)
+end
+
+function Recipe.OnTest.WholeItem(item)
+    return item:getCondition() == item:getConditionMax()
 end
 
 -- ==========================
@@ -37,16 +57,15 @@ end
 function Recipe.OnCreate.LoadUses(items, result, player)
     if instanceof(result, "DrainableComboItem") then
         local savedUses = items:get(0):getModData().EasyPackingRemainingUses
+        local inventory = player:getInventory()
+        local itemToAdd = result:getFullType()
+
         if savedUses then
-            local inventory = player:getInventory()
-            local itemToAdd = result:getFullType()
             for _, savedUse in pairs(savedUses) do
                 local newItem = inventory:AddItem(itemToAdd)
                 newItem:setDelta(savedUse)
             end
         else
-            local inventory = player:getInventory()
-            local itemToAdd = result:getFullType()
             local amount = defaultItemAmounts[items:get(0):getFullType()]
             for i = 1, amount do
                 inventory:AddItem(itemToAdd)
@@ -82,9 +101,10 @@ end
 function Recipe.OnCreate.LoadFood(items, result, player)
     if instanceof(result, "Food") then
         local foodList = items:get(0):getModData().EasyPackingFoodPack
+        local inventory = player:getInventory()
+        local itemToAdd = result:getFullType()
+
         if foodList then
-            local inventory = player:getInventory()
-            local itemToAdd = result:getFullType()
             for _, savedFood in pairs(foodList) do
                 local newItem = inventory:AddItem(itemToAdd)
                 newItem:setCalories(savedFood.calories)
@@ -100,8 +120,6 @@ function Recipe.OnCreate.LoadFood(items, result, player)
                 newItem:setName(savedFood.name)
             end
         else
-            local inventory = player:getInventory()
-            local itemToAdd = result:getFullType()
             local amount = defaultFoodItems[items:get(0):getFullType()]
             for i = 1, amount do
                 inventory:AddItem(itemToAdd)
@@ -167,23 +185,54 @@ end
 
 function Recipe.OnCreate.SplitUsesInTwo(items, result, player)
     local savedUses = items:get(0):getModData().EasyPackingRemainingUses
-    local inventory = player:getInventory()
     local itemToAdd = result:getFullType()
+    local inventory = player:getInventory()
     local unpackedModData = { {}, {} }
 
     if savedUses then
-        for i = 1, #savedUses/2 do table.insert(unpackedModData[1], savedUses[i]) end
-        for i = #savedUses/2 + 1, #savedUses do table.insert(unpackedModData[2], savedUses[i]) end
+        for i = 1, #savedUses / 2 do table.insert(unpackedModData[1], savedUses[i]) end
+        for i = #savedUses / 2 + 1, #savedUses do table.insert(unpackedModData[2], savedUses[i]) end
     else
         local amount = defaultItemAmounts[items:get(0):getFullType()]
-        for i = 1, amount/2 do table.insert(unpackedModData[1], 1) end
-        for i = amount/2 + 1, amount do table.insert(unpackedModData[2], 1) end
+        for i = 1, amount / 2 do table.insert(unpackedModData[1], 1) end
+        for i = amount / 2 + 1, amount do table.insert(unpackedModData[2], 1) end
     end
 
     for _, v in pairs(unpackedModData) do
         local newItem = inventory:AddItem(itemToAdd)
         newItem:getModData().EasyPackingRemainingUses = v
     end
+end
+
+-- ==========================
+-- == Unpack Functions ==
+-- ==========================
+
+function Recipe.OnCreate.Unpack2SheetRope(items, result, player)
+    player:getInventory():AddItem("Base.SheetRope")
+    player:getInventory():AddItem("Base.SheetRope")
+end
+
+function Recipe.OnCreate.Unpack2Rope(items, result, player)
+    player:getInventory():AddItem("Base.Rope")
+    player:getInventory():AddItem("Base.Rope")
+end
+
+function Recipe.OnCreate.Unpack1SheetRope(items, result, player)
+    player:getInventory():AddItem("Base.SheetRope")
+end
+
+function Recipe.OnCreate.Unpack1Rope(items, result, player)
+    player:getInventory():AddItem("Base.Rope")
+end
+
+function Recipe.OnCreate.Unpack2WoodenContainer(items, result, player)
+    player:getInventory():AddItem("Packing.WoodenContainer")
+    player:getInventory():AddItem("Packing.WoodenContainer")
+end
+
+function Recipe.OnCreate.Unpack1WoodenContainer(items, result, player)
+    player:getInventory():AddItem("Packing.WoodenContainer")
 end
 
 -- ==========================
@@ -204,7 +253,7 @@ local function saveItemAmounts()
                 if item and item:getTypeString() == "Drainable" then
                     local amount = recipeSource:getCount()
                     defaultItemAmounts[recipe:getResult():getFullType()] = amount
-                    print(recipe:getResult():getFullType(), amount)
+                    print("[EasyPacking][Debug] Saved Drainable Amount", recipe:getResult():getFullType(), amount)
                 end
             end
         end
@@ -225,7 +274,7 @@ local function saveNutritionAmounts()
                 if item and item:getTypeString() == "Food" then
                     local amount = recipeSource:getCount()
                     defaultFoodItems[recipe:getResult():getFullType()] = amount
-                    print(recipe:getResult():getFullType(), amount)
+                    print("[EasyPacking][Debug] Saved Food Amount", recipe:getResult():getFullType(), amount)
                 end
             end
         end
