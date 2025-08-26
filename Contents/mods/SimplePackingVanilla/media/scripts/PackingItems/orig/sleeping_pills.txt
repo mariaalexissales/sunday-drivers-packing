@@ -1,4 +1,4 @@
-module GidOrganized
+module SP
 {
 	imports
 	{
