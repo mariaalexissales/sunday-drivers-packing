@@ -16,6 +16,26 @@ function recipe_opencigpack(items, result, player)
     AMSI("Base.Cigarettes", 0, player);
 end
 
+local function callIf(item, method, ...)
+    if item[method] then return item[method](item, ...) end
+end
+
+
+local function getHunger(item)
+    return (item.getHungerChange and item:getHungerChange())
+        or (item.getHungChange and item:getHungChange())
+        or 0
+end
+
+local function setHunger(item, v)
+    if item.setHungerChange then
+        item:setHungerChange(v)
+    elseif item.setHungChange then
+        item:setHungChange(v)
+    end
+end
+
+
 -- ==========================
 -- == Recipe OnTest ==
 -- ==========================
@@ -75,56 +95,74 @@ function Recipe.OnCreate.LoadUses(items, result, player)
 end
 
 function Recipe.OnCreate.SaveFood(items, result, player)
-    local foodList = {}
+    local list = {}
     for i = 0, items:size() - 1 do
-        local food = items:get(i)
-        if food and instanceof(food, "Food") then
-            table.insert(foodList, {
-                type     = food:getFullType(),
-                calories = food:getCalories(),
-                hunger   = food:getHungChange(),
-                thirst   = food:getThirstChange(),
-                stress   = food:getStressChange(),
-                boredom  = food:getBoredomChange(),
-                poison   = food:getPoisonPower(),
-                age      = food:getAge(),
-                rotten   = food:isRotten(),
-                cooked   = food:isCooked(),
-                burnt    = food:isBurnt(),
-                name     = food:getName(),
-            })
+        local it = items:get(i)
+        if it and instanceof(it, "Food") then
+            local entry = {
+                schemaVersion = 1,
+                type          = it:getFullType(),
+                name          = it:getName(),
+                calories      = it:getCalories() or 0,
+                hunger        = getHunger(it) or 0,
+                thirst        = it:getThirstChange() or 0,
+                stress        = it:getStressChange() or 0,
+                boredom       = it:getBoredomChange() or 0,
+                poison        = it:getPoisonPower() or 0,
+                age           = it:getAge() or 0,
+                rotten        = it:isRotten() or false,
+                cooked        = it:isCooked() or false,
+                burnt         = it:isBurnt() or false,
+                useDelta      = instanceof(it, "DrainableComboItem") and it:getUsedDelta() or nil,
+            }
+            table.insert(list, entry)
         end
     end
-    result:getModData().EasyPackingFoodPack = foodList
+    result:getModData().EasyPackingFoodPack = list
 end
 
 function Recipe.OnCreate.LoadFood(items, result, player)
-    if instanceof(result, "Food") then
-        local foodList = items:get(0):getModData().EasyPackingFoodPack
-        local inventory = player:getInventory()
-        local itemToAdd = result:getFullType()
+    if not instanceof(result, "Food") and not instanceof(result, "InventoryItem") then return end
 
-        if foodList then
-            for _, savedFood in pairs(foodList) do
-                local newItem = inventory:AddItem(itemToAdd)
-                newItem:setCalories(savedFood.calories)
-                newItem:setHungChange(savedFood.hunger)
-                newItem:setThirstChange(savedFood.thirst)
-                newItem:setStressChange(savedFood.stress)
-                newItem:setBoredomChange(savedFood.boredom)
-                newItem:setPoisonPower(savedFood.poison)
-                newItem:setAge(savedFood.age)
-                newItem:setRotten(savedFood.rotten)
-                newItem:setCooked(savedFood.cooked)
-                newItem:setBurnt(savedFood.burnt)
-                newItem:setName(savedFood.name)
-            end
-        else
-            local amount = defaultFoodItems[items:get(0):getFullType()]
-            for i = 1, amount do
-                inventory:AddItem(itemToAdd)
+    local source = items and items:size() > 0 and items:get(0) or nil
+    local payload = source and source:getModData() and source:getModData().EasyPackingFoodPack or nil
+
+    local inv = player and player:getInventory()
+    if not inv then return end
+
+    local spawnType = result:getFullType()
+
+    if payload and type(payload) == "table" then
+        for _, saved in ipairs(payload) do
+            local newItem = inv:AddItem(spawnType)
+            if newItem and instanceof(newItem, "Food") then
+                callIf(newItem, "setCalories", saved.calories or 0)
+                setHunger(newItem, saved.hunger or 0)
+                callIf(newItem, "setThirstChange", saved.thirst or 0)
+                callIf(newItem, "setStressChange", saved.stress or 0)
+                callIf(newItem, "setBoredomChange", saved.boredom or 0)
+                callIf(newItem, "setPoisonPower", saved.poison or 0)
+                if saved.age then
+                    local age = math.max(saved.age, 0)
+                    callIf(newItem, "setAge", age)
+                end
+                if saved.rotten ~= nil then callIf(newItem, "setRotten", saved.rotten) end
+                if saved.cooked ~= nil then callIf(newItem, "setCooked", saved.cooked) end
+                if saved.burnt ~= nil then callIf(newItem, "setBurnt", saved.burnt) end
+                if saved.useDelta and instanceof(newItem, "DrainableComboItem") then
+                    newItem:setUsedDelta(saved.useDelta)
+                end
+
+                if saved.name and saved.name ~= "" then
+                    newItem:setName(saved.name)
+                    if newItem.setCustomName then newItem:setCustomName(true) end
+                end
             end
         end
+    else
+        local defaults = defaultFoodItems or {}
+        local count = defaults[source and source:getFullType() or ""] or 1
+        for i = 1, count do inv:AddItem(spawnType) end
     end
 end
 

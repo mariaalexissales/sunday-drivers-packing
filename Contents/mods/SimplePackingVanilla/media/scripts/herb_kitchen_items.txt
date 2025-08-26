@@ -5,45 +5,8 @@ module SP
 		Base,
 	}
 
-    /***** Basil *****/
-
-	item 10pkBasil
-	{
-		DisplayName		= 10 x Basil,
-		Weight			= 0.5,
-		Type			= Normal,
-		Icon			= HerbBasil,
-		WorldStaticModel= Basil_Ground
-	}
 	
-	item 50pkBasil
-	{
-		DisplayName		= 50 x Basil,
-		Weight			= 2.8,
-		Type			= Normal,
-		Icon			= HerbBasil,
-		WorldStaticModel= Basil_Ground
-	}
-	
-    /***** Chives *****/
-
-	item 10pkChives
-	{
-		DisplayName		= 10 x Chives,
-		Weight			= 0.5,
-		Type			= Normal,
-		Icon			= HerbChives,
-		WorldStaticModel= HerbChives_Ground
-	}
-	
-	item 50pkChives
-	{
-		DisplayName		= 50 x Chives,
-		Weight			= 2.8,
-		Type			= Normal,
-		Icon			= HerbChives,
-		WorldStaticModel= HerbChives_Ground
-	}
+    
 	
     /***** Cilantro *****/
 

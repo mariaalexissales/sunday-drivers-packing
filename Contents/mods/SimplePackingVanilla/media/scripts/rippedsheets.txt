@@ -5,7 +5,7 @@ module SP
         Base,
     }
 
-    item 10pkRag
+    item 10pkStrips
 	{
 		Weight			= 0.35,
 		Type			= Normal,
@@ -15,7 +15,7 @@ module SP
 		WorldStaticModel= StripRollSheet,
 	}
 	
-	item 50pkRag
+	item 50pkStrips
 	{
 		Weight			= 1.5,
 		Type			= Normal,
@@ -25,7 +25,7 @@ module SP
 		WorldStaticModel= StripRollSheet,
 	}
 	
-	item 100pkRag
+	item 100pkStrips
 	{
 		Weight			= 2.5,
 		Type			= Normal,
@@ -35,96 +35,7 @@ module SP
 		WorldStaticModel= StripRollSheet,
 	}
 
-	recipe Pack 10
-	{
-		destroy RippedSheets=10,
-		
-		Result:10pkRag=1,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
-		Category:Storage,
-	}
-	
-	recipe Unpack 10
-	{
-		destroy 10pkRag,
-		
-		Result:RippedSheets=10,
-		Time:25.0,
-		Category:Storage,
-	}
-	
-	recipe Pack 50
-	{
-		destroy RippedSheets=50,
-		
-		Result:50pkRag=1,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
-		Category:Storage,
-	}
-	
-	recipe Unpack 50
-	{
-		destroy 50pkRag,
-		
-		Result:RippedSheets=50,
-		Time:50.0,
-		Category:Storage,
-	}
-	
-	recipe Pack 100
-	{
-		destroy RippedSheets=100,
-		
-		Result:100pkRag=1,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
-		Category:Storage,
-	}
-	
-	recipe Unpack 100
-	{
-		destroy 100pkRag,
-		
-		Result:RippedSheets=100,
-		Time:75.0,
-		Category:Storage,
-	}
-
-	recipe Put Together
-	{
-		10pkRag=5,
-		
-		Result:50pkRag=1,
-		Time:40.0,
-	}
-	
-	recipe Put Together
-	{
-		50pkRag=2,
-		
-		Result:100pkRag=1,
-		Time:40.0,
-	}
-
-	recipe Split in Two
-	{
-		100pkRag=1,
-		
-		Result:50pkRag=2,
-		Time:40.0,
-	}
-
-	recipe Split in Five
-	{
-		50pkRag=1,
-		
-		Result:10pkRag=5,
-		Time:40.0,
-	}
-
-    item 500pkRag
+        item 500pkStrips
     {
 		DisplayName		= 500 x Ripped Sheets,
 		DisplayCategory = Household,
@@ -134,37 +45,126 @@ module SP
 		WorldStaticModel= StripRollSheet,
     }
 
+	recipe Pack 10
+	{
+		destroy RippedSheets=10,
+		
+		Result:10pkStrips=1,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:StoStripse,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkStrips,
+		
+		Result:RippedSheets=10,
+		Time:25.0,
+		Category:StoStripse,
+	}
+	
+	recipe Pack 50
+	{
+		destroy RippedSheets=50,
+		
+		Result:50pkStrips=1,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:StoStripse,
+	}
+	
+	recipe Unpack 50
+	{
+		destroy 50pkStrips,
+		
+		Result:RippedSheets=50,
+		Time:50.0,
+		Category:StoStripse,
+	}
+	
+	recipe Pack 100
+	{
+		destroy RippedSheets=100,
+		
+		Result:100pkStrips=1,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:100.0,
+		Category:StoStripse,
+	}
+	
+	recipe Unpack 100
+	{
+		destroy 100pkStrips,
+		
+		Result:RippedSheets=100,
+		Time:75.0,
+		Category:StoStripse,
+	}
+
+	recipe Put Together
+	{
+		10pkStrips=5,
+		
+		Result:50pkStrips=1,
+		Time:40.0,
+	}
+	
+	recipe Put Together
+	{
+		50pkStrips=2,
+		
+		Result:100pkStrips=1,
+		Time:40.0,
+	}
+
+	recipe Split in Two
+	{
+		100pkStrips=1,
+		
+		Result:50pkStrips=2,
+		Time:40.0,
+	}
+
+	recipe Split in Five
+	{
+		50pkStrips=1,
+		
+		Result:10pkStrips=5,
+		Time:40.0,
+	}
+
     recipe Pack 500
     {
-        destroy RippedStrips=500,
+        destroy RippedSheets=500,
         
-        Result  :500pkRag=1,
+        Result  :500pkStrips=1,
         OnTest  :Recipe.OnTest.IsFavorite,
         Time    :75.0,
-        Category:Storage
+        Category:StoStripse
     }
 
     recipe Unpack 500
     {
-        destroy 500pkRag,
+        destroy 500pkStrips,
 
-        Result  :RippedStrips=500,
+        Result  :RippedSheets=500,
         Time    :75.0,
-        Category:Storage,
+        Category:StoStripse,
     }
 
     recipe Put Together
     {
-        100pkRag=5,
+        100pkStrips=5,
 
-        Result  :500pkRag=1,
+        Result  :500pkStrips=1,
         Time    :75.0
     }
 
     model StripRollSheet
 	{
 		mesh = WorldItems/stripsroll,
-		texture = WorldItems/Sheet,
+		texture = WorldItems/RippedSheet,
 		scale = 1.0,
 	}
 }
