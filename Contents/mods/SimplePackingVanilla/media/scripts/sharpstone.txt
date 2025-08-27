@@ -14,8 +14,6 @@ module SP
 		WorldStaticModel= MediumSharpedStone
 	}
 	
-	
-	
 	recipe Pack 10
 	{
 		destroy SharpedStone=10,

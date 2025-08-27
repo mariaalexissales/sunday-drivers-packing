@@ -4,6 +4,15 @@ module Packing
 	{
 		Base,
 	}
+
+    item 5pkAmplifier
+	{
+		DisplayName		= 5 x Amplifier,
+		Weight			= 1.5
+		Type			= Normal,
+		Icon			= PkAmplifierBox,
+		WorldStaticModel= MediumAmplifier
+	}
 	
 	item 10pkAmplifier
 	{
@@ -11,8 +20,8 @@ module Packing
 		Type			= Normal,
 		DisplayName		= 10 x Amplifier,
 		DisplayCategory = Electronics,
-		Icon			= Amplifier,
-		WorldStaticModel = WIP,
+		Icon			= PkAmplifierBox,
+		WorldStaticModel = MediumAmplifier,
 	}
 	
 	item 50pkAmplifier
@@ -21,8 +30,8 @@ module Packing
 		Type			= Normal,
 		DisplayName		= 50 x Amplifier,
 		DisplayCategory = Electronics,
-		Icon			= Amplifier,
-		WorldStaticModel = WIP,
+		Icon			= PkAmplifierBox,
+		WorldStaticModel = MediumAmplifier,
 	}
 	
 	item 100pkAmplifier
@@ -31,8 +40,8 @@ module Packing
 		Type			= Normal,
 		DisplayName		= 100 x Amplifier,
 		DisplayCategory = Electronics,
-		Icon			= Amplifier,
-		WorldStaticModel = WIP,
+		Icon			= PkAmplifierBox,
+		WorldStaticModel = MediumAmplifier,
 	}
 
 	recipe Pack 10

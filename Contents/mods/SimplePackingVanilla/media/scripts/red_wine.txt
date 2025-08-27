@@ -30,7 +30,7 @@ module Packing
 		destroy Wine2=10,
 		
 		Result:10pkRedWine,
-		OnTest:Recipe.OnTest.WholeFood,
+		OnTest:Recipe.OnTest.SaveFood,
 		Time:100.0,
 		Category:Storage,
 	}
@@ -41,6 +41,7 @@ module Packing
 		
 		Result:Wine2=10,
 		OnGiveXP:Recipe.OnGiveXP.None,
+        OnCreate:Recipe.OnCreate.LoadFood,
 		Time:75.0,
 		Category:Storage,
 	}
@@ -50,7 +51,7 @@ module Packing
 		destroy Wine2=5,
 		
 		Result:5pkRedWine,
-		OnTest:Recipe.OnTest.WholeFood,
+		OnTest:Recipe.OnTest.SaveFood,
 		Time:75.0,
 		Category:Storage,
 	}
@@ -61,6 +62,7 @@ module Packing
 		
 		Result:Wine2=5,
 		OnGiveXP:Recipe.OnGiveXP.None,
+        OnCreate:Recipe.OnCreate.LoadFood,
 		Time:50.0,
 		Category:Storage,
 	}
