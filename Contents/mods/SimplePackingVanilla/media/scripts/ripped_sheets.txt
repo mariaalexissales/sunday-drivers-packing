@@ -52,7 +52,7 @@ module SP
 		Result:10pkStrips=1,
 		OnTest:Recipe.OnTest.IsFavorite,
 		Time:50.0,
-		Category:StoStripse,
+		Category:Storage,
 	}
 	
 	recipe Unpack 10
@@ -61,7 +61,7 @@ module SP
 		
 		Result:RippedSheets=10,
 		Time:25.0,
-		Category:StoStripse,
+		Category:Storage,
 	}
 	
 	recipe Pack 50
@@ -71,7 +71,7 @@ module SP
 		Result:50pkStrips=1,
 		OnTest:Recipe.OnTest.IsFavorite,
 		Time:75.0,
-		Category:StoStripse,
+		Category:Storage,
 	}
 	
 	recipe Unpack 50
@@ -80,7 +80,7 @@ module SP
 		
 		Result:RippedSheets=50,
 		Time:50.0,
-		Category:StoStripse,
+		Category:Storage,
 	}
 	
 	recipe Pack 100
@@ -90,7 +90,7 @@ module SP
 		Result:100pkStrips=1,
 		OnTest:Recipe.OnTest.IsFavorite,
 		Time:100.0,
-		Category:StoStripse,
+		Category:Storage,
 	}
 	
 	recipe Unpack 100
@@ -99,7 +99,7 @@ module SP
 		
 		Result:RippedSheets=100,
 		Time:75.0,
-		Category:StoStripse,
+		Category:Storage,
 	}
 
 	recipe Put Together
@@ -141,7 +141,7 @@ module SP
         Result  :500pkStrips=1,
         OnTest  :Recipe.OnTest.IsFavorite,
         Time    :75.0,
-        Category:StoStripse
+        Category:Storage,
     }
 
     recipe Unpack 500
@@ -150,7 +150,7 @@ module SP
 
         Result  :RippedSheets=500,
         Time    :75.0,
-        Category:StoStripse,
+        Category:Storage,
     }
 
     recipe Put Together
@@ -164,7 +164,7 @@ module SP
     model StripRollSheet
 	{
 		mesh = WorldItems/stripsroll,
-		texture = WorldItems/RippedSheet,
+		texture = WorldItems/sheet,
 		scale = 1.0,
 	}
 }
