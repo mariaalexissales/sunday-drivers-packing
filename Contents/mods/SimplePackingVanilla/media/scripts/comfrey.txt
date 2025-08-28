@@ -5,7 +5,7 @@ module SP
         Base,
     }
 
-    item 5kpkComfrey
+    item 5pkComfrey
 	{
 		DisplayName		= 5 x Comfrey,
 		Weight			= 0.25,
