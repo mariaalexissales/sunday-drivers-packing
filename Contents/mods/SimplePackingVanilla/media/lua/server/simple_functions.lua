@@ -16,25 +16,11 @@ function recipe_opencigpack(items, result, player)
     AMSI("Base.Cigarettes", 0, player);
 end
 
-local function callIf(item, method, ...)
-    if item[method] then return item[method](item, ...) end
-end
-
-
 local function getHunger(item)
     return (item.getHungerChange and item:getHungerChange())
         or (item.getHungChange and item:getHungChange())
         or 0
 end
-
-local function setHunger(item, v)
-    if item.setHungerChange then
-        item:setHungerChange(v)
-    elseif item.setHungChange then
-        item:setHungChange(v)
-    end
-end
-
 
 -- ==========================
 -- == Recipe OnTest ==
