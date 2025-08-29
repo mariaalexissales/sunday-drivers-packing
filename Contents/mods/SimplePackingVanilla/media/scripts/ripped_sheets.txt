@@ -1,11 +1,11 @@
-module SP
+module Packing
 {
-    imports
-    {
-        Base,
-    }
-
-    item 10pkStrips
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkRag
 	{
 		Weight			= 0.35,
 		Type			= Normal,
@@ -15,7 +15,7 @@ module SP
 		WorldStaticModel= StripRollSheet,
 	}
 	
-	item 50pkStrips
+	item 50pkRag
 	{
 		Weight			= 1.5,
 		Type			= Normal,
@@ -25,7 +25,7 @@ module SP
 		WorldStaticModel= StripRollSheet,
 	}
 	
-	item 100pkStrips
+	item 100pkRag
 	{
 		Weight			= 2.5,
 		Type			= Normal,
@@ -35,7 +35,7 @@ module SP
 		WorldStaticModel= StripRollSheet,
 	}
 
-        item 500pkStrips
+	item 500pkRag
     {
 		DisplayName		= 500 x Ripped Sheets,
 		DisplayCategory = Household,
@@ -49,7 +49,7 @@ module SP
 	{
 		destroy RippedSheets=10,
 		
-		Result:10pkStrips=1,
+		Result:10pkRag=1,
 		OnTest:Recipe.OnTest.IsFavorite,
 		Time:50.0,
 		Category:Storage,
@@ -57,7 +57,7 @@ module SP
 	
 	recipe Unpack 10
 	{
-		destroy 10pkStrips,
+		destroy 10pkRag,
 		
 		Result:RippedSheets=10,
 		Time:25.0,
@@ -68,7 +68,7 @@ module SP
 	{
 		destroy RippedSheets=50,
 		
-		Result:50pkStrips=1,
+		Result:50pkRag=1,
 		OnTest:Recipe.OnTest.IsFavorite,
 		Time:75.0,
 		Category:Storage,
@@ -76,7 +76,7 @@ module SP
 	
 	recipe Unpack 50
 	{
-		destroy 50pkStrips,
+		destroy 50pkRag,
 		
 		Result:RippedSheets=50,
 		Time:50.0,
@@ -87,7 +87,7 @@ module SP
 	{
 		destroy RippedSheets=100,
 		
-		Result:100pkStrips=1,
+		Result:100pkRag=1,
 		OnTest:Recipe.OnTest.IsFavorite,
 		Time:100.0,
 		Category:Storage,
@@ -95,7 +95,7 @@ module SP
 	
 	recipe Unpack 100
 	{
-		destroy 100pkStrips,
+		destroy 100pkRag,
 		
 		Result:RippedSheets=100,
 		Time:75.0,
@@ -104,49 +104,33 @@ module SP
 
 	recipe Put Together
 	{
-		10pkStrips=5,
+		10pkRag=5,
 		
-		Result:50pkStrips=1,
+		Result:50pkRag=1,
 		Time:40.0,
 	}
 	
 	recipe Put Together
 	{
-		50pkStrips=2,
+		50pkRag=2,
 		
-		Result:100pkStrips=1,
+		Result:100pkRag=1,
 		Time:40.0,
 	}
 
-	recipe Split in Two
-	{
-		100pkStrips=1,
-		
-		Result:50pkStrips=2,
-		Time:40.0,
-	}
-
-	recipe Split in Five
-	{
-		50pkStrips=1,
-		
-		Result:10pkStrips=5,
-		Time:40.0,
-	}
-
-    recipe Pack 500
+	recipe Pack 500
     {
         destroy RippedSheets=500,
         
-        Result  :500pkStrips=1,
+        Result  :500pkRag=1,
         OnTest  :Recipe.OnTest.IsFavorite,
         Time    :75.0,
-        Category:Storage,
+        Category:Storage
     }
 
     recipe Unpack 500
     {
-        destroy 500pkStrips,
+        destroy 500pkRag,
 
         Result  :RippedSheets=500,
         Time    :75.0,
@@ -155,16 +139,32 @@ module SP
 
     recipe Put Together
     {
-        100pkStrips=5,
+        100pkRag=5,
 
-        Result  :500pkStrips=1,
+        Result  :500pkRag=1,
         Time    :75.0
     }
 
-    model StripRollSheet
+	recipe Split in Two
+	{
+		100pkRag=1,
+		
+		Result:50pkRag=2,
+		Time:40.0,
+	}
+
+	recipe Split in Five
+	{
+		50pkRag=1,
+		
+		Result:10pkRag=5,
+		Time:40.0,
+	}
+
+	model StripRollSheet
 	{
 		mesh = WorldItems/stripsroll,
-		texture = WorldItems/sheet,
+		texture = WorldItems/Sheet,
 		scale = 1.0,
 	}
 }

@@ -30,7 +30,7 @@ module Packing
 		destroy Garbagebag=10,
 		
 		Result:10pkGarbage,
-		OnTest:Recipe.OnTest.IsFavorite,
+		OnTest:Recipe.OnTest.IsEmpty,
 		Time:75.0,
 		Category:Storage,
 	}

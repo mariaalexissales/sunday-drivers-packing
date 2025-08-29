@@ -59,6 +59,30 @@ function Recipe.OnTest.WholeItem(item)
     return item:getCondition() == item:getConditionMax()
 end
 
+function Recipe.OnTest.IsEmpty(items)
+    if instanceof(items, "ArrayList") then
+        for i = 0, items:size() - 1 do
+            local items = items:get(i)
+            if items and items.getItemContainer then
+                local container = items:getItemContainer()
+                if container and not container:isEmpty() then
+                    return false
+                end
+            else
+                return false
+            end
+        end
+        return true
+    else
+        local item = items
+        if item and item.getItemContainer then
+            local container = item:getItemContainer()
+            if container then return container:isEmpty() end
+        end
+        return false
+    end
+end
+
 -- ==========================
 -- == Save/Load Functions ==
 -- ==========================
@@ -67,7 +91,7 @@ function Recipe.OnCreate.SaveUses(items, result, player)
     local remainingUses = {}
     for i = 0, items:size() - 1 do
         local item = items:get(i)
-        if item and instanceof(item, "DrainableComboItem") then
+        if item and item(item, "DrainableComboItem") then
             table.insert(remainingUses, item:getDelta())
         end
     end
@@ -75,7 +99,7 @@ function Recipe.OnCreate.SaveUses(items, result, player)
 end
 
 function Recipe.OnCreate.LoadUses(items, result, player)
-    if instanceof(result, "DrainableComboItem") then
+    if items(result, "DrainableComboItem") then
         local savedUses = items:get(0):getModData().EasyPackingRemainingUses
         local inventory = player:getInventory()
         local itemToAdd = result:getFullType()
@@ -97,23 +121,21 @@ end
 function Recipe.OnCreate.SaveFood(items, result, player)
     local list = {}
     for i = 0, items:size() - 1 do
-        local it = items:get(i)
-        if it and instanceof(it, "Food") then
+        local item = items:get(i)
+        if item then
             local entry = {
-                schemaVersion = 1,
-                type          = it:getFullType(),
-                name          = it:getName(),
-                calories      = it:getCalories() or 0,
-                hunger        = getHunger(it) or 0,
-                thirst        = it:getThirstChange() or 0,
-                stress        = it:getStressChange() or 0,
-                boredom       = it:getBoredomChange() or 0,
-                poison        = it:getPoisonPower() or 0,
-                age           = it:getAge() or 0,
-                rotten        = it:isRotten() or false,
-                cooked        = it:isCooked() or false,
-                burnt         = it:isBurnt() or false,
-                useDelta      = instanceof(it, "DrainableComboItem") and it:getUsedDelta() or nil,
+                type     = item:getFullType(),
+                name     = item:getName(),
+                calories = item:getCalories() or 0,
+                hunger   = getHunger(item) or 0,
+                thirst   = item:getThirstChange() or 0,
+                stress   = item:getStressChange() or 0,
+                boredom  = item:getBoredomChange() or 0,
+                poison   = item:getPoisonPower() or 0,
+                age      = item:getAge() or 0,
+                rotten   = item:isRotten() or false,
+                cooked   = item:isCooked() or false,
+                burnt    = item:isBurnt() or false,
             }
             table.insert(list, entry)
         end
@@ -122,7 +144,7 @@ function Recipe.OnCreate.SaveFood(items, result, player)
 end
 
 function Recipe.OnCreate.LoadFood(items, result, player)
-    if not instanceof(result, "Food") and not instanceof(result, "InventoryItem") then return end
+    if not items(result, "InventoryItem") then return end
 
     local source = items and items:size() > 0 and items:get(0) or nil
     local payload = source and source:getModData() and source:getModData().EasyPackingFoodPack or nil
@@ -135,7 +157,7 @@ function Recipe.OnCreate.LoadFood(items, result, player)
     if payload and type(payload) == "table" then
         for _, saved in ipairs(payload) do
             local newItem = inv:AddItem(spawnType)
-            if newItem and instanceof(newItem, "Food") then
+            if newItem then
                 callIf(newItem, "setCalories", saved.calories or 0)
                 setHunger(newItem, saved.hunger or 0)
                 callIf(newItem, "setThirstChange", saved.thirst or 0)
@@ -149,9 +171,6 @@ function Recipe.OnCreate.LoadFood(items, result, player)
                 if saved.rotten ~= nil then callIf(newItem, "setRotten", saved.rotten) end
                 if saved.cooked ~= nil then callIf(newItem, "setCooked", saved.cooked) end
                 if saved.burnt ~= nil then callIf(newItem, "setBurnt", saved.burnt) end
-                if saved.useDelta and instanceof(newItem, "DrainableComboItem") then
-                    newItem:setUsedDelta(saved.useDelta)
-                end
 
                 if saved.name and saved.name ~= "" then
                     newItem:setName(saved.name)
