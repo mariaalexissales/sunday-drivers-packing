@@ -144,38 +144,33 @@ function Recipe.OnCreate.SaveFood(items, result, player)
 end
 
 function Recipe.OnCreate.LoadFood(items, result, player)
-    if not items(result, "InventoryItem") then return end
+    if not instanceof(result, "InventoryItem") then return end
+    if not instanceof(items, "ArrayList") then return end
+    if not player or not player.getInventory or not player:getInventory() then return end
 
-    local source = items and items:size() > 0 and items:get(0) or nil
+    local inv = player:getInventory()
+    local source = items:size() > 0 and items:get(0) or nil
     local payload = source and source:getModData() and source:getModData().EasyPackingFoodPack or nil
-
-    local inv = player and player:getInventory()
-    if not inv then return end
-
     local spawnType = result:getFullType()
 
-    if payload and type(payload) == "table" then
+    if type(payload) == "table" then
         for _, saved in ipairs(payload) do
             local newItem = inv:AddItem(spawnType)
-            if newItem then
-                callIf(newItem, "setCalories", saved.calories or 0)
-                setHunger(newItem, saved.hunger or 0)
-                callIf(newItem, "setThirstChange", saved.thirst or 0)
-                callIf(newItem, "setStressChange", saved.stress or 0)
-                callIf(newItem, "setBoredomChange", saved.boredom or 0)
-                callIf(newItem, "setPoisonPower", saved.poison or 0)
-                if saved.age then
-                    local age = math.max(saved.age, 0)
-                    callIf(newItem, "setAge", age)
-                end
-                if saved.rotten ~= nil then callIf(newItem, "setRotten", saved.rotten) end
-                if saved.cooked ~= nil then callIf(newItem, "setCooked", saved.cooked) end
-                if saved.burnt ~= nil then callIf(newItem, "setBurnt", saved.burnt) end
-
-                if saved.name and saved.name ~= "" then
-                    newItem:setName(saved.name)
-                    if newItem.setCustomName then newItem:setCustomName(true) end
-                end
+            if newItem and instanceof(newItem, "Food") then
+                if newItem.setCalories then newItem:setCalories(saved.calories or 0) end
+                if newItem.setHungerChange then newItem:setHungerChange(saved.hunger or 0) end
+                if newItem.setThirstChange then newItem:setThirstChange(saved.thirst or 0) end
+                if newItem.setStressChange then newItem:setStressChange(saved.stress or 0) end
+                if newItem.setBoredomChange then newItem:setBoredomChange(saved.boredom or 0) end
+                if newItem.setPoisonPower then newItem:setPoisonPower(saved.poison or 0) end
+                if saved.age and newItem.setAge then newItem:setAge(math.max(saved.age, 0)) end
+                if saved.rotten ~= nil and newItem.setRotten then newItem:setRotten(saved.rotten) end
+                if saved.cooked ~= nil and newItem.setCooked then newItem:setCooked(saved.cooked) end
+                if saved.burnt ~= nil and newItem.setBurnt then newItem:setBurnt(saved.burnt) end
+            end
+            if newItem and saved.name and saved.name ~= "" then
+                newItem:setName(saved.name)
+                if newItem.setCustomName then newItem:setCustomName(true) end
             end
         end
     else
