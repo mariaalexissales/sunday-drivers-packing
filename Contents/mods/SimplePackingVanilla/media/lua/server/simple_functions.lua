@@ -74,32 +74,41 @@ end
 -- ==========================
 
 function Recipe.OnCreate.SaveUses(items, result, player)
-    local remainingUses = {}
+    local remainingUses = {};
     for i = 0, items:size() - 1 do
+        ---@type Item
         local item = items:get(i)
-        if item and item(item, "DrainableComboItem") then
+        if item and instanceof(item, "DrainableComboItem") then
             table.insert(remainingUses, item:getDelta())
         end
     end
     result:getModData().EasyPackingRemainingUses = remainingUses
 end
 
+---@param items Item
+---@param result InventoryItem
+---@param player IsoGameCharacter
 function Recipe.OnCreate.LoadUses(items, result, player)
-    if items(result, "DrainableComboItem") then
+    if instanceof(result, "DrainableComboItem") then
         local savedUses = items:get(0):getModData().EasyPackingRemainingUses
-        local inventory = player:getInventory()
-        local itemToAdd = result:getFullType()
-
         if savedUses then
-            for _, savedUse in pairs(savedUses) do
+            local inventory = player:getInventory()
+            local itemToAdd = result:getFullType()
+            for k, savedUse in pairs(savedUses) do
+                ---@type DrainableComboItem
                 local newItem = inventory:AddItem(itemToAdd)
                 newItem:setDelta(savedUse)
             end
         else
+            local inventory = player:getInventory()
+            --result is an inventory item, full type is the ID
+            local itemToAdd = result:getFullType()
+            --items is a non inventory item, so full name is the ID
             local amount = defaultItemAmounts[items:get(0):getFullType()]
             for i = 1, amount do
                 inventory:AddItem(itemToAdd)
             end
+            --check static table of items to give
         end
     end
 end
