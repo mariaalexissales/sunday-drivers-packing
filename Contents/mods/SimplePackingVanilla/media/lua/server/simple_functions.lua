@@ -45,28 +45,14 @@ function Recipe.OnTest.WholeItem(item)
     return item:getCondition() == item:getConditionMax()
 end
 
-function Recipe.OnTest.IsEmpty(items)
-    if instanceof(items, "ArrayList") then
-        for i = 0, items:size() - 1 do
-            local items = items:get(i)
-            if items and items.getItemContainer then
-                local container = items:getItemContainer()
-                if container and not container:isEmpty() then
-                    return false
-                end
-            else
-                return false
-            end
+function Recipe.OnTest.IsEmpty(items, result)
+    for i = 0, items:size() - 1 do
+        local container = items:get(i)
+        if container and not container:isEmpty() then
+            return false
         end
-        return true
-    else
-        local item = items
-        if item and item.getItemContainer then
-            local container = item:getItemContainer()
-            if container then return container:isEmpty() end
-        end
-        return false
     end
+    return true
 end
 
 -- ==========================
@@ -110,7 +96,7 @@ function Recipe.OnCreate.LoadUses(items, result, player)
     end
 end
 
----@param items Items
+---@param items Item
 ---@param result InventoryItem
 ---@param player IsoGameCharacter
 function Recipe.OnCreate.SaveFood(items, result, player)
@@ -145,7 +131,7 @@ function Recipe.OnCreate.SaveFood(items, result, player)
     print(string.format("[SaveFood] saved=%d", #list))
 end
 
----@param items Items
+---@param items Item
 ---@param result InventoryItem
 ---@param player IsoGameCharacter
 function Recipe.OnCreate.LoadFood(items, result, player)
