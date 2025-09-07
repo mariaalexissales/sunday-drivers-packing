@@ -1,0 +1,27 @@
+Recipes_EN	= {
+	Recipe_Pack_Brewing_Skill_Books			= "Pack Brewing Skill Books",
+	Recipe_Unpack_Brewing_Skill_Books 		= "Unpack Brewing Skill Books",
+	Recipe_Pack_5 							= "Pack 5",
+	Recipe_Unpack_5 						= "Unpack 5",
+	Recipe_Pack_6 							= "Pack 6",
+	Recipe_Unpack_6 						= "Unpack 6",
+	Recipe_Pack_10 							= "Pack 10",
+	Recipe_Unpack_10 						= "Unpack 10",
+	Recipe_Pack_24 							= "Pack 24",
+	Recipe_Unpack_24 						= "Unpack 24",
+	Recipe_Pack_50 							= "Pack 50",
+	Recipe_Unpack_50 						= "Unpack 50",
+	Recipe_Put_Together 					= "Put Together",
+	Recipe_Split 							= "Split",
+	Recipe_Split_into_2 					= "Split into 2",
+	Recipe_Split_into_4 					= "Split into 4",
+	Recipe_Split_into_5 					= "Split into 5",
+	Recipe_Split_into_10 					= "Split into 10",
+	Recipe_Rope_4							= "Rope 4",
+	Recipe_Unrope_4							= "Unrope 4",
+}
+
+
+
+
+

@@ -42,6 +42,17 @@ module SP
 		Time	:45.0,
 		Category:Storage,
 	}
+
+    recipe Unpack 5
+	{
+		destroy 5pkComfrey,
+		
+		Result	:Comfrey=5,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
+		Time	:45.0,
+		Category:Storage,
+	}
 	
 	recipe Pack 10
 	{

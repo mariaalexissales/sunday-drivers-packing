@@ -18,9 +18,8 @@ local function WeightAdjustment(itemName, baseItemName, amount, multiplier)
     if item and baseItem then
         local baseItemWeight = baseItem:getActualWeight()
         local calculated = baseItemWeight * amount * multiplier
-        item:DoParam("Weight = "..calculated)
+        item:DoParam("Weight = " .. calculated)
     end
-
 end
 local function AdjustWeight(itemName, baseItemName, amount, multiplier)
     if not listToAdjust[itemName] then
@@ -32,11 +31,12 @@ local function AdjustWeight(itemName, baseItemName, amount, multiplier)
     listToAdjust[itemName][baseItemName][amount] = multiplier;
 end
 local function Perform()
-    for itemName,v in pairs(listToAdjust) do
-        for baseItemName,y in pairs(v) do
-            for amount,multiplier in pairs(y) do
-                if pcall(WeightAdjustment(itemName,baseItemName,amount,multiplier)) then
-                    print("Could not patch Item's ",itemName," Weight calculated from base item ",baseItemName," of amount",amount," multiplied by ", multiplier)
+    for itemName, v in pairs(listToAdjust) do
+        for baseItemName, y in pairs(v) do
+            for amount, multiplier in pairs(y) do
+                if pcall(WeightAdjustment(itemName, baseItemName, amount, multiplier)) then
+                    print("Could not patch Item's ", itemName, " Weight calculated from base item ", baseItemName,
+                        " of amount", amount, " multiplied by ", multiplier)
                 end
             end
         end
@@ -183,10 +183,10 @@ AdjustWeight("SP.5pkPearBagSeed", "PZGFarm.PearBagSeed", 5, 0.7)
 AdjustWeight("SP.10pkPearBagSeed", "PZGFarm.PearBagSeed", 10, 0.5)
 AdjustWeight("SP.50pkPearBagSeed", "PZGFarm.PearBagSeed", 50, 0.5)
 AdjustWeight("SP.100pkPearBagSeed", "PZGFarm.PearBagSeed", 100, 0.5)
-AdjustWeight("SP.5pkPinePineappleBagSeed", "PZGFarm.PinePineappleBagSeed", 5, 0.7)
-AdjustWeight("SP.10pkPinePineappleBagSeed", "PZGFarm.PinePineappleBagSeed", 10, 0.5)
-AdjustWeight("SP.50pkPinePineappleBagSeed", "PZGFarm.PinePineappleBagSeed", 50, 0.5)
-AdjustWeight("SP.100pkPinePineappleBagSeed", "PZGFarm.PinePineappleBagSeed", 100, 0.5)
+AdjustWeight("SP.5pkPineappleBagSeed", "PZGFarm.PineappleBagSeed", 5, 0.7)
+AdjustWeight("SP.10pkPineappleBagSeed", "PZGFarm.PineappleBagSeed", 10, 0.5)
+AdjustWeight("SP.50pkPineappleBagSeed", "PZGFarm.PineappleBagSeed", 50, 0.5)
+AdjustWeight("SP.100pkPineappleBagSeed", "PZGFarm.PineappleBagSeed", 100, 0.5)
 AdjustWeight("SP.5pkPumpkinBagSeed", "PZGFarm.PumpkinBagSeed", 5, 0.7)
 AdjustWeight("SP.10pkPumpkinBagSeed", "PZGFarm.PumpkinBagSeed", 10, 0.5)
 AdjustWeight("SP.50pkPumpkinBagSeed", "PZGFarm.PumpkinBagSeed", 50, 0.5)

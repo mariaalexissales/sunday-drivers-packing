@@ -1,4 +1,4 @@
-module Packing
+module SP
 {
 	imports
 	{
@@ -30,7 +30,7 @@ module Packing
 		destroy Wine2=10,
 		
 		Result:10pkRedWine,
-		OnTest:Recipe.OnTest.SaveFood,
+		OnCreate:Recipe.OnCreate.SaveFood,
 		Time:100.0,
 		Category:Storage,
 	}
@@ -51,7 +51,7 @@ module Packing
 		destroy Wine2=5,
 		
 		Result:5pkRedWine,
-		OnTest:Recipe.OnTest.SaveFood,
+		OnCreate:Recipe.OnCreate.SaveFood,
 		Time:75.0,
 		Category:Storage,
 	}

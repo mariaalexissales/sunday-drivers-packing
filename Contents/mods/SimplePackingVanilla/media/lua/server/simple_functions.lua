@@ -6,7 +6,7 @@ local defaultFoodItems = {}
 -- ==========================
 
 function AMSI(item, count, player)
-    print("[EasyPacking][Debug] Adding", count + 1, item)
+    print("[Debug] Adding", count + 1, item)
     for x = 0, count do
         player:getInventory():AddItem(item)
     end
@@ -14,12 +14,6 @@ end
 
 function recipe_opencigpack(items, result, player)
     AMSI("Base.Cigarettes", 0, player);
-end
-
-local function getHunger(item)
-    return (item.getHungerChange and item:getHungerChange())
-        or (item.getHungChange and item:getHungChange())
-        or 0
 end
 
 -- ==========================
@@ -45,28 +39,92 @@ function Recipe.OnTest.WholeItem(item)
     return item:getCondition() == item:getConditionMax()
 end
 
-function Recipe.OnTest.IsEmpty(items)
-    if instanceof(items, "ArrayList") then
-        for i = 0, items:size() - 1 do
-            local items = items:get(i)
-            if items and items.getItemContainer then
-                local container = items:getItemContainer()
-                if container and not container:isEmpty() then
-                    return false
-                end
-            else
+function Recipe.OnTest.IsEmpty(items, result)
+    print("DEBUG: IsEmpty called")
+
+    if not items then
+        print("DEBUG: items is nil")
+        return false
+    end
+
+    print("DEBUG: items type: " .. tostring(type(items)))
+
+    -- Check if items is an ItemContainer
+    if items.getItems then
+        print("DEBUG: items has getItems method")
+        local itemsList = items:getItems()
+        if itemsList then
+            print("DEBUG: got items list, size: " .. tostring(itemsList:size()))
+            if itemsList:size() == 0 then
+                print("DEBUG: no items in container")
                 return false
             end
+            local item = itemsList:get(0)
+            print("DEBUG: got first item: " .. tostring(item and item:getType() or "nil"))
+        else
+            print("DEBUG: getItems returned nil")
+            return false
         end
-        return true
-    else
+        -- Check if items is directly an item list
+    elseif items.size then
+        print("DEBUG: items has size method")
+        if items:size() == 0 then
+            print("DEBUG: no items in list")
+            return false
+        end
+        local item = items:get(0)
+        print("DEBUG: got first item: " .. tostring(item and item:getType() or "nil"))
+        -- Check if items is a single item
+    elseif items.getType then
+        print("DEBUG: items appears to be a single item")
         local item = items
-        if item and item.getItemContainer then
-            local container = item:getItemContainer()
-            if container then return container:isEmpty() end
+        print("DEBUG: single item type: " .. tostring(item:getType()))
+    else
+        print("DEBUG: unknown items type - checking available methods")
+        -- Try to find what methods are available
+        local mt = getmetatable(items)
+        if mt and mt.__index then
+            print("DEBUG: items has metatable")
         end
         return false
     end
+
+    -- Now check if the item is a container
+    local item = nil
+    if items.getItems then
+        local itemsList = items:getItems()
+        if itemsList and itemsList:size() > 0 then
+            item = itemsList:get(0)
+        end
+    elseif items.size and items:size() > 0 then
+        item = items:get(0)
+    elseif items.getType then
+        item = items
+    end
+
+    if not item then
+        print("DEBUG: no item found")
+        return false
+    end
+
+    print("DEBUG: checking if item is container")
+    print("DEBUG: has getContainer: " .. tostring(item.getContainer ~= nil))
+
+    if item.getContainer and item:getContainer() then
+        local container = item:getContainer()
+        print("DEBUG: container exists")
+        if container and container.getItems then
+            local isEmpty = container:getItems():isEmpty()
+            print("DEBUG: container is empty: " .. tostring(isEmpty))
+            return isEmpty
+        else
+            print("DEBUG: container or getItems is nil")
+        end
+    else
+        print("DEBUG: item is not a container")
+    end
+
+    return false
 end
 
 -- ==========================
@@ -74,28 +132,34 @@ end
 -- ==========================
 
 function Recipe.OnCreate.SaveUses(items, result, player)
-    local remainingUses = {}
+    local remainingUses = {};
     for i = 0, items:size() - 1 do
+        ---@type Item
         local item = items:get(i)
-        if item and item(item, "DrainableComboItem") then
+        if item and instanceof(item, "DrainableComboItem") then
             table.insert(remainingUses, item:getDelta())
         end
     end
     result:getModData().EasyPackingRemainingUses = remainingUses
 end
 
+---@param items Item
+---@param result InventoryItem
+---@param player IsoGameCharacter
 function Recipe.OnCreate.LoadUses(items, result, player)
-    if items(result, "DrainableComboItem") then
+    if instanceof(result, "DrainableComboItem") then
         local savedUses = items:get(0):getModData().EasyPackingRemainingUses
-        local inventory = player:getInventory()
-        local itemToAdd = result:getFullType()
-
         if savedUses then
-            for _, savedUse in pairs(savedUses) do
+            local inventory = player:getInventory()
+            local itemToAdd = result:getFullType()
+            for k, savedUse in pairs(savedUses) do
+                ---@type DrainableComboItem
                 local newItem = inventory:AddItem(itemToAdd)
                 newItem:setDelta(savedUse)
             end
         else
+            local inventory = player:getInventory()
+            local itemToAdd = result:getFullType()
             local amount = defaultItemAmounts[items:get(0):getFullType()]
             for i = 1, amount do
                 inventory:AddItem(itemToAdd)
@@ -104,55 +168,79 @@ function Recipe.OnCreate.LoadUses(items, result, player)
     end
 end
 
+---@param items Item
+---@param result InventoryItem
+---@param player IsoGameCharacter
 function Recipe.OnCreate.SaveFood(items, result, player)
+    print(string.format("[SaveFood] start - count=%d", items:size()))
     local list = {}
+
     for i = 0, items:size() - 1 do
-        local item = items:get(i)
-        if item then
+        ---@type InventoryItem
+        local it = items:get(i)
+        if it then
+            local hunger = (it.getHungerChange and it:getHungerChange())
+                or (it.getHungChange and it:getHungChange()) or 0
             local entry = {
-                type     = item:getFullType(),
-                name     = item:getName(),
-                calories = item:getCalories() or 0,
-                hunger   = getHunger(item) or 0,
-                thirst   = item:getThirstChange() or 0,
-                stress   = item:getStressChange() or 0,
-                boredom  = item:getBoredomChange() or 0,
-                poison   = item:getPoisonPower() or 0,
-                age      = item:getAge() or 0,
-                rotten   = item:isRotten() or false,
-                cooked   = item:isCooked() or false,
-                burnt    = item:isBurnt() or false,
+                type     = it:getFullType(),
+                name     = it:getName(),
+                calories = it.getCalories and it:getCalories() or 0,
+                hunger   = hunger,
+                thirst   = it.getThirstChange and it:getThirstChange() or 0,
+                stress   = it.getStressChange and it:getStressChange() or 0,
+                boredom  = it.getBoredomChange and it:getBoredomChange() or 0,
+                poison   = it.getPoisonPower and it:getPoisonPower() or 0,
+                age      = it.getAge and it:getAge() or 0,
+                rotten   = it.isRotten and it:isRotten() or false,
+                cooked   = it.isCooked and it:isCooked() or false,
+                burnt    = it.isBurnt and it:isBurnt() or false,
             }
             table.insert(list, entry)
         end
     end
+
     result:getModData().EasyPackingFoodPack = list
+    print(string.format("[SaveFood] saved=%d", #list))
 end
 
+---@param items Item
+---@param result InventoryItem
+---@param player IsoGameCharacter
 function Recipe.OnCreate.LoadFood(items, result, player)
-    if not instanceof(result, "InventoryItem") then return end
-    if not instanceof(items, "ArrayList") then return end
-    if not player or not player.getInventory or not player:getInventory() then return end
+    print(string.format("[LoadFood] begin; count=%d", items:size()))
 
-    local inv = player:getInventory()
-    local source = items:size() > 0 and items:get(0) or nil
-    local payload = source and source:getModData() and source:getModData().EasyPackingFoodPack or nil
+    if not (player and player.getInventory) then
+        print("[LoadFood] abort: bad player")
+        return
+    end
+    if items:size() == 0 then
+        print("[LoadFood] abort: empty items")
+        return
+    end
+
+    local inv       = player:getInventory()
+    local source    = items:get(0)
     local spawnType = result:getFullType()
 
+    local md        = source and source.getModData and source:getModData() or nil
+    local payload   = md and md.EasyPackingFoodPack or nil
+
     if type(payload) == "table" then
+        print(string.format("[LoadFood] restoring %d", #payload))
         for _, saved in ipairs(payload) do
+            ---@type InventoryItem
             local newItem = inv:AddItem(spawnType)
-            if newItem and instanceof(newItem, "Food") then
+            if newItem then
                 if newItem.setCalories then newItem:setCalories(saved.calories or 0) end
                 if newItem.setHungerChange then newItem:setHungerChange(saved.hunger or 0) end
                 if newItem.setThirstChange then newItem:setThirstChange(saved.thirst or 0) end
                 if newItem.setStressChange then newItem:setStressChange(saved.stress or 0) end
                 if newItem.setBoredomChange then newItem:setBoredomChange(saved.boredom or 0) end
                 if newItem.setPoisonPower then newItem:setPoisonPower(saved.poison or 0) end
-                if saved.age and newItem.setAge then newItem:setAge(math.max(saved.age, 0)) end
-                if saved.rotten ~= nil and newItem.setRotten then newItem:setRotten(saved.rotten) end
-                if saved.cooked ~= nil and newItem.setCooked then newItem:setCooked(saved.cooked) end
-                if saved.burnt ~= nil and newItem.setBurnt then newItem:setBurnt(saved.burnt) end
+                if newItem.setAge and saved.age then newItem:setAge(math.max(saved.age, 0)) end
+                if newItem.setRotten and saved.rotten ~= nil then newItem:setRotten(saved.rotten) end
+                if newItem.setCooked and saved.cooked ~= nil then newItem:setCooked(saved.cooked) end
+                if newItem.setBurnt and saved.burnt ~= nil then newItem:setBurnt(saved.burnt) end
             end
             if newItem and saved.name and saved.name ~= "" then
                 newItem:setName(saved.name)
@@ -161,9 +249,13 @@ function Recipe.OnCreate.LoadFood(items, result, player)
         end
     else
         local defaults = defaultFoodItems or {}
-        local count = defaults[source and source:getFullType() or ""] or 1
+        local key      = source.getFullType and source:getFullType() or ""
+        local count    = defaults[key] or 1
+        print(string.format("[LoadFood] no payload; spawn defaults %s x%d", spawnType, count))
         for i = 1, count do inv:AddItem(spawnType) end
     end
+
+    print("[LoadFood] done")
 end
 
 -- ==========================
@@ -265,12 +357,12 @@ function Recipe.OnCreate.Unpack1Rope(items, result, player)
 end
 
 function Recipe.OnCreate.Unpack2WoodenContainer(items, result, player)
-    player:getInventory():AddItem("Packing.WoodenContainer")
-    player:getInventory():AddItem("Packing.WoodenContainer")
+    player:getInventory():AddItem("SP.WoodenContainer")
+    player:getInventory():AddItem("SP.WoodenContainer")
 end
 
 function Recipe.OnCreate.Unpack1WoodenContainer(items, result, player)
-    player:getInventory():AddItem("Packing.WoodenContainer")
+    player:getInventory():AddItem("SP.WoodenContainer")
 end
 
 -- ==========================
@@ -291,7 +383,6 @@ local function saveItemAmounts()
                 if item and item:getTypeString() == "Drainable" then
                     local amount = recipeSource:getCount()
                     defaultItemAmounts[recipe:getResult():getFullType()] = amount
-                    print("[EasyPacking][Debug] Saved Drainable Amount", recipe:getResult():getFullType(), amount)
                 end
             end
         end
@@ -309,10 +400,9 @@ local function saveNutritionAmounts()
                 local recipeSource = source:get(0)
                 local itemName = recipeSource:getOnlyItem()
                 local item = scriptManager:FindItem(itemName)
-                if item and item:getTypeString() == "Food" then
+                if item then
                     local amount = recipeSource:getCount()
                     defaultFoodItems[recipe:getResult():getFullType()] = amount
-                    print("[EasyPacking][Debug] Saved Food Amount", recipe:getResult():getFullType(), amount)
                 end
             end
         end
