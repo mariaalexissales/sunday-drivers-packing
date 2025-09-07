@@ -3733,9 +3733,9 @@ module SP
 
     recipe Pack 5
     {
-        destroy PinePineappleBagSeed=5,
+        destroy PineappleBagSeed=5,
 
-        Result  :5pkPinePineappleBagSeed,
+        Result  :5pkPineappleBagSeed,
         OnTest  :Recipe.OnTest.IsFavorite,
         Time    :50.0,
         Category:Storage
@@ -3744,9 +3744,9 @@ module SP
 
     recipe Pack 10
     {
-        destroy PinePineappleBagSeed=10,
+        destroy PineappleBagSeed=10,
 
-        Result  :10pkPinePineappleBagSeed,
+        Result  :10pkPineappleBagSeed,
         OnTest  :Recipe.OnTest.IsFavorite,
         Time    :75.0,
         Category:Storage
@@ -3755,9 +3755,9 @@ module SP
 
     recipe Pack 50
     {
-        destroy PinePineappleBagSeed=50,
+        destroy PineappleBagSeed=50,
 
-        Result  :50pkPinePineappleBagSeed,
+        Result  :50pkPineappleBagSeed,
         OnTest  :Recipe.OnTest.IsFavorite,
         Time    :100.0,
         Category:Storage
@@ -3766,9 +3766,9 @@ module SP
 
     recipe Pack 100
     {
-        destroy PinePineappleBagSeed=100,
+        destroy PineappleBagSeed=100,
 
-        Result  :100pkPinePineappleBagSeed,
+        Result  :100pkPineappleBagSeed,
         OnTest  :Recipe.OnTest.IsFavorite,
         Time    :125.0,
         Category:Storage
@@ -3818,54 +3818,54 @@ module SP
 
     recipe Put Together
     {
-        5pkPinePineappleBagSeed=2,
+        5pkPineappleBagSeed=2,
 
-        Result  :10pkPinePineappleBagSeed=1,
+        Result  :10pkPineappleBagSeed=1,
         Time    :10.0
     }
 
 
     recipe Put Together
     {
-        10pkPinePineappleBagSeed=5,
+        10pkPineappleBagSeed=5,
 
-        Result  :50pkPinePineappleBagSeed=1,
+        Result  :50pkPineappleBagSeed=1,
         Time    :20.0
     }
 
 
     recipe Put Together
     {
-        50pkPinePineappleBagSeed=2,
+        50pkPineappleBagSeed=2,
 
-        Result  :100pkPinePineappleBagSeed=1,
+        Result  :100pkPineappleBagSeed=1,
         Time    :40.0
     }
 
 
     recipe Split in Two
     {
-        10pkPinePineappleBagSeed=1,
+        10pkPineappleBagSeed=1,
 
-        Result  :5pkPinePineappleBagSeed=2,
+        Result  :5pkPineappleBagSeed=2,
         Time    :10.0
     }
 
 
     recipe Split in Five
     {
-        50pkPinePineappleBagSeed=1,
+        50pkPineappleBagSeed=1,
 
-        Result  :10pkPinePineappleBagSeed=5,
+        Result  :10pkPineappleBagSeed=5,
         Time    :20.0
     }
 
 
     recipe Split in Two
     {
-        100pkPinePineappleBagSeed=1,
+        100pkPineappleBagSeed=1,
 
-        Result  :50pkPinePineappleBagSeed=2,
+        Result  :50pkPineappleBagSeed=2,
         Time    :40.0
     }
 

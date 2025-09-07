@@ -1,0 +1,464 @@
+module Base
+{
+	model PackWineMakingBook
+	{
+		mesh = WorldItems/PackWineMakingBook,
+		texture = WorldItems/PackWineMakingBook,
+		scale = 0.5,
+	}
+
+	model Pack6pkRedWine
+	{
+		mesh = WorldItems/Pack6Wine,
+		texture = WorldItems/PackRedWine,
+		scale = 0.5,
+	}
+
+	model Pack12pkRedWine
+	{
+		mesh = WorldItems/Pack12Wine,
+		texture = WorldItems/PackRedWine,
+		scale = 0.5,
+	}
+
+	model Pack6pkRedWineAged
+	{
+		mesh = WorldItems/Pack6Wine,
+		texture = WorldItems/PackRedWineAged,
+		scale = 0.5,
+	}
+
+	model Pack12pkRedWineAged
+	{
+		mesh = WorldItems/Pack12Wine,
+		texture = WorldItems/PackRedWineAged,
+		scale = 0.5,
+	}
+
+	model Pack6pkRedWineAgedFully
+	{
+		mesh = WorldItems/Pack6Wine,
+		texture = WorldItems/PackRedWineAgedFully,
+		scale = 0.5,
+	}
+
+	model Pack12pkRedWineAgedFully
+	{
+		mesh = WorldItems/Pack12Wine,
+		texture = WorldItems/PackRedWineAgedFully,
+		scale = 0.5,
+	}
+
+	model Pack6pkWhiteWine
+	{
+		mesh = WorldItems/Pack6Wine,
+		texture = WorldItems/PackWhiteWine,
+		scale = 0.5,
+	}
+
+	model Pack12pkWhiteWine
+	{
+		mesh = WorldItems/Pack12Wine,
+		texture = WorldItems/PackWhiteWine,
+		scale = 0.5,
+	}
+
+	model Pack6pkWhiteWineAged
+	{
+		mesh = WorldItems/Pack6Wine,
+		texture = WorldItems/PackWhiteWineAged,
+		scale = 0.5,
+	}
+
+	model Pack12pkWhiteWineAged
+	{
+		mesh = WorldItems/Pack12Wine,
+		texture = WorldItems/PackWhiteWineAged,
+		scale = 0.5,
+	}
+
+	model Pack6pkWhiteWineAgedFully
+	{
+		mesh = WorldItems/Pack6Wine,
+		texture = WorldItems/PackWhiteWineAgedFully,
+		scale = 0.5,
+	}
+
+	model Pack12pkWhiteWineAgedFully
+	{
+		mesh = WorldItems/Pack12Wine,
+		texture = WorldItems/PackWhiteWineAgedFully,
+		scale = 0.5,
+	}
+
+	model Pack6pkWildBerryWine
+	{
+		mesh = WorldItems/Pack6Wine,
+		texture = WorldItems/PackWildBerryWine,
+		scale = 0.5,
+	}
+
+	model Pack12pkWildBerryWine
+	{
+		mesh = WorldItems/Pack12Wine,
+		texture = WorldItems/PackWildBerryWine,
+		scale = 0.5,
+	}
+
+	model Pack6pkRosehipWine
+	{
+		mesh = WorldItems/Pack6Wine,
+		texture = WorldItems/PackRosehipWine,
+		scale = 0.5,
+	}
+
+	model Pack12pkRosehipWine
+	{
+		mesh = WorldItems/Pack12Wine,
+		texture = WorldItems/PackRosehipWine,
+		scale = 0.5,
+	}
+
+	model Pack6pkPineappleWine
+	{
+		mesh = WorldItems/Pack6Wine,
+		texture = WorldItems/PackPineappleWine,
+		scale = 0.5,
+	}
+
+	model Pack12pkPineappleWine
+	{
+		mesh = WorldItems/Pack12Wine,
+		texture = WorldItems/PackPineappleWine,
+		scale = 0.5,
+	}
+
+	model Pack6pkStrawberryWine
+	{
+		mesh = WorldItems/Pack6Wine,
+		texture = WorldItems/PackStrawberryWine,
+		scale = 0.5,
+	}
+
+	model Pack12pkStrawberryWine
+	{
+		mesh = WorldItems/Pack12Wine,
+		texture = WorldItems/PackStrawberryWine,
+		scale = 0.5,
+	}
+
+	model Pack6pkPeachWine
+	{
+		mesh = WorldItems/Pack6Wine,
+		texture = WorldItems/PackPeachWine,
+		scale = 0.5,
+	}
+
+	model Pack12pkPeachWine
+	{
+		mesh = WorldItems/Pack12Wine,
+		texture = WorldItems/PackPeachWine,
+		scale = 0.5,
+	}
+
+	model Pack6pkPearWine
+	{
+		mesh = WorldItems/Pack6Wine,
+		texture = WorldItems/PackPearWine,
+		scale = 0.5,
+	}
+
+	model Pack12pkPearWine
+	{
+		mesh = WorldItems/Pack12Wine,
+		texture = WorldItems/PackPearWine,
+		scale = 0.5,
+	}
+
+	model Pack6pkBananaWine
+	{
+		mesh = WorldItems/Pack6Wine,
+		texture = WorldItems/PackBananaWine,
+		scale = 0.5,
+	}
+
+	model Pack12pkBananaWine
+	{
+		mesh = WorldItems/Pack12Wine,
+		texture = WorldItems/PackBananaWine,
+		scale = 0.5,
+	}
+
+	model Pack6pkHoneyMead
+	{
+		mesh = WorldItems/Pack6Wine,
+		texture = WorldItems/PackHoneyMead,
+		scale = 0.5,
+	}
+
+	model Pack12pkHoneyMead
+	{
+		mesh = WorldItems/Pack12Wine,
+		texture = WorldItems/PackHoneyMead,
+		scale = 0.5,
+	}
+
+	model 6pkHardCider
+	{
+		mesh = WorldItems/Pack6Wine,
+		texture = WorldItems/PackHardCider,
+		scale = 0.5,
+	}
+
+	model Pack12pkHardCider
+	{
+		mesh = WorldItems/Pack12Wine,
+		texture = WorldItems/PackHardCider,
+		scale = 0.5,
+	}
+
+	model 6pkWineBoxSmall1
+	{
+		mesh = WorldItems/PackGeneral,
+		texture = WorldItems/PackWineBoxSmall1,
+		scale = 0.5,
+	}
+
+	model 24pkWineBoxSmall1
+	{
+		mesh = WorldItems/PackGeneral,
+		texture = WorldItems/PackWineBoxSmall1,
+		scale = 0.8,
+	}
+
+	model 6pkWineBoxSmall2
+	{
+		mesh = WorldItems/PackGeneral,
+		texture = WorldItems/PackWineBoxSmall2,
+		scale = 0.5,
+	}
+
+	model 24pkWineBoxSmall2
+	{
+		mesh = WorldItems/PackGeneral,
+		texture = WorldItems/PackWineBoxSmall2,
+		scale = 0.8,
+	}
+
+	model 6pkWineBoxSmall3
+	{
+		mesh = WorldItems/PackGeneral,
+		texture = WorldItems/PackWineBoxSmall3,
+		scale = 0.5,
+	}
+
+	model 24pkWineBoxSmall3
+	{
+		mesh = WorldItems/PackGeneral,
+		texture = WorldItems/PackWineBoxSmall3,
+		scale = 0.8,
+	}
+
+	model 6pkWineBoxSmall4
+	{
+		mesh = WorldItems/PackGeneral,
+		texture = WorldItems/PackWineBoxSmall4,
+		scale = 0.5,
+	}
+
+	model 24pkWineBoxSmall4
+	{
+		mesh = WorldItems/PackGeneral,
+		texture = WorldItems/PackWineBoxSmall4,
+		scale = 0.8,
+	}
+
+	model 6pkWineBoxSmall5
+	{
+		mesh = WorldItems/PackGeneral,
+		texture = WorldItems/PackWineBoxSmall5,
+		scale = 0.5,
+	}
+
+	model 24pkWineBoxSmall5
+	{
+		mesh = WorldItems/PackGeneral,
+		texture = WorldItems/PackWineBoxSmall5,
+		scale = 0.8,
+	}
+
+	model 6pkWineBoxSmall6
+	{
+		mesh = WorldItems/PackGeneral,
+		texture = WorldItems/PackWineBoxSmall6,
+		scale = 0.5,
+	}
+
+	model 24pkWineBoxSmall6
+	{
+		mesh = WorldItems/PackGeneral,
+		texture = WorldItems/PackWineBoxSmall6,
+		scale = 0.8,
+	}
+
+	model PackFruitYeastStarter
+	{
+		mesh = WorldItems/PackYeast,
+		texture = WorldItems/PackFruitYeastStarter,
+		scale = 0.5,
+	}
+	
+	model PackPotatoYeastStarter
+	{
+		mesh = WorldItems/PackYeast,
+		texture = WorldItems/PackPotatoYeastStarter,
+		scale = 0.5,
+	}
+
+	model PackWildPlantsYeastStarter
+	{
+		mesh = WorldItems/PackYeast,
+		texture = WorldItems/PackWildPlantsYeastStarter,
+		scale = 0.5,
+	}
+
+	model PackRubberBandsBag
+	{
+		mesh = WorldItems/PackBaggedItems,
+		texture = WorldItems/PackRubberBandsBag,
+		scale = 0.5,
+	}
+
+	model PackCorksBag
+	{
+		mesh = WorldItems/PackBaggedItems,
+		texture = WorldItems/PackCorksBag,
+		scale = 0.5,
+	}
+
+	model PackBarrelDispenser
+	{
+		mesh = WorldItems/PackBarrelDispenser,
+		texture = WorldItems/PackBarrelDispenser,
+		scale = 0.7,
+	}
+
+	model PackEmptyCarboy
+	{
+		mesh = WorldItems/PackEmptyCarboy,
+		texture = WorldItems/PackEmptyCarboy,
+		scale = 0.5,
+	}
+
+	model PackGallonCarboys
+	{
+		mesh = WorldItems/PackGallonCarboys,
+		texture = WorldItems/PackGallonCarboys,
+		scale = 0.5,
+	}
+
+	model PackRedWineBase
+	{
+		mesh = WorldItems/PackGeneralSmall,
+		texture = WorldItems/PackRedWineBase,
+		scale = 0.8,
+	}
+
+	model PackWhiteWineBase
+	{
+		mesh = WorldItems/PackGeneralSmall,
+		texture = WorldItems/PackWhiteWineBase,
+		scale = 0.8,
+	}
+
+	model PackWildBerryWineBase
+	{
+		mesh = WorldItems/PackGeneralSmall,
+		texture = WorldItems/PackWildBerryWineBase,
+		scale = 0.8,
+	}
+
+	model PackRosehipWineBase
+	{
+		mesh = WorldItems/PackGeneralSmall,
+		texture = WorldItems/PackRosehipWineBase,
+		scale = 0.8,
+	}
+
+	model PackPineappleWineBase
+	{
+		mesh = WorldItems/PackGeneralSmall,
+		texture = WorldItems/PackPineappleWineBase,
+		scale = 0.8,
+	}
+
+	model PackStrawberryWineBase
+	{
+		mesh = WorldItems/PackGeneralSmall,
+		texture = WorldItems/PackStrawberryWineBase,
+		scale = 0.8,
+	}
+
+	model PackPeachWineBase
+	{
+		mesh = WorldItems/PackGeneralSmall,
+		texture = WorldItems/PackPeachWineBase,
+		scale = 0.8,
+	}
+
+	model PackPearWineBase
+	{
+		mesh = WorldItems/PackGeneralSmall,
+		texture = WorldItems/PackPearWineBase,
+		scale = 0.8,
+	}
+
+	model PackBananaWineBase
+	{
+		mesh = WorldItems/PackGeneralSmall,
+		texture = WorldItems/PackBananaWineBase,
+		scale = 0.8,
+	}
+
+	model PackHoneyMeadBase
+	{
+		mesh = WorldItems/PackGeneralSmall,
+		texture = WorldItems/PackHoneyMeadBase,
+		scale = 0.8,
+	}
+
+	model PackHardCiderBase
+	{
+		mesh = WorldItems/PackGeneralSmall,
+		texture = WorldItems/PackHardCiderBase,
+		scale = 0.8,
+	}
+
+	model PackWineEmptySmall
+	{
+		mesh = WorldItems/PackGeneral,
+		texture = WorldItems/PackWineEmpty,
+		scale = 0.5,
+	}
+
+	model PackWineEmptyLarge
+	{
+		mesh = WorldItems/PackGeneral,
+		texture = WorldItems/PackWineEmpty,
+		scale = 0.8,
+	}
+
+	model PackWineBoxEmptySmall
+	{
+		mesh = WorldItems/PackGeneral,
+		texture = WorldItems/PackWineBoxEmpty,
+		scale = 0.5,
+	}
+
+	model PackWineBoxEmptyLarge
+	{
+		mesh = WorldItems/PackGeneral,
+		texture = WorldItems/PackWineBoxEmpty,
+		scale = 0.8,
+	}
+}

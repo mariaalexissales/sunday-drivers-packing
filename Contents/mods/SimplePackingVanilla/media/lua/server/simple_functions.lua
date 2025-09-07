@@ -46,13 +46,91 @@ function Recipe.OnTest.WholeItem(item)
 end
 
 function Recipe.OnTest.IsEmpty(items, result)
-    for i = 0, items:size() - 1 do
-        local container = items:get(i)
-        if container and not container:isEmpty() then
+    print("DEBUG: IsEmpty called")
+
+    if not items then
+        print("DEBUG: items is nil")
+        return false
+    end
+
+    print("DEBUG: items type: " .. tostring(type(items)))
+
+    -- Check if items is an ItemContainer
+    if items.getItems then
+        print("DEBUG: items has getItems method")
+        local itemsList = items:getItems()
+        if itemsList then
+            print("DEBUG: got items list, size: " .. tostring(itemsList:size()))
+            if itemsList:size() == 0 then
+                print("DEBUG: no items in container")
+                return false
+            end
+            local item = itemsList:get(0)
+            print("DEBUG: got first item: " .. tostring(item and item:getType() or "nil"))
+        else
+            print("DEBUG: getItems returned nil")
             return false
         end
+        -- Check if items is directly an item list
+    elseif items.size then
+        print("DEBUG: items has size method")
+        if items:size() == 0 then
+            print("DEBUG: no items in list")
+            return false
+        end
+        local item = items:get(0)
+        print("DEBUG: got first item: " .. tostring(item and item:getType() or "nil"))
+        -- Check if items is a single item
+    elseif items.getType then
+        print("DEBUG: items appears to be a single item")
+        local item = items
+        print("DEBUG: single item type: " .. tostring(item:getType()))
+    else
+        print("DEBUG: unknown items type - checking available methods")
+        -- Try to find what methods are available
+        local mt = getmetatable(items)
+        if mt and mt.__index then
+            print("DEBUG: items has metatable")
+        end
+        return false
     end
-    return true
+
+    -- Now check if the item is a container
+    local item = nil
+    if items.getItems then
+        local itemsList = items:getItems()
+        if itemsList and itemsList:size() > 0 then
+            item = itemsList:get(0)
+        end
+    elseif items.size and items:size() > 0 then
+        item = items:get(0)
+    elseif items.getType then
+        item = items
+    end
+
+    if not item then
+        print("DEBUG: no item found")
+        return false
+    end
+
+    print("DEBUG: checking if item is container")
+    print("DEBUG: has getContainer: " .. tostring(item.getContainer ~= nil))
+
+    if item.getContainer and item:getContainer() then
+        local container = item:getContainer()
+        print("DEBUG: container exists")
+        if container and container.getItems then
+            local isEmpty = container:getItems():isEmpty()
+            print("DEBUG: container is empty: " .. tostring(isEmpty))
+            return isEmpty
+        else
+            print("DEBUG: container or getItems is nil")
+        end
+    else
+        print("DEBUG: item is not a container")
+    end
+
+    return false
 end
 
 -- ==========================
@@ -106,7 +184,7 @@ function Recipe.OnCreate.SaveFood(items, result, player)
     for i = 0, items:size() - 1 do
         ---@type InventoryItem
         local it = items:get(i)
-        if it and instanceof(it, "Food") then
+        if it then
             local hunger = (it.getHungerChange and it:getHungerChange())
                 or (it.getHungChange and it:getHungChange()) or 0
             local entry = {
@@ -285,12 +363,12 @@ function Recipe.OnCreate.Unpack1Rope(items, result, player)
 end
 
 function Recipe.OnCreate.Unpack2WoodenContainer(items, result, player)
-    player:getInventory():AddItem("Packing.WoodenContainer")
-    player:getInventory():AddItem("Packing.WoodenContainer")
+    player:getInventory():AddItem("SP.WoodenContainer")
+    player:getInventory():AddItem("SP.WoodenContainer")
 end
 
 function Recipe.OnCreate.Unpack1WoodenContainer(items, result, player)
-    player:getInventory():AddItem("Packing.WoodenContainer")
+    player:getInventory():AddItem("SP.WoodenContainer")
 end
 
 -- ==========================
@@ -311,7 +389,6 @@ local function saveItemAmounts()
                 if item and item:getTypeString() == "Drainable" then
                     local amount = recipeSource:getCount()
                     defaultItemAmounts[recipe:getResult():getFullType()] = amount
-                    print("[Debug] Saved Drainable Amount", recipe:getResult():getFullType(), amount)
                 end
             end
         end
@@ -329,10 +406,9 @@ local function saveNutritionAmounts()
                 local recipeSource = source:get(0)
                 local itemName = recipeSource:getOnlyItem()
                 local item = scriptManager:FindItem(itemName)
-                if item and item:getTypeString() == "Food" then
+                if item then
                     local amount = recipeSource:getCount()
                     defaultFoodItems[recipe:getResult():getFullType()] = amount
-                    print("[Debug] Saved Food Amount", recipe:getResult():getFullType(), amount)
                 end
             end
         end

@@ -1,0 +1,5 @@
+name=Simple Packing - MoreBrewsAndWine
+id=SimplePackingMB
+description=Simple Packing recipes for MoreBrews (+ Wine Me Up!). Modifications done to original packing recipes but with nutrition retainment.
+poster=poster.png
+require=SimplePacking,MoreBrews,MoreBrewsWineMeUp

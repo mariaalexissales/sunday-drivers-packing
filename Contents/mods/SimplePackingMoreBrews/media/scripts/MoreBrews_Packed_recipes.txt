@@ -1,0 +1,2786 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+
+	/******************************  SKILL BOOK  ******************************/
+
+	recipe Pack Brewing Skill Books
+	{
+		MoreBrews.BookBrewing1,
+		MoreBrews.BookBrewing2,
+		MoreBrews.BookBrewing3,
+		MoreBrews.BookBrewing4,
+		MoreBrews.BookBrewing5,
+		
+		Result				:pkBrewing,
+		Time				:150.0,
+		Category			:Storage,
+	}
+	
+	recipe Unpack Brewing Skill Books
+	{
+		pkBrewing,
+		
+		Result				:MoreBrews.BookBrewing1,
+		OnCreate			:Recipe.OnCreate.UnpackBrewingSkillBook,
+		Time				:100.0,
+		Category			:Storage,
+	}
+
+	/******************************  BEER CANS & BOTTLES  ******************************/
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerCanAmericanLager=6,
+		
+		Result				:6pkBeerCanAmericanLager,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerCanAmericanLager,
+		
+		Result				:MoreBrews.BeerCanAmericanLager=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerCanAmericanLager=24,
+		
+		Result				:24pkBeerCanAmericanLager,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerCanAmericanLager,
+		
+		Result				:MoreBrews.BeerCanAmericanLager=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerCanAmericanLager=4,
+		
+		Result				:24pkBeerCanAmericanLager,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerCanAmericanLager,
+		
+		Result				:6pkBeerCanAmericanLager=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerBottleAmericanLager=6,
+		
+		Result				:6pkBeerBottleAmericanLager,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerBottleAmericanLager,
+		
+		Result				:MoreBrews.BeerBottleAmericanLager=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerBottleAmericanLager=24,
+		
+		Result				:24pkBeerBottleAmericanLager,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerBottleAmericanLager,
+		
+		Result				:MoreBrews.BeerBottleAmericanLager=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerBottleAmericanLager=4,
+		
+		Result				:24pkBeerBottleAmericanLager,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerBottleAmericanLager,
+		
+		Result				:6pkBeerBottleAmericanLager=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerCanAPA1=6,
+		
+		Result				:6pkBeerCanAPA1,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerCanAPA1,
+		
+		Result				:MoreBrews.BeerCanAPA1=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerCanAPA1=24,
+		
+		Result				:24pkBeerCanAPA1,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerCanAPA1,
+		
+		Result				:MoreBrews.BeerCanAPA1=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerCanAPA1=4,
+		
+		Result				:24pkBeerCanAPA1,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerCanAPA1,
+		
+		Result				:6pkBeerCanAPA1=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerBottleAPA1=6,
+		
+		Result				:6pkBeerBottleAPA1,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerBottleAPA1,
+		
+		Result				:MoreBrews.BeerBottleAPA1=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerBottleAPA1=24,
+		
+		Result				:24pkBeerBottleAPA1,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerBottleAPA1,
+		
+		Result				:MoreBrews.BeerBottleAPA1=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerBottleAPA1=4,
+		
+		Result				:24pkBeerBottleAPA1,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerBottleAPA1,
+		
+		Result				:6pkBeerBottleAPA1=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+    
+		recipe Pack 6
+	{
+		destroy MoreBrews.BeerCanAPA2=6,
+		
+		Result				:6pkBeerCanAPA2,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerCanAPA2,
+		
+		Result				:MoreBrews.BeerCanAPA2=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerCanAPA2=24,
+		
+		Result				:24pkBeerCanAPA2,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerCanAPA2,
+		
+		Result				:MoreBrews.BeerCanAPA2=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerCanAPA2=4,
+		
+		Result				:24pkBeerCanAPA2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerCanAPA2,
+		
+		Result				:6pkBeerCanAPA2=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerBottleAPA2=6,
+		
+		Result				:6pkBeerBottleAPA2,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerBottleAPA2,
+		
+		Result				:MoreBrews.BeerBottleAPA2=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerBottleAPA2=24,
+		
+		Result				:24pkBeerBottleAPA2,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerBottleAPA2,
+		
+		Result				:MoreBrews.BeerBottleAPA2=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerBottleAPA2=4,
+		
+		Result				:24pkBeerBottleAPA2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerBottleAPA2,
+		
+		Result				:6pkBeerBottleAPA2=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerCanIPA1=6,
+		
+		Result				:6pkBeerCanIPA1,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerCanIPA1,
+		
+		Result				:MoreBrews.BeerCanIPA1=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerCanIPA1=24,
+		
+		Result				:24pkBeerCanIPA1,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerCanIPA1,
+		
+		Result				:MoreBrews.BeerCanIPA1=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerCanIPA1=4,
+		
+		Result				:24pkBeerCanIPA1,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerCanIPA1,
+		
+		Result				:6pkBeerCanIPA1=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerBottleIPA1=6,
+		
+		Result				:6pkBeerBottleIPA1,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerBottleIPA1,
+		
+		Result				:MoreBrews.BeerBottleIPA1=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerBottleIPA1=24,
+		
+		Result				:24pkBeerBottleIPA1,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerBottleIPA1,
+		
+		Result				:MoreBrews.BeerBottleIPA1=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerBottleIPA1=4,
+		
+		Result				:24pkBeerBottleIPA1,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerBottleIPA1,
+		
+		Result				:6pkBeerBottleIPA1=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerCanIPA2=6,
+		
+		Result				:6pkBeerCanIPA2,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerCanIPA2,
+		
+		Result				:MoreBrews.BeerCanIPA2=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerCanIPA2=24,
+		
+		Result				:24pkBeerCanIPA2,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerCanIPA2,
+		
+		Result				:MoreBrews.BeerCanIPA2=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerCanIPA2=4,
+		
+		Result				:24pkBeerCanIPA2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerCanIPA2,
+		
+		Result				:6pkBeerCanIPA2=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerBottleIPA2=6,
+		
+		Result				:6pkBeerBottleIPA2,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerBottleIPA2,
+		
+		Result				:MoreBrews.BeerBottleIPA2=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerBottleIPA2=24,
+		
+		Result				:24pkBeerBottleIPA2,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerBottleIPA2,
+		
+		Result				:MoreBrews.BeerBottleIPA2=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerBottleIPA2=4,
+		
+		Result				:24pkBeerBottleIPA2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerBottleIPA2,
+		
+		Result				:6pkBeerBottleIPA2=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerCanLightLager=6,
+		
+		Result				:6pkBeerCanLightLager,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerCanLightLager,
+		
+		Result				:MoreBrews.BeerCanLightLager=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerCanLightLager=24,
+		
+		Result				:24pkBeerCanLightLager,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerCanLightLager,
+		
+		Result				:MoreBrews.BeerCanLightLager=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerCanLightLager=4,
+		
+		Result				:24pkBeerCanLightLager,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerCanLightLager,
+		
+		Result				:6pkBeerCanLightLager=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerBottleLightLager=6,
+		
+		Result				:6pkBeerBottleLightLager,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerBottleLightLager,
+		
+		Result				:MoreBrews.BeerBottleLightLager=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerBottleLightLager=24,
+		
+		Result				:24pkBeerBottleLightLager,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerBottleLightLager,
+		
+		Result				:MoreBrews.BeerBottleLightLager=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerBottleLightLager=4,
+		
+		Result				:24pkBeerBottleLightLager,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerBottleLightLager,
+		
+		Result				:6pkBeerBottleLightLager=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerCanPilsner=6,
+		
+		Result				:6pkBeerCanPilsner,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerCanPilsner,
+		
+		Result				:MoreBrews.BeerCanPilsner=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerCanPilsner=24,
+		
+		Result				:24pkBeerCanPilsner,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerCanPilsner,
+		
+		Result				:MoreBrews.BeerCanPilsner=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerCanPilsner=4,
+		
+		Result				:24pkBeerCanPilsner,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerCanPilsner,
+		
+		Result				:6pkBeerCanPilsner=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerBottlePilsner=6,
+		
+		Result				:6pkBeerBottlePilsner,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerBottlePilsner,
+		
+		Result				:MoreBrews.BeerBottlePilsner=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerBottlePilsner=24,
+		
+		Result				:24pkBeerBottlePilsner,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerBottlePilsner,
+		
+		Result				:MoreBrews.BeerBottlePilsner=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerBottlePilsner=4,
+		
+		Result				:24pkBeerBottlePilsner,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerBottlePilsner,
+		
+		Result				:6pkBeerBottlePilsner=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerCanPorter=6,
+		
+		Result				:6pkBeerCanPorter,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerCanPorter,
+		
+		Result				:MoreBrews.BeerCanPorter=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerCanPorter=24,
+		
+		Result				:24pkBeerCanPorter,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerCanPorter,
+		
+		Result				:MoreBrews.BeerCanPorter=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerCanPorter=4,
+		
+		Result				:24pkBeerCanPorter,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerCanPorter,
+		
+		Result				:6pkBeerCanPorter=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerBottlePorter=6,
+		
+		Result				:6pkBeerBottlePorter,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerBottlePorter,
+		
+		Result				:MoreBrews.BeerBottlePorter=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerBottlePorter=24,
+		
+		Result				:24pkBeerBottlePorter,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerBottlePorter,
+		
+		Result				:MoreBrews.BeerBottlePorter=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerBottlePorter=4,
+		
+		Result				:24pkBeerBottlePorter,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerBottlePorter,
+		
+		Result				:6pkBeerBottlePorter=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerCanStout=6,
+		
+		Result				:6pkBeerCanStout,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerCanStout,
+		
+		Result				:MoreBrews.BeerCanStout=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerCanStout=24,
+		
+		Result				:24pkBeerCanStout,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerCanStout,
+		
+		Result				:MoreBrews.BeerCanStout=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerCanStout=4,
+		
+		Result				:24pkBeerCanStout,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerCanStout,
+		
+		Result				:6pkBeerCanStout=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerBottleStout=6,
+		
+		Result				:6pkBeerBottleStout,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerBottleStout,
+		
+		Result				:MoreBrews.BeerBottleStout=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerBottleStout=24,
+		
+		Result				:24pkBeerBottleStout,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerBottleStout,
+		
+		Result				:MoreBrews.BeerBottleStout=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerBottleStout=4,
+		
+		Result				:24pkBeerBottleStout,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerBottleStout,
+		
+		Result				:6pkBeerBottleStout=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerCanSkunked=6,
+		
+		Result				:6pkBeerCanSkunked,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerCanSkunked,
+		
+		Result				:MoreBrews.BeerCanSkunked=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerCanSkunked=24,
+		
+		Result				:24pkBeerCanSkunked,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerCanSkunked,
+		
+		Result				:MoreBrews.BeerCanSkunked=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerCanSkunked=4,
+		
+		Result				:24pkBeerCanSkunked,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerCanSkunked,
+		
+		Result				:6pkBeerCanSkunked=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy MoreBrews.BeerBottleSkunked=6,
+		
+		Result				:6pkBeerBottleSkunked,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerBottleSkunked,
+		
+		Result				:MoreBrews.BeerBottleSkunked=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 24
+	{
+		destroy MoreBrews.BeerBottleSkunked=24,
+		
+		Result				:24pkBeerBottleSkunked,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 24
+	{
+		destroy 24pkBeerBottleSkunked,
+		
+		Result				:MoreBrews.BeerBottleSkunked=24,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkBeerBottleSkunked=4,
+		
+		Result				:24pkBeerBottleSkunked,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 4
+	{
+		24pkBeerBottleSkunked,
+		
+		Result				:6pkBeerBottleSkunked=4,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	/******************************  EMPTY KEGS & CARBOYS  ******************************/
+
+	recipe Rope 4
+	{
+		destroy MoreBrews.EmptyKeg=4,
+		Rope=1,
+
+		Result				:4pkEmptyKeg,
+		Time				:100.0,
+		Category			:Storage,
+		CanBeDoneFromFloor	:true,
+	}
+	
+	recipe Unrope 4
+	{
+		destroy 4pkEmptyKeg,
+		
+		Result				:MoreBrews.EmptyKeg=4,
+		Time				:100.0,
+		Category			:Storage,
+		CanBeDoneFromFloor	:true,
+		OnCreate			:Recipe.OnCreate.Unpack1Rope,
+	}
+
+	recipe Rope 4
+	{
+		destroy MoreBrews.EmptyCarboy=4,
+		Rope=1,
+
+		Result				:4pkEmptyCarboy,
+		Time				:100.0,
+		Category			:Storage,
+		CanBeDoneFromFloor	:true,
+	}
+
+	recipe Unrope 4
+	{
+		destroy 4pkEmptyCarboy,
+		
+		Result				:MoreBrews.EmptyCarboy=4,
+		Time				:100.0,
+		Category			:Storage,
+		CanBeDoneFromFloor	:true,
+		OnCreate			:Recipe.OnCreate.Unpack1Rope,
+	}
+
+	/******************************  EXTRACT  ******************************/
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.MaltExtractDark=5,
+		
+		Result				:5pkMaltExtractDark,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkMaltExtractDark,
+		
+		Result				:MoreBrews.MaltExtractDark=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.MaltExtractDark=10,
+		
+		Result				:10pkMaltExtractDark,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkMaltExtractDark,
+		
+		Result				:MoreBrews.MaltExtractDark=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.MaltExtractDark=50,
+		
+		Result				:50pkMaltExtractDark,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkMaltExtractDark,
+		
+		Result				:MoreBrews.MaltExtractDark=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkMaltExtractDark=2,
+		
+		Result				:10pkMaltExtractDark,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkMaltExtractDark,
+		
+		Result				:5pkMaltExtractDark=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkMaltExtractDark=5,
+		
+		Result				:50pkMaltExtractDark,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkMaltExtractDark,
+		
+		Result				:10pkMaltExtractDark=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.MaltExtractLight=5,
+		
+		Result				:5pkMaltExtractLight,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkMaltExtractLight,
+		
+		Result				:MoreBrews.MaltExtractLight=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.MaltExtractLight=10,
+		
+		Result				:10pkMaltExtractLight,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkMaltExtractLight,
+		
+		Result				:MoreBrews.MaltExtractLight=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.MaltExtractLight=50,
+		
+		Result				:50pkMaltExtractLight,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkMaltExtractLight,
+		
+		Result				:MoreBrews.MaltExtractLight=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkMaltExtractLight=2,
+		
+		Result				:10pkMaltExtractLight,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkMaltExtractLight,
+		
+		Result				:5pkMaltExtractLight=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkMaltExtractLight=5,
+		
+		Result				:50pkMaltExtractLight,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkMaltExtractLight,
+		
+		Result				:10pkMaltExtractLight=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	/******************************  BOTTLE CAPS  ******************************/
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.BottleCapsBag=5,
+		
+		Result				:5pkBottleCapsBag,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkBottleCapsBag,
+		
+		Result				:MoreBrews.BottleCapsBag=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.BottleCapsBag=10,
+		
+		Result				:10pkBottleCapsBag,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkBottleCapsBag,
+		
+		Result				:MoreBrews.BottleCapsBag=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.BottleCapsBag=50,
+		
+		Result				:50pkBottleCapsBag,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkBottleCapsBag,
+		
+		Result				:MoreBrews.BottleCapsBag=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkBottleCapsBag=2,
+		
+		Result				:10pkBottleCapsBag,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkBottleCapsBag,
+		
+		Result				:5pkBottleCapsBag=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkBottleCapsBag=5,
+		
+		Result				:50pkBottleCapsBag,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkBottleCapsBag,
+		
+		Result				:10pkBottleCapsBag=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	/******************************  EMPTY CANS & BOTTLES  ******************************/
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.HopsCascade=5,
+		
+		Result				:5pkHopsCascade,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkHopsCascade,
+		
+		Result				:MoreBrews.HopsCascade=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.HopsCascade=10,
+		
+		Result				:10pkHopsCascade,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkHopsCascade,
+		
+		Result				:MoreBrews.HopsCascade=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.HopsCascade=50,
+		
+		Result				:50pkHopsCascade,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkHopsCascade,
+		
+		Result				:MoreBrews.HopsCascade=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkHopsCascade=2,
+		
+		Result				:10pkHopsCascade,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkHopsCascade,
+		
+		Result				:5pkHopsCascade=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkHopsCascade=5,
+		
+		Result				:50pkHopsCascade,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkHopsCascade,
+		
+		Result				:10pkHopsCascade=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.HopsCentennial=5,
+		
+		Result				:5pkHopsCentennial,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkHopsCentennial,
+		
+		Result				:MoreBrews.HopsCentennial=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.HopsCentennial=10,
+		
+		Result				:10pkHopsCentennial,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkHopsCentennial,
+		
+		Result				:MoreBrews.HopsCentennial=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.HopsCentennial=50,
+		
+		Result				:50pkHopsCentennial,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkHopsCentennial,
+		
+		Result				:MoreBrews.HopsCentennial=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkHopsCentennial=2,
+		
+		Result				:10pkHopsCentennial,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkHopsCentennial,
+		
+		Result				:5pkHopsCentennial=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkHopsCentennial=5,
+		
+		Result				:50pkHopsCentennial,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkHopsCentennial,
+		
+		Result				:10pkHopsCentennial=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.HopsCitra=5,
+		
+		Result				:5pkHopsCitra,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkHopsCitra,
+		
+		Result				:MoreBrews.HopsCitra=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.HopsCitra=10,
+		
+		Result				:10pkHopsCitra,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkHopsCitra,
+		
+		Result				:MoreBrews.HopsCitra=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.HopsCitra=50,
+		
+		Result				:50pkHopsCitra,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkHopsCitra,
+		
+		Result				:MoreBrews.HopsCitra=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkHopsCitra=2,
+		
+		Result				:10pkHopsCitra,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkHopsCitra,
+		
+		Result				:5pkHopsCitra=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkHopsCitra=5,
+		
+		Result				:50pkHopsCitra,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkHopsCitra,
+		
+		Result				:10pkHopsCitra=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.HopsGolding=5,
+		
+		Result				:5pkHopsGolding,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkHopsGolding,
+		
+		Result				:MoreBrews.HopsGolding=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.HopsGolding=10,
+		
+		Result				:10pkHopsGolding,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkHopsGolding,
+		
+		Result				:MoreBrews.HopsGolding=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.HopsGolding=50,
+		
+		Result				:50pkHopsGolding,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkHopsGolding,
+		
+		Result				:MoreBrews.HopsGolding=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkHopsGolding=2,
+		
+		Result				:10pkHopsGolding,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkHopsGolding,
+		
+		Result				:5pkHopsGolding=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkHopsGolding=5,
+		
+		Result				:50pkHopsGolding,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkHopsGolding,
+		
+		Result				:10pkHopsGolding=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.HopsHallertau=5,
+		
+		Result				:5pkHopsHallertau,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkHopsHallertau,
+		
+		Result				:MoreBrews.HopsHallertau=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.HopsHallertau=10,
+		
+		Result				:10pkHopsHallertau,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkHopsHallertau,
+		
+		Result				:MoreBrews.HopsHallertau=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.HopsHallertau=50,
+		
+		Result				:50pkHopsHallertau,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkHopsHallertau,
+		
+		Result				:MoreBrews.HopsHallertau=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkHopsHallertau=2,
+		
+		Result				:10pkHopsHallertau,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkHopsHallertau,
+		
+		Result				:5pkHopsHallertau=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkHopsHallertau=5,
+		
+		Result				:50pkHopsHallertau,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkHopsHallertau,
+		
+		Result				:10pkHopsHallertau=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.HopsMosaic=5,
+		
+		Result				:5pkHopsMosaic,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkHopsMosaic,
+		
+		Result				:MoreBrews.HopsMosaic=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.HopsMosaic=10,
+		
+		Result				:10pkHopsMosaic,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkHopsMosaic,
+		
+		Result				:MoreBrews.HopsMosaic=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.HopsMosaic=50,
+		
+		Result				:50pkHopsMosaic,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkHopsMosaic,
+		
+		Result				:MoreBrews.HopsMosaic=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkHopsMosaic=2,
+		
+		Result				:10pkHopsMosaic,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkHopsMosaic,
+		
+		Result				:5pkHopsMosaic=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkHopsMosaic=5,
+		
+		Result				:50pkHopsMosaic,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkHopsMosaic,
+		
+		Result				:10pkHopsMosaic=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.HopsNugget=5,
+		
+		Result				:5pkHopsNugget,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkHopsNugget,
+		
+		Result				:MoreBrews.HopsNugget=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.HopsNugget=10,
+		
+		Result				:10pkHopsNugget,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkHopsNugget,
+		
+		Result				:MoreBrews.HopsNugget=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.HopsNugget=50,
+		
+		Result				:50pkHopsNugget,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkHopsNugget,
+		
+		Result				:MoreBrews.HopsNugget=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkHopsNugget=2,
+		
+		Result				:10pkHopsNugget,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkHopsNugget,
+		
+		Result				:5pkHopsNugget=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkHopsNugget=5,
+		
+		Result				:50pkHopsNugget,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkHopsNugget,
+		
+		Result				:10pkHopsNugget=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.HopsSaaz=5,
+		
+		Result				:5pkHopsSaaz,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkHopsSaaz,
+		
+		Result				:MoreBrews.HopsSaaz=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.HopsSaaz=10,
+		
+		Result				:10pkHopsSaaz,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkHopsSaaz,
+		
+		Result				:MoreBrews.HopsSaaz=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.HopsSaaz=50,
+		
+		Result				:50pkHopsSaaz,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkHopsSaaz,
+		
+		Result				:MoreBrews.HopsSaaz=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkHopsSaaz=2,
+		
+		Result				:10pkHopsSaaz,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkHopsSaaz,
+		
+		Result				:5pkHopsSaaz=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkHopsSaaz=5,
+		
+		Result				:50pkHopsSaaz,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkHopsSaaz,
+		
+		Result				:10pkHopsSaaz=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy MoreBrews.HopsSimcoe=5,
+		
+		Result				:5pkHopsSimcoe,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkHopsSimcoe,
+		
+		Result				:MoreBrews.HopsSimcoe=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MoreBrews.HopsSimcoe=10,
+		
+		Result				:10pkHopsSimcoe,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkHopsSimcoe,
+		
+		Result				:MoreBrews.HopsSimcoe=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy MoreBrews.HopsSimcoe=50,
+		
+		Result				:50pkHopsSimcoe,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkHopsSimcoe,
+		
+		Result				:MoreBrews.HopsSimcoe=50,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkHopsSimcoe=2,
+		
+		Result				:10pkHopsSimcoe,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkHopsSimcoe,
+		
+		Result				:5pkHopsSimcoe=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkHopsSimcoe=5,
+		
+		Result				:50pkHopsSimcoe,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkHopsSimcoe,
+		
+		Result				:10pkHopsSimcoe=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	/******************************  EMPTY CANS & BOTTLES  ******************************/
+
+	recipe Pack 5
+	{
+		destroy BeerCanEmpty/[Recipe.GetItemTypes.EmptyBeerCan]=5,
+		
+		Result				:5pkEmptyBeerCans,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkEmptyBeerCans,
+		
+		Result				:BeerCanEmpty=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy BeerCanEmpty/[Recipe.GetItemTypes.EmptyBeerCan]=5,
+		destroy BeerCanEmpty/[Recipe.GetItemTypes.EmptyBeerCan]=5,
+		
+		Result				:10pkEmptyBeerCans,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkEmptyBeerCans,
+		
+		Result				:BeerCanEmpty=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkEmptyBeerCans=2,
+		
+		Result				:10pkEmptyBeerCans,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkEmptyBeerCans,
+		
+		Result				:5pkEmptyBeerCans=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkEmptyBeerCans=5,
+		
+		Result				:50pkEmptyBeerCans,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkEmptyBeerCans,
+		
+		Result				:10pkEmptyBeerCans=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		50pkEmptyBeerCans=2,
+		
+		Result				:100pkEmptyBeerCans,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 2
+	{
+		100pkEmptyBeerCans,
+		
+		Result				:50pkEmptyBeerCans=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkEmptyBeerCans=10,
+		
+		Result				:100pkEmptyBeerCans,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 10
+	{
+		100pkEmptyBeerCans,
+		
+		Result				:10pkEmptyBeerCans=10,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy BeerEmpty/[Recipe.GetItemTypes.EmptyBeerBottle]=5,
+		
+		Result				:5pkEmptyBeerBottles,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkEmptyBeerBottles,
+		
+		Result				:BeerEmpty=5,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy BeerEmpty/[Recipe.GetItemTypes.EmptyBeerBottle]=5,
+		destroy BeerEmpty/[Recipe.GetItemTypes.EmptyBeerBottle]=5,
+		
+		Result				:10pkEmptyBeerBottles,
+		OnTest				:Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkEmptyBeerBottles,
+		
+		Result				:BeerEmpty=10,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkEmptyBeerBottles=2,
+		
+		Result				:10pkEmptyBeerBottles,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		10pkEmptyBeerBottles,
+		
+		Result				:5pkEmptyBeerBottles=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkEmptyBeerBottles=5,
+		
+		Result				:50pkEmptyBeerBottles,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 5
+	{
+		50pkEmptyBeerBottles,
+		
+		Result				:10pkEmptyBeerBottles=5,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		50pkEmptyBeerBottles=2,
+		
+		Result				:100pkEmptyBeerBottles,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 2
+	{
+		100pkEmptyBeerBottles,
+		
+		Result				:50pkEmptyBeerBottles=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkEmptyBeerBottles=10,
+		
+		Result				:100pkEmptyBeerBottles,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Split into 10
+	{
+		100pkEmptyBeerBottles,
+		
+		Result				:10pkEmptyBeerBottles=10,
+		Time				:75.0,
+		Category			:Storage,
+	}
+}
