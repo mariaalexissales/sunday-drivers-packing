@@ -16,12 +16,6 @@ function recipe_opencigpack(items, result, player)
     AMSI("Base.Cigarettes", 0, player);
 end
 
-local function getHunger(item)
-    return (item.getHungerChange and item:getHungerChange())
-        or (item.getHungChange and item:getHungChange())
-        or 0
-end
-
 -- ==========================
 -- == Recipe OnTest ==
 -- ==========================
@@ -236,7 +230,7 @@ function Recipe.OnCreate.LoadFood(items, result, player)
         for _, saved in ipairs(payload) do
             ---@type InventoryItem
             local newItem = inv:AddItem(spawnType)
-            if newItem and instanceof(newItem, "Food") then
+            if newItem then
                 if newItem.setCalories then newItem:setCalories(saved.calories or 0) end
                 if newItem.setHungerChange then newItem:setHungerChange(saved.hunger or 0) end
                 if newItem.setThirstChange then newItem:setThirstChange(saved.thirst or 0) end

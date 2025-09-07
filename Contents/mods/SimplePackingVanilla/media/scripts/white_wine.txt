@@ -30,7 +30,7 @@ module SP
 		destroy Wine=10,
 		
 		Result:10pkWhiteWine,
-		OnTest:Recipe.OnTest.SaveFood,
+		OnCreate:Recipe.OnCreate.SaveFood,
 		Time:100.0,
 		Category:Storage,
 	}
@@ -42,6 +42,7 @@ module SP
 		Result:Wine=10,
 		OnGiveXP:Recipe.OnGiveXP.None,
         OnCreate:Recipe.OnCreate.LoadFood,
+        RemoveResultItem:true,
 		Time:75.0,
 		Category:Storage,
 	}
@@ -51,7 +52,7 @@ module SP
 		destroy Wine=5,
 		
 		Result:5pkWhiteWine,
-		OnTest:Recipe.OnTest.SaveFood,
+		OnCreate:Recipe.OnCreate.SaveFood,
 		Time:75.0,
 		Category:Storage,
 	}
@@ -63,6 +64,7 @@ module SP
 		Result:Wine=5,
 		OnGiveXP:Recipe.OnGiveXP.None,
         OnCreate:Recipe.OnCreate.LoadFood,
+        RemoveResultItem:true,
 		Time:50.0,
 		Category:Storage,
 	}

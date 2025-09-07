@@ -50,6 +50,7 @@ module SP
 		Result				:MoreBrews.BeerCanAmericanLager=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -72,6 +73,7 @@ module SP
 		Result				:MoreBrews.BeerCanAmericanLager=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -112,6 +114,7 @@ module SP
 		Result				:MoreBrews.BeerBottleAmericanLager=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -134,6 +137,7 @@ module SP
 		Result				:MoreBrews.BeerBottleAmericanLager=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -174,6 +178,7 @@ module SP
 		Result				:MoreBrews.BeerCanAPA1=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -196,6 +201,7 @@ module SP
 		Result				:MoreBrews.BeerCanAPA1=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -236,6 +242,7 @@ module SP
 		Result				:MoreBrews.BeerBottleAPA1=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -258,6 +265,7 @@ module SP
 		Result				:MoreBrews.BeerBottleAPA1=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -298,6 +306,7 @@ module SP
 		Result				:MoreBrews.BeerCanAPA2=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -320,6 +329,7 @@ module SP
 		Result				:MoreBrews.BeerCanAPA2=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -360,6 +370,7 @@ module SP
 		Result				:MoreBrews.BeerBottleAPA2=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -382,6 +393,7 @@ module SP
 		Result				:MoreBrews.BeerBottleAPA2=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -422,6 +434,7 @@ module SP
 		Result				:MoreBrews.BeerCanIPA1=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -444,6 +457,7 @@ module SP
 		Result				:MoreBrews.BeerCanIPA1=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -484,6 +498,7 @@ module SP
 		Result				:MoreBrews.BeerBottleIPA1=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -506,6 +521,7 @@ module SP
 		Result				:MoreBrews.BeerBottleIPA1=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -546,6 +562,7 @@ module SP
 		Result				:MoreBrews.BeerCanIPA2=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -568,6 +585,7 @@ module SP
 		Result				:MoreBrews.BeerCanIPA2=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -608,6 +626,7 @@ module SP
 		Result				:MoreBrews.BeerBottleIPA2=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -630,6 +649,7 @@ module SP
 		Result				:MoreBrews.BeerBottleIPA2=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -670,6 +690,7 @@ module SP
 		Result				:MoreBrews.BeerCanLightLager=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -692,6 +713,7 @@ module SP
 		Result				:MoreBrews.BeerCanLightLager=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -732,6 +754,7 @@ module SP
 		Result				:MoreBrews.BeerBottleLightLager=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -754,6 +777,7 @@ module SP
 		Result				:MoreBrews.BeerBottleLightLager=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -794,6 +818,7 @@ module SP
 		Result				:MoreBrews.BeerCanPilsner=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -816,6 +841,7 @@ module SP
 		Result				:MoreBrews.BeerCanPilsner=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -856,6 +882,7 @@ module SP
 		Result				:MoreBrews.BeerBottlePilsner=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -878,6 +905,7 @@ module SP
 		Result				:MoreBrews.BeerBottlePilsner=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -918,6 +946,7 @@ module SP
 		Result				:MoreBrews.BeerCanPorter=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -940,6 +969,7 @@ module SP
 		Result				:MoreBrews.BeerCanPorter=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -980,6 +1010,7 @@ module SP
 		Result				:MoreBrews.BeerBottlePorter=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1002,6 +1033,7 @@ module SP
 		Result				:MoreBrews.BeerBottlePorter=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1042,6 +1074,7 @@ module SP
 		Result				:MoreBrews.BeerCanStout=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1064,6 +1097,7 @@ module SP
 		Result				:MoreBrews.BeerCanStout=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1104,6 +1138,7 @@ module SP
 		Result				:MoreBrews.BeerBottleStout=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1126,6 +1161,7 @@ module SP
 		Result				:MoreBrews.BeerBottleStout=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1166,6 +1202,7 @@ module SP
 		Result				:MoreBrews.BeerCanSkunked=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1188,6 +1225,7 @@ module SP
 		Result				:MoreBrews.BeerCanSkunked=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1228,6 +1266,7 @@ module SP
 		Result				:MoreBrews.BeerBottleSkunked=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1250,6 +1289,7 @@ module SP
 		Result				:MoreBrews.BeerBottleSkunked=24,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1338,6 +1378,7 @@ module SP
 		Result				:MoreBrews.MaltExtractDark=5,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1360,6 +1401,7 @@ module SP
 		Result				:MoreBrews.MaltExtractDark=10,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1382,6 +1424,7 @@ module SP
 		Result				:MoreBrews.MaltExtractDark=50,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1440,6 +1483,7 @@ module SP
 		Result				:MoreBrews.MaltExtractLight=5,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1462,6 +1506,7 @@ module SP
 		Result				:MoreBrews.MaltExtractLight=10,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1484,6 +1529,7 @@ module SP
 		Result				:MoreBrews.MaltExtractLight=50,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1544,6 +1590,7 @@ module SP
 		Result				:MoreBrews.BottleCapsBag=5,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1566,6 +1613,7 @@ module SP
 		Result				:MoreBrews.BottleCapsBag=10,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1588,6 +1636,7 @@ module SP
 		Result				:MoreBrews.BottleCapsBag=50,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1648,6 +1697,7 @@ module SP
 		Result				:MoreBrews.HopsCascade=5,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1670,6 +1720,7 @@ module SP
 		Result				:MoreBrews.HopsCascade=10,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1692,6 +1743,7 @@ module SP
 		Result				:MoreBrews.HopsCascade=50,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1750,6 +1802,7 @@ module SP
 		Result				:MoreBrews.HopsCentennial=5,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1772,6 +1825,7 @@ module SP
 		Result				:MoreBrews.HopsCentennial=10,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1794,6 +1848,7 @@ module SP
 		Result				:MoreBrews.HopsCentennial=50,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1852,6 +1907,7 @@ module SP
 		Result				:MoreBrews.HopsCitra=5,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1874,6 +1930,7 @@ module SP
 		Result				:MoreBrews.HopsCitra=10,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1896,6 +1953,7 @@ module SP
 		Result				:MoreBrews.HopsCitra=50,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1954,6 +2012,7 @@ module SP
 		Result				:MoreBrews.HopsGolding=5,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1976,6 +2035,7 @@ module SP
 		Result				:MoreBrews.HopsGolding=10,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -1998,6 +2058,7 @@ module SP
 		Result				:MoreBrews.HopsGolding=50,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2056,6 +2117,7 @@ module SP
 		Result				:MoreBrews.HopsHallertau=5,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2078,6 +2140,7 @@ module SP
 		Result				:MoreBrews.HopsHallertau=10,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2100,6 +2163,7 @@ module SP
 		Result				:MoreBrews.HopsHallertau=50,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2158,6 +2222,7 @@ module SP
 		Result				:MoreBrews.HopsMosaic=5,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2180,6 +2245,7 @@ module SP
 		Result				:MoreBrews.HopsMosaic=10,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2202,6 +2268,7 @@ module SP
 		Result				:MoreBrews.HopsMosaic=50,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2260,6 +2327,7 @@ module SP
 		Result				:MoreBrews.HopsNugget=5,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2282,6 +2350,7 @@ module SP
 		Result				:MoreBrews.HopsNugget=10,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2304,6 +2373,7 @@ module SP
 		Result				:MoreBrews.HopsNugget=50,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2362,6 +2432,7 @@ module SP
 		Result				:MoreBrews.HopsSaaz=5,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2384,6 +2455,7 @@ module SP
 		Result				:MoreBrews.HopsSaaz=10,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2406,6 +2478,7 @@ module SP
 		Result				:MoreBrews.HopsSaaz=50,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2464,6 +2537,7 @@ module SP
 		Result				:MoreBrews.HopsSimcoe=5,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2486,6 +2560,7 @@ module SP
 		Result				:MoreBrews.HopsSimcoe=10,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2508,6 +2583,7 @@ module SP
 		Result				:MoreBrews.HopsSimcoe=50,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2568,6 +2644,7 @@ module SP
 		Result				:BeerCanEmpty=5,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2591,6 +2668,7 @@ module SP
 		Result				:BeerCanEmpty=10,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2685,6 +2763,7 @@ module SP
 		Result				:BeerEmpty=5,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
@@ -2708,6 +2787,7 @@ module SP
 		Result				:BeerEmpty=10,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
 		Time				:50.0,
 		Category			:Storage,
 	}
