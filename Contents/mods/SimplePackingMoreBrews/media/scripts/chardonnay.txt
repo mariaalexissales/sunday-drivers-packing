@@ -1,0 +1,177 @@
+module SP
+{
+    imports
+    {
+        Base,
+        MoreBrews,
+        MoreBrewsWineMeUp
+    }
+
+    item 6pkWhiteWine
+    {
+        DisplayCategory    = MoreBrews,
+        Weight             = 4.2,
+        Type               = Normal,
+        DisplayName        = 6 x Wine [Chardonnay],
+        Icon               = Pack6pkWhiteWine,
+        WorldStaticModel   = Pack6pkWhiteWine,
+    }
+
+    item 12pkWhiteWine
+    {
+        DisplayCategory    = MoreBrews,
+        Weight             = 6,
+        Type               = Normal,
+        DisplayName        = 12 x Wine [Chardonnay],
+        Icon               = Pack12pkWhiteWine,
+        WorldStaticModel   = Pack12pkWhiteWine,
+    }
+
+    item 6pkWineBoxSmall4
+    {
+        DisplayCategory    = MoreBrews,
+        Weight             = 2.1,
+        Type               = Normal,
+        DisplayName        = 6 x Wine Box [Chardonnay],
+        Icon               = PackWineBox4,
+        WorldStaticModel   = 6pkWineBoxSmall4,
+    }
+
+    item 24pkWineBoxSmall4
+    {
+        DisplayCategory    = MoreBrews,
+        Weight             = 6,
+        Type               = Normal,
+        DisplayName        = 24 x Wine Box [Chardonnay],
+        Icon               = PackWineBox4,
+        WorldStaticModel   = 24pkWineBoxSmall4,
+    }
+
+    recipe Pack 6
+    {
+        destroy MoreBrews.WhiteWine=6,
+
+        Result              :6pkWhiteWine,
+        OnTest              :Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+        Time                :75.0,
+        Category            :Storage,
+    }
+
+    recipe Unpack 6
+    {
+        destroy 6pkWhiteWine,
+
+        Result              :MoreBrews.WhiteWine=6,
+        OnGiveXP            :Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
+        Time                :50.0,
+        Category            :Storage,
+    }
+
+    recipe Pack 12
+    {
+        destroy MoreBrews.WhiteWine=12,
+
+        Result              :12pkWhiteWine,
+        OnTest              :Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+        Time                :75.0,
+        Category            :Storage,
+    }
+
+    recipe Unpack 12
+    {
+        destroy 12pkWhiteWine,
+
+        Result              :MoreBrews.WhiteWine=12,
+        OnGiveXP            :Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
+        Time                :50.0,
+        Category            :Storage,
+    }
+
+    recipe Put Together
+    {
+        6pkWhiteWine=2,
+
+        Result              :12pkWhiteWine,
+        Time                :75.0,
+        Category            :Storage,
+    }
+
+    recipe Split
+    {
+        12pkWhiteWine,
+
+        Result              :6pkWhiteWine=2,
+        Time                :75.0,
+        Category            :Storage,
+    }
+
+    recipe Pack 6
+    {
+        destroy MoreBrews.WineBoxSmall4=6,
+
+        Result              :6pkWineBoxSmall4,
+        OnTest              :Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+        Time                :75.0,
+        Category            :Storage,
+    }
+
+    recipe Unpack 6
+    {
+        destroy 6pkWineBoxSmall4,
+
+        Result              :MoreBrews.WineBoxSmall4=6,
+        OnGiveXP            :Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
+        Time                :50.0,
+        Category            :Storage,
+    }
+
+    recipe Pack 24
+    {
+        destroy MoreBrews.WineBoxSmall4=24,
+
+        Result              :24pkWineBoxSmall4,
+        OnTest              :Recipe.OnTest.IsFavorite,
+        OnCreate            :Recipe.OnCreate.SaveFood,
+        Time                :75.0,
+        Category            :Storage,
+    }
+
+    recipe Unpack 24
+    {
+        destroy 24pkWineBoxSmall4,
+
+        Result              :MoreBrews.WineBoxSmall4=24,
+        OnGiveXP            :Recipe.OnGiveXP.None,
+        OnCreate            :Recipe.OnCreate.LoadFood,
+        RemoveResultItem    :true,
+        Time                :50.0,
+        Category            :Storage,
+    }
+
+    recipe Put Together
+    {
+        6pkWineBoxSmall4=4,
+
+        Result              :24pkWineBoxSmall4,
+        Time                :75.0,
+        Category            :Storage,
+    }
+
+    recipe Split
+    {
+        24pkWineBoxSmall4,
+
+        Result              :6pkWineBoxSmall4=4,
+        Time                :75.0,
+        Category            :Storage,
+    }
+}
