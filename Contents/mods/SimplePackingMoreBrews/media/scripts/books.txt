@@ -1,0 +1,75 @@
+module SP
+{
+    imports
+    {
+        Base,
+        MoreBrews,
+        MoreBrewsWineMeUp
+    }
+
+    item pkBrewing
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2,
+		Type				= Normal,
+		DisplayName			= Bundle of Brewing Books,
+		Icon				= PackBrewingBook,
+		WorldStaticModel	= PackBrewingBook,
+	}
+
+    item pkWineMaking
+	{
+		DisplayCategory 	= MoreBrews,
+		Weight				= 2,
+		Type				= Normal,
+		DisplayName			= Bundle of Wine Making Books,
+		Icon				= PackWineMakingBook,
+		WorldStaticModel	= PackWineMakingBook,
+	}
+
+    recipe Pack Brewing Skill Books
+	{
+		MoreBrews.BookBrewing1,
+		MoreBrews.BookBrewing2,
+		MoreBrews.BookBrewing3,
+		MoreBrews.BookBrewing4,
+		MoreBrews.BookBrewing5,
+		
+		Result				:pkBrewing,
+		Time				:150.0,
+		Category			:Storage,
+	}
+	
+	recipe Unpack Brewing Skill Books
+	{
+		pkBrewing,
+		
+		Result				:MoreBrews.BookBrewing1,
+		OnCreate			:Recipe.OnCreate.UnpackBrewingSkillBook,
+		Time				:100.0,
+		Category			:Storage,
+	}
+
+    recipe Pack Wine Making Skill Books
+	{
+		MoreBrews.BookWineMaking1,
+		MoreBrews.BookWineMaking2,
+		MoreBrews.BookWineMaking3,
+		MoreBrews.BookWineMaking4,
+		MoreBrews.BookWineMaking5,
+		
+		Result				:pkWineMaking,
+		Time				:150.0,
+		Category			:Storage,
+	}
+	
+	recipe Unpack Wine Making Skill Books
+	{
+		pkWineMaking,
+		
+		Result				:MoreBrews.BookWineMaking1,
+		OnCreate			:Recipe.OnCreate.UnpackWineMakingSkillBook,
+		Time				:100.0,
+		Category			:Storage,
+	}
+}
