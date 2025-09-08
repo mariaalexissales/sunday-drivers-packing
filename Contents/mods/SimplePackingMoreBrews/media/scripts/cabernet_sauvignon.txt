@@ -49,7 +49,7 @@ module SP
 
     recipe Pack 6
     {
-        destroy MoreBrews.RedWine=6,
+        destroy RedWine=6,
 
         Result              :6pkRedWine,
         OnTest              :Recipe.OnTest.IsFavorite,
@@ -62,7 +62,7 @@ module SP
     {
         destroy 6pkRedWine,
 
-        Result              :MoreBrews.RedWine=6,
+        Result              :RedWine=6,
         OnGiveXP            :Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
         RemoveResultItem    :true,
@@ -72,7 +72,7 @@ module SP
 
     recipe Pack 12
     {
-        destroy MoreBrews.RedWine=12,
+        destroy RedWine=12,
 
         Result              :12pkRedWine,
         OnTest              :Recipe.OnTest.IsFavorite,
@@ -85,7 +85,7 @@ module SP
     {
         destroy 12pkRedWine,
 
-        Result              :MoreBrews.RedWine=12,
+        Result              :RedWine=12,
         OnGiveXP            :Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
         RemoveResultItem    :true,
@@ -113,7 +113,7 @@ module SP
 
     recipe Pack 6
     {
-        destroy MoreBrews.WineBoxSmall1=6,
+        destroy WineBoxSmall1=6,
 
         Result              :6pkWineBoxSmall1,
         OnTest              :Recipe.OnTest.IsFavorite,
@@ -126,7 +126,7 @@ module SP
     {
         destroy 6pkWineBoxSmall1,
 
-        Result              :MoreBrews.WineBoxSmall1=6,
+        Result              :WineBoxSmall1=6,
         OnGiveXP            :Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
         RemoveResultItem    :true,
@@ -136,7 +136,7 @@ module SP
 
     recipe Pack 24
     {
-        destroy MoreBrews.WineBoxSmall1=24,
+        destroy WineBoxSmall1=24,
 
         Result              :24pkWineBoxSmall1,
         OnTest              :Recipe.OnTest.IsFavorite,
@@ -149,7 +149,7 @@ module SP
     {
         destroy 24pkWineBoxSmall1,
 
-        Result              :MoreBrews.WineBoxSmall1=24,
+        Result              :WineBoxSmall1=24,
         OnGiveXP            :Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
         RemoveResultItem    :true,
