@@ -81,18 +81,15 @@ function Recipe.OnCanPerform.HasEnoughEmpties(recipe, playerObj, items)
         return false
     end
 
-    -- Count empty garbage bags in player inventory
     local found = 0
     local needed = getNeededForResult(recipe:getResult())
 
     for i = 0, playerItems:size() - 1 do
         local it = playerItems:get(i)
-        if it and it:getType() == "Garbagebag" then
-            if Recipe.OnTest.IsEmpty(it) then
-                found = found + 1
-                if found >= needed then
-                    return true
-                end
+        if it and Recipe.OnTest.IsEmpty(it) then
+            found = found + 1
+            if found >= needed then
+                return true
             end
         end
     end
