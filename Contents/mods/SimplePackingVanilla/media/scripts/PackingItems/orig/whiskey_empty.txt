@@ -14,15 +14,6 @@ module GidOrganizedFood
 		Icon			= OS8pkWhiskeyEmpty,
 		WorldStaticModel= WoodenBoxOfWhiskeyEmpty,
 	}
-	
-	recipe Pack 8
-	{
-		WhiskeyEmpty=8,
-
-		Result:OS8pkWhiskeyEmpty,
-		Time:120.0,
-		Category:Storage,
-	}
 
 	recipe Unpack 8
 	{

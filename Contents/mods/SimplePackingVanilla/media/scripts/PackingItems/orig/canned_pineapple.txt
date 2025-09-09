@@ -15,16 +15,6 @@ module Packing
 		WorldStaticModel= PackOfPineappleCan,
 	}
 
-	recipe Pack 6
-	{
-		destroy CannedPineapple=6,
-		
-		Result:6pkCannedPineapple,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 6
 	{
 		destroy 6pkCannedPineapple,

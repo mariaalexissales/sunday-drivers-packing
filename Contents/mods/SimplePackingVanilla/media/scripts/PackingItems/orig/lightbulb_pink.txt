@@ -44,16 +44,6 @@ module Packing
 		WorldStaticModel = WIP,
 	}
 
-	recipe Pack 10
-	{
-		destroy LightBulbPink=10,
-		
-		Result:10pkLightBulbPink=1,
-		OnTest:Recipe.OnTest.WholeItem,
-		Time:50.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 10
 	{
 		destroy 10pkLightBulbPink,
@@ -62,17 +52,7 @@ module Packing
 		Time:25.0,
 		Category:Storage,
 	}
-	
-	recipe Pack 50
-	{
-		destroy LightBulbPink=50,
-		
-		Result:50pkLightBulbPink=1,
-		OnTest:Recipe.OnTest.WholeItem,
-		Time:75.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 50
 	{
 		destroy 50pkLightBulbPink,
@@ -81,17 +61,7 @@ module Packing
 		Time:50.0,
 		Category:Storage,
 	}
-	
-	recipe Pack 100
-	{
-		destroy LightBulbPink=100,
-		
-		Result:100pkLightBulbPink=1,
-		OnTest:Recipe.OnTest.WholeItem,
-		Time:100.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 100
 	{
 		destroy 100pkLightBulbPink,
@@ -99,38 +69,6 @@ module Packing
 		Result:LightBulbPink=100,
 		Time:75.0,
 		Category:Storage,
-	}
-
-	recipe Put Together
-	{
-		10pkLightBulbPink=5,
-		
-		Result:50pkLightBulbPink=1,
-		Time:40.0,
-	}
-	
-	recipe Put Together
-	{
-		50pkLightBulbPink=2,
-		
-		Result:100pkLightBulbPink=1,
-		Time:40.0,
-	}
-
-	recipe Split in Two
-	{
-		100pkLightBulbPink=1,
-		
-		Result:50pkLightBulbPink=2,
-		Time:40.0,
-	}
-
-	recipe Split in Five
-	{
-		50pkLightBulbPink=1,
-		
-		Result:10pkLightBulbPink=5,
-		Time:40.0,
 	}
 
 	model WIP

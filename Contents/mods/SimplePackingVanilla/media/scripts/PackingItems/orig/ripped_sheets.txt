@@ -35,16 +35,6 @@ module Packing
 		WorldStaticModel= StripRollSheet,
 	}
 
-	recipe Pack 10
-	{
-		destroy RippedSheets=10,
-		
-		Result:10pkRag=1,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 10
 	{
 		destroy 10pkRag,
@@ -53,17 +43,7 @@ module Packing
 		Time:25.0,
 		Category:Storage,
 	}
-	
-	recipe Pack 50
-	{
-		destroy RippedSheets=50,
-		
-		Result:50pkRag=1,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 50
 	{
 		destroy 50pkRag,
@@ -72,17 +52,7 @@ module Packing
 		Time:50.0,
 		Category:Storage,
 	}
-	
-	recipe Pack 100
-	{
-		destroy RippedSheets=100,
-		
-		Result:100pkRag=1,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 100
 	{
 		destroy 100pkRag,
@@ -90,38 +60,6 @@ module Packing
 		Result:RippedSheets=100,
 		Time:75.0,
 		Category:Storage,
-	}
-
-	recipe Put Together
-	{
-		10pkRag=5,
-		
-		Result:50pkRag=1,
-		Time:40.0,
-	}
-	
-	recipe Put Together
-	{
-		50pkRag=2,
-		
-		Result:100pkRag=1,
-		Time:40.0,
-	}
-
-	recipe Split in Two
-	{
-		100pkRag=1,
-		
-		Result:50pkRag=2,
-		Time:40.0,
-	}
-
-	recipe Split in Five
-	{
-		50pkRag=1,
-		
-		Result:10pkRag=5,
-		Time:40.0,
 	}
 
 	model StripRollSheet

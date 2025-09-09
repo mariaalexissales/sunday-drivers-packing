@@ -15,16 +15,6 @@ module Packing
 		WorldStaticModel= PackOfDogFoodCan,
 	}
 
-	recipe Pack 6
-	{
-		destroy Dogfood=6,
-		
-		Result:6pkDogFood,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 6
 	{
 		destroy 6pkDogFood,

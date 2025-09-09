@@ -14,16 +14,6 @@ module GidOrganizedFood
 		Icon			= OS6pkCannedMushSoup,
 		WorldStaticModel= PackOfMushCan,
 	}
-	
-	recipe Pack 6
-	{
-		destroy CannedMushroomSoup=6,
-
-		Result:OS6pkCannedMushSoup,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
-		Category:Storage,
-	}
 
 	recipe Unpack 6
 	{

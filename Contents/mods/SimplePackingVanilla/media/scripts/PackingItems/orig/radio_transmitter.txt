@@ -44,15 +44,6 @@ module Packing
 		WorldStaticModel = WIP,
 	}
 
-	recipe Pack 10
-	{
-		destroy RadioTransmitter=10,
-		
-		Result:10pkRadioTransmitter=1,
-		Time:50.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 10
 	{
 		destroy 10pkRadioTransmitter,
@@ -62,16 +53,7 @@ module Packing
 		Time:25.0,
 		Category:Storage,
 	}
-	
-	recipe Pack 50
-	{
-		destroy RadioTransmitter=50,
-		
-		Result:50pkRadioTransmitter=1,
-		Time:75.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 50
 	{
 		destroy 50pkRadioTransmitter,
@@ -81,16 +63,7 @@ module Packing
 		Time:50.0,
 		Category:Storage,
 	}
-	
-	recipe Pack 100
-	{
-		destroy RadioTransmitter=100,
-		
-		Result:100pkRadioTransmitter=1,
-		Time:100.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 100
 	{
 		destroy 100pkRadioTransmitter,
@@ -99,38 +72,6 @@ module Packing
 		OnGiveXP:Recipe.OnGiveXP.None,
 		Time:75.0,
 		Category:Storage,
-	}
-
-	recipe Put Together
-	{
-		10pkRadioTransmitter=5,
-		
-		Result:50pkRadioTransmitter=1,
-		Time:40.0,
-	}
-	
-	recipe Put Together
-	{
-		50pkRadioTransmitter=2,
-		
-		Result:100pkRadioTransmitter=1,
-		Time:40.0,
-	}
-
-	recipe Split in Two
-	{
-		100pkRadioTransmitter=1,
-		
-		Result:50pkRadioTransmitter=2,
-		Time:40.0,
-	}
-
-	recipe Split in Five
-	{
-		50pkRadioTransmitter=1,
-		
-		Result:10pkRadioTransmitter=5,
-		Time:40.0,
 	}
 
 	model WIP

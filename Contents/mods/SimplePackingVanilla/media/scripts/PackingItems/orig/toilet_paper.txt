@@ -15,17 +15,6 @@ module Packing
 		WorldStaticModel= PackOfToiletPaper,
 	}
 
-	recipe Pack 4
-	{
-		destroy ToiletPaper=4,
-		
-		Result:4pkToiletPaper,
-		OnCreate:Recipe.OnCreate.SaveUses,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 4
 	{
 		destroy 4pkToiletPaper,

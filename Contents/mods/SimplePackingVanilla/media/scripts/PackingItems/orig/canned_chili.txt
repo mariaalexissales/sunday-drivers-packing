@@ -14,16 +14,6 @@ module GidOrganizedFood
 		Icon			= OS6pkCannedChili,
 		WorldStaticModel= PackOfChiliCan,
 	}
-	
-	recipe Pack 6
-	{
-		destroy CannedChili=6,
-
-		Result:OS6pkCannedChili,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
-		Category:Storage,
-	}
 
 	recipe Unpack 6
 	{

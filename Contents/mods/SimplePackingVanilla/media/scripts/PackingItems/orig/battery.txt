@@ -25,17 +25,6 @@ module Packing
 		WorldStaticModel= PackOfBatteries
 	}
 
-	recipe Pack 10
-	{
-		destroy Battery=10,
-		
-		Result:10pkBattery,
-		OnCreate:Recipe.OnCreate.SaveUses,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 10
 	{
 		destroy 10pkBattery,
@@ -46,18 +35,7 @@ module Packing
 		Time:75.0,
 		Category:Storage,
 	}
-	
-	recipe Pack 5
-	{
-		destroy Battery=5,
-		
-		Result:5pkBattery,
-		OnCreate:Recipe.OnCreate.SaveUses,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 5
 	{
 		destroy 5pkBattery,
@@ -67,25 +45,6 @@ module Packing
 		RemoveResultItem:true,
 		Time:50.0,
 		Category:Storage,
-	}
-	
-	recipe Put Together
-	{
-		5pkBattery=2,
-		
-		Result:10pkBattery=1,
-		OnCreate:Recipe.OnCreate.MergeUses,
-		Time:30.0,
-	}
-
-	recipe Split in Two
-	{
-		10pkBattery=1,
-		
-		Result:5pkBattery,
-		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
-		RemoveResultItem:true,
-		Time:30.0,
 	}
 
 	model PackOfBatteries

@@ -14,16 +14,6 @@ module GidOrganizedFood
 		Icon			= OS6pkCannedCorn,
 		WorldStaticModel= PackOfCornCan,
 	}
-	
-	recipe Pack 6
-	{
-		destroy CannedCorn=6,
-
-		Result:OS6pkCannedCorn,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
-		Category:Storage,
-	}
 
 	recipe Unpack 6
 	{

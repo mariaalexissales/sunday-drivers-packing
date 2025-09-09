@@ -14,16 +14,6 @@ module GidOrganized
 		Icon			= OS12pkCottonBalls,
 		WorldStaticModel= PackOfCottonBalls,
 	}
-	
-	recipe Pack 12
-	{
-		CottonBalls=12,
-
-		Result:OS12pkCottonBalls,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
-		Category:Storage,
-	}
 
 	recipe Unpack 12
 	{

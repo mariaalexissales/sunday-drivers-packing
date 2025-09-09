@@ -15,18 +15,7 @@ module GidOrganized
 		Icon				= OS50pkBetaBlockers,
 		WorldStaticModel    = BottleOfBetaBlockers,
 	}
-	
-	recipe Pack 5
-	{
-		destroy PillsBeta=5,
 
-		Result:OS50pkBetaBlockers,
-		OnCreate:Recipe.OnCreate.SaveUses,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:120.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 5
 	{
 		OS50pkBetaBlockers,

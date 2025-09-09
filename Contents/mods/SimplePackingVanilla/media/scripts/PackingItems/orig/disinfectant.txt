@@ -15,18 +15,7 @@ module GidOrganized
 		Icon				= OS4pkDisinfectant,
 		WorldStaticModel= StackOfDisinfectant,
 	}
-	
-	recipe Pack 4
-	{
-		destroy Disinfectant=4,
 
-		Result:OS4pkDisinfectant,
-		OnCreate:Recipe.OnCreate.SaveUses,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:120.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 4
 	{
 		OS4pkDisinfectant,

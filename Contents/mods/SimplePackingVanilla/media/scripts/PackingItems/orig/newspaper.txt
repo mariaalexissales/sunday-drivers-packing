@@ -25,16 +25,6 @@ module Packing
 		WorldStaticModel= StackOfNewspaper,
 	}
 
-	recipe Pack 10
-	{
-		destroy Newspaper=10,
-		
-		Result:10pkNewspaper,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 10
 	{
 		destroy 10pkNewspaper,
@@ -43,17 +33,7 @@ module Packing
 		Time:50.0,
 		Category:Storage,
 	}
-	
-	recipe Pack 5
-	{
-		destroy Newspaper=5,
-		
-		Result:5pkNewspaper,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 5
 	{
 		destroy 5pkNewspaper,
@@ -61,22 +41,6 @@ module Packing
 		Result:Newspaper=5,
 		Time:25.0,
 		Category:Storage,
-	}
-
-	recipe Put Together
-	{
-		5pkNewspaper=2,
-		
-		Result:10pkNewspaper=1,
-		Time:30.0,
-	}
-
-	recipe Split in Two
-	{
-		10pkNewspaper=1,
-		
-		Result:5pkNewspaper=2,
-		Time:30.0,
 	}
 
 	model StackOfNewspaper

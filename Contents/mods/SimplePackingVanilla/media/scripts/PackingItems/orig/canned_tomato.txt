@@ -14,16 +14,6 @@ module GidOrganizedFood
 		Icon			= OS6pkCannedTomato,
 		WorldStaticModel= PackOfTomatoCan,
 	}
-	
-	recipe Pack 6
-	{
-		destroy CannedTomato2=6,
-
-		Result:OS6pkCannedTomato,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
-		Category:Storage,
-	}
 
 	recipe Unpack 6
 	{

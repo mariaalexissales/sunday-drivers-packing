@@ -14,16 +14,6 @@ module GidOrganizedFood
 		Icon			= OS4pkSardines,
 		WorldStaticModel= PackOfSardines,
 	}
-	
-	recipe Pack 4
-	{
-		destroy CannedSardines=4,
-
-		Result:OS4pkSardines,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:40.0,
-		Category:Storage,
-	}
 
 	recipe Unpack 4
 	{

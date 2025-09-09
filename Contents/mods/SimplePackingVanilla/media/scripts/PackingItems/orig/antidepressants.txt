@@ -15,18 +15,7 @@ module GidOrganized
 		Icon				= OS50pkAntidepressants,
 		WorldStaticModel    = BottleOfAntidepressants,
 	}
-	
-	recipe Pack 5
-	{
-		destroy PillsAntiDep=5,
 
-		Result:OS50pkAntidepressants,
-		OnCreate:Recipe.OnCreate.SaveUses,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:120.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 5
 	{
 		OS50pkAntidepressants,

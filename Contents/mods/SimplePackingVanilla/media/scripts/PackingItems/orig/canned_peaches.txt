@@ -15,16 +15,6 @@ module Packing
 		WorldStaticModel= PackOfPeachesCan,
 	}
 
-    recipe Pack 6
-	{
-		destroy CannedPeaches=6,
-		
-		Result:6pkCannedPeaches,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 6
 	{
 		destroy 6pkCannedPeaches,

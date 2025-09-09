@@ -115,19 +115,6 @@ module Packing
 		WorldStaticModel = BoxOfBooksTrapping,
 	}
 
-	recipe Pack Carpentry Skill Books
-	{
-		BookCarpentry1,
-		BookCarpentry2,
-		BookCarpentry3,
-		BookCarpentry4,
-		BookCarpentry5,
-		
-		Result:pkCarpentry,
-		Time:150.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack Carpentry Skill Books
 	{
 		pkCarpentry,
@@ -137,20 +124,7 @@ module Packing
 		Time:100.0,
 		Category:Storage,
 	}
-	
-	recipe Pack Cooking Skill Books
-	{
-		BookCooking1,
-		BookCooking2,
-		BookCooking3,
-		BookCooking4,
-		BookCooking5,
-		
-		Result:pkCooking,
-		Time:150.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack Cooking Skill Books
 	{
 		pkCooking,
@@ -160,20 +134,7 @@ module Packing
 		Time:100.0,
 		Category:Storage,
 	}
-	
-	recipe Pack Electricity Skill Books
-	{
-		BookElectrician1,
-		BookElectrician2,
-		BookElectrician3,
-		BookElectrician4,
-		BookElectrician5,
-		
-		Result:pkElectricity,
-		Time:150.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack Electricity Skill Books
 	{
 		pkElectricity,
@@ -183,20 +144,7 @@ module Packing
 		Time:100.0,
 		Category:Storage,
 	}
-	
-	recipe Pack Farming Skill Books
-	{
-		BookFarming1,
-		BookFarming2,
-		BookFarming3,
-		BookFarming4,
-		BookFarming5,
-		
-		Result:pkFarming,
-		Time:150.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack Farming Skill Books
 	{
 		pkFarming,
@@ -206,20 +154,7 @@ module Packing
 		Time:100.0,
 		Category:Storage,
 	}
-	
-	recipe Pack Firstaid Skill Books
-	{
-		BookFirstAid1,
-		BookFirstAid2,
-		BookFirstAid3,
-		BookFirstAid4,
-		BookFirstAid5,
-		
-		Result:pkFirstaid,
-		Time:150.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack Firstaid Skill Books
 	{
 		pkFirstaid,
@@ -229,20 +164,7 @@ module Packing
 		Time:100.0,
 		Category:Storage,
 	}
-	
-	recipe Pack Fishing Skill Books
-	{
-		BookFishing1,
-		BookFishing2,
-		BookFishing3,
-		BookFishing4,
-		BookFishing5,
-		
-		Result:pkFishing,
-		Time:150.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack Fishing Skill Books
 	{
 		pkFishing,
@@ -252,20 +174,7 @@ module Packing
 		Time:100.0,
 		Category:Storage,
 	}
-	
-	recipe Pack Foraging Skill Books
-	{
-		BookForaging1,
-		BookForaging2,
-		BookForaging3,
-		BookForaging4,
-		BookForaging5,
-		
-		Result:pkForaging,
-		Time:150.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack Foraging Skill Books
 	{
 		pkForaging,
@@ -275,20 +184,7 @@ module Packing
 		Time:100.0,
 		Category:Storage,
 	}
-	
-	recipe Pack Mechanics Skill Books
-	{
-		BookMechanic1,
-		BookMechanic2,
-		BookMechanic3,
-		BookMechanic4,
-		BookMechanic5,
-		
-		Result:pkMechanics,
-		Time:150.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack Mechanics Skill Books
 	{
 		pkMechanics,
@@ -298,20 +194,7 @@ module Packing
 		Time:100.0,
 		Category:Storage,
 	}
-	
-	recipe Pack Tailoring Skill Books
-	{
-		BookTailoring1,
-		BookTailoring2,
-		BookTailoring3,
-		BookTailoring4,
-		BookTailoring5,
-		
-		Result:pkTailoring,
-		Time:150.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack Tailoring Skill Books
 	{
 		pkTailoring,
@@ -321,20 +204,7 @@ module Packing
 		Time:100.0,
 		Category:Storage,
 	}
-	
-	recipe Pack Metalwork Skill Books
-	{
-		BookMetalWelding1,
-		BookMetalWelding2,
-		BookMetalWelding3,
-		BookMetalWelding4,
-		BookMetalWelding5,
-		
-		Result:pkMetalwork,
-		Time:150.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack Metalwork Skill Books
 	{
 		pkMetalwork,
@@ -344,20 +214,7 @@ module Packing
 		Time:100.0,
 		Category:Storage,
 	}
-	
-	recipe Pack Trapping Skill Books
-	{
-		BookTrapping1,
-		BookTrapping2,
-		BookTrapping3,
-		BookTrapping4,
-		BookTrapping5,
-		
-		Result:pkTrapping,
-		Time:150.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack Trapping Skill Books
 	{
 		pkTrapping,

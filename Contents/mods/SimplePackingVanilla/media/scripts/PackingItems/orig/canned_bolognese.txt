@@ -14,16 +14,6 @@ module GidOrganizedFood
 		Icon			= OS6pkCannedBolognese,
 		WorldStaticModel= PackOfBologneseCan,
 	}
-	
-	recipe Pack 6
-	{
-		destroy CannedBolognese=6,
-
-		Result:OS6pkCannedBolognese,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
-		Category:Storage,
-	}
 
 	recipe Unpack 6
 	{

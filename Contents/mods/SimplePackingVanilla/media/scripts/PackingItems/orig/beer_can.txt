@@ -15,16 +15,6 @@ module Packing
 		WorldStaticModel= PackOfBeerCan,
 	}
 
-	recipe Pack 6
-	{
-		destroy BeerCan=6,
-		
-		Result:6pkBeerCan,
-		OnTest:Recipe.OnTest.WholeFood,
-		Time:75.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 6
 	{
 		destroy 6pkBeerCan,

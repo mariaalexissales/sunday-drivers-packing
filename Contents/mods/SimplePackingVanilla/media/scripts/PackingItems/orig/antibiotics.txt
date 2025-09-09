@@ -14,17 +14,7 @@ module GidOrganized
 		Icon			= OS30pkAntibiotics,
 		WorldStaticModel= BottleOfAntibiotics,
 	}
-	
-	recipe Pack 30
-	{
-		destroy Antibiotics=30,
 
-		Result:OS30pkAntibiotics,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 30
 	{
 		destroy OS30pkAntibiotics,

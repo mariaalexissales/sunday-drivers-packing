@@ -14,16 +14,6 @@ module GidOrganized
 		Icon			= OS12pkAdhesiveBandages,
 		WorldStaticModel= PackOfAdhesiveBandages,
 	}
-	
-	recipe Pack 12
-	{
-		Bandaid=12,
-
-		Result:OS12pkAdhesiveBandages,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
-		Category:Storage,
-	}
 
 	recipe Unpack 12
 	{

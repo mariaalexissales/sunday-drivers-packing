@@ -14,16 +14,6 @@ module GidOrganizedFood
 		Icon			= OS4pkCoffee,
 		WorldStaticModel= StackOfCoffee,
 	}
-	
-	recipe Pack 4
-	{
-		destroy Coffee2=4,
-
-		Result:OS4pkCoffee,
-		OnTest:Recipe.OnTest.WholeFood,
-		Time:60.0,
-		Category:Storage,
-	}
 
 	recipe Unpack 4
 	{

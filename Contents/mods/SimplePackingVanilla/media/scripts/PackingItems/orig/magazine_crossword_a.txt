@@ -25,16 +25,6 @@ module Packing
 		WorldStaticModel= StackOfMagazineCrosswordA,
 	}
 
-	recipe Pack 10
-	{
-		destroy MagazineCrossword1=10,
-		
-		Result:10pkMagazineCrosswordA,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 10
 	{
 		destroy 10pkMagazineCrosswordA,
@@ -43,17 +33,7 @@ module Packing
 		Time:50.0,
 		Category:Storage,
 	}
-	
-	recipe Pack 5
-	{
-		destroy MagazineCrossword1=5,
-		
-		Result:5pkMagazineCrosswordA,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 5
 	{
 		destroy 5pkMagazineCrosswordA,
@@ -61,38 +41,6 @@ module Packing
 		Result:MagazineCrossword1=5,
 		Time:25.0,
 		Category:Storage,
-	}
-
-	recipe Put Together
-	{
-		5pkMagazineCrosswordA=2,
-		
-		Result:10pkMagazineCrosswordA=1,
-		Time:30.0,
-	}
-
-	recipe Split in Two
-	{
-		10pkMagazineCrosswordA=1,
-		
-		Result:5pkMagazineCrosswordA=2,
-		Time:30.0,
-	}
-	
-	recipe Change to Type 2
-	{
-		destroy MagazineCrossword1,
-		
-		Result:MagazineCrossword2=1,
-		Time:25.0,
-	}
-	
-	recipe Change to Type 3
-	{
-		destroy MagazineCrossword1,
-		
-		Result:MagazineCrossword3=1,
-		Time:25.0,
 	}
 
 	model StackOfMagazineCrosswordA

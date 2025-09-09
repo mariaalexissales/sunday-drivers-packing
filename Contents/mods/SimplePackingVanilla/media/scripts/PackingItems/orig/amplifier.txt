@@ -35,16 +35,6 @@ module Packing
 		WorldStaticModel = WIP,
 	}
 
-	recipe Pack 10
-	{
-		destroy Amplifier=10,
-		
-		Result:10pkAmplifier=1,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 10
 	{
 		destroy 10pkAmplifier,
@@ -53,17 +43,7 @@ module Packing
 		Time:25.0,
 		Category:Storage,
 	}
-	
-	recipe Pack 50
-	{
-		destroy Amplifier=50,
-		
-		Result:50pkAmplifier=1,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 50
 	{
 		destroy 50pkAmplifier,
@@ -72,17 +52,7 @@ module Packing
 		Time:50.0,
 		Category:Storage,
 	}
-	
-	recipe Pack 100
-	{
-		destroy Amplifier=100,
-		
-		Result:100pkAmplifier=1,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 100
 	{
 		destroy 100pkAmplifier,
@@ -92,35 +62,4 @@ module Packing
 		Category:Storage,
 	}
 
-	recipe Put Together
-	{
-		10pkAmplifier=5,
-		
-		Result:50pkAmplifier=1,
-		Time:40.0,
-	}
-	
-	recipe Put Together
-	{
-		50pkAmplifier=2,
-		
-		Result:100pkAmplifier=1,
-		Time:40.0,
-	}
-
-	recipe Split in Two
-	{
-		100pkAmplifier=1,
-		
-		Result:50pkAmplifier=2,
-		Time:40.0,
-	}
-
-	recipe Split in Five
-	{
-		50pkAmplifier=1,
-		
-		Result:10pkAmplifier=5,
-		Time:40.0,
-	}
 }

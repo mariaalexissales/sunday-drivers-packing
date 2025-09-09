@@ -14,17 +14,7 @@ module GidOrganizedFood
 		Icon			= OS4pkDuctTape,
 		WorldStaticModel= StackOfDuctTape,
 	}
-	
-	recipe Pack 4
-	{
-		destroy DuctTape=4,
 
-		Result:OS4pkDuctTape,
-		OnCreate:Recipe.OnCreate.SaveUses,
-		Time:60.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 4
 	{
 		OS4pkDuctTape,

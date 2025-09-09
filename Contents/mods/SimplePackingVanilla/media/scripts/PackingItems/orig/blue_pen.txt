@@ -23,17 +23,7 @@ module Packing
 		DisplayCategory = Household,
 		Icon			= PackOfBluePens,
 	}
-	
-	recipe Pack 10
-	{
-		destroy BluePen=10,
-		
-		Result:10pkBluePen,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 10
 	{
 		destroy 10pkBluePen,
@@ -42,17 +32,7 @@ module Packing
 		Time:50.0,
 		Category:Storage,
 	}
-	
-	recipe Pack 5
-	{
-		destroy BluePen=5,
-		
-		Result:5pkBluePen,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 5
 	{
 		destroy 5pkBluePen,
@@ -60,22 +40,6 @@ module Packing
 		Result:BluePen=5,
 		Time:25.0,
 		Category:Storage,
-	}
-
-	recipe Put Together
-	{
-		5pkBluePen=2,
-		
-		Result:10pkBluePen=1,
-		Time:30.0,
-	}
-
-	recipe Split in Two
-	{
-		10pkBluePen=1,
-		
-		Result:5pkBluePen=2,
-		Time:30.0,
 	}
 
 	model PackOfBluePens

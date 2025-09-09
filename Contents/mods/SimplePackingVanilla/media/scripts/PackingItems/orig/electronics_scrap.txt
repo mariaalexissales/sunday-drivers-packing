@@ -35,16 +35,6 @@ module Packing
 		WorldStaticModel= BoxOfElectronicScrap,
 	}
 
-	recipe Pack 10
-	{
-		destroy ElectronicsScrap=10,
-		
-		Result:10pkElectronicsScrap=1,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 10
 	{
 		destroy 10pkElectronicsScrap,
@@ -53,17 +43,7 @@ module Packing
 		Time:25.0,
 		Category:Storage,
 	}
-	
-	recipe Pack 50
-	{
-		destroy ElectronicsScrap=50,
-		
-		Result:50pkElectronicsScrap=1,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 50
 	{
 		destroy 50pkElectronicsScrap,
@@ -72,17 +52,7 @@ module Packing
 		Time:75.0,
 		Category:Storage,
 	}
-	
-	recipe Pack 100
-	{
-		destroy ElectronicsScrap=100,
-		
-		Result:100pkElectronicsScrap=1,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:150.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 100
 	{
 		destroy 100pkElectronicsScrap,
@@ -90,38 +60,6 @@ module Packing
 		Result:ElectronicsScrap=100,
 		Time:100.0,
 		Category:Storage,
-	}
-
-	recipe Put Together
-	{
-		50pkElectronicsScrap=2,
-		
-		Result:100pkElectronicsScrap=1,
-		Time:40.0,
-	}
-	
-	recipe Put Together
-	{
-		10pkElectronicsScrap=5,
-		
-		Result:50pkElectronicsScrap=1,
-		Time:40.0,
-	}
-
-	recipe Split in Two
-	{
-		100pkElectronicsScrap=1,
-		
-		Result:50pkElectronicsScrap=2,
-		Time:40.0,
-	}
-
-	recipe Split in Five
-	{
-		50pkElectronicsScrap=1,
-		
-		Result:10pkElectronicsScrap=5,
-		Time:40.0,
 	}
 
 	model BoxOfElectronicScrap

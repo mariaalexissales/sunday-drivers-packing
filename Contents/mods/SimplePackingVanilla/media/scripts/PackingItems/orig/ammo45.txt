@@ -24,18 +24,7 @@ module Packing
 		Icon			= PAmmoBox,
 		WorldStaticModel = pkAmmoCan_Ground,
 	}
-	
-	recipe Pack 10
-	{
-		destroy Bullets45Box=10,
-		
-		Result:10pk45,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:243.0,
-		Category:Storage,
-		Sound:AmmoCan_Storage,
-	}
-	
+
 	recipe Unpack 10
 	{
 		destroy 10pk45,
@@ -45,18 +34,7 @@ module Packing
 		Category:Storage,
 		Sound:AmmoCan_Storage,
 	}
-	
-	recipe Pack 5
-	{
-		destroy Bullets45Box=5,
-		
-		Result:5pk45,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:170.0,
-		Category:Storage,
-		Sound:AmmoCan_Storage,
-	}
-	
+
 	recipe Unpack 5
 	{
 		destroy 5pk45,
@@ -67,21 +45,4 @@ module Packing
 		Sound:AmmoCan_Storage,
 	}
 
-	recipe Put Together
-	{
-		5pk45=2,
-		
-		Result:10pk45=1,
-		Time:120.0,
-		Sound:AmmoCan_Storage,
-	}
-
-	recipe Split in Two
-	{
-		10pk45=1,
-		
-		Result:5pk45=2,
-		Time:120.0,
-		Sound:AmmoCan_Storage,
-	}
 }

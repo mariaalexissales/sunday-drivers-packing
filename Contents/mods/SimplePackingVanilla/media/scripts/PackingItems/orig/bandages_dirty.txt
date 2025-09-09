@@ -14,16 +14,6 @@ module GidOrganized
 		Icon			= OS9pkBandagesDirty,
 		WorldStaticModel= PackOfDirtyBandages,
 	}
-	
-	recipe Pack 9
-	{
-		BandageDirty=9,
-
-		Result:OS9pkBandagesDirty,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
-		Category:Storage,
-	}
 
 	recipe Unpack 9
 	{

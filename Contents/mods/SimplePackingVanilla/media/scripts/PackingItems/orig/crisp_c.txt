@@ -25,16 +25,6 @@ module Packing
 		WorldStaticModel = WIP,
 	}
 
-	recipe Pack 10
-	{
-		destroy Crisps3=10,
-		
-		Result:10pkCrispC,
-		OnTest:Recipe.OnTest.WholeFood,
-		Time:100.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 10
 	{
 		destroy 10pkCrispC,
@@ -44,17 +34,7 @@ module Packing
 		Time:75.0,
 		Category:Storage,
 	}
-	
-	recipe Pack 5
-	{
-		destroy Crisps3=5,
-		
-		Result:5pkCrispC,
-		OnTest:Recipe.OnTest.WholeFood,
-		Time:75.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 5
 	{
 		destroy 5pkCrispC,
@@ -64,51 +44,5 @@ module Packing
 		Time:50.0,
 		Category:Storage,
 	}
-	
-	recipe Change to Type 1
-	{
-		destroy Crisps3,
-		
-		Result:Crisps=1,
-		OnTest:Recipe.OnTest.WholeFood,
-		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:25.0,
-	}
-	
-	recipe Change to Type 2
-	{
-		destroy Crisps3,
-		
-		Result:Crisps2=1,
-		OnTest:Recipe.OnTest.WholeFood,
-		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:25.0,
-	}
-	
-	recipe Change to Type 4
-	{
-		destroy Crisps3,
-		
-		Result:Crisps4=1,
-		OnTest:Recipe.OnTest.WholeFood,
-		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:25.0,
-	}
 
-	recipe Put Together
-	{
-		5pkCrispC=2,
-		
-		Result:10pkCrispC=1,
-		Time:40.0,
-	}
-
-	recipe Split in Two
-	{
-		10pkCrispC=1,
-		
-		CanBeDoneFromFloor:true,
-		Result:5pkCrispC=2,
-		Time:40.0,
-	}
 }

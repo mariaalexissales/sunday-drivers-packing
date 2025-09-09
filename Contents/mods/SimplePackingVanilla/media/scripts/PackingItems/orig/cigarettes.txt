@@ -15,16 +15,6 @@ module Packing
 		WorldStaticModel= PackOfCigarettes,
 	}
 
-	recipe Pack 20
-	{
-		destroy Cigarettes=20,
-		
-		Result:20pkCigarettes,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 20
 	{
 		20pkCigarettes,

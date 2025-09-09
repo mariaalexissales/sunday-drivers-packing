@@ -15,17 +15,6 @@ module GidOrganized
 		Icon				= OS30pkAlcoholWipes,
 		WorldStaticModel    = PackOfAlchoholWipes,
 	}
-	
-	recipe Pack 6
-	{
-		destroy AlcoholWipes=6,
-
-		Result:OS30pkAlcoholWipes,
-		OnCreate:Recipe.OnCreate.SaveUses,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
-		Category:Storage,
-	}
 
 	recipe Unpack 6
 	{

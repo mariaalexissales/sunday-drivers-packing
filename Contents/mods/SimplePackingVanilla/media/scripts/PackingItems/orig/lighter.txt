@@ -25,17 +25,6 @@ module Packing
 		WorldStaticModel= StackOfZippo,
 	}
 
-	recipe Pack 10
-	{
-		destroy Lighter=10,
-		
-		Result:10pkLighter,
-		OnCreate:Recipe.OnCreate.SaveUses,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
-		Category:Storage,
-	}
-	
 	recipe Unpack 10
 	{
 		destroy 10pkLighter,
@@ -46,18 +35,7 @@ module Packing
 		Time:50.0,
 		Category:Storage,
 	}
-	
-	recipe Pack 5
-	{
-		destroy Lighter=5,
-		
-		Result:5pkLighter,
-		OnCreate:Recipe.OnCreate.SaveUses,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 5
 	{
 		destroy 5pkLighter,
@@ -67,25 +45,6 @@ module Packing
 		RemoveResultItem:true,
 		Time:25.0,
 		Category:Storage,
-	}
-
-	recipe Put Together
-	{
-		5pkLighter=2,
-		
-		Result:10pkLighter=1,
-		OnCreate:Recipe.OnCreate.MergeUses,
-		Time:30.0,
-	}
-
-	recipe Split in Two
-	{
-		10pkLighter=1,
-		
-		Result:5pkLighter,
-		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
-		RemoveResultItem:true,
-		Time:30.0,
 	}
 
 	model StackOfZippo

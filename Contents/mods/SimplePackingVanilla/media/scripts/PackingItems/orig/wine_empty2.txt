@@ -14,15 +14,6 @@ module GidOrganizedFood
 		Icon			= OS12pkWineEmpty,
 		WorldStaticModel= WoodenBoxOfRedWineBottleEmpty,
 	}
-	
-	recipe Pack 12
-	{
-		WineEmpty2=12,
-
-		Result:OS12pkWineEmpty2,
-		Time:120.0,
-		Category:Storage,
-	}
 
 	recipe Unpack 12
 	{

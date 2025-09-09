@@ -24,17 +24,7 @@ module GidOrganizedFood
 		ToolTip					= Tooltip_item_OnlyPurifyMicrowave,
 		WorldStaticModel        = PackOfWaterBottle
 	}
-	
-	recipe Pack 24
-	{
-		destroy WaterBottleFull=24,
-		
-		Result:OS24pkWaterBottleFull,
-		OnTest:Recipe.OnTest.FullAndNotTainted,
-		Time:240.0,
-		Category:Storage,
-	}
-	
+
 	recipe Unpack 24
 	{
 		destroy OS24pkWaterBottleFull,
