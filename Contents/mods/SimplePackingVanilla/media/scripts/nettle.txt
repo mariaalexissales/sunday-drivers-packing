@@ -5,15 +5,6 @@ module SP
         Base,
     }
 
-    item 5pkNettles
-	{
-		DisplayName		= 5 x Nettles,
-		Weight			= 0.25,
-		Type			= Normal,
-		Icon			= Nettle,
-		WorldStaticModel= Nettles_Ground,
-	}
-
     item 10pkNettles
 	{
 		DisplayName		= 10 x Nettles,
@@ -30,28 +21,6 @@ module SP
 		Type			= Normal,
 		Icon			= Nettle,
 		WorldStaticModel= Nettles_Ground
-	}
-
-    recipe Pack 5
-	{
-		destroy Nettles=5,
-
-		Result:5pkNettles,
-		OnCreate:Recipe.OnCreate.SaveFood,
-		OnTest	:Recipe.OnTest.IsFavorite,
-		Time	:45.0,
-		Category:Storage,
-	}
-
-    recipe Unpack 5
-	{
-		destroy 5pkNettles,
-		
-		Result	:Nettles=5,
-		OnCreate:Recipe.OnCreate.LoadFood,
-		RemoveResultItem:true,
-		Time	:45.0,
-		Category:Storage,
 	}
 
     recipe Pack 10
