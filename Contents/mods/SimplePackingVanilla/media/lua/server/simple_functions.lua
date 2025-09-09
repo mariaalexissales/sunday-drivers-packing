@@ -54,7 +54,6 @@ end
 function Recipe.OnTest.IsEmpty(item)
     if not item then return false end
 
-    -- Only allow actual containers
     if item.getItemContainer then
         local cont = item:getItemContainer()
         if cont and cont.getItems then
@@ -62,7 +61,6 @@ function Recipe.OnTest.IsEmpty(item)
         end
     end
 
-    -- Reject non-containers
     return false
 end
 
