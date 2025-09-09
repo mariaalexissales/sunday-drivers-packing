@@ -31,6 +31,7 @@ module SP
 		
 		Result:10pkGarbage,
 		OnTest:Recipe.OnTest.IsEmpty,
+        OnCanPerform: Recipe.OnCanPerform.HasEnoughEmpties,
 		Time:75.0,
 		Category:Storage,
 	}
@@ -49,7 +50,8 @@ module SP
 		destroy Garbagebag=5,
 		
 		Result:5pkGarbage,
-		OnTest:Recipe.OnTest.IsFavorite,
+		OnTest:Recipe.OnTest.IsEmpty,
+        OnCanPerform: Recipe.OnCanPerform.HasEnoughEmpties,
 		Time:50.0,
 		Category:Storage,
 	}

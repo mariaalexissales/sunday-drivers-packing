@@ -16,6 +16,18 @@ function recipe_opencigpack(items, result, player)
     AMSI("Base.Cigarettes", 0, player);
 end
 
+local function getNeededForResult(result)
+    if not (result and result.getFullType) then return 1 end
+    local ft = result:getFullType()
+    if defaultItemAmounts and defaultItemAmounts[ft] then
+        return math.max(1, defaultItemAmounts[ft])
+    end
+    if defaultFoodItems and defaultFoodItems[ft] then
+        return math.max(1, defaultFoodItems[ft])
+    end
+    return 1
+end
+
 -- ==========================
 -- == Recipe OnTest ==
 -- ==========================
@@ -39,89 +51,50 @@ function Recipe.OnTest.WholeItem(item)
     return item:getCondition() == item:getConditionMax()
 end
 
-function Recipe.OnTest.IsEmpty(items, result)
-    print("DEBUG: IsEmpty called")
+function Recipe.OnTest.IsEmpty(item)
+    if not item then return false end
 
-    if not items then
-        print("DEBUG: items is nil")
+    -- Only allow actual containers
+    if item.getItemContainer then
+        local cont = item:getItemContainer()
+        if cont and cont.getItems then
+            return cont:getItems():size() == 0
+        end
+    end
+
+    -- Reject non-containers
+    return false
+end
+
+function Recipe.OnCanPerform.HasEnoughEmpties(recipe, playerObj, items)
+    if not (playerObj and playerObj.getInventory) then
         return false
     end
 
-    print("DEBUG: items type: " .. tostring(type(items)))
+    local playerInv = playerObj:getInventory()
+    if not (playerInv and playerInv.getItems) then
+        return false
+    end
 
-    -- Check if items is an ItemContainer
-    if items.getItems then
-        print("DEBUG: items has getItems method")
-        local itemsList = items:getItems()
-        if itemsList then
-            print("DEBUG: got items list, size: " .. tostring(itemsList:size()))
-            if itemsList:size() == 0 then
-                print("DEBUG: no items in container")
-                return false
+    local playerItems = playerInv:getItems()
+    if not (playerItems and playerItems.size) then
+        return false
+    end
+
+    -- Count empty garbage bags in player inventory
+    local found = 0
+    local needed = getNeededForResult(recipe:getResult())
+
+    for i = 0, playerItems:size() - 1 do
+        local it = playerItems:get(i)
+        if it and it:getType() == "Garbagebag" then
+            if Recipe.OnTest.IsEmpty(it) then
+                found = found + 1
+                if found >= needed then
+                    return true
+                end
             end
-            local item = itemsList:get(0)
-            print("DEBUG: got first item: " .. tostring(item and item:getType() or "nil"))
-        else
-            print("DEBUG: getItems returned nil")
-            return false
         end
-        -- Check if items is directly an item list
-    elseif items.size then
-        print("DEBUG: items has size method")
-        if items:size() == 0 then
-            print("DEBUG: no items in list")
-            return false
-        end
-        local item = items:get(0)
-        print("DEBUG: got first item: " .. tostring(item and item:getType() or "nil"))
-        -- Check if items is a single item
-    elseif items.getType then
-        print("DEBUG: items appears to be a single item")
-        local item = items
-        print("DEBUG: single item type: " .. tostring(item:getType()))
-    else
-        print("DEBUG: unknown items type - checking available methods")
-        -- Try to find what methods are available
-        local mt = getmetatable(items)
-        if mt and mt.__index then
-            print("DEBUG: items has metatable")
-        end
-        return false
-    end
-
-    -- Now check if the item is a container
-    local item = nil
-    if items.getItems then
-        local itemsList = items:getItems()
-        if itemsList and itemsList:size() > 0 then
-            item = itemsList:get(0)
-        end
-    elseif items.size and items:size() > 0 then
-        item = items:get(0)
-    elseif items.getType then
-        item = items
-    end
-
-    if not item then
-        print("DEBUG: no item found")
-        return false
-    end
-
-    print("DEBUG: checking if item is container")
-    print("DEBUG: has getContainer: " .. tostring(item.getContainer ~= nil))
-
-    if item.getContainer and item:getContainer() then
-        local container = item:getContainer()
-        print("DEBUG: container exists")
-        if container and container.getItems then
-            local isEmpty = container:getItems():isEmpty()
-            print("DEBUG: container is empty: " .. tostring(isEmpty))
-            return isEmpty
-        else
-            print("DEBUG: container or getItems is nil")
-        end
-    else
-        print("DEBUG: item is not a container")
     end
 
     return false
