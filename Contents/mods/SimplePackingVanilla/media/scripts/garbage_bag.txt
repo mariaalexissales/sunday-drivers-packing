@@ -29,8 +29,7 @@ module SP
 	{
 		destroy Garbagebag=10,
 		
-		Result:10pkGarbage,
-		OnTest:Recipe.OnTest.IsEmpty,
+		Result:10pkGarbage, 
 		Time:75.0,
 		Category:Storage,
 	}

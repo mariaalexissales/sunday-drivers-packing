@@ -7,51 +7,51 @@ module SP
         MoreBrewsWineMeUp
     }
 
-    item 6pkWhiteWine
+    item 6pkWhiteWineAgedFully
     {
         DisplayCategory    = MoreBrews,
         Weight             = 4.2,
         Type               = Normal,
         DisplayName        = 6 x Wine [Sauvignon Blanc],
-        Icon               = Pack6pkWhiteWine,
-        WorldStaticModel   = Pack6pkWhiteWine,
+        Icon               = Pack6pkWhiteWineAgedFully,
+        WorldStaticModel   = Pack6pkWhiteWineAgedFully,
     }
 
-    item 12pkWhiteWine
+    item 12pkWhiteWineAgedFully
     {
         DisplayCategory    = MoreBrews,
         Weight             = 6,
         Type               = Normal,
         DisplayName        = 12 x Wine [Sauvignon Blanc],
-        Icon               = Pack12pkWhiteWine,
-        WorldStaticModel   = Pack12pkWhiteWine,
+        Icon               = Pack12pkWhiteWineAgedFully,
+        WorldStaticModel   = Pack12pkWhiteWineAgedFully,
     }
 
-    item 6pkWineBoxSmall4
+    item 6pkWineBoxSmall6
     {
         DisplayCategory    = MoreBrews,
         Weight             = 2.1,
         Type               = Normal,
         DisplayName        = 6 x Wine Box [Sauvignon Blanc],
-        Icon               = PackWineBox4,
-        WorldStaticModel   = 6pkWineBoxSmall4,
+        Icon               = PackWineBox6,
+        WorldStaticModel   = 6pkWineBoxSmall6,
     }
 
-    item 24pkWineBoxSmall4
+    item 24pkWineBoxSmall6
     {
         DisplayCategory    = MoreBrews,
         Weight             = 6,
         Type               = Normal,
         DisplayName        = 24 x Wine Box [Sauvignon Blanc],
-        Icon               = PackWineBox4,
-        WorldStaticModel   = 24pkWineBoxSmall4,
+        Icon               = PackWineBox6,
+        WorldStaticModel   = 24pkWineBoxSmall6,
     }
 
     recipe Pack 6
     {
-        destroy WhiteWine=6,
+        destroy WhiteWineAgedFully=6,
 
-        Result              :6pkWhiteWine,
+        Result              :6pkWhiteWineAgedFully,
         OnTest              :Recipe.OnTest.IsFavorite,
         OnCreate            :Recipe.OnCreate.SaveFood,
         Time                :75.0,
@@ -60,9 +60,9 @@ module SP
 
     recipe Unpack 6
     {
-        destroy 6pkWhiteWine,
+        destroy 6pkWhiteWineAgedFully,
 
-        Result              :WhiteWine=6,
+        Result              :WhiteWineAgedFully=6,
         OnGiveXP            :Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
         RemoveResultItem    :true,
@@ -72,9 +72,9 @@ module SP
 
     recipe Pack 12
     {
-        destroy WhiteWine=12,
+        destroy WhiteWineAgedFully=12,
 
-        Result              :12pkWhiteWine,
+        Result              :12pkWhiteWineAgedFully,
         OnTest              :Recipe.OnTest.IsFavorite,
         OnCreate            :Recipe.OnCreate.SaveFood,
         Time                :75.0,
@@ -83,9 +83,9 @@ module SP
 
     recipe Unpack 12
     {
-        destroy 12pkWhiteWine,
+        destroy 12pkWhiteWineAgedFully,
 
-        Result              :WhiteWine=12,
+        Result              :WhiteWineAgedFully=12,
         OnGiveXP            :Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
         RemoveResultItem    :true,
@@ -95,27 +95,27 @@ module SP
 
     recipe Put Together
     {
-        6pkWhiteWine=2,
+        6pkWhiteWineAgedFully=2,
 
-        Result              :12pkWhiteWine,
+        Result              :12pkWhiteWineAgedFully,
         Time                :75.0,
         Category            :Storage,
     }
 
     recipe Split
     {
-        12pkWhiteWine,
+        12pkWhiteWineAgedFully,
 
-        Result              :6pkWhiteWine=2,
+        Result              :6pkWhiteWineAgedFully=2,
         Time                :75.0,
         Category            :Storage,
     }
 
     recipe Pack 6
     {
-        destroy WineBoxSmall4=6,
+        destroy WineBoxSmall6=6,
 
-        Result              :6pkWineBoxSmall4,
+        Result              :6pkWineBoxSmall6,
         OnTest              :Recipe.OnTest.IsFavorite,
         OnCreate            :Recipe.OnCreate.SaveFood,
         Time                :75.0,
@@ -124,9 +124,9 @@ module SP
 
     recipe Unpack 6
     {
-        destroy 6pkWineBoxSmall4,
+        destroy 6pkWineBoxSmall6,
 
-        Result              :WineBoxSmall4=6,
+        Result              :WineBoxSmall6=6,
         OnGiveXP            :Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
         RemoveResultItem    :true,
@@ -136,9 +136,9 @@ module SP
 
     recipe Pack 24
     {
-        destroy WineBoxSmall4=24,
+        destroy WineBoxSmall6=24,
 
-        Result              :24pkWineBoxSmall4,
+        Result              :24pkWineBoxSmall6,
         OnTest              :Recipe.OnTest.IsFavorite,
         OnCreate            :Recipe.OnCreate.SaveFood,
         Time                :75.0,
@@ -147,9 +147,9 @@ module SP
 
     recipe Unpack 24
     {
-        destroy 24pkWineBoxSmall4,
+        destroy 24pkWineBoxSmall6,
 
-        Result              :WineBoxSmall4=24,
+        Result              :WineBoxSmall6=24,
         OnGiveXP            :Recipe.OnGiveXP.None,
         OnCreate            :Recipe.OnCreate.LoadFood,
         RemoveResultItem    :true,
@@ -159,18 +159,18 @@ module SP
 
     recipe Put Together
     {
-        6pkWineBoxSmall4=4,
+        6pkWineBoxSmall6=4,
 
-        Result              :24pkWineBoxSmall4,
+        Result              :24pkWineBoxSmall6,
         Time                :75.0,
         Category            :Storage,
     }
 
     recipe Split
     {
-        24pkWineBoxSmall4,
+        24pkWineBoxSmall6,
 
-        Result              :6pkWineBoxSmall4=4,
+        Result              :6pkWineBoxSmall6=4,
         Time                :75.0,
         Category            :Storage,
     }
