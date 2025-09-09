@@ -1,0 +1,36 @@
+module GidOrganized
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS50pkSleepingPills
+	{
+		Weight				= 0.5,
+		Type				= Normal,
+		UseWhileEquipped	= FALSE,
+		DisplayName			= 5 x Sleeping Pills,
+		DisplayCategory 	= FirstAid,
+		Icon				= OS50pkSleepingPills,
+		WorldStaticModel    = BottleOfSleepingPills,
+	}
+
+	recipe Unpack 5
+	{
+		OS50pkSleepingPills,
+
+		Result:PillsSleepingTablets,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:120.0,
+		Category:Storage,
+	}
+
+	model BottleOfSleepingPills
+	{
+		mesh = WorldItems/bottle_of_antibiotics,
+		texture = WorldItems/BottleOfSleepingPills,
+		scale = 1.0,
+	}
+}

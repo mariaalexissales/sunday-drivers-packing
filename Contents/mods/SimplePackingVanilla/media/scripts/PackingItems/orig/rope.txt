@@ -1,0 +1,52 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkRope
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 10 x Rope,
+		DisplayCategory = Material,
+		Icon			= PRope,
+		WorldStaticModel = StackOfRope,
+	}
+	
+	item 5pkRope
+	{
+		Weight			= 1.05,
+		Type			= Normal,
+		DisplayName		= 5 x Rope,
+		DisplayCategory = Material,
+		Icon			= PRope,
+		WorldStaticModel = StackOfRope,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkRope,
+		
+		Result:Rope=10,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkRope,
+		
+		Result:Rope=5,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	model StackOfRope
+	{
+		mesh = WorldItems/stack_of_rope,
+		texture = WorldItems/Rope,
+		scale = 1.0,
+	}
+}

@@ -1,0 +1,61 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkRopeGravelBag
+	{
+		Weight			= 3.0,
+		Type			= Normal,
+		DisplayName		= 10 x Gravel Bag (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeSandbag,
+		WorldStaticModel= StackOfGravelBagRoped,
+	}
+	
+	item 5pkRopeGravelBag
+	{
+		Weight			= 2.0,
+		Type			= Normal,
+		DisplayName		= 5 x Gravel Bag (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeSandbag,
+		WorldStaticModel= StackOfGravelBagRoped,
+	}
+
+	item 10pkSheetRopeGravelBag
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 10 x Gravel Bag (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeSandbag,
+		WorldStaticModel= StackOfGravelBagSheetRoped,
+	}
+	
+	item 5pkSheetRopeGravelBag
+	{
+		Weight			= 3.0,
+		Type			= Normal,
+		DisplayName		= 5 x Gravel Bag (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeSandbag,
+		WorldStaticModel= StackOfGravelBagSheetRoped,
+	}
+
+	model StackOfGravelBagRoped
+	{
+		mesh = WorldItems/stack_of_gravel_bags,
+		texture = WorldItems/StackOfGravelBagRoped,
+		scale = 0.9,
+	}
+	
+	model StackOfGravelBagSheetRoped
+	{
+		mesh = WorldItems/stack_of_gravel_bags,
+		texture = WorldItems/StackOfGravelBagSheetRoped,
+		scale = 0.9,
+	}
+}

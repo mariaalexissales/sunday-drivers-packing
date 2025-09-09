@@ -1,0 +1,71 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkLeather
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 10 x Leather Strips,
+		DisplayCategory = Material,
+		Icon			= PLeatherStrips,
+		WorldStaticModel = StripRollLeather,
+	}
+	
+	item 50pkLeather
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 50 x Leather Strips,
+		DisplayCategory = Material,
+		Icon			= PLeatherStrips,
+		WorldStaticModel = StripRollLeather,
+	}
+	
+	item 100pkLeather
+	{
+		Weight			= 2.5,
+		Type			= Normal,
+		DisplayName		= 100 x Leather Strips,
+		DisplayCategory = Material,
+		Icon			= PLeatherStrips,
+		WorldStaticModel = StripRollLeather,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkLeather,
+		
+		Result:LeatherStrips=10,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkLeather,
+		
+		Result:LeatherStrips=50,
+		Time:40.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkLeather,
+		
+		Result:LeatherStrips=100,
+		Time:80.0,
+		Category:Storage,
+	}
+
+	model StripRollLeather
+	{
+		mesh = WorldItems/stripsroll,
+		texture = WorldItems/LeatherStrips,
+		scale = 1.0,
+	}
+}

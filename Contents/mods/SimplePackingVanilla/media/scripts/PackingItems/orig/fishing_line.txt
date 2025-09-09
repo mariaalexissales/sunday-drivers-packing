@@ -1,0 +1,56 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkFishingLine
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Fishing Line,
+		DisplayCategory = Fishing,
+		Icon			= PFishingLine,
+		WorldStaticModel= FishingLineXL,
+	}
+	
+	item 5pkFishingLine
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Fishing Line,
+		DisplayCategory = Fishing,
+		Icon			= PFishingLine,
+		WorldStaticModel= FishingLineXL,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkFishingLine,
+		
+		Result:FishingLine,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkFishingLine,
+		
+		Result:FishingLine,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	model FishingLineXL
+	{
+		mesh = WorldItems/xl_fishing_line,
+		texture = WorldItems/FishingLine,
+		scale = 1.0,
+	}
+}

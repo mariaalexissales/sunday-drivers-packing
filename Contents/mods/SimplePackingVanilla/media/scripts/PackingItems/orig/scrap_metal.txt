@@ -1,0 +1,89 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	item 100pkScrapMetal
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 100 x Scrap Metal,
+		DisplayCategory = Material,
+		Icon			= PScrapMetal,
+		WorldStaticModel= BoxOfScrapMetal,
+	}
+	
+	item 50pkScrapMetal
+	{
+		Weight			= 2.75,
+		Type			= Normal,
+		DisplayName		= 50 x Scrap Metal,
+		DisplayCategory = Material,
+		Icon			= PScrapMetal,
+		WorldStaticModel= BoxOfScrapMetal,
+	}
+	
+	item 10pkScrapMetal
+	{
+		Weight			= 0.6,
+		Type			= Normal,
+		DisplayName		= 10 x Scrap Metal,
+		DisplayCategory = Material,
+		Icon			= PScrapMetal,
+		WorldStaticModel= BoxOfScrapMetal,
+	}
+	
+	item 5pkScrapMetal
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Scrap Metal,
+		DisplayCategory = Material,
+		Icon			= PScrapMetal,
+		WorldStaticModel= BoxOfScrapMetal,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkScrapMetal,
+		
+		Result:ScrapMetal=100,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkScrapMetal,
+		
+		Result:ScrapMetal=50,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkScrapMetal,
+		
+		Result:ScrapMetal=10,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkScrapMetal,
+		
+		Result:ScrapMetal=5,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	model BoxOfScrapMetal
+	{
+		mesh = WorldItems/box_of_scrap_metal,
+		texture = WorldItems/BoxOfScrapMetal,
+		scale = 1.0,
+	}
+}

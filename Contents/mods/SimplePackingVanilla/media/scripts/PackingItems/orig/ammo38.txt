@@ -1,0 +1,48 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pk38
+	{
+		Weight			= 1.75,
+		Type			= Normal,
+		DisplayName		= 10 x Box of .38 Special Bullets,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+	
+	item 5pk38
+	{
+		Weight			= 1.225,
+		Type			= Normal,
+		DisplayName		= 5 x Box of .38 Special Bullets,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pk38,
+		
+		Result:Bullets38Box=10,
+		Time:130.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pk38,
+		
+		Result:Bullets38Box=5,
+		Time:90.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+
+}

@@ -1,0 +1,109 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkMetalPipe
+	{
+		Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 10 x Metal Pipe,
+		DisplayCategory = Material,
+		Icon			= PMetalPipe,
+		WorldStaticModel= StackOfMetalPipes,
+	}
+	
+	item 5pkMetalPipe
+	{
+		Weight			= 5.25,
+		Type			= Normal,
+		DisplayName		= 5 x Metal Pipe,
+		DisplayCategory = Material,
+		Icon			= PMetalPipe,
+		WorldStaticModel= StackOfMetalPipes,
+		
+	}
+	
+	item 10pkRopeMetalPipe
+	{
+		Weight			= 2.25,
+		Type			= Normal,
+		DisplayName		= 10 x Metal Pipe (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeMetalPipe,
+		WorldStaticModel= StackOfMetalPipesRoped,
+	}
+	
+	item 5pkRopeMetalPipe
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 5 x Metal Pipe (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeMetalPipe,
+		WorldStaticModel= StackOfMetalPipesRoped,
+	}
+	
+	item 10pkSheetRopeMetalPipe
+	{
+		Weight			= 3.75,
+		Type			= Normal,
+		DisplayName		= 10 x Metal Pipe (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeMetalPipe,
+		WorldStaticModel= StackOfMetalPipesSheetRoped,
+	}
+	
+	item 5pkSheetRopeMetalPipe
+	{
+		Weight			= 2.25,
+		Type			= Normal,
+		DisplayName		= 5 x Metal Pipe (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeMetalPipe,
+		WorldStaticModel= StackOfMetalPipesSheetRoped,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkMetalPipe,
+		
+		CanBeDoneFromFloor:true,
+		Result:MetalPipe=10,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkMetalPipe,
+		
+		CanBeDoneFromFloor:true,
+		Result:MetalPipe=5,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	model StackOfMetalPipes
+	{
+		mesh = WorldItems/stack_of_metal_pipes_no_rope,
+		texture = WorldItems/StackOfLeadPipeRoped,
+		scale = 1.0,
+	}
+
+	model StackOfMetalPipesRoped
+	{
+		mesh = WorldItems/stack_of_metal_pipes,
+		texture = WorldItems/StackOfLeadPipeRoped,
+		scale = 1.0,
+	}
+
+	model StackOfMetalPipesSheetRoped
+	{
+		mesh = WorldItems/stack_of_metal_pipes,
+		texture = WorldItems/StackOfLeadPipeSheetRoped,
+		scale = 1.0,
+	}
+}

@@ -1,0 +1,52 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkMagazineCrosswordB
+	{
+		Weight			= 1,
+		Type			= Normal,
+		DisplayName		= 10 x Crossword Magazine,
+		DisplayCategory = Literature,
+		Icon			= PMagazineCrosswordB,
+		WorldStaticModel= StackOfMagazineCrosswordB,
+	}
+	
+	item 5pkMagazineCrosswordB
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 5 x Crossword Magazine,
+		DisplayCategory = Literature,
+		Icon			= PMagazineCrosswordB,
+		WorldStaticModel= StackOfMagazineCrosswordB,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkMagazineCrosswordB,
+		
+		Result:MagazineCrossword2=10,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkMagazineCrosswordB,
+		
+		Result:MagazineCrossword2=5,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	model StackOfMagazineCrosswordB
+	{
+		mesh = WorldItems/stack_of_magazine,
+		texture = WorldItems/MagazineCrossword2,
+		scale = 1.0,
+	}
+}

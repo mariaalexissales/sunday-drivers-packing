@@ -1,0 +1,36 @@
+module GidOrganized
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS30pkAlcoholWipes
+	{
+		Weight				= 0.9,
+		Type				= Normal,
+		UseWhileEquipped	= FALSE,
+		DisplayName			= 6 x Alcohol Wipes,
+		DisplayCategory 	= FirstAid,
+		Icon				= OS30pkAlcoholWipes,
+		WorldStaticModel    = PackOfAlchoholWipes,
+	}
+
+	recipe Unpack 6
+	{
+		OS30pkAlcoholWipes,
+
+		Result:AlcoholWipes,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	model PackOfAlchoholWipes
+	{
+		mesh = WorldItems/small_box_for_pack,
+		texture = WorldItems/PackOfAlcoholWipes,
+		scale = 1.1,
+	}
+}

@@ -1,0 +1,80 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkLightBulbGreen
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 10 x Green Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		ColorRed		= 0,
+        ColorGreen		= 255,
+        ColorBlue		= 0,
+		WorldStaticModel = WIP,
+	}
+	
+	item 50pkLightBulbGreen
+	{
+		Weight			= 3.0,
+		Type			= Normal,
+		DisplayName		= 50 x Green Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		ColorRed		= 0,
+        ColorGreen		= 255,
+        ColorBlue		= 0,
+		WorldStaticModel = WIP,
+	}
+	
+	item 100pkLightBulbGreen
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 100 x Green Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		ColorRed		= 0,
+        ColorGreen		= 255,
+        ColorBlue		= 0,
+		WorldStaticModel = WIP,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkLightBulbGreen,
+		
+		Result:LightBulbGreen=10,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkLightBulbGreen,
+		
+		Result:LightBulbGreen=50,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkLightBulbGreen,
+		
+		Result:LightBulbGreen=100,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	model WIP
+	{
+		mesh = WorldItems/wip_model,
+		texture = WorldItems/WIP_Tex,
+		scale = 1.0,
+	}
+}

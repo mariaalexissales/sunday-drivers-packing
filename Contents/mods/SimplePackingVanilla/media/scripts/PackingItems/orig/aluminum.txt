@@ -1,0 +1,65 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkAluminum
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 10 x Aluminum,
+		DisplayCategory = Material,
+		Icon			= Aluminum,
+		WorldStaticModel = WIP,
+	}
+	
+	item 50pkAluminum
+	{
+		Weight			= 3.0,
+		Type			= Normal,
+		DisplayName		= 50 x Aluminum,
+		DisplayCategory = Material,
+		Icon			= Aluminum,
+		WorldStaticModel = WIP,
+	}
+	
+	item 100pkAluminum
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 100 x Aluminum,
+		DisplayCategory = Material,
+		Icon			= Aluminum,
+		WorldStaticModel = WIP,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkAluminum,
+		
+		Result:Aluminum=10,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkAluminum,
+		
+		Result:Aluminum=50,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkAluminum,
+		
+		Result:Aluminum=100,
+		Time:75.0,
+		Category:Storage,
+	}
+
+}

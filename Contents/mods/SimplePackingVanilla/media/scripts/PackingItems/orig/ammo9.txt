@@ -1,0 +1,48 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pk9
+	{
+		Weight			= 1.0,
+		Type			= Normal,
+		DisplayName		= 10 x Box of 9mm Bullets,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+	
+	item 5pk9
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 5 x Box of 9mm Bullets,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pk9,
+		
+		Result:Bullets9mmBox=10,
+		Time:75.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pk9,
+		
+		Result:Bullets9mmBox=5,
+		Time:52.5,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+
+}

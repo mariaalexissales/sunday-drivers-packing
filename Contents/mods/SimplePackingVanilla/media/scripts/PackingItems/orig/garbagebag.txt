@@ -1,0 +1,52 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkGarbage
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Garbage Bag,
+		DisplayCategory = Container,
+		Icon			= PGarbage,
+		WorldStaticModel= PackOfGarbageBags,
+	}
+	
+	item 5pkGarbage
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Garbage Bag,
+		DisplayCategory = Container,
+		Icon			= PGarbage,
+		WorldStaticModel= PackOfGarbageBags,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkGarbage,
+		
+		Result:Garbagebag=10,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkGarbage,
+		
+		Result:Garbagebag=5,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	model PackOfGarbageBags
+	{
+		mesh = WorldItems/pack_of_adhesive_bandages,
+		texture = WorldItems/PackOfGarbageBags,
+		scale = 1.5,
+	}
+}

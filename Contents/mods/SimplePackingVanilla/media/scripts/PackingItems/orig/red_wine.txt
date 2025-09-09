@@ -1,0 +1,54 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkRedWine
+	{
+		Weight			= 5,
+		Type			= Normal,
+		DisplayName		= 10 x Red Wine,
+		DisplayCategory = Food,
+		Icon			= PRedWine,
+		WorldStaticModel= WoodenBoxOfRedWineBottle,
+	}
+	
+	item 5pkRedWine
+	{
+		Weight			= 3.5,
+		Type			= Normal,
+		DisplayName		= 5 x Red Wine,
+		DisplayCategory = Food,
+		Icon			= PRedWine,
+		WorldStaticModel= WoodenBoxOfRedWineBottle,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkRedWine,
+		
+		Result:Wine2=10,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkRedWine,
+		
+		Result:Wine2=5,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	model WoodenBoxOfRedWineBottle
+	{
+		mesh = WorldItems/wooden_box_of_wine_bottles,
+		texture = WorldItems/WoodenBoxOfRedWineBottle,
+		scale = 1.0,
+	}
+}

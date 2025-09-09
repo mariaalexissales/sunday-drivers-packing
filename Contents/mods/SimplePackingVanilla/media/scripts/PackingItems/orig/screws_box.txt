@@ -1,0 +1,52 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkScrewsBox
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 10 x Box of Screws,
+		DisplayCategory = Material,
+		Icon			= PScrewsBox,
+		WorldStaticModel= BoxOfScrews,
+	}
+
+	item 5pkScrewsBox
+	{
+		Weight			= 1.05,
+		Type			= Normal,
+		DisplayName		= 5 x Box of Screws,
+		DisplayCategory = Material,
+		Icon			= PScrewsBox,
+		WorldStaticModel= BoxOfScrews,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkScrewsBox,
+		
+		Result:ScrewsBox=10,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkScrewsBox,
+		
+		Result:ScrewsBox=5,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	model BoxOfScrews
+	{
+		mesh = WorldItems/box_of_screws,
+		texture = WorldItems/BoxOfScrews,
+		scale = 1.0,
+	}
+}

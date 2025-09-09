@@ -1,0 +1,48 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkCrispC
+	{
+		Weight			= 1.0,
+		Type			= Normal,
+		DisplayName		= 10 x Chips,
+		DisplayCategory = Food,
+		Icon			= Crisps3,
+		WorldStaticModel = WIP,
+	}
+	
+	item 5pkCrispC
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 5 x Chips,
+		DisplayCategory = Food,
+		Icon			= Crisps3,
+		WorldStaticModel = WIP,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkCrispC,
+		
+		Result:Crisps3=10,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkCrispC,
+		
+		Result:Crisps3=5,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:50.0,
+		Category:Storage,
+	}
+
+}

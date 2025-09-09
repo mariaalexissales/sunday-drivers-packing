@@ -1,0 +1,71 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkElectronicsScrap
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 10 x Electronics Scrap,
+		DisplayCategory = Electronics,
+		Icon			= PElectronicsScrap,
+		WorldStaticModel= BoxOfElectronicScrap,
+	}
+	
+	item 50pkElectronicsScrap
+	{
+		Weight			= 3,
+		Type			= Normal,
+		DisplayName		= 50 x Electronics Scrap,
+		DisplayCategory = Electronics,
+		Icon			= PElectronicsScrap,
+		WorldStaticModel= BoxOfElectronicScrap,
+	}
+	
+	item 100pkElectronicsScrap
+	{
+		Weight			= 5,
+		Type			= Normal,
+		DisplayName		= 100 x Electronics Scrap,
+		DisplayCategory = Electronics,
+		Icon			= PElectronicsScrap,
+		WorldStaticModel= BoxOfElectronicScrap,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkElectronicsScrap,
+		
+		Result:ElectronicsScrap=10,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkElectronicsScrap,
+		
+		Result:ElectronicsScrap=50,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkElectronicsScrap,
+		
+		Result:ElectronicsScrap=100,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	model BoxOfElectronicScrap
+	{
+		mesh = WorldItems/box_of_electronics_scrap,
+		texture = WorldItems/BoxOfElectronicScrap,
+		scale = 1.0,
+	}
+}

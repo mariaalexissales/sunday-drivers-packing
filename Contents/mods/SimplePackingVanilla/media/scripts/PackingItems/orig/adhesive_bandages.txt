@@ -1,4 +1,4 @@
-module SP
+module GidOrganized
 {
 	imports
 	{
@@ -13,16 +13,6 @@ module SP
 		DisplayCategory = FirstAid,
 		Icon			= OS12pkAdhesiveBandages,
 		WorldStaticModel= PackOfAdhesiveBandages,
-	}
-	
-	recipe Pack 12
-	{
-		Bandaid=12,
-
-		Result:SP.OS12pkAdhesiveBandages,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
-		Category:Storage,
 	}
 
 	recipe Unpack 12

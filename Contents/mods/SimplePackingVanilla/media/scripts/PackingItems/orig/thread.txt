@@ -1,0 +1,56 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkThread
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Thread,
+		DisplayCategory = Material,
+		Icon			= PThread,
+		WorldStaticModel= ThreadXL,
+	}
+	
+	item 5pkThread
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Thread,
+		DisplayCategory = Material,
+		Icon			= PThread,
+		WorldStaticModel= ThreadXL,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkThread,
+		
+		Result:Thread,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkThread,
+		
+		Result:Thread,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	model ThreadXL
+	{
+		mesh = WorldItems/threadXL,
+		texture = WorldItems/Thread,
+		scale = 1.0,
+	}
+}

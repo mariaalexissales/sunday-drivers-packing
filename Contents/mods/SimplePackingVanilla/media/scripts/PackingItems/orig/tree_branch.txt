@@ -1,0 +1,107 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	/** Base Weight = 1.7 **/
+	item 10pkRopeTreeBranch
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 10 x Branch (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeBranch,
+		WorldStaticModel= StackOfTreeBranchesRoped,
+	}
+	
+	item 5pkRopeTreeBranch
+	{
+		Weight			= 1,
+		Type			= Normal,
+		DisplayName		= 5 x Branch (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeBranch,
+		WorldStaticModel= StackOfTreeBranchesRoped,
+	}
+	
+	item 10pkSheetRopeTreeBranch
+	{
+		Weight			= 2.5,
+		Type			= Normal,
+		DisplayName		= 10 x Branch (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeBranch,
+		WorldStaticModel= StackOfTreeBranchesSheetRoped,
+	}
+	
+	item 5pkSheetRopeTreeBranch
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 5 x Branch (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeBranch,
+		WorldStaticModel= StackOfTreeBranchesSheetRoped,
+	}
+
+	item 50pkWCTreeBranch
+	{
+		Weight			= 8.5,
+		Type			= Normal,
+		DisplayName		= 50 x Branch (Box),
+		DisplayCategory	= Material,
+		Icon			= WIP,
+		WorldStaticModel= WIP,
+	}
+
+	item 100pkWCTreeBranch
+	{
+		Weight			= 12.75,
+		Type			= Normal,
+		DisplayName		= 100 x Branch (Box),
+		DisplayCategory	= Material,
+		Icon			= WIP,
+		WorldStaticModel= WIP,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkWCTreeBranch,
+
+		Result:TreeBranch=50,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack1WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:160.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkWCTreeBranch,
+
+		Result:TreeBranch=100,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack2WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:185.0,
+		Category:Storage,
+	}
+
+	model StackOfTreeBranchesRoped
+	{
+		mesh = WorldItems/stack_of_tree_branches,
+		texture = WorldItems/StackOfTreeBranchRoped,
+		scale = 1.0,
+	}
+
+	model StackOfTreeBranchesSheetRoped
+	{
+		mesh = WorldItems/stack_of_tree_branches,
+		texture = WorldItems/StackOfTreeBranchSheetRoped,
+		scale = 1.0,
+	}
+}

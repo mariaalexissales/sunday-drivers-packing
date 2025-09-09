@@ -1,0 +1,52 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkMagazineWordsearchA
+	{
+		Weight			= 1,
+		Type			= Normal,
+		DisplayName		= 10 x Wordsearch Magazine,
+		DisplayCategory = Literature,
+		Icon			= PMagazineWordsearchA,
+		WorldStaticModel= StackOfMagazineWordsearchA,
+	}
+	
+	item 5pkMagazineWordsearchA
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 5 x Wordsearch Magazine,
+		DisplayCategory = Literature,
+		Icon			= PMagazineWordsearchA,
+		WorldStaticModel= StackOfMagazineWordsearchA,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkMagazineWordsearchA,
+		
+		Result:MagazineWordsearch1=10,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkMagazineWordsearchA,
+		
+		Result:MagazineWordsearch1=5,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	model StackOfMagazineWordsearchA
+	{
+		mesh = WorldItems/stack_of_magazine,
+		texture = WorldItems/MagazineWordSearch1,
+		scale = 1.0,
+	}
+}

@@ -1,0 +1,34 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 6pkCannedFruitCocktail
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 6 x Canned Fruit Cocktail,
+		DisplayCategory = Food,
+		Icon			= PCannedFruitCocktail,
+		WorldStaticModel= PackOfFruitCocktailCan,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkCannedFruitCocktail,
+		
+		Result:CannedFruitCocktail=6,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:40.0,
+		Category:Storage,
+	}
+
+	model PackOfFruitCocktailCan
+	{
+		mesh = WorldItems/pack_of_cans,
+		texture = WorldItems/TinnedFruitCocktail,
+		scale = 1.0,
+	}
+}

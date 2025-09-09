@@ -1,0 +1,80 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkLightBulbPurple
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 10 x Purple Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		ColorRed		= 128,
+        ColorGreen		= 0,
+        ColorBlue		= 255,
+		WorldStaticModel = WIP,
+	}
+	
+	item 50pkLightBulbPurple
+	{
+		Weight			= 3.0,
+		Type			= Normal,
+		DisplayName		= 50 x Purple Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		ColorRed		= 128,
+        ColorGreen		= 0,
+        ColorBlue		= 255,
+		WorldStaticModel = WIP,
+	}
+	
+	item 100pkLightBulbPurple
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 100 x Purple Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		ColorRed		= 128,
+        ColorGreen		= 0,
+        ColorBlue		= 255,
+		WorldStaticModel = WIP,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkLightBulbPurple,
+		
+		Result:LightBulbPurple=10,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkLightBulbPurple,
+		
+		Result:LightBulbPurple=50,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkLightBulbPurple,
+		
+		Result:LightBulbPurple=100,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	model WIP
+	{
+		mesh = WorldItems/wip_model,
+		texture = WorldItems/WIP_Tex,
+		scale = 1.0,
+	}
+}

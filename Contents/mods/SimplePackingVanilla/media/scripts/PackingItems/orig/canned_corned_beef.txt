@@ -1,0 +1,34 @@
+module GidOrganizedFood
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS6pkCannedCornedBeef
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 6 x Canned Corned Beef,
+		DisplayCategory = Food,
+		Icon			= OS6pkCannedCornedBeef,
+		WorldStaticModel= PackOfCornedBeef,
+	}
+
+	recipe Unpack 6
+	{
+		destroy OS6pkCannedCornedBeef,
+
+		Result:CannedCornedBeef=6,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	model PackOfCornedBeef
+	{
+		mesh = WorldItems/pack_of_cans,
+		texture = WorldItems/TinnedCornedBeef,
+		scale = 1.0,
+	}
+}

@@ -1,0 +1,52 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkFishingNet
+	{
+		Weight			= 2.5,
+		Type			= Normal,
+		DisplayName		= 10 x Fishing Net Trap,
+		DisplayCategory = Fishing,
+		Icon			= PFishTrap,
+		WorldStaticModel= StackOfFishingNet,
+	}
+	
+	item 5pkFishingNet
+	{
+		Weight			= 1.75,
+		Type			= Normal,
+		DisplayName		= 5 x Fishing Net Trap,
+		DisplayCategory = Fishing,
+		Icon			= PFishTrap,
+		WorldStaticModel= StackOfFishingNet,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkFishingNet,
+		
+		Result:FishingNet=10,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkFishingNet,
+		
+		Result:FishingNet=5,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	model StackOfFishingNet
+	{
+		mesh = WorldItems/stack_of_fishing_net,
+		texture = WorldItems/FishingNet,
+		scale = 1.0,
+	}
+}

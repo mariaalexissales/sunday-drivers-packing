@@ -1,0 +1,304 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item pkCarpentry
+	{
+		Weight			= 2,
+		Type			= Normal,
+		DisplayName		= Bundle of Carpentry Books,
+		DisplayCategory = SkillBook,
+		Icon			= PCarpentryBook,
+		WorldStaticModel = BoxOfBooksCarpentry,
+	}
+	
+	item pkCooking
+	{
+		Weight			= 2,
+		Type			= Normal,
+		DisplayName		= Bundle of Cooking Books,
+		DisplayCategory = SkillBook,
+		Icon			= PCookingBook,
+		WorldStaticModel = BoxOfBooksCooking,
+	}
+	
+	item pkElectricity
+	{
+		Weight			= 2,
+		Type			= Normal,
+		DisplayName		= Bundle of Electricity Books,
+		DisplayCategory = SkillBook,
+		Icon			= PElectricityBook,
+		WorldStaticModel = BoxOfBooksElectricity,
+	}
+	
+	item pkFarming
+	{
+		Weight			= 2,
+		Type			= Normal,
+		DisplayName		= Bundle of Farming Books,
+		DisplayCategory = SkillBook,
+		Icon			= PFarmingBook,
+		WorldStaticModel = BoxOfBooksFarming,
+	}
+	
+	item pkFirstaid
+	{
+		Weight			= 2,
+		Type			= Normal,
+		DisplayName		= Bundle of Firstaid Books,
+		DisplayCategory = SkillBook,
+		Icon			= PFirstaidBook,
+		WorldStaticModel = BoxOfBooksFirstaid,
+	}
+	
+	item pkFishing
+	{
+		Weight			= 2,
+		Type			= Normal,
+		DisplayName		= Bundle of Fishing Books,
+		DisplayCategory = SkillBook,
+		Icon			= PFishingBook,
+		WorldStaticModel = BoxOfBooksFishing,
+	}
+	
+	item pkForaging
+	{
+		Weight			= 2,
+		Type			= Normal,
+		DisplayName		= Bundle of Foraging Books,
+		DisplayCategory = SkillBook,
+		Icon			= PForagingBook,
+		WorldStaticModel = BoxOfBooksForaging,
+	}
+	
+	item pkMechanics
+	{
+		Weight			= 2,
+		Type			= Normal,
+		DisplayName		= Bundle of Mechanics Books,
+		DisplayCategory = SkillBook,
+		Icon			= PMechanicsBook,
+		WorldStaticModel = BoxOfBooksMechanics,
+	}
+	
+	item pkTailoring
+	{
+		Weight			= 2,
+		Type			= Normal,
+		DisplayName		= Bundle of Tailoring Books,
+		DisplayCategory = SkillBook,
+		Icon			= PTailoringBook,
+		WorldStaticModel = BoxOfBooksTailoring,
+	}
+	
+	item pkMetalwork
+	{
+		Weight			= 2,
+		Type			= Normal,
+		DisplayName		= Bundle of Metalwork Books,
+		DisplayCategory = SkillBook,
+		Icon			= PMetalworkBook,
+		WorldStaticModel = BoxOfBooksMetalwork,
+	}
+	
+	item pkTrapping
+	{
+		Weight			= 2,
+		Type			= Normal,
+		DisplayName		= Bundle of Trapping Books,
+		DisplayCategory = SkillBook,
+		Icon			= PTrappingBook,
+		WorldStaticModel = BoxOfBooksTrapping,
+	}
+
+	recipe Unpack Carpentry Skill Books
+	{
+		pkCarpentry,
+		
+		Result:BookCarpentry1,
+		OnCreate:Recipe.OnCreate.UnpackCarpentrySkillBook,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Unpack Cooking Skill Books
+	{
+		pkCooking,
+		
+		Result:BookCooking1,
+		OnCreate:Recipe.OnCreate.UnpackCookingSkillBook,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Unpack Electricity Skill Books
+	{
+		pkElectricity,
+		
+		Result:BookElectrician1,
+		OnCreate:Recipe.OnCreate.UnpackElectricitySkillBook,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Unpack Farming Skill Books
+	{
+		pkFarming,
+		
+		Result:BookFarming1,
+		OnCreate:Recipe.OnCreate.UnpackFarmingSkillBook,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Unpack Firstaid Skill Books
+	{
+		pkFirstaid,
+		
+		Result:BookFirstAid1,
+		OnCreate:Recipe.OnCreate.UnpackFirstaidSkillBook,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Unpack Fishing Skill Books
+	{
+		pkFishing,
+		
+		Result:BookFishing1,
+		OnCreate:Recipe.OnCreate.UnpackFishingSkillBook,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Unpack Foraging Skill Books
+	{
+		pkForaging,
+		
+		Result:BookForaging1,
+		OnCreate:Recipe.OnCreate.UnpackForagingSkillBook,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Unpack Mechanics Skill Books
+	{
+		pkMechanics,
+		
+		Result:BookMechanic1,
+		OnCreate:Recipe.OnCreate.UnpackMechanicsSkillBook,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Unpack Tailoring Skill Books
+	{
+		pkTailoring,
+		
+		Result:BookTailoring1,
+		OnCreate:Recipe.OnCreate.UnpackTailoringSkillBook,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Unpack Metalwork Skill Books
+	{
+		pkMetalwork,
+		
+		Result:BookMetalWelding1,
+		OnCreate:Recipe.OnCreate.UnpackMetalworkSkillBook,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Unpack Trapping Skill Books
+	{
+		pkTrapping,
+		
+		Result:BookTrapping1,
+		OnCreate:Recipe.OnCreate.UnpackTrappingSkillBook,
+		Time:100.0,
+		Category:Storage,
+	}
+	
+	model BoxOfBooksCarpentry
+	{
+		mesh = WorldItems/box_of_books,
+		texture = WorldItems/BookBrown,
+		scale = 1.0,
+	}
+	
+	model BoxOfBooksCooking
+	{
+		mesh = WorldItems/box_of_books,
+		texture = WorldItems/BookDarkCyan,
+		scale = 1.0,
+	}
+	
+	model BoxOfBooksElectricity
+	{
+		mesh = WorldItems/box_of_books,
+		texture = WorldItems/BookRedPink,
+		scale = 1.0,
+	}
+	
+	model BoxOfBooksFarming
+	{
+		mesh = WorldItems/box_of_books,
+		texture = WorldItems/BookLightGreen,
+		scale = 1.0,
+	}
+	
+	model BoxOfBooksFirstaid
+	{
+		mesh = WorldItems/box_of_books,
+		texture = WorldItems/BookLightBlue,
+		scale = 1.0,
+	}
+	
+	model BoxOfBooksFishing
+	{
+		mesh = WorldItems/box_of_books,
+		texture = WorldItems/BookPurple,
+		scale = 1.0,
+	}
+	
+	model BoxOfBooksForaging
+	{
+		mesh = WorldItems/box_of_books,
+		texture = WorldItems/BookGreen,
+		scale = 1.0,
+	}
+	
+	model BoxOfBooksMechanics
+	{
+		mesh = WorldItems/box_of_books,
+		texture = WorldItems/BookYellow,
+		scale = 1.0,
+	}
+	
+	model BoxOfBooksTailoring
+	{
+		mesh = WorldItems/box_of_books,
+		texture = WorldItems/BookYellow,
+		scale = 1.0,
+	}
+	
+	model BoxOfBooksMetalwork
+	{
+		mesh = WorldItems/box_of_books,
+		texture = WorldItems/BookGrey,
+		scale = 1.0,
+	}
+	
+	model BoxOfBooksTrapping
+	{
+		mesh = WorldItems/box_of_books,
+		texture = WorldItems/BookYellowBrown,
+		scale = 1.0,
+	}
+}

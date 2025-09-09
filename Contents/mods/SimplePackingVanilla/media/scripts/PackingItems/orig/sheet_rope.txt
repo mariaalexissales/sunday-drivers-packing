@@ -1,0 +1,52 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkSheetRope
+	{
+		Weight			= 4,
+		Type			= Normal,
+		DisplayName		= 10 x Sheet Rope,
+		DisplayCategory = Material,
+		Icon			= PSheetRope,
+		WorldStaticModel= BundleOfSheetRope,
+	}
+	
+	item 5pkSheetRope
+	{
+		Weight			= 2.8,
+		Type			= Normal,
+		DisplayName		= 5 x Sheet Rope,
+		DisplayCategory = Material,
+		Icon			= PSheetRope,
+		WorldStaticModel= BundleOfSheetRope,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkSheetRope,
+		
+		Result:SheetRope=10,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkSheetRope,
+		
+		Result:SheetRope=5,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	model BundleOfSheetRope
+	{
+		mesh = WorldItems/pack_of_sheet_rope,
+		texture = WorldItems/BundleOfSheetRope,
+		scale = 1.0,
+	}
+}
