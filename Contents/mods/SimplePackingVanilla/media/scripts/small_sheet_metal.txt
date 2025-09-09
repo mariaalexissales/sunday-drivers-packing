@@ -1,4 +1,4 @@
-module SP
+module Packing
 {
 	imports
 	{

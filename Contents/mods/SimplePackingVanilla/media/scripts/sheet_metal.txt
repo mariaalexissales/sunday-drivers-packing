@@ -1,8 +1,18 @@
-module SP
+module Packing
 {
 	imports
 	{
 		Base,
+	}
+	
+	item 10pkSheetMetal
+	{
+		Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 10 x Metal Sheet,
+		DisplayCategory = Material,
+		Icon			= PSheetMetal,
+		WorldStaticModel= StackOfSheetMetal,
 	}
 	
 	item 5pkSheetMetal
@@ -10,16 +20,6 @@ module SP
 		Weight			= 5.25,
 		Type			= Normal,
 		DisplayName		= 5 x Metal Sheet,
-		DisplayCategory = Material,
-		Icon			= PSheetMetal,
-		WorldStaticModel= StackOfSheetMetal,
-	}
-
-	item 10pkSheetMetal
-	{
-		Weight			= 7.5,
-		Type			= Normal,
-		DisplayName		= 10 x Metal Sheet,
 		DisplayCategory = Material,
 		Icon			= PSheetMetal,
 		WorldStaticModel= StackOfSheetMetal,
