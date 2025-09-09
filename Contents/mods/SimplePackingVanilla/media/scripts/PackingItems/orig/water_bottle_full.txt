@@ -1,0 +1,55 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS24pkWaterBottleFull
+	{
+		Weight					= 9.6,
+		Type					= Drainable,
+		DisplayName				= 24 x Full Water Bottles,
+		DisplayCategory 		= Water,
+		Icon					= OS24pkWaterBottleFull,
+		ReplaceOnDeplete		= OS24pkWaterBottleEmpty,
+		ReplaceOnUseOn			= WaterSource-OS24pkWaterBottleFull,
+		FillFromDispenserSound 	= GetWaterFromDispenserPlasticMedium,
+		FillFromTapSound 		= GetWaterFromTapPlasticMedium,
+		UseDelta 				= 0.00416,
+		UseWhileEquipped		= FALSE,
+		CanStoreWater 			= TRUE,
+		IsWaterSource			= TRUE,
+		UseWhileEquipped  		= FALSE,
+		ToolTip					= Tooltip_item_OnlyPurifyMicrowave,
+		WorldStaticModel        = PackOfWaterBottle
+	}
+	
+	recipe Pack 24
+	{
+		destroy WaterBottleFull=24,
+		
+		Result:OS24pkWaterBottleFull,
+		OnTest:Recipe.OnTest.FullAndNotTainted,
+		Time:240.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 24
+	{
+		destroy OS24pkWaterBottleFull,
+
+		Result:WaterBottleFull=24,
+		OnTest:Recipe.OnTest.FullAndNotTainted,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:120.0,
+		Category:Storage,
+	}
+
+	model PackOfWaterBottle
+	{
+		mesh = WorldItems/pack_of_water_bottles,
+		texture = WorldItems/WaterBottleFull,
+		scale = 1.0,
+	}
+}

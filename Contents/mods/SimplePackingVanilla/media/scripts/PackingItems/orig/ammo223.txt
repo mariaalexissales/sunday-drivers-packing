@@ -1,0 +1,87 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pk223
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 10 x Box of .223 Bullets,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+	
+	item 5pk223
+	{
+		Weight			= 1.0,
+		Type			= Normal,
+		DisplayName		= 5 x Box of .223 Bullets,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+	
+	recipe Pack 10
+	{
+		destroy 223Box=10,
+		
+		Result:10pk223,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:110.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pk223,
+		
+		Result:223Box=10,
+		Time:110.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+	
+	recipe Pack 5
+	{
+		destroy 223Box=5,
+		
+		Result:5pk223,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:80.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+	
+	recipe Unpack 5
+	{
+		destroy 5pk223,
+		
+		Result:223Box=5,
+		Time:80.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Put Together
+	{
+		5pk223=2,
+		
+		Result:10pk223=1,
+		Time:55.0,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pk223=1,
+		
+		Result:5pk223=2,
+		Time:55.0,
+		Sound:AmmoCan_Storage,
+	}
+}

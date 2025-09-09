@@ -5,7 +5,7 @@ module SP
         Base,
     }
 
-    item 5kpkOregano
+    item 5pkOregano
 	{
 		DisplayName		= 5 x Oregano,
 		Weight			= 0.25,
@@ -39,6 +39,17 @@ module SP
 		Result:5pkOregano,
 		OnCreate:Recipe.OnCreate.SaveFood,
 		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:45.0,
+		Category:Storage,
+	}
+
+    recipe Unpack 5
+	{
+		destroy 5pkOregano,
+		
+		Result	:Oregano=5,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
 		Time	:45.0,
 		Category:Storage,
 	}

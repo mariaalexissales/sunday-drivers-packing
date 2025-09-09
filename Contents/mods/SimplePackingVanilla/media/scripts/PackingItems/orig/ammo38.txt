@@ -1,0 +1,87 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pk38
+	{
+		Weight			= 1.75,
+		Type			= Normal,
+		DisplayName		= 10 x Box of .38 Special Bullets,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+	
+	item 5pk38
+	{
+		Weight			= 1.225,
+		Type			= Normal,
+		DisplayName		= 5 x Box of .38 Special Bullets,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+	
+	recipe Pack 10
+	{
+		destroy Bullets38Box=10,
+		
+		Result:10pk38,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:130.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pk38,
+		
+		Result:Bullets38Box=10,
+		Time:130.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+	
+	recipe Pack 5
+	{
+		destroy Bullets38Box=5,
+		
+		Result:5pk38,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:90.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+	
+	recipe Unpack 5
+	{
+		destroy 5pk38,
+		
+		Result:Bullets38Box=5,
+		Time:90.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Put Together
+	{
+		5pk38=2,
+		
+		Result:10pk38=1,
+		Time:65.0,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pk38=1,
+		
+		Result:5pk38=2,
+		Time:65.0,
+		Sound:AmmoCan_Storage,
+	}
+}

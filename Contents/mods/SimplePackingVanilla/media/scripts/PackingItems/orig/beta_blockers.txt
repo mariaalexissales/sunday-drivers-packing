@@ -1,0 +1,47 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS50pkBetaBlockers
+	{
+		Weight				= 0.5,
+		Type				= Normal,
+		UseWhileEquipped	= FALSE,
+		DisplayName			= 5 x Beta Blockers,
+		DisplayCategory 	= FirstAid,
+		Icon				= OS50pkBetaBlockers,
+		WorldStaticModel    = BottleOfBetaBlockers,
+	}
+	
+	recipe Pack 5
+	{
+		destroy PillsBeta=5,
+
+		Result:OS50pkBetaBlockers,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:120.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 5
+	{
+		OS50pkBetaBlockers,
+
+		Result:PillsBeta,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:120.0,
+		Category:Storage,
+	}
+
+	model BottleOfBetaBlockers
+	{
+		mesh = WorldItems/bottle_of_antibiotics,
+		texture = WorldItems/BottleOfBetaBlocker,
+		scale = 0.7,
+	}
+}

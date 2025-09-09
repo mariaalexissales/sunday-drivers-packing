@@ -1,0 +1,88 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkPen
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Pen,
+		DisplayCategory = Household,
+		Icon			= PPen,
+		WorldStaticModel= PackOfPens,
+	}
+	
+	item 5pkPen
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Pen,
+		DisplayCategory = Household,
+		Icon			= PPen,
+		WorldStaticModel= PackOfPens,
+	}
+	
+	recipe Pack 10
+	{
+		destroy Pen=10,
+		
+		Result:10pkPen,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkPen,
+		
+		Result:Pen=10,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 5
+	{
+		destroy Pen=5,
+		
+		Result:5pkPen,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 5
+	{
+		destroy 5pkPen,
+		
+		Result:Pen=5,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkPen=2,
+		
+		Result:10pkPen=1,
+		Time:30.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkPen=1,
+		
+		Result:5pkPen=2,
+		Time:30.0,
+	}
+
+	model PackOfPens
+	{
+		mesh = WorldItems/pack_of_pens,
+		texture = WorldItems/PackOfPens,
+		scale = 1.0,
+	}
+}

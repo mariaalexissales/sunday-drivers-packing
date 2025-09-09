@@ -1,0 +1,177 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+	item 100pkScrapMetal
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 100 x Scrap Metal,
+		DisplayCategory = Material,
+		Icon			= PScrapMetal,
+		WorldStaticModel= BoxOfScrapMetal,
+	}
+	
+	item 50pkScrapMetal
+	{
+		Weight			= 2.75,
+		Type			= Normal,
+		DisplayName		= 50 x Scrap Metal,
+		DisplayCategory = Material,
+		Icon			= PScrapMetal,
+		WorldStaticModel= BoxOfScrapMetal,
+	}
+	
+	item 10pkScrapMetal
+	{
+		Weight			= 0.6,
+		Type			= Normal,
+		DisplayName		= 10 x Scrap Metal,
+		DisplayCategory = Material,
+		Icon			= PScrapMetal,
+		WorldStaticModel= BoxOfScrapMetal,
+	}
+	
+	item 5pkScrapMetal
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Scrap Metal,
+		DisplayCategory = Material,
+		Icon			= PScrapMetal,
+		WorldStaticModel= BoxOfScrapMetal,
+	}
+
+	recipe Pack 100
+	{
+		destroy ScrapMetal=100,
+		
+		Result:100pkScrapMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:150.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 100
+	{
+		destroy 100pkScrapMetal,
+		
+		Result:ScrapMetal=100,
+		Time:100.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 50
+	{
+		destroy ScrapMetal=50,
+		
+		Result:50pkScrapMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:100.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 50
+	{
+		destroy 50pkScrapMetal,
+		
+		Result:ScrapMetal=50,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 10
+	{
+		destroy ScrapMetal=10,
+		
+		Result:10pkScrapMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkScrapMetal,
+		
+		Result:ScrapMetal=10,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 5
+	{
+		destroy ScrapMetal=5,
+		
+		Result:5pkScrapMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 5
+	{
+		destroy 5pkScrapMetal,
+		
+		Result:ScrapMetal=5,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		50pkScrapMetal=2,
+		
+		Result:100pkScrapMetal=1,
+		Time:50.0,
+	}
+	
+	recipe Put Together
+	{
+		10pkScrapMetal=5,
+		
+		Result:50pkScrapMetal=1,
+		Time:40.0,
+	}
+	
+	recipe Put Together
+	{
+		5pkScrapMetal=2,
+		
+		Result:10pkScrapMetal=1,
+		Time:30.0,
+	}
+
+	recipe Split in Two
+	{
+		100pkScrapMetal=1,
+		
+		Result:50pkScrapMetal=2,
+		Time:50.0,
+	}
+	
+	recipe Split in Five
+	{
+		50pkScrapMetal=1,
+		
+		Result:10pkScrapMetal=5,
+		Time:40.0,
+	}
+	
+	recipe Split in Two
+	{
+		10pkScrapMetal=1,
+		
+		Result:5pkScrapMetal=2,
+		Time:30.0,
+	}
+
+	model BoxOfScrapMetal
+	{
+		mesh = WorldItems/box_of_scrap_metal,
+		texture = WorldItems/BoxOfScrapMetal,
+		scale = 1.0,
+	}
+}

@@ -1,0 +1,89 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkScrewsBox
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 10 x Box of Screws,
+		DisplayCategory = Material,
+		Icon			= PScrewsBox,
+		WorldStaticModel= BoxOfScrews,
+	}
+
+	item 5pkScrewsBox
+	{
+		Weight			= 1.05,
+		Type			= Normal,
+		DisplayName		= 5 x Box of Screws,
+		DisplayCategory = Material,
+		Icon			= PScrewsBox,
+		WorldStaticModel= BoxOfScrews,
+	}
+
+	recipe Pack 10
+	{
+		destroy ScrewsBox=10,
+		
+		Result:10pkScrewsBox,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:100.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkScrewsBox,
+		
+		Result:ScrewsBox=10,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 5
+	{
+		destroy ScrewsBox=5,
+		
+		Result:5pkScrewsBox,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 5
+	{
+		destroy 5pkScrewsBox,
+		
+		Result:ScrewsBox=5,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkScrewsBox=2,
+		
+		Result:10pkScrewsBox=1,
+		Time:40.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkScrewsBox=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkScrewsBox=2,
+		Time:40.0,
+	}
+
+	model BoxOfScrews
+	{
+		mesh = WorldItems/box_of_screws,
+		texture = WorldItems/BoxOfScrews,
+		scale = 1.0,
+	}
+}

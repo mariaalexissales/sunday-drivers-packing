@@ -1,0 +1,43 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS9pkSterileBandages
+	{
+		Weight			= 0.45,
+		Type			= Normal,
+		DisplayName		= 9 x Sterile Bandages,
+		DisplayCategory = FirstAid,
+		Icon			= OS9pkSterileBandages,
+		WorldStaticModel= PackOfSterileBandages,
+	}
+	
+	recipe Pack 9
+	{
+		AlcoholBandage=9,
+
+		Result:OS9pkSterileBandages,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 9
+	{
+		OS9pkSterileBandages,
+
+		Result:AlcoholBandage=9,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	model PackOfSterileBandages
+	{
+		mesh = WorldItems/pack_of_bandages,
+		texture = WorldItems/PackOfSterileBandages,
+		scale = 1.0,
+	}
+}

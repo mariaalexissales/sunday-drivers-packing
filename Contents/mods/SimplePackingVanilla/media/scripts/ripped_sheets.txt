@@ -1,0 +1,170 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkRag
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 10 x Ripped Sheets,
+		DisplayCategory = Household,
+		Icon			= PRag,
+		WorldStaticModel= StripRollSheet,
+	}
+	
+	item 50pkRag
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 50 x Ripped Sheets,
+		DisplayCategory = Household,
+		Icon			= PRag,
+		WorldStaticModel= StripRollSheet,
+	}
+	
+	item 100pkRag
+	{
+		Weight			= 2.5,
+		Type			= Normal,
+		DisplayName		= 100 x Ripped Sheets,
+		DisplayCategory = Household,
+		Icon			= PRag,
+		WorldStaticModel= StripRollSheet,
+	}
+
+	item 500pkRag
+    {
+		DisplayName		= 500 x Ripped Sheets,
+		DisplayCategory = Household,
+        Weight			= 7.5,
+		Type			= Normal,
+		Icon			= PRag,
+		WorldStaticModel= StripRollSheet,
+    }
+
+	recipe Pack 10
+	{
+		destroy RippedSheets=10,
+		
+		Result:10pkRag=1,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkRag,
+		
+		Result:RippedSheets=10,
+		Time:25.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 50
+	{
+		destroy RippedSheets=50,
+		
+		Result:50pkRag=1,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 50
+	{
+		destroy 50pkRag,
+		
+		Result:RippedSheets=50,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 100
+	{
+		destroy RippedSheets=100,
+		
+		Result:100pkRag=1,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:100.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 100
+	{
+		destroy 100pkRag,
+		
+		Result:RippedSheets=100,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkRag=5,
+		
+		Result:50pkRag=1,
+		Time:40.0,
+	}
+	
+	recipe Put Together
+	{
+		50pkRag=2,
+		
+		Result:100pkRag=1,
+		Time:40.0,
+	}
+
+	recipe Pack 500
+    {
+        destroy RippedSheets=500,
+        
+        Result  :500pkRag=1,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :75.0,
+        Category:Storage
+    }
+
+    recipe Unpack 500
+    {
+        destroy 500pkRag,
+
+        Result  :RippedSheets=500,
+        Time    :75.0,
+        Category:Storage,
+    }
+
+    recipe Put Together
+    {
+        100pkRag=5,
+
+        Result  :500pkRag=1,
+        Time    :75.0
+    }
+
+	recipe Split in Two
+	{
+		100pkRag=1,
+		
+		Result:50pkRag=2,
+		Time:40.0,
+	}
+
+	recipe Split in Five
+	{
+		50pkRag=1,
+		
+		Result:10pkRag=5,
+		Time:40.0,
+	}
+
+	model StripRollSheet
+	{
+		mesh = WorldItems/stripsroll,
+		texture = WorldItems/Sheet,
+		scale = 1.0,
+	}
+}

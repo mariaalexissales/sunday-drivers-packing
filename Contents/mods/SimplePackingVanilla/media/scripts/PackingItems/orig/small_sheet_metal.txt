@@ -1,0 +1,94 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkSheetMetalSmall
+	{
+		Weight			= 2,
+		Type			= Normal,
+		DisplayName		= 10 x Small Metal Sheet,
+		DisplayCategory = Material,
+		Icon			= PSheetMetalSmall,
+		WorldStaticModel= StackOfSmallMetalSheets,
+	}
+	
+	item 5pkSheetMetalSmall
+	{
+		Weight			= 1.4,
+		Type			= Normal,
+		DisplayName		= 5 x Small Metal Sheet,
+		DisplayCategory = Material,
+		Icon			= PSheetMetalSmall,
+		WorldStaticModel= StackOfSmallMetalSheets,
+	}
+
+	recipe Pack 10
+	{
+		destroy SmallSheetMetal=10,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetMetalSmall,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:100.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkSheetMetalSmall,
+		
+		CanBeDoneFromFloor:true,
+		Result:SmallSheetMetal=10,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 5
+	{
+		destroy SmallSheetMetal=5,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetMetalSmall,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 5
+	{
+		destroy 5pkSheetMetalSmall,
+		
+		CanBeDoneFromFloor:true,
+		Result:SmallSheetMetal=5,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkSheetMetalSmall=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetMetalSmall=1,
+		Time:40.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkSheetMetalSmall=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetMetalSmall=2,
+		Time:30.0,
+	}
+
+	model StackOfSmallMetalSheets
+	{
+		mesh = WorldItems/stack_of_small_metal_sheets,
+		texture = WorldItems/MetalSheet,
+		scale = 0.87,
+	}
+}

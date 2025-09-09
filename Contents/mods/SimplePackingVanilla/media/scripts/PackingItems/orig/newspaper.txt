@@ -1,0 +1,88 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkNewspaper
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Newspaper,
+		DisplayCategory = Literature,
+		Icon			= PNewspaper,
+		WorldStaticModel= StackOfNewspaper,
+	}
+	
+	item 5pkNewspaper
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Newspaper,
+		DisplayCategory = Literature,
+		Icon			= PNewspaper,
+		WorldStaticModel= StackOfNewspaper,
+	}
+
+	recipe Pack 10
+	{
+		destroy Newspaper=10,
+		
+		Result:10pkNewspaper,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkNewspaper,
+		
+		Result:Newspaper=10,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 5
+	{
+		destroy Newspaper=5,
+		
+		Result:5pkNewspaper,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 5
+	{
+		destroy 5pkNewspaper,
+		
+		Result:Newspaper=5,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkNewspaper=2,
+		
+		Result:10pkNewspaper=1,
+		Time:30.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkNewspaper=1,
+		
+		Result:5pkNewspaper=2,
+		Time:30.0,
+	}
+
+	model StackOfNewspaper
+	{
+		mesh = WorldItems/stack_of_newspaper,
+		texture = WorldItems/Newspaper,
+		scale = 0.88,
+	}
+}

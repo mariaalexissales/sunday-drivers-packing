@@ -1,0 +1,142 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkLightBulbPurple
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 10 x Purple Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		ColorRed		= 128,
+        ColorGreen		= 0,
+        ColorBlue		= 255,
+		WorldStaticModel = WIP,
+	}
+	
+	item 50pkLightBulbPurple
+	{
+		Weight			= 3.0,
+		Type			= Normal,
+		DisplayName		= 50 x Purple Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		ColorRed		= 128,
+        ColorGreen		= 0,
+        ColorBlue		= 255,
+		WorldStaticModel = WIP,
+	}
+	
+	item 100pkLightBulbPurple
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 100 x Purple Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		ColorRed		= 128,
+        ColorGreen		= 0,
+        ColorBlue		= 255,
+		WorldStaticModel = WIP,
+	}
+
+	recipe Pack 10
+	{
+		destroy LightBulbPurple=10,
+		
+		Result:10pkLightBulbPurple=1,
+		OnTest:Recipe.OnTest.WholeItem,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkLightBulbPurple,
+		
+		Result:LightBulbPurple=10,
+		Time:25.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 50
+	{
+		destroy LightBulbPurple=50,
+		
+		Result:50pkLightBulbPurple=1,
+		OnTest:Recipe.OnTest.WholeItem,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 50
+	{
+		destroy 50pkLightBulbPurple,
+		
+		Result:LightBulbPurple=50,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 100
+	{
+		destroy LightBulbPurple=100,
+		
+		Result:100pkLightBulbPurple=1,
+		OnTest:Recipe.OnTest.WholeItem,
+		Time:100.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 100
+	{
+		destroy 100pkLightBulbPurple,
+		
+		Result:LightBulbPurple=100,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkLightBulbPurple=5,
+		
+		Result:50pkLightBulbPurple=1,
+		Time:40.0,
+	}
+	
+	recipe Put Together
+	{
+		50pkLightBulbPurple=2,
+		
+		Result:100pkLightBulbPurple=1,
+		Time:40.0,
+	}
+
+	recipe Split in Two
+	{
+		100pkLightBulbPurple=1,
+		
+		Result:50pkLightBulbPurple=2,
+		Time:40.0,
+	}
+
+	recipe Split in Five
+	{
+		50pkLightBulbPurple=1,
+		
+		Result:10pkLightBulbPurple=5,
+		Time:40.0,
+	}
+
+	model WIP
+	{
+		mesh = WorldItems/wip_model,
+		texture = WorldItems/WIP_Tex,
+		scale = 1.0,
+	}
+}

@@ -1,0 +1,45 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 20pkCigarettes
+	{
+		Weight			= 0.05,
+		Type			= Normal,
+		DisplayName		= 20 x Cigarettes,
+		DisplayCategory = FirstAid,
+		Icon			= PCigarettes,
+		WorldStaticModel= PackOfCigarettes,
+	}
+
+	recipe Pack 20
+	{
+		destroy Cigarettes=20,
+		
+		Result:20pkCigarettes,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 20
+	{
+		20pkCigarettes,
+		
+		Result:Cigarettes=1,
+		OnCreate:recipe_opencigpack,
+		RemoveResultItem:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:25.0,
+	}
+
+	model PackOfCigarettes
+	{
+		mesh = WorldItems/pack_of_cigarettes,
+		texture = WorldItems/CigarettePack,
+		scale = 0.5,
+	}
+}

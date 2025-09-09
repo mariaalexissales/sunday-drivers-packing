@@ -1,0 +1,133 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkLightBulb
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 10 x Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		WorldStaticModel = WIP,
+	}
+	
+	item 50pkLightBulb
+	{
+		Weight			= 3.0,
+		Type			= Normal,
+		DisplayName		= 50 x Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		WorldStaticModel = WIP,
+	}
+	
+	item 100pkLightBulb
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 100 x Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		WorldStaticModel = WIP,
+	}
+
+	recipe Pack 10
+	{
+		destroy LightBulb=10,
+		
+		Result:10pkLightBulb=1,
+		OnTest:Recipe.OnTest.WholeItem,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkLightBulb,
+		
+		Result:LightBulb=10,
+		Time:25.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 50
+	{
+		destroy LightBulb=50,
+		
+		Result:50pkLightBulb=1,
+		OnTest:Recipe.OnTest.WholeItem,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 50
+	{
+		destroy 50pkLightBulb,
+		
+		Result:LightBulb=50,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 100
+	{
+		destroy LightBulb=100,
+		
+		Result:100pkLightBulb=1,
+		OnTest:Recipe.OnTest.WholeItem,
+		Time:100.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 100
+	{
+		destroy 100pkLightBulb,
+		
+		Result:LightBulb=100,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkLightBulb=5,
+		
+		Result:50pkLightBulb=1,
+		Time:40.0,
+	}
+	
+	recipe Put Together
+	{
+		50pkLightBulb=2,
+		
+		Result:100pkLightBulb=1,
+		Time:40.0,
+	}
+
+	recipe Split in Two
+	{
+		100pkLightBulb=1,
+		
+		Result:50pkLightBulb=2,
+		Time:40.0,
+	}
+
+	recipe Split in Five
+	{
+		50pkLightBulb=1,
+		
+		Result:10pkLightBulb=5,
+		Time:40.0,
+	}
+
+	model WIP
+	{
+		mesh = WorldItems/wip_model,
+		texture = WorldItems/WIP_Tex,
+		scale = 1.0,
+	}
+}

@@ -1,0 +1,371 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkRopePetrolCan
+	{
+		Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 10 x Gas Can (Rope),
+		DisplayCategory = VehicleMaintenance,
+		Icon			= PRopePetrolCan,
+		WorldStaticModel= StackOfPetrolCansRoped,
+	}
+
+	item 5pkRopePetrolCan
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 5 x Gas Can (Rope),
+		DisplayCategory = VehicleMaintenance,
+		Icon			= PRopePetrolCan,
+		WorldStaticModel= StackOfPetrolCansRoped,
+	}
+	
+	item 10pkSheetRopePetrolCan
+	{
+		Weight			= 12.5,
+		Type			= Normal,
+		DisplayName		= 10 x Gas Can (Sheet Rope),
+		DisplayCategory = VehicleMaintenance,
+		Icon			= PSheetRopePetrolCan,
+		WorldStaticModel= StackOfPetrolCansSheetRoped,
+	}
+
+	item 5pkSheetRopePetrolCan
+	{
+		Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 5 x Gas Can (Sheet Rope),
+		DisplayCategory = VehicleMaintenance,
+		Icon			= PSheetRopePetrolCan,
+		WorldStaticModel= StackOfPetrolCansSheetRoped,
+	}
+	
+	item 10pkRopeEmptyPetrolCan
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 10 x Empty Gas Can (Rope),
+		DisplayCategory = VehicleMaintenance,
+		Icon			= PRopePetrolCan,
+		WorldStaticModel= StackOfPetrolCansRoped,
+	}
+
+	item 5pkRopeEmptyPetrolCan
+	{
+		Weight			= 1.6,
+		Type			= Normal,
+		DisplayName		= 5 x Empty Gas Can (Rope),
+		DisplayCategory = VehicleMaintenance,
+		Icon			= PRopePetrolCan,
+		WorldStaticModel= StackOfPetrolCansRoped,
+	}
+	
+	item 10pkSheetRopeEmptyPetrolCan
+	{
+		Weight			= 4.0,
+		Type			= Normal,
+		DisplayName		= 10 x Empty Gas Can (Sheet Rope),
+		DisplayCategory = VehicleMaintenance,
+		Icon			= PSheetRopePetrolCan,
+		WorldStaticModel= StackOfPetrolCansSheetRoped,
+	}
+
+	item 5pkSheetRopeEmptyPetrolCan
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 5 x Empty Gas Can (Sheet Rope),
+		DisplayCategory = VehicleMaintenance,
+		Icon			= PSheetRopePetrolCan,
+		WorldStaticModel= StackOfPetrolCansSheetRoped,
+	}
+
+	recipe Rope 10
+	{
+		destroy PetrolCan=10,
+		Rope=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkRopePetrolCan,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:300.0,
+		Category:Storage,
+	}
+	
+	recipe Unrope 10
+	{
+		destroy 10pkRopePetrolCan,
+		
+		CanBeDoneFromFloor:true,
+		Result:PetrolCan,
+		OnCreate:Recipe.OnCreate.LoadUsesTwoRope,
+		RemoveResultItem:true,
+		Time:250.0,
+		Category:Storage,
+	}
+
+	recipe Rope 5
+	{
+		destroy PetrolCan=5,
+		Rope=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkRopePetrolCan,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:250.0,
+		Category:Storage,
+	}
+	
+	recipe Unrope 5
+	{
+		destroy 5pkRopePetrolCan,
+		
+		CanBeDoneFromFloor:true,
+		Result:PetrolCan,
+		OnCreate:Recipe.OnCreate.LoadUsesOneRope,
+		RemoveResultItem:true,
+		Time:200.0,
+		Category:Storage,
+	}
+
+	recipe Rope 10
+	{
+		destroy PetrolCan=10,
+		SheetRope=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetRopePetrolCan,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:300.0,
+		Category:Storage,
+	}
+	
+	recipe Unrope 10
+	{
+		destroy 10pkSheetRopePetrolCan,
+		
+		CanBeDoneFromFloor:true,
+		Result:PetrolCan,
+		OnCreate:Recipe.OnCreate.LoadUsesTwoSheetRope,
+		RemoveResultItem:true,
+		Time:250.0,
+		Category:Storage,
+	}
+
+	recipe Rope 5
+	{
+		destroy PetrolCan=5,
+		SheetRope=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetRopePetrolCan,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:250.0,
+		Category:Storage,
+	}
+	
+	recipe Unrope 5
+	{
+		destroy 5pkSheetRopePetrolCan,
+		
+		CanBeDoneFromFloor:true,
+		Result:PetrolCan,
+		OnCreate:Recipe.OnCreate.LoadUsesOneSheetRope,
+		RemoveResultItem:true,
+		Time:200.0,
+		Category:Storage,
+	}
+
+	recipe Rope 10
+	{
+		destroy EmptyPetrolCan=10,
+		Rope=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkRopeEmptyPetrolCan,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:150.0,
+		Category:Storage,
+	}
+	
+	recipe Unrope 10
+	{
+		destroy 10pkRopeEmptyPetrolCan,
+		
+		CanBeDoneFromFloor:true,
+		Result:EmptyPetrolCan=10,
+		OnCreate:Recipe.OnCreate.Unpack2Rope,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Rope 5
+	{
+		destroy EmptyPetrolCan=5,
+		Rope=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkRopeEmptyPetrolCan,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:100.0,
+		Category:Storage,
+	}
+	
+	recipe Unrope 5
+	{
+		destroy 5pkRopeEmptyPetrolCan,
+		
+		CanBeDoneFromFloor:true,
+		Result:EmptyPetrolCan=5,
+		OnCreate:Recipe.OnCreate.Unpack1Rope,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Rope 10
+	{
+		destroy EmptyPetrolCan=10,
+		SheetRope=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetRopeEmptyPetrolCan,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:150.0,
+		Category:Storage,
+	}
+	
+	recipe Unrope 10
+	{
+		destroy 10pkSheetRopeEmptyPetrolCan,
+		
+		CanBeDoneFromFloor:true,
+		Result:EmptyPetrolCan=10,
+		OnCreate:Recipe.OnCreate.Unpack2SheetRope,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Rope 5
+	{
+		destroy EmptyPetrolCan=5,
+		SheetRope=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetRopeEmptyPetrolCan,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:100.0,
+		Category:Storage,
+	}
+	
+	recipe Unrope 5
+	{
+		destroy 5pkSheetRopeEmptyPetrolCan,
+		
+		CanBeDoneFromFloor:true,
+		Result:EmptyPetrolCan=5,
+		OnCreate:Recipe.OnCreate.Unpack1SheetRope,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkRopePetrolCan=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkRopePetrolCan=1,
+		OnCreate:Recipe.OnCreate.MergeUses,
+		Time:70.0,
+	}
+
+	recipe Put Together
+	{
+		5pkSheetRopePetrolCan=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetRopePetrolCan=1,
+		OnCreate:Recipe.OnCreate.MergeUses,
+		Time:70.0,
+	}
+
+	recipe Put Together
+	{
+		5pkRopeEmptyPetrolCan=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkRopeEmptyPetrolCan=1,
+		Time:50.0,
+	}
+
+	recipe Put Together
+	{
+		5pkSheetRopeEmptyPetrolCan=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetRopeEmptyPetrolCan=1,
+		Time:50.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkRopePetrolCan=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkRopePetrolCan,
+		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
+		RemoveResultItem:true,
+		Time:50.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkSheetRopePetrolCan=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetRopePetrolCan,
+		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
+		RemoveResultItem:true,
+		Time:50.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkRopeEmptyPetrolCan=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkRopeEmptyPetrolCan=2,
+		Time:40.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkSheetRopeEmptyPetrolCan=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetRopeEmptyPetrolCan=2,
+		Time:40.0,
+	}
+
+	model StackOfPetrolCansRoped
+	{
+		mesh = WorldItems/stack_of_petrolcans,
+		texture = WorldItems/StackOfGasCanRoped,
+		scale = 0.9,
+	}
+
+	model StackOfPetrolCansSheetRoped
+	{
+		mesh = WorldItems/stack_of_petrolcans,
+		texture = WorldItems/StackOfGasCanSheetRoped,
+		scale = 0.9,
+	}
+}

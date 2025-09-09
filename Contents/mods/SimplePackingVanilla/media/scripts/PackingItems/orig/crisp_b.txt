@@ -1,0 +1,114 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkCrispB
+	{
+		Weight			= 1.0,
+		Type			= Normal,
+		DisplayName		= 10 x Chips,
+		DisplayCategory = Food,
+		Icon			= Crisps2,
+		WorldStaticModel = WIP,
+	}
+	
+	item 5pkCrispB
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 5 x Chips,
+		DisplayCategory = Food,
+		Icon			= Crisps2,
+		WorldStaticModel = WIP,
+	}
+
+	recipe Pack 10
+	{
+		destroy Crisps2=10,
+		
+		Result:10pkCrispB,
+		OnTest:Recipe.OnTest.WholeFood,
+		Time:100.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkCrispB,
+		
+		Result:Crisps2=10,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 5
+	{
+		destroy Crisps2=5,
+		
+		Result:5pkCrispB,
+		OnTest:Recipe.OnTest.WholeFood,
+		Time:75.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 5
+	{
+		destroy 5pkCrispB,
+		
+		Result:Crisps2=5,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Change to Type 1
+	{
+		destroy Crisps2,
+		
+		Result:Crisps=1,
+		OnTest:Recipe.OnTest.WholeFood,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:25.0,
+	}
+	
+	recipe Change to Type 3
+	{
+		destroy Crisps2,
+		
+		Result:Crisps3=1,
+		OnTest:Recipe.OnTest.WholeFood,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:25.0,
+	}
+	
+	recipe Change to Type 4
+	{
+		destroy Crisps2,
+		
+		Result:Crisps4=1,
+		OnTest:Recipe.OnTest.WholeFood,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:25.0,
+	}
+
+	recipe Put Together
+	{
+		5pkCrispB=2,
+		
+		Result:10pkCrispB=1,
+		Time:40.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkCrispB=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkCrispB=2,
+		Time:40.0,
+	}
+}

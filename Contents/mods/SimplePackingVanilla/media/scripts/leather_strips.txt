@@ -1,0 +1,133 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pkLeather
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 10 x Leather Strips,
+		DisplayCategory = Material,
+		Icon			= PLeatherStrips,
+		WorldStaticModel = StripRollLeather,
+	}
+	
+	item 50pkLeather
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 50 x Leather Strips,
+		DisplayCategory = Material,
+		Icon			= PLeatherStrips,
+		WorldStaticModel = StripRollLeather,
+	}
+	
+	item 100pkLeather
+	{
+		Weight			= 2.5,
+		Type			= Normal,
+		DisplayName		= 100 x Leather Strips,
+		DisplayCategory = Material,
+		Icon			= PLeatherStrips,
+		WorldStaticModel = StripRollLeather,
+	}
+
+	recipe Pack 10
+	{
+		destroy LeatherStrips=10,
+		
+		Result:10pkLeather=1,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:25.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkLeather,
+		
+		Result:LeatherStrips=10,
+		Time:25.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 50
+	{
+		destroy LeatherStrips=50,
+		
+		Result:50pkLeather=1,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 50
+	{
+		destroy 50pkLeather,
+		
+		Result:LeatherStrips=50,
+		Time:40.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 100
+	{
+		destroy LeatherStrips=100,
+		
+		Result:100pkLeather=1,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:100.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 100
+	{
+		destroy 100pkLeather,
+		
+		Result:LeatherStrips=100,
+		Time:80.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkLeather=5,
+		
+		Result:50pkLeather=1,
+		Time:40.0,
+	}
+	
+	recipe Put Together
+	{
+		50pkLeather=2,
+		
+		Result:100pkLeather=1,
+		Time:40.0,
+	}
+
+	recipe Split in Two
+	{
+		100pkLeather=1,
+		
+		Result:50pkLeather=2,
+		Time:40.0,
+	}
+
+	recipe Split in Five
+	{
+		50pkLeather=1,
+		
+		Result:10pkLeather=5,
+		Time:40.0,
+	}
+
+	model StripRollLeather
+	{
+		mesh = WorldItems/stripsroll,
+		texture = WorldItems/LeatherStrips,
+		scale = 1.0,
+	}
+}

@@ -1,0 +1,87 @@
+module Packing
+{
+	imports
+	{
+		Base,
+	}
+	
+	item 10pk556
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 10 x Box of .556 Bullets,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+	
+	item 5pk556
+	{
+		Weight			= 1.0,
+		Type			= Normal,
+		DisplayName		= 5 x Box of .556 Bullets,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+	
+	recipe Pack 10
+	{
+		destroy 556Box=10,
+		
+		Result:10pk556,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:110.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pk556,
+		
+		Result:556Box=10,
+		Time:110.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+	
+	recipe Pack 5
+	{
+		destroy 556Box=5,
+		
+		Result:5pk556,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:80.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+	
+	recipe Unpack 5
+	{
+		destroy 5pk556,
+		
+		Result:556Box=5,
+		Time:80.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Put Together
+	{
+		5pk556=2,
+		
+		Result:10pk556=1,
+		Time:55.0,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pk556=1,
+		
+		Result:5pk556=2,
+		Time:55.0,
+		Sound:AmmoCan_Storage,
+	}
+}

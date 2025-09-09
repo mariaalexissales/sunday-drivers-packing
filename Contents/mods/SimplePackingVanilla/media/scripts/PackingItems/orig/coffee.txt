@@ -1,0 +1,44 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS4pkCoffee
+	{
+		Weight			= 2,
+		Type			= Normal,
+		DisplayName		= 4 x Instant Coffee,
+		DisplayCategory = Food,
+		Icon			= OS4pkCoffee,
+		WorldStaticModel= StackOfCoffee,
+	}
+	
+	recipe Pack 4
+	{
+		destroy Coffee2=4,
+
+		Result:OS4pkCoffee,
+		OnTest:Recipe.OnTest.WholeFood,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 4
+	{
+		destroy OS4pkCoffee,
+
+		Result:Coffee2=4,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	model StackOfCoffee
+	{
+		mesh = WorldItems/stack_of_coffee,
+		texture = WorldItems/Coffee,
+		scale = 1.0,
+	}
+}

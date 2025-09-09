@@ -1,0 +1,42 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS12pkWineEmpty
+	{
+		Weight			= 1.8,
+		Type			= Normal,
+		DisplayName		= 12 x Empty Wine Bottles,
+		DisplayCategory = WaterContainer,
+		Icon			= OS12pkWineEmpty,
+		WorldStaticModel= WoodenBoxOfWhiteWineBottleEmpty,
+	}
+	
+	recipe Pack 12
+	{
+		WineEmpty=12,
+
+		Result:OS12pkWineEmpty,
+		Time:120.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		OS12pkWineEmpty,
+
+		Result:WineEmpty=12,
+		Time:120.0,
+		Category:Storage,
+	}
+
+	model WoodenBoxOfWhiteWineBottleEmpty
+	{
+		mesh = WorldItems/wooden_box_of_empty_wine_bottles,
+		texture = WorldItems/WoodenBoxOfWhiteWineBottle,
+		scale = 1.0,
+	}
+}
