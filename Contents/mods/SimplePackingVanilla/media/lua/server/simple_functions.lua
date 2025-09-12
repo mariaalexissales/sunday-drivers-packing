@@ -105,13 +105,18 @@ function Recipe.OnCreate.SaveUses(items, result, player)
     for i = 0, items:size() - 1 do
         ---@type Item
         local item = items:get(i)
-        if item and instanceof(item, "DrainableComboItem") then
-            local delta = item:getDelta()
+        if item then
+            -- Try to get delta regardless of item type
+            local delta = nil
+            if item.getDelta then
+                delta = item:getDelta()
+            end
+
             -- Only save valid delta values
             if delta ~= nil and type(delta) == "number" then
                 table.insert(remainingUses, delta)
             else
-                -- Use default value for corrupted/missing delta
+                -- Use default value for items without delta or corrupted/missing delta
                 table.insert(remainingUses, 1.0)
             end
         end
@@ -136,37 +141,37 @@ function Recipe.OnCreate.LoadUses(items, result, player)
         return
     end
 
-    if instanceof(result, "DrainableComboItem") then
-        local modData = firstItem:getModData()
-        local savedUses = modData and modData.EasyPackingRemainingUses
+    local modData = firstItem:getModData()
+    local savedUses = modData and modData.EasyPackingRemainingUses
 
-        if savedUses and #savedUses > 0 then
-            -- Load saved uses data
-            local inventory = player:getInventory()
-            local itemToAdd = result:getFullType()
+    if savedUses and #savedUses > 0 then
+        -- Load saved uses data
+        local inventory = player:getInventory()
+        local itemToAdd = result:getFullType()
 
-            for k, savedUse in pairs(savedUses) do
-                -- Validate savedUse before using it
-                if savedUse ~= nil and type(savedUse) == "number" then
-                    -- Clamp delta values to valid range
-                    local delta = math.max(0, math.min(1, savedUse))
+        for k, savedUse in pairs(savedUses) do
+            -- Validate savedUse before using it
+            if savedUse ~= nil and type(savedUse) == "number" then
+                -- Clamp delta values to valid range
+                local delta = math.max(0, math.min(1, savedUse))
 
-                    ---@type DrainableComboItem
-                    local newItem = inventory:AddItem(itemToAdd)
-                    if newItem then
+                local newItem = inventory:AddItem(itemToAdd)
+                if newItem then
+                    -- Try to set delta if the item supports it
+                    if newItem.setDelta then
                         newItem:setDelta(delta)
                     end
                 end
             end
-        else
-            -- Failsafe: use default amounts if no saved data
-            local inventory = player:getInventory()
-            local itemToAdd = result:getFullType()
-            local amount = defaultItemAmounts and defaultItemAmounts[firstItem:getFullType()] or 1
+        end
+    else
+        -- Failsafe: use default amounts if no saved data
+        local inventory = player:getInventory()
+        local itemToAdd = result:getFullType()
+        local amount = defaultItemAmounts and defaultItemAmounts[firstItem:getFullType()] or 1
 
-            for i = 1, amount do
-                inventory:AddItem(itemToAdd)
-            end
+        for i = 1, amount do
+            inventory:AddItem(itemToAdd)
         end
     end
 end
