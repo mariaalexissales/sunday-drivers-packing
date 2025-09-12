@@ -19,7 +19,7 @@ module SP
 	{
 		Bandaid=12,
 
-		Result:OS12pkAdhesiveBandages,
+		Result:SP.OS12pkAdhesiveBandages,
 		OnTest:Recipe.OnTest.IsFavorite,
 		Time:60.0,
 		Category:Storage,
