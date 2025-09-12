@@ -85,6 +85,50 @@ module Packing
 		Category:Storage,
 	}
 
+    recipe Unrope 5
+	{
+		destroy 5pkRopeSheetMetal,
+		
+		CanBeDoneFromFloor:true,
+		Result:SheetMetal=5,
+		OnCreate:Recipe.OnCreate.Unpack1Rope,
+		Time:75.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 10
+	{
+		destroy 10pkRopeSheetMetal,
+		
+		CanBeDoneFromFloor:true,
+		Result:SheetMetal=10,
+		OnCreate:Recipe.OnCreate.Unpack2Rope,
+		Time:100.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 5
+	{
+		destroy 5pkSheetRopeSheetMetal,
+		
+		CanBeDoneFromFloor:true,
+		Result:SheetMetal=5,
+		OnCreate:Recipe.OnCreate.Unpack1SheetRope,
+		Time:75.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 10
+	{
+		destroy 10pkSheetRopeSheetMetal,
+		
+		CanBeDoneFromFloor:true,
+		Result:SheetMetal=10,
+		OnCreate:Recipe.OnCreate.Unpack2SheetRope,
+		Time:100.0,
+		Category:Storage,
+	}
+
 	model StackOfSheetMetal
 	{
 		mesh = WorldItems/stack_of_metal_sheets_no_rope,
