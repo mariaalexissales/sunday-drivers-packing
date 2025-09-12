@@ -91,6 +91,50 @@ module Packing
 		Category:Storage,
 	}
 
+    recipe Unrope 5
+	{
+		destroy 5pkRopeConcretePowder,
+		
+		CanBeDoneFromFloor:true,
+		Result:ConcretePowder=5,
+		OnCreate:Recipe.OnCreate.Unpack1Rope,
+		Time:200.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 10
+	{
+		destroy 10pkRopeConcretePowder,
+		
+		CanBeDoneFromFloor:true,
+		Result:ConcretePowder=10,
+		OnCreate:Recipe.OnCreate.Unpack2Rope,
+		Time:250.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 10
+	{
+		destroy 10pkSheetRopeConcretePowder,
+		
+		CanBeDoneFromFloor:true,
+		Result:ConcretePowder=10,
+		OnCreate:Recipe.OnCreate.Unpack2SheetRope,
+		Time:250.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 5
+	{
+		destroy 5pkSheetRopeConcretePowder,
+		
+		CanBeDoneFromFloor:true,
+		Result:ConcretePowder=5,
+		OnCreate:Recipe.OnCreate.Unpack1SheetRope,
+		Time:200.0,
+		Category:Storage,
+	}
+
 	model StackOfConcretePowderRoped
 	{
 		mesh = WorldItems/stack_of_concrete_powder,
