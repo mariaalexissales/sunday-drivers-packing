@@ -375,6 +375,7 @@ end
 local function saveItemAmounts()
     local scriptManager = ScriptManager.instance
     local recipes = scriptManager:getAllRecipes()
+
     for i = 0, recipes:size() - 1 do
         local recipe = recipes:get(i)
         if recipe and recipe:getLuaCreate() == "Recipe.OnCreate.SaveUses" then
@@ -382,16 +383,16 @@ local function saveItemAmounts()
             if source and source:size() > 0 then
                 local recipeSource = source:get(0)
                 if recipeSource then
-                    local itemName = recipeSource:getOnlyItem()
-                    -- Add null check for itemName
-                    if itemName and itemName ~= "" then
-                        local item = scriptManager:FindItem(itemName)
-                        if item and item:getTypeString() == "Drainable" then
-                            local amount = recipeSource:getCount()
-                            defaultItemAmounts[recipe:getResult():getFullType()] = amount
+                    -- Only process recipes with exactly one item type
+                    if recipeSource:getItems():size() == 1 then
+                        local itemName = recipeSource:getOnlyItem()
+                        if itemName and itemName ~= "" then
+                            local item = scriptManager:FindItem(itemName)
+                            if item and item:getTypeString() == "Drainable" then
+                                local amount = recipeSource:getCount()
+                                defaultItemAmounts[recipe:getResult():getFullType()] = amount
+                            end
                         end
-                    else
-                        print("Warning: Recipe " .. tostring(recipe:getName()) .. " has null or empty itemName")
                     end
                 end
             end
@@ -402,6 +403,7 @@ end
 local function saveNutritionAmounts()
     local scriptManager = ScriptManager.instance
     local recipes = scriptManager:getAllRecipes()
+
     for i = 0, recipes:size() - 1 do
         local recipe = recipes:get(i)
         if recipe and recipe:getLuaCreate() == "Recipe.OnCreate.SaveFood" then
@@ -409,16 +411,16 @@ local function saveNutritionAmounts()
             if source and source:size() > 0 then
                 local recipeSource = source:get(0)
                 if recipeSource then
-                    local itemName = recipeSource:getOnlyItem()
-                    -- Add null check for itemName
-                    if itemName and itemName ~= "" then
-                        local item = scriptManager:FindItem(itemName)
-                        if item then
-                            local amount = recipeSource:getCount()
-                            defaultFoodItems[recipe:getResult():getFullType()] = amount
+                    -- Only process recipes with exactly one item type
+                    if recipeSource:getItems():size() == 1 then
+                        local itemName = recipeSource:getOnlyItem()
+                        if itemName and itemName ~= "" then
+                            local item = scriptManager:FindItem(itemName)
+                            if item then
+                                local amount = recipeSource:getCount()
+                                defaultFoodItems[recipe:getResult():getFullType()] = amount
+                            end
                         end
-                    else
-                        print("Warning: Recipe " .. tostring(recipe:getName()) .. " has null or empty itemName")
                     end
                 end
             end
