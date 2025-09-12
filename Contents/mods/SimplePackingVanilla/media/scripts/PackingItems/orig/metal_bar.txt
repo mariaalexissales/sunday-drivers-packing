@@ -85,6 +85,50 @@ module Packing
 		Category:Storage,
 	}
 
+    recipe Unrope 5
+	{
+		destroy 5pkRopeMetalBar,
+		
+		CanBeDoneFromFloor:true,
+		Result:MetalBar=5,
+		OnCreate:Recipe.OnCreate.Unpack1Rope,
+		Time:75.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 10
+	{
+		destroy 10pkRopeMetalBar,
+		
+		CanBeDoneFromFloor:true,
+		Result:MetalBar=10,
+		OnCreate:Recipe.OnCreate.Unpack2Rope,
+		Time:100.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 5
+	{
+		destroy 5pkSheetRopeMetalBar,
+		
+		CanBeDoneFromFloor:true,
+		Result:MetalBar=5,
+		OnCreate:Recipe.OnCreate.Unpack1SheetRope,
+		Time:75.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 10
+	{
+		destroy 10pkSheetRopeMetalBar,
+		
+		CanBeDoneFromFloor:true,
+		Result:MetalBar=10,
+		OnCreate:Recipe.OnCreate.Unpack2SheetRope,
+		Time:100.0,
+		Category:Storage,
+	}
+
 	model StackOfMetalBars
 	{
 		mesh = WorldItems/stack_of_metal_pipes_no_rope,
