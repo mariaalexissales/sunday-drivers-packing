@@ -381,11 +381,18 @@ local function saveItemAmounts()
             local source = recipe:getSource()
             if source and source:size() > 0 then
                 local recipeSource = source:get(0)
-                local itemName = recipeSource:getOnlyItem()
-                local item = scriptManager:FindItem(itemName)
-                if item and item:getTypeString() == "Drainable" then
-                    local amount = recipeSource:getCount()
-                    defaultItemAmounts[recipe:getResult():getFullType()] = amount
+                if recipeSource then
+                    local itemName = recipeSource:getOnlyItem()
+                    -- Add null check for itemName
+                    if itemName and itemName ~= "" then
+                        local item = scriptManager:FindItem(itemName)
+                        if item and item:getTypeString() == "Drainable" then
+                            local amount = recipeSource:getCount()
+                            defaultItemAmounts[recipe:getResult():getFullType()] = amount
+                        end
+                    else
+                        print("Warning: Recipe " .. tostring(recipe:getName()) .. " has null or empty itemName")
+                    end
                 end
             end
         end
@@ -401,11 +408,18 @@ local function saveNutritionAmounts()
             local source = recipe:getSource()
             if source and source:size() > 0 then
                 local recipeSource = source:get(0)
-                local itemName = recipeSource:getOnlyItem()
-                local item = scriptManager:FindItem(itemName)
-                if item then
-                    local amount = recipeSource:getCount()
-                    defaultFoodItems[recipe:getResult():getFullType()] = amount
+                if recipeSource then
+                    local itemName = recipeSource:getOnlyItem()
+                    -- Add null check for itemName
+                    if itemName and itemName ~= "" then
+                        local item = scriptManager:FindItem(itemName)
+                        if item then
+                            local amount = recipeSource:getCount()
+                            defaultFoodItems[recipe:getResult():getFullType()] = amount
+                        end
+                    else
+                        print("Warning: Recipe " .. tostring(recipe:getName()) .. " has null or empty itemName")
+                    end
                 end
             end
         end
