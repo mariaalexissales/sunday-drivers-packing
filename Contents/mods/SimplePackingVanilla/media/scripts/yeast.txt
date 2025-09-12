@@ -43,7 +43,6 @@ module SP
         Result          :Yeast=5,
         OnCreate        :Recipe.OnCreate.LoadUses,
         OnGiveXP        :Recipe.OnGiveXP.None,
-        RemoveResultItem:true,
         Time            :50.0,
         Category        :Storage
     }
@@ -66,7 +65,6 @@ module SP
         Result          :Yeast=10,
         OnCreate        :Recipe.OnCreate.LoadUses,
         OnGiveXP        :Recipe.OnGiveXP.None,
-        RemoveResultItem:true,
         Time            :50.0,
         Category        :Storage
     }
