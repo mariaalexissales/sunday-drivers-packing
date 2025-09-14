@@ -170,6 +170,26 @@ function Recipe.OnCreate.LoadUses(items, result, player)
         local itemToAdd = result:getFullType()
         local amount = defaultItemAmounts and defaultItemAmounts[firstItem:getFullType()] or 1
 
+        -- Try to parse "Unpack X" recipe name as fallback
+        if amount == 1 then
+            local scriptManager = ScriptManager.instance
+            local recipes = scriptManager:getAllRecipes()
+
+            for i = 0, recipes:size() - 1 do
+                local recipe = recipes:get(i)
+                if recipe and recipe:getResult():getFullType() == result:getFullType() then
+                    local recipeName = recipe:getName()
+                    if recipeName then
+                        local unpackNumber = string.match(recipeName, "Unpack (%d+)")
+                        if unpackNumber then
+                            amount = tonumber(unpackNumber) or 1
+                            break
+                        end
+                    end
+                end
+            end
+        end
+
         for i = 1, amount do
             inventory:AddItem(itemToAdd)
         end
@@ -259,6 +279,27 @@ function Recipe.OnCreate.LoadFood(items, result, player)
         local defaults = defaultFoodItems or {}
         local key      = source.getFullType and source:getFullType() or ""
         local count    = defaults[key] or 1
+
+        -- Try to parse "Unpack X" recipe name as fallback
+        if count == 1 then
+            local scriptManager = ScriptManager.instance
+            local recipes = scriptManager:getAllRecipes()
+
+            for i = 0, recipes:size() - 1 do
+                local recipe = recipes:get(i)
+                if recipe and recipe:getResult():getFullType() == spawnType then
+                    local recipeName = recipe:getName()
+                    if recipeName then
+                        local unpackNumber = string.match(recipeName, "Unpack (%d+)")
+                        if unpackNumber then
+                            count = tonumber(unpackNumber) or 1
+                            break
+                        end
+                    end
+                end
+            end
+        end
+
         print(string.format("[LoadFood] no payload; spawn defaults %s x%d", spawnType, count))
         for i = 1, count do inv:AddItem(spawnType) end
     end
