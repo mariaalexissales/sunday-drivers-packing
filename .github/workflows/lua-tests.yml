@@ -2,14 +2,14 @@ name: Lua Unit Tests
 
 on:
   push:
-    branches: [ main, develop, vanilla-recipe-fixes ]
+    branches: [ main, test ]
     paths:
       - 'Contents/mods/SimplePackingVanilla/media/lua/**/*.lua'
       - 'tests/**/*.lua'
       - '.github/workflows/lua-tests.yml'
       - 'simple_packing-scm-1.rockspec'
   pull_request:
-    branches: [ main, develop ]
+    branches: [ main, test ]
     paths:
       - 'Contents/mods/SimplePackingVanilla/media/lua/**/*.lua'
       - 'tests/**/*.lua'
