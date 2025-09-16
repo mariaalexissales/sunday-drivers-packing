@@ -36,17 +36,8 @@ function TestRunner.runAllTests()
     print("  4. test_merge_split_functions.lua - Merge and split operations")
     print()
 
-    -- Run all tests
-    local runner = luaunit.LuaUnit:new()
-    runner.verbosity = 2
-
-    -- Add test classes
-    runner:addSuite('TestSimpleFunctions')
-    runner:addSuite('TestFoodFunctions')
-    runner:addSuite('TestRopeContainerFunctions')
-    runner:addSuite('TestMergeSplitFunctions')
-
-    local result = runner:runSuite()
+    -- Run all tests using standard luaunit approach
+    local result = luaunit.LuaUnit.run()
 
     local endTime = os.time()
     local duration = endTime - startTime
@@ -55,18 +46,15 @@ function TestRunner.runAllTests()
     print("===============================================")
     print("Test Summary:")
     print("===============================================")
-    print(string.format("Tests run: %d", runner.result.testCount))
-    print(string.format("Failures: %d", runner.result.failureCount))
-    print(string.format("Errors: %d", runner.result.errorCount))
     print(string.format("Duration: %d seconds", duration))
 
-    if runner.result.failureCount == 0 and runner.result.errorCount == 0 then
+    if result == 0 then
         print()
-        print("🎉 ALL TESTS PASSED! 🎉")
+        print("*** ALL TESTS PASSED! ***")
         print("The simple_functions.lua code is working correctly.")
     else
         print()
-        print("❌ SOME TESTS FAILED")
+        print("*** SOME TESTS FAILED ***")
         print("Please review the test output above for details.")
     end
 
@@ -76,7 +64,12 @@ end
 -- Run tests if this file is executed directly
 if arg and arg[0] and arg[0]:match("run_tests%.lua$") then
     local result = TestRunner.runAllTests()
-    os.exit(result)
+    -- Ensure we exit with proper code (0 for success, 1 for failure)
+    if result == 0 then
+        os.exit(0)
+    else
+        os.exit(1)
+    end
 else
     -- Return the test runner for external use
     return TestRunner

@@ -2,14 +2,14 @@ name: Lua Unit Tests
 
 on:
   push:
-    branches: [ main, test ]
+    branches: [ main, test, test-automation ]
     paths:
       - 'Contents/mods/SimplePackingVanilla/media/lua/**/*.lua'
       - 'tests/**/*.lua'
       - '.github/workflows/lua-tests.yml'
       - 'simple_packing-scm-1.rockspec'
   pull_request:
-    branches: [ main, test ]
+    branches: [ main, test, test-automation ]
     paths:
       - 'Contents/mods/SimplePackingVanilla/media/lua/**/*.lua'
       - 'tests/**/*.lua'
@@ -54,8 +54,8 @@ jobs:
         echo "Lua version: $(lua -v)"
         echo ""
 
-        # Create symbolic link for easier path resolution in tests
-        ln -sf . simple_packing
+        # Create symbolic link for easier path resolution in tests (ignore errors)
+        ln -sf . simple_packing 2>/dev/null || true
 
         # Run the test suite
         lua tests/run_tests.lua
