@@ -19,24 +19,18 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
-    strategy:
-      matrix:
-        lua-version: ['5.1', '5.2', '5.3', '5.4']
-        include:
-          - lua-version: '5.1'
-            primary: true  # Project Zomboid B41 uses Lua 5.1
-
-    name: Test with Lua ${{ matrix.lua-version }}
+    name: Test with Lua 5.1.5
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Setup Lua ${{ matrix.lua-version }}
+    - name: Setup Lua 5.1.5
       uses: leafo/gh-actions-lua@v10
       with:
-        luaVersion: ${{ matrix.lua-version }}
+        luaVersion: '5.1.5'
 
     - name: Setup LuaRocks
       uses: leafo/gh-actions-luarocks@v4
@@ -64,7 +58,7 @@ jobs:
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: test-results-lua-${{ matrix.lua-version }}
+        name: test-results-lua-5.1.5
         path: |
           test-results.xml
           coverage-report.html
