@@ -174,9 +174,14 @@ end
 function TestFoodFunctions:testSaveFoodMissingMethods()
     -- Create item without some methods
     local basicItem = mocks.MockItem:new("Base.BasicFood", "Basic Food")
-    basicItem.getCalories = nil
-    basicItem.getThirstChange = nil
-    basicItem.getPoisonPower = nil
+    -- Create a custom metatable without the methods we want to remove
+    local mt = {}
+    for k, v in pairs(getmetatable(basicItem)) do
+        if k ~= "getCalories" and k ~= "getThirstChange" and k ~= "getPoisonPower" then
+            mt[k] = v
+        end
+    end
+    setmetatable(basicItem, mt)
 
     self.mockItemContainer:add(basicItem)
 
