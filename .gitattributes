@@ -1,3 +1,4 @@
-/tests/*      merge=ours
-Makefile      merge=ours
-*.rockspec    merge=ours
+/tests/*              merge=ours
+Makefile              merge=ours
+*.rockspec            merge=ours
+/.github/workflows/*  merge=ours
