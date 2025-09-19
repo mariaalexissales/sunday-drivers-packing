@@ -4,6 +4,16 @@ module SP
 	{
 		Base,
 	}
+
+    item 50pkThread
+	{
+		Weight			= 0.75,
+		Type			= Normal,
+		DisplayName		= 50 x Thread,
+		DisplayCategory = Material,
+		Icon			= PThread,
+		WorldStaticModel= ThreadXL,
+	}
 	
 	item 10pkThread
 	{
@@ -46,6 +56,28 @@ module SP
 		Time:50.0,
 		Category:Storage,
 	}
+
+    recipe Pack 50
+	{
+		destroy Thread=50,
+		
+		Result:50pkThread,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:25.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 50
+	{
+		destroy 50pkThread,
+		
+		Result:Thread,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:25.0,
+		Category:Storage,
+	}
 	
 	recipe Pack 5
 	{
@@ -85,6 +117,15 @@ module SP
 		Result:5pkThread,
 		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
 		RemoveResultItem:true,
+		Time:30.0,
+	}
+
+    recipe Put Together
+	{
+		10pkThread=5,
+		
+		Result:50pkThread=1,
+		OnCreate:Recipe.OnCreate.MergeUses,
 		Time:30.0,
 	}
 

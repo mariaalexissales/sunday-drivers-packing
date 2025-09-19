@@ -9,7 +9,7 @@ module SP
     {
         DisplayName = 5 x Sack,
         DisplayCategory = Container,
-        Weight = 2.5,
+        Weight = 0.5,
         Type = Normal,
         Icon = SandbagEmpty,
         WorldStaticModel = SandBag_Ground,
@@ -19,7 +19,7 @@ module SP
     {
         DisplayName = 10 x Sack,
         DisplayCategory = Container,
-        Weight = 5,
+        Weight = 1,
         Type = Normal,
         Icon = SandbagEmpty,
         WorldStaticModel = SandBag_Ground,
