@@ -1,0 +1,14 @@
+# Git attributes for handling test branch merges
+
+# Prevent GitHub Actions from being merged from test branches to main
+.github/workflows/* merge=ours
+
+# Prevent test files from being merged from test branches to main
+tests/* merge=ours
+
+# Test-related configuration files
+*test*.yml merge=ours
+*test*.yaml merge=ours
+
+# Rockspec files (test dependencies)
+*test*.rockspec merge=ours
