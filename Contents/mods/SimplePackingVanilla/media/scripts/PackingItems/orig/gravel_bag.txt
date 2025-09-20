@@ -45,6 +45,54 @@ module Packing
 		WorldStaticModel= StackOfGravelBagSheetRoped,
 	}
 
+    recipe Unrope 5
+	{
+		destroy 5pkRopeGravelBag,
+		
+		CanBeDoneFromFloor:true,
+		Result:Gravelbag=5,
+		OnCreate:Recipe.OnCreate.LoadUsesOneRope,
+		RemoveResultItem:true,
+		Time:75.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 10
+	{
+		destroy 10pkRopeGravelBag,
+		
+		CanBeDoneFromFloor:true,
+		Result:Gravelbag=10,
+		OnCreate:Recipe.OnCreate.LoadUsesTwoRope,
+		RemoveResultItem:true,
+		Time:100.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 5
+	{
+		destroy 5pkSheetRopeGravelBag,
+		
+		CanBeDoneFromFloor:true,
+		Result:Gravelbag=5,
+		OnCreate:Recipe.OnCreate.LoadUsesOneSheetRope,
+		RemoveResultItem:true,
+		Time:75.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 10
+	{
+		destroy 10pkSheetRopeGravelBag,
+		
+		CanBeDoneFromFloor:true,
+		Result:Gravelbag=10,
+		OnCreate:Recipe.OnCreate.LoadUsesTwoSheetRope,
+		RemoveResultItem:true,
+		Time:100.0,
+		Category:Storage,
+	}
+
 	model StackOfGravelBagRoped
 	{
 		mesh = WorldItems/stack_of_gravel_bags,

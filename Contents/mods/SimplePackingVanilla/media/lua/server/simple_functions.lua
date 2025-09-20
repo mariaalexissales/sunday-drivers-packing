@@ -101,37 +101,97 @@ end
 
 function Recipe.OnCreate.SaveUses(items, result, player)
     local remainingUses = {};
+
     for i = 0, items:size() - 1 do
         ---@type Item
         local item = items:get(i)
-        if item and instanceof(item, "DrainableComboItem") then
-            table.insert(remainingUses, item:getDelta())
+        if item then
+            -- Try to get delta regardless of item type
+            local delta = nil
+            if item.getDelta then
+                delta = item:getDelta()
+            end
+
+            -- Only save valid delta values
+            if delta ~= nil and type(delta) == "number" then
+                table.insert(remainingUses, delta)
+            else
+                -- Use default value for items without delta or corrupted/missing delta
+                table.insert(remainingUses, 1.0)
+            end
         end
     end
-    result:getModData().EasyPackingRemainingUses = remainingUses
+
+    -- Only save if we have valid data
+    if #remainingUses > 0 then
+        result:getModData().EasyPackingRemainingUses = remainingUses
+    end
 end
 
 ---@param items Item
 ---@param result InventoryItem
 ---@param player IsoGameCharacter
 function Recipe.OnCreate.LoadUses(items, result, player)
-    if instanceof(result, "DrainableComboItem") then
-        local savedUses = items:get(0):getModData().EasyPackingRemainingUses
-        if savedUses then
-            local inventory = player:getInventory()
-            local itemToAdd = result:getFullType()
-            for k, savedUse in pairs(savedUses) do
-                ---@type DrainableComboItem
+    if not items or not result or not player then
+        return
+    end
+
+    local firstItem = items:get(0)
+    if not firstItem then
+        return
+    end
+
+    local modData = firstItem:getModData()
+    local savedUses = modData and modData.EasyPackingRemainingUses
+
+    if savedUses and #savedUses > 0 then
+        -- Load saved uses data
+        local inventory = player:getInventory()
+        local itemToAdd = result:getFullType()
+
+        for k, savedUse in pairs(savedUses) do
+            -- Validate savedUse before using it
+            if savedUse ~= nil and type(savedUse) == "number" then
+                -- Clamp delta values to valid range
+                local delta = math.max(0, math.min(1, savedUse))
+
                 local newItem = inventory:AddItem(itemToAdd)
-                newItem:setDelta(savedUse)
+                if newItem then
+                    -- Try to set delta if the item supports it
+                    if newItem.setDelta then
+                        newItem:setDelta(delta)
+                    end
+                end
             end
-        else
-            local inventory = player:getInventory()
-            local itemToAdd = result:getFullType()
-            local amount = defaultItemAmounts[items:get(0):getFullType()]
-            for i = 1, amount do
-                inventory:AddItem(itemToAdd)
+        end
+    else
+        -- Failsafe: use default amounts if no saved data
+        local inventory = player:getInventory()
+        local itemToAdd = result:getFullType()
+        local amount = defaultItemAmounts and defaultItemAmounts[firstItem:getFullType()] or 1
+
+        -- Try to parse "Unpack X" recipe name as fallback
+        if amount == 1 then
+            local scriptManager = ScriptManager.instance
+            local recipes = scriptManager:getAllRecipes()
+
+            for i = 0, recipes:size() - 1 do
+                local recipe = recipes:get(i)
+                if recipe and recipe:getResult():getFullType() == result:getFullType() then
+                    local recipeName = recipe:getName()
+                    if recipeName then
+                        local unpackNumber = string.match(recipeName, "Unpack (%d+)")
+                        if unpackNumber then
+                            amount = tonumber(unpackNumber) or 1
+                            break
+                        end
+                    end
+                end
             end
+        end
+
+        for i = 1, amount do
+            inventory:AddItem(itemToAdd)
         end
     end
 end
@@ -219,6 +279,27 @@ function Recipe.OnCreate.LoadFood(items, result, player)
         local defaults = defaultFoodItems or {}
         local key      = source.getFullType and source:getFullType() or ""
         local count    = defaults[key] or 1
+
+        -- Try to parse "Unpack X" recipe name as fallback
+        if count == 1 then
+            local scriptManager = ScriptManager.instance
+            local recipes = scriptManager:getAllRecipes()
+
+            for i = 0, recipes:size() - 1 do
+                local recipe = recipes:get(i)
+                if recipe and recipe:getResult():getFullType() == spawnType then
+                    local recipeName = recipe:getName()
+                    if recipeName then
+                        local unpackNumber = string.match(recipeName, "Unpack (%d+)")
+                        if unpackNumber then
+                            count = tonumber(unpackNumber) or 1
+                            break
+                        end
+                    end
+                end
+            end
+        end
+
         print(string.format("[LoadFood] no payload; spawn defaults %s x%d", spawnType, count))
         for i = 1, count do inv:AddItem(spawnType) end
     end
@@ -340,17 +421,25 @@ end
 local function saveItemAmounts()
     local scriptManager = ScriptManager.instance
     local recipes = scriptManager:getAllRecipes()
+
     for i = 0, recipes:size() - 1 do
         local recipe = recipes:get(i)
         if recipe and recipe:getLuaCreate() == "Recipe.OnCreate.SaveUses" then
             local source = recipe:getSource()
             if source and source:size() > 0 then
                 local recipeSource = source:get(0)
-                local itemName = recipeSource:getOnlyItem()
-                local item = scriptManager:FindItem(itemName)
-                if item and item:getTypeString() == "Drainable" then
-                    local amount = recipeSource:getCount()
-                    defaultItemAmounts[recipe:getResult():getFullType()] = amount
+                if recipeSource then
+                    -- Only process recipes with exactly one item type
+                    if recipeSource:getItems():size() == 1 then
+                        local itemName = recipeSource:getOnlyItem()
+                        if itemName and itemName ~= "" then
+                            local item = scriptManager:FindItem(itemName)
+                            if item and item:getTypeString() == "Drainable" then
+                                local amount = recipeSource:getCount()
+                                defaultItemAmounts[recipe:getResult():getFullType()] = amount
+                            end
+                        end
+                    end
                 end
             end
         end
@@ -360,17 +449,25 @@ end
 local function saveNutritionAmounts()
     local scriptManager = ScriptManager.instance
     local recipes = scriptManager:getAllRecipes()
+
     for i = 0, recipes:size() - 1 do
         local recipe = recipes:get(i)
         if recipe and recipe:getLuaCreate() == "Recipe.OnCreate.SaveFood" then
             local source = recipe:getSource()
             if source and source:size() > 0 then
                 local recipeSource = source:get(0)
-                local itemName = recipeSource:getOnlyItem()
-                local item = scriptManager:FindItem(itemName)
-                if item then
-                    local amount = recipeSource:getCount()
-                    defaultFoodItems[recipe:getResult():getFullType()] = amount
+                if recipeSource then
+                    -- Only process recipes with exactly one item type
+                    if recipeSource:getItems():size() == 1 then
+                        local itemName = recipeSource:getOnlyItem()
+                        if itemName and itemName ~= "" then
+                            local item = scriptManager:FindItem(itemName)
+                            if item then
+                                local amount = recipeSource:getCount()
+                                defaultFoodItems[recipe:getResult():getFullType()] = amount
+                            end
+                        end
+                    end
                 end
             end
         end

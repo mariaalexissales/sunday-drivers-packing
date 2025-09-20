@@ -42,6 +42,7 @@ module SP
 		Result:Wine2=10,
 		OnGiveXP:Recipe.OnGiveXP.None,
         OnCreate:Recipe.OnCreate.LoadFood,
+        RemoveResultItem:true,
 		Time:75.0,
 		Category:Storage,
 	}
@@ -63,6 +64,7 @@ module SP
 		Result:Wine2=5,
 		OnGiveXP:Recipe.OnGiveXP.None,
         OnCreate:Recipe.OnCreate.LoadFood,
+        RemoveResultItem:true,
 		Time:50.0,
 		Category:Storage,
 	}

@@ -91,6 +91,46 @@ module Packing
 		Category:Storage,
 	}
 
+    recipe Unrope 5
+	{
+		destroy 5pkRopeTreeBranch,
+		
+		Result:TreeBranch=5,
+		OnCreate:Recipe.OnCreate.Unpack1Rope,
+		Time:50.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 10
+	{
+		destroy 10pkRopeTreeBranch,
+		
+		Result:TreeBranch=10,
+		OnCreate:Recipe.OnCreate.Unpack2Rope,
+		Time:75.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 5
+	{
+		destroy 5pkSheetRopeTreeBranch,
+		
+		Result:TreeBranch=5,
+		OnCreate:Recipe.OnCreate.Unpack1SheetRope,
+		Time:50.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 10
+	{
+		destroy 10pkSheetRopeTreeBranch,
+		
+		Result:TreeBranch=10,
+		OnCreate:Recipe.OnCreate.Unpack2SheetRope,
+		Time:75.0,
+		Category:Storage,
+	}
+
 	model StackOfTreeBranchesRoped
 	{
 		mesh = WorldItems/stack_of_tree_branches,
