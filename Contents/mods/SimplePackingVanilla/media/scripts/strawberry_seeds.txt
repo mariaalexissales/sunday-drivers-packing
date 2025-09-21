@@ -5,7 +5,7 @@ module SP
 		Base,
 	}
 
-    item 5pkStrawberryBagSeed
+    item 5pkStrewberrieBagSeed
     {
         DisplayName = 5x Strawberry Seeds,
         Weight = 0.05,
@@ -14,7 +14,7 @@ module SP
         WorldStaticModel = SeedPacket,
     }
 
-    item 10pkStrawberryBagSeed
+    item 10pkStrewberrieBagSeed
     {
         DisplayName = 10x Strawberry Seeds,
         Weight = 0.1,
@@ -23,7 +23,7 @@ module SP
         WorldStaticModel = SeedPacket,
     }
 
-    item 50pkStrawberryBagSeed
+    item 50pkStrewberrieBagSeed
     {
         DisplayName = 50x Strawberry Seeds,
         Weight = 0.5,
@@ -32,7 +32,7 @@ module SP
         WorldStaticModel = SeedPacket,
     }
 
-    item 100pkStrawberryBagSeed
+    item 100pkStrewberrieBagSeed
     {
         DisplayName = 100x Strawberry Seeds,
         Weight = 1.0,
@@ -43,41 +43,41 @@ module SP
 
     recipe Pack 5 Strawberry Seeds
     {
-        destroy StrawberryBagSeed=5,
-        Result:5pkStrawberryBagSeed,
+        destroy StrewberrieBagSeed=5,
+        Result:5pkStrewberrieBagSeed,
         Time:45.0,
         Category:Storage,
     }
 
     recipe Pack 10 Strawberry Seeds
     {
-        destroy StrawberryBagSeed=10,
-        Result:10pkStrawberryBagSeed,
+        destroy StrewberrieBagSeed=10,
+        Result:10pkStrewberrieBagSeed,
         Time:45.0,
         Category:Storage,
     }
 
     recipe Pack 50 Strawberry Seeds
     {
-        destroy StrawberryBagSeed=50,
-        Result:50pkStrawberryBagSeed,
+        destroy StrewberrieBagSeed=50,
+        Result:50pkStrewberrieBagSeed,
         Time:45.0,
         Category:Storage,
     }
 
     recipe Pack 100 Strawberry Seeds
     {
-        destroy StrawberryBagSeed=100,
-        Result:100pkStrawberryBagSeed,
+        destroy StrewberrieBagSeed=100,
+        Result:100pkStrewberrieBagSeed,
         Time:45.0,
         Category:Storage,
     }
 
     recipe Unpack 5
     {
-        destroy 5pkStrawberryBagSeed,
+        destroy 5pkStrewberrieBagSeed,
 
-        Result:StrawberryBagSeed=5,
+        Result:StrewberrieBagSeed=5,
         Time:50.0,
         Category:Storage
     }
@@ -85,9 +85,9 @@ module SP
 
     recipe Unpack 10
     {
-        destroy 10pkStrawberryBagSeed,
+        destroy 10pkStrewberrieBagSeed,
 
-        Result:StrawberryBagSeed=10,
+        Result:StrewberrieBagSeed=10,
         Time:50.0,
         Category:Storage
     }
@@ -95,9 +95,9 @@ module SP
 
     recipe Unpack 50
     {
-        destroy 50pkStrawberryBagSeed,
+        destroy 50pkStrewberrieBagSeed,
 
-        Result:StrawberryBagSeed=50,
+        Result:StrewberrieBagSeed=50,
         Time:50.0,
         Category:Storage
     }
@@ -105,9 +105,9 @@ module SP
 
     recipe Unpack 100
     {
-        destroy 100pkStrawberryBagSeed,
+        destroy 100pkStrewberrieBagSeed,
 
-        Result:StrawberryBagSeed=100,
+        Result:StrewberrieBagSeed=100,
         Time:50.0,
         Category:Storage
     }
@@ -116,54 +116,54 @@ module SP
 
     recipe Put Together
     {
-        5pkStrawberryBagSeed=2,
+        5pkStrewberrieBagSeed=2,
 
-        Result  :10pkStrawberryBagSeed=1,
+        Result  :10pkStrewberrieBagSeed=1,
         Time    :10.0
     }
 
 
     recipe Put Together
     {
-        10pkStrawberryBagSeed=5,
+        10pkStrewberrieBagSeed=5,
 
-        Result  :50pkStrawberryBagSeed=1,
+        Result  :50pkStrewberrieBagSeed=1,
         Time    :20.0
     }
 
 
     recipe Put Together
     {
-        50pkStrawberryBagSeed=2,
+        50pkStrewberrieBagSeed=2,
 
-        Result  :100pkStrawberryBagSeed=1,
+        Result  :100pkStrewberrieBagSeed=1,
         Time    :40.0
     }
 
 
     recipe Split in Two
     {
-        10pkStrawberryBagSeed=1,
+        10pkStrewberrieBagSeed=1,
 
-        Result  :5pkStrawberryBagSeed=2,
+        Result  :5pkStrewberrieBagSeed=2,
         Time    :10.0
     }
 
 
     recipe Split in Five
     {
-        50pkStrawberryBagSeed=1,
+        50pkStrewberrieBagSeed=1,
 
-        Result  :10pkStrawberryBagSeed=5,
+        Result  :10pkStrewberrieBagSeed=5,
         Time    :20.0
     }
 
 
     recipe Split in Two
     {
-        100pkStrawberryBagSeed=1,
+        100pkStrewberrieBagSeed=1,
 
-        Result  :50pkStrawberryBagSeed=2,
+        Result  :50pkStrewberrieBagSeed=2,
         Time    :40.0
     }
 }
