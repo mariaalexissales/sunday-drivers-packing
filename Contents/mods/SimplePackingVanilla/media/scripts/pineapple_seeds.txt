@@ -5,9 +5,6 @@ module SP
 		Base,
 	}
 
-    // Note: Item definitions for PineappleBagSeed were missing from original files
-    // Adding placeholder items for completeness
-
     item 5pkPineappleBagSeed
     {
         DisplayName = 5x Pineapple Seeds,
