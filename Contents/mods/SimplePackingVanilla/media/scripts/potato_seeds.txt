@@ -1,0 +1,169 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+
+    item 5pkPotatoBagSeed
+    {
+        DisplayName = 5x Potato Seeds,
+        Weight = 0.05,
+        Type = Normal,
+        Icon = TZ_SeedpackPotatoes,
+        WorldStaticModel = PotatoSeedBag_Ground,
+    }
+
+    item 10pkPotatoBagSeed
+    {
+        DisplayName = 10x Potato Seeds,
+        Weight = 0.1,
+        Type = Normal,
+        Icon = TZ_SeedpackPotatoes,
+        WorldStaticModel = PotatoSeedBag_Ground,
+    }
+
+    item 50pkPotatoBagSeed
+    {
+        DisplayName = 50x Potato Seeds,
+        Weight = 0.5,
+        Type = Normal,
+        Icon = TZ_SeedpackPotatoes,
+        WorldStaticModel = PotatoSeedBag_Ground,
+    }
+
+    item 100pkPotatoBagSeed
+    {
+        DisplayName = 100x Potato Seeds,
+        Weight = 1.0,
+        Type = Normal,
+        Icon = TZ_SeedpackPotatoes,
+        WorldStaticModel = PotatoSeedBag_Ground,
+    }
+
+    recipe Pack 5 Potato Seeds
+    {
+        destroy PotatoBagSeed=5,
+        Result:5pkPotatoBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 10 Potato Seeds
+    {
+        destroy PotatoBagSeed=10,
+        Result:10pkPotatoBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 50 Potato Seeds
+    {
+        destroy PotatoBagSeed=50,
+        Result:50pkPotatoBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 100 Potato Seeds
+    {
+        destroy PotatoBagSeed=100,
+        Result:100pkPotatoBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Unpack 5
+    {
+        destroy 5pkPotatoBagSeed,
+
+        Result:PotatoBagSeed=5,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 10
+    {
+        destroy 10pkPotatoBagSeed,
+
+        Result:PotatoBagSeed=10,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 50
+    {
+        destroy 50pkPotatoBagSeed,
+
+        Result:PotatoBagSeed=50,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 100
+    {
+        destroy 100pkPotatoBagSeed,
+
+        Result:PotatoBagSeed=100,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+
+    recipe Put Together
+    {
+        5pkPotatoBagSeed=2,
+
+        Result  :10pkPotatoBagSeed=1,
+        Time    :10.0
+    }
+
+
+    recipe Put Together
+    {
+        10pkPotatoBagSeed=5,
+
+        Result  :50pkPotatoBagSeed=1,
+        Time    :20.0
+    }
+
+
+    recipe Put Together
+    {
+        50pkPotatoBagSeed=2,
+
+        Result  :100pkPotatoBagSeed=1,
+        Time    :40.0
+    }
+
+
+    recipe Split in Two
+    {
+        10pkPotatoBagSeed=1,
+
+        Result  :5pkPotatoBagSeed=2,
+        Time    :10.0
+    }
+
+
+    recipe Split in Five
+    {
+        50pkPotatoBagSeed=1,
+
+        Result  :10pkPotatoBagSeed=5,
+        Time    :20.0
+    }
+
+
+    recipe Split in Two
+    {
+        100pkPotatoBagSeed=1,
+
+        Result  :50pkPotatoBagSeed=2,
+        Time    :40.0
+    }
+}

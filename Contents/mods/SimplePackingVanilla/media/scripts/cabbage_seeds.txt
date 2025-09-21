@@ -1,0 +1,169 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+
+    item 5pkCabbageBagSeed
+    {
+        DisplayName = 5x Cabbage Seeds,
+        Weight = 0.05,
+        Type = Normal,
+        Icon = TZ_SeedpackCabbageLettuce,
+        WorldStaticModel = CabbageSeedBag_Ground,
+    }
+
+    item 10pkCabbageBagSeed
+    {
+        DisplayName = 10x Cabbage Seeds,
+        Weight = 0.1,
+        Type = Normal,
+        Icon = TZ_SeedpackCabbageLettuce,
+        WorldStaticModel = CabbageSeedBag_Ground,
+    }
+
+    item 50pkCabbageBagSeed
+    {
+        DisplayName = 50x Cabbage Seeds,
+        Weight = 0.5,
+        Type = Normal,
+        Icon = TZ_SeedpackCabbageLettuce,
+        WorldStaticModel = CabbageSeedBag_Ground,
+    }
+
+    item 100pkCabbageBagSeed
+    {
+        DisplayName = 100x Cabbage Seeds,
+        Weight = 1.0,
+        Type = Normal,
+        Icon = TZ_SeedpackCabbageLettuce,
+        WorldStaticModel = CabbageSeedBag_Ground,
+    }
+
+    recipe Pack 5 Cabbage Seeds
+    {
+        destroy CabbageBagSeed=5,
+        Result:5pkCabbageBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 10 Cabbage Seeds
+    {
+        destroy CabbageBagSeed=10,
+        Result:10pkCabbageBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 50 Cabbage Seeds
+    {
+        destroy CabbageBagSeed=50,
+        Result:50pkCabbageBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 100 Cabbage Seeds
+    {
+        destroy CabbageBagSeed=100,
+        Result:100pkCabbageBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Unpack 5
+    {
+        destroy 5pkCabbageBagSeed,
+
+        Result:CabbageBagSeed=5,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 10
+    {
+        destroy 10pkCabbageBagSeed,
+
+        Result:CabbageBagSeed=10,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 50
+    {
+        destroy 50pkCabbageBagSeed,
+
+        Result:CabbageBagSeed=50,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 100
+    {
+        destroy 100pkCabbageBagSeed,
+
+        Result:CabbageBagSeed=100,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+
+    recipe Put Together
+    {
+        5pkCabbageBagSeed=2,
+
+        Result  :10pkCabbageBagSeed=1,
+        Time    :10.0
+    }
+
+
+    recipe Put Together
+    {
+        10pkCabbageBagSeed=5,
+
+        Result  :50pkCabbageBagSeed=1,
+        Time    :20.0
+    }
+
+
+    recipe Put Together
+    {
+        50pkCabbageBagSeed=2,
+
+        Result  :100pkCabbageBagSeed=1,
+        Time    :40.0
+    }
+
+
+    recipe Split in Two
+    {
+        10pkCabbageBagSeed=1,
+
+        Result  :5pkCabbageBagSeed=2,
+        Time    :10.0
+    }
+
+
+    recipe Split in Five
+    {
+        50pkCabbageBagSeed=1,
+
+        Result  :10pkCabbageBagSeed=5,
+        Time    :20.0
+    }
+
+
+    recipe Split in Two
+    {
+        100pkCabbageBagSeed=1,
+
+        Result  :50pkCabbageBagSeed=2,
+        Time    :40.0
+    }
+}

@@ -1,0 +1,169 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+
+    item 5pkCarrotsBagSeed
+    {
+        DisplayName = 5x Carrots Seeds,
+        Weight = 0.05,
+        Type = Normal,
+        Icon = CarrotsSeedPacket,
+        WorldStaticModel = SeedPacket,
+    }
+
+    item 10pkCarrotsBagSeed
+    {
+        DisplayName = 10x Carrots Seeds,
+        Weight = 0.1,
+        Type = Normal,
+        Icon = CarrotsSeedPacket,
+        WorldStaticModel = SeedPacket,
+    }
+
+    item 50pkCarrotsBagSeed
+    {
+        DisplayName = 50x Carrots Seeds,
+        Weight = 0.5,
+        Type = Normal,
+        Icon = CarrotsSeedPacket,
+        WorldStaticModel = SeedPacket,
+    }
+
+    item 100pkCarrotsBagSeed
+    {
+        DisplayName = 100x Carrots Seeds,
+        Weight = 1.0,
+        Type = Normal,
+        Icon = CarrotsSeedPacket,
+        WorldStaticModel = SeedPacket,
+    }
+
+    recipe Pack 5 Carrots Seeds
+    {
+        destroy CarrotsBagSeed=5,
+        Result:5pkCarrotsBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 10 Carrots Seeds
+    {
+        destroy CarrotsBagSeed=10,
+        Result:10pkCarrotsBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 50 Carrots Seeds
+    {
+        destroy CarrotsBagSeed=50,
+        Result:50pkCarrotsBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 100 Carrots Seeds
+    {
+        destroy CarrotsBagSeed=100,
+        Result:100pkCarrotsBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Unpack 5
+    {
+        destroy 5pkCarrotsBagSeed,
+
+        Result:CarrotsBagSeed=5,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 10
+    {
+        destroy 10pkCarrotsBagSeed,
+
+        Result:CarrotsBagSeed=10,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 50
+    {
+        destroy 50pkCarrotsBagSeed,
+
+        Result:CarrotsBagSeed=50,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 100
+    {
+        destroy 100pkCarrotsBagSeed,
+
+        Result:CarrotsBagSeed=100,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+
+    recipe Put Together
+    {
+        5pkCarrotsBagSeed=2,
+
+        Result  :10pkCarrotsBagSeed=1,
+        Time    :10.0
+    }
+
+
+    recipe Put Together
+    {
+        10pkCarrotsBagSeed=5,
+
+        Result  :50pkCarrotsBagSeed=1,
+        Time    :20.0
+    }
+
+
+    recipe Put Together
+    {
+        50pkCarrotsBagSeed=2,
+
+        Result  :100pkCarrotsBagSeed=1,
+        Time    :40.0
+    }
+
+
+    recipe Split in Two
+    {
+        10pkCarrotsBagSeed=1,
+
+        Result  :5pkCarrotsBagSeed=2,
+        Time    :10.0
+    }
+
+
+    recipe Split in Five
+    {
+        50pkCarrotsBagSeed=1,
+
+        Result  :10pkCarrotsBagSeed=5,
+        Time    :20.0
+    }
+
+
+    recipe Split in Two
+    {
+        100pkCarrotsBagSeed=1,
+
+        Result  :50pkCarrotsBagSeed=2,
+        Time    :40.0
+    }
+}
