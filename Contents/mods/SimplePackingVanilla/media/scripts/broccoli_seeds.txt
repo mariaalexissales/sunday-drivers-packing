@@ -1,0 +1,169 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+
+    item 5pkBroccoliBagSeed
+    {
+        DisplayName = 5x Broccoli Seeds,
+        Weight = 0.05,
+        Type = Normal,
+        Icon = TZ_SeedpackBroccoli,
+        WorldStaticModel = SeedPacket,
+    }
+
+    item 10pkBroccoliBagSeed
+    {
+        DisplayName = 10x Broccoli Seeds,
+        Weight = 0.1,
+        Type = Normal,
+        Icon = TZ_SeedpackBroccoli,
+        WorldStaticModel = SeedPacket,
+    }
+
+    item 50pkBroccoliBagSeed
+    {
+        DisplayName = 50x Broccoli Seeds,
+        Weight = 0.5,
+        Type = Normal,
+        Icon = TZ_SeedpackBroccoli,
+        WorldStaticModel = SeedPacket,
+    }
+
+    item 100pkBroccoliBagSeed
+    {
+        DisplayName = 100x Broccoli Seeds,
+        Weight = 1.0,
+        Type = Normal,
+        Icon = TZ_SeedpackBroccoli,
+        WorldStaticModel = SeedPacket,
+    }
+
+    recipe Pack 5 Broccoli Seeds
+    {
+        destroy BroccoliBagSeed=5,
+        Result:5pkBroccoliBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 10 Broccoli Seeds
+    {
+        destroy BroccoliBagSeed=10,
+        Result:10pkBroccoliBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 50 Broccoli Seeds
+    {
+        destroy BroccoliBagSeed=50,
+        Result:50pkBroccoliBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 100 Broccoli Seeds
+    {
+        destroy BroccoliBagSeed=100,
+        Result:100pkBroccoliBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Unpack 5
+    {
+        destroy 5pkBroccoliBagSeed,
+
+        Result:BroccoliBagSeed=5,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 10
+    {
+        destroy 10pkBroccoliBagSeed,
+
+        Result:BroccoliBagSeed=10,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 50
+    {
+        destroy 50pkBroccoliBagSeed,
+
+        Result:BroccoliBagSeed=50,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 100
+    {
+        destroy 100pkBroccoliBagSeed,
+
+        Result:BroccoliBagSeed=100,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+
+    recipe Put Together
+    {
+        5pkBroccoliBagSeed=2,
+
+        Result  :10pkBroccoliBagSeed=1,
+        Time    :10.0
+    }
+
+
+    recipe Put Together
+    {
+        10pkBroccoliBagSeed=5,
+
+        Result  :50pkBroccoliBagSeed=1,
+        Time    :20.0
+    }
+
+
+    recipe Put Together
+    {
+        50pkBroccoliBagSeed=2,
+
+        Result  :100pkBroccoliBagSeed=1,
+        Time    :40.0
+    }
+
+
+    recipe Split in Two
+    {
+        10pkBroccoliBagSeed=1,
+
+        Result  :5pkBroccoliBagSeed=2,
+        Time    :10.0
+    }
+
+
+    recipe Split in Five
+    {
+        50pkBroccoliBagSeed=1,
+
+        Result  :10pkBroccoliBagSeed=5,
+        Time    :20.0
+    }
+
+
+    recipe Split in Two
+    {
+        100pkBroccoliBagSeed=1,
+
+        Result  :50pkBroccoliBagSeed=2,
+        Time    :40.0
+    }
+}
