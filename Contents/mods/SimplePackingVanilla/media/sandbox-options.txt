@@ -1,0 +1,40 @@
+VERSION = 1,
+
+option PRMeta.EnableEvent
+{
+    type = boolean,
+    default = true,
+    page = PRMeta,
+    translation = PR_EnableEvent,
+    tooltip = "Turns the Pack Rat profession-trio meta event on or off.",
+}
+
+option PRMeta.ChancePerDay
+{
+    type = double,
+    default = 0.25,
+    min = 0.0,
+    max = 1.0,
+    step = 0.01,
+    page = PRMeta,
+    translation = PR_ChancePerDay,
+    tooltip = "Probability the event rolls each day around dawn.",
+}
+
+option PRMeta.DefaultProfession
+{
+    type = string,
+    default = "medical",
+    page = PRMeta,
+    translation = PR_DefaultProfession,
+    tooltip = "Profession used when not forced (e.g., medical, police, fire).",
+}
+
+option PRMeta.DebugMenu
+{
+    type = boolean,
+    default = true,
+    page = PRMeta,
+    translation = PR_DebugMenu,
+    tooltip = "Adds right-click admin tools to trigger events.",
+}
