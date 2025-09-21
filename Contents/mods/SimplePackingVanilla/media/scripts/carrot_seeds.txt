@@ -5,7 +5,7 @@ module SP
 		Base,
 	}
 
-    item 5pkCarrotsBagSeed
+    item 5pkCarrotBagSeed
     {
         DisplayName = 5x Carrots Seeds,
         Weight = 0.05,
@@ -14,7 +14,7 @@ module SP
         WorldStaticModel = SeedPacket,
     }
 
-    item 10pkCarrotsBagSeed
+    item 10pkCarrotBagSeed
     {
         DisplayName = 10x Carrots Seeds,
         Weight = 0.1,
@@ -23,7 +23,7 @@ module SP
         WorldStaticModel = SeedPacket,
     }
 
-    item 50pkCarrotsBagSeed
+    item 50pkCarrotBagSeed
     {
         DisplayName = 50x Carrots Seeds,
         Weight = 0.5,
@@ -32,7 +32,7 @@ module SP
         WorldStaticModel = SeedPacket,
     }
 
-    item 100pkCarrotsBagSeed
+    item 100pkCarrotBagSeed
     {
         DisplayName = 100x Carrots Seeds,
         Weight = 1.0,
@@ -43,41 +43,41 @@ module SP
 
     recipe Pack 5 Carrots Seeds
     {
-        destroy CarrotsBagSeed=5,
-        Result:5pkCarrotsBagSeed,
+        destroy CarrotBagSeed=5,
+        Result:5pkCarrotBagSeed,
         Time:45.0,
         Category:Storage,
     }
 
     recipe Pack 10 Carrots Seeds
     {
-        destroy CarrotsBagSeed=10,
-        Result:10pkCarrotsBagSeed,
+        destroy CarrotBagSeed=10,
+        Result:10pkCarrotBagSeed,
         Time:45.0,
         Category:Storage,
     }
 
     recipe Pack 50 Carrots Seeds
     {
-        destroy CarrotsBagSeed=50,
-        Result:50pkCarrotsBagSeed,
+        destroy CarrotBagSeed=50,
+        Result:50pkCarrotBagSeed,
         Time:45.0,
         Category:Storage,
     }
 
     recipe Pack 100 Carrots Seeds
     {
-        destroy CarrotsBagSeed=100,
-        Result:100pkCarrotsBagSeed,
+        destroy CarrotBagSeed=100,
+        Result:100pkCarrotBagSeed,
         Time:45.0,
         Category:Storage,
     }
 
     recipe Unpack 5
     {
-        destroy 5pkCarrotsBagSeed,
+        destroy 5pkCarrotBagSeed,
 
-        Result:CarrotsBagSeed=5,
+        Result:CarrotBagSeed=5,
         Time:50.0,
         Category:Storage
     }
@@ -85,9 +85,9 @@ module SP
 
     recipe Unpack 10
     {
-        destroy 10pkCarrotsBagSeed,
+        destroy 10pkCarrotBagSeed,
 
-        Result:CarrotsBagSeed=10,
+        Result:CarrotBagSeed=10,
         Time:50.0,
         Category:Storage
     }
@@ -95,9 +95,9 @@ module SP
 
     recipe Unpack 50
     {
-        destroy 50pkCarrotsBagSeed,
+        destroy 50pkCarrotBagSeed,
 
-        Result:CarrotsBagSeed=50,
+        Result:CarrotBagSeed=50,
         Time:50.0,
         Category:Storage
     }
@@ -105,9 +105,9 @@ module SP
 
     recipe Unpack 100
     {
-        destroy 100pkCarrotsBagSeed,
+        destroy 100pkCarrotBagSeed,
 
-        Result:CarrotsBagSeed=100,
+        Result:CarrotBagSeed=100,
         Time:50.0,
         Category:Storage
     }
@@ -116,54 +116,54 @@ module SP
 
     recipe Put Together
     {
-        5pkCarrotsBagSeed=2,
+        5pkCarrotBagSeed=2,
 
-        Result  :10pkCarrotsBagSeed=1,
+        Result  :10pkCarrotBagSeed=1,
         Time    :10.0
     }
 
 
     recipe Put Together
     {
-        10pkCarrotsBagSeed=5,
+        10pkCarrotBagSeed=5,
 
-        Result  :50pkCarrotsBagSeed=1,
+        Result  :50pkCarrotBagSeed=1,
         Time    :20.0
     }
 
 
     recipe Put Together
     {
-        50pkCarrotsBagSeed=2,
+        50pkCarrotBagSeed=2,
 
-        Result  :100pkCarrotsBagSeed=1,
+        Result  :100pkCarrotBagSeed=1,
         Time    :40.0
     }
 
 
     recipe Split in Two
     {
-        10pkCarrotsBagSeed=1,
+        10pkCarrotBagSeed=1,
 
-        Result  :5pkCarrotsBagSeed=2,
+        Result  :5pkCarrotBagSeed=2,
         Time    :10.0
     }
 
 
     recipe Split in Five
     {
-        50pkCarrotsBagSeed=1,
+        50pkCarrotBagSeed=1,
 
-        Result  :10pkCarrotsBagSeed=5,
+        Result  :10pkCarrotBagSeed=5,
         Time    :20.0
     }
 
 
     recipe Split in Two
     {
-        100pkCarrotsBagSeed=1,
+        100pkCarrotBagSeed=1,
 
-        Result  :50pkCarrotsBagSeed=2,
+        Result  :50pkCarrotBagSeed=2,
         Time    :40.0
     }
 }
