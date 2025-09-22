@@ -1,0 +1,169 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+
+    item 5pkStrewberrieBagSeed
+    {
+        DisplayName = 5x Strawberry Seeds,
+        Weight = 0.05,
+        Type = Normal,
+        Icon = TZ_SeedpackStrewberries,
+        WorldStaticModel = SeedPacket,
+    }
+
+    item 10pkStrewberrieBagSeed
+    {
+        DisplayName = 10x Strawberry Seeds,
+        Weight = 0.1,
+        Type = Normal,
+        Icon = TZ_SeedpackStrewberries,
+        WorldStaticModel = SeedPacket,
+    }
+
+    item 50pkStrewberrieBagSeed
+    {
+        DisplayName = 50x Strawberry Seeds,
+        Weight = 0.5,
+        Type = Normal,
+        Icon = TZ_SeedpackStrewberries,
+        WorldStaticModel = SeedPacket,
+    }
+
+    item 100pkStrewberrieBagSeed
+    {
+        DisplayName = 100x Strawberry Seeds,
+        Weight = 1.0,
+        Type = Normal,
+        Icon = TZ_SeedpackStrewberries,
+        WorldStaticModel = SeedPacket,
+    }
+
+    recipe Pack 5 Strawberry Seeds
+    {
+        destroy StrewberrieBagSeed=5,
+        Result:5pkStrewberrieBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 10 Strawberry Seeds
+    {
+        destroy StrewberrieBagSeed=10,
+        Result:10pkStrewberrieBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 50 Strawberry Seeds
+    {
+        destroy StrewberrieBagSeed=50,
+        Result:50pkStrewberrieBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 100 Strawberry Seeds
+    {
+        destroy StrewberrieBagSeed=100,
+        Result:100pkStrewberrieBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Unpack 5
+    {
+        destroy 5pkStrewberrieBagSeed,
+
+        Result:StrewberrieBagSeed=5,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 10
+    {
+        destroy 10pkStrewberrieBagSeed,
+
+        Result:StrewberrieBagSeed=10,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 50
+    {
+        destroy 50pkStrewberrieBagSeed,
+
+        Result:StrewberrieBagSeed=50,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 100
+    {
+        destroy 100pkStrewberrieBagSeed,
+
+        Result:StrewberrieBagSeed=100,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+
+    recipe Put Together
+    {
+        5pkStrewberrieBagSeed=2,
+
+        Result  :10pkStrewberrieBagSeed=1,
+        Time    :10.0
+    }
+
+
+    recipe Put Together
+    {
+        10pkStrewberrieBagSeed=5,
+
+        Result  :50pkStrewberrieBagSeed=1,
+        Time    :20.0
+    }
+
+
+    recipe Put Together
+    {
+        50pkStrewberrieBagSeed=2,
+
+        Result  :100pkStrewberrieBagSeed=1,
+        Time    :40.0
+    }
+
+
+    recipe Split in Two
+    {
+        10pkStrewberrieBagSeed=1,
+
+        Result  :5pkStrewberrieBagSeed=2,
+        Time    :10.0
+    }
+
+
+    recipe Split in Five
+    {
+        50pkStrewberrieBagSeed=1,
+
+        Result  :10pkStrewberrieBagSeed=5,
+        Time    :20.0
+    }
+
+
+    recipe Split in Two
+    {
+        100pkStrewberrieBagSeed=1,
+
+        Result  :50pkStrewberrieBagSeed=2,
+        Time    :40.0
+    }
+}

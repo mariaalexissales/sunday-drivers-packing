@@ -1,0 +1,169 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+
+    item 5pkRedRadishBagSeed
+    {
+        DisplayName = 5x Radish Seeds,
+        Weight = 0.05,
+        Type = Normal,
+        Icon = RadishSeedPacket,
+        WorldStaticModel = SeedPacket,
+    }
+
+    item 10pkRedRadishBagSeed
+    {
+        DisplayName = 10x Radish Seeds,
+        Weight = 0.1,
+        Type = Normal,
+        Icon = RadishSeedPacket,
+        WorldStaticModel = SeedPacket,
+    }
+
+    item 50pkRedRadishBagSeed
+    {
+        DisplayName = 50x Radish Seeds,
+        Weight = 0.5,
+        Type = Normal,
+        Icon = RadishSeedPacket,
+        WorldStaticModel = SeedPacket,
+    }
+
+    item 100pkRedRadishBagSeed
+    {
+        DisplayName = 100x Radish Seeds,
+        Weight = 1.0,
+        Type = Normal,
+        Icon = RadishSeedPacket,
+        WorldStaticModel = SeedPacket,
+    }
+
+    recipe Pack 5 Radish Seeds
+    {
+        destroy RedRadishBagSeed=5,
+        Result:5pkRedRadishBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 10 Radish Seeds
+    {
+        destroy RedRadishBagSeed=10,
+        Result:10pkRedRadishBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 50 Radish Seeds
+    {
+        destroy RedRadishBagSeed=50,
+        Result:50pkRedRadishBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 100 Radish Seeds
+    {
+        destroy RedRadishBagSeed=100,
+        Result:100pkRedRadishBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Unpack 5
+    {
+        destroy 5pkRedRadishBagSeed,
+
+        Result:RedRadishBagSeed=5,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 10
+    {
+        destroy 10pkRedRadishBagSeed,
+
+        Result:RedRadishBagSeed=10,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 50
+    {
+        destroy 50pkRedRadishBagSeed,
+
+        Result:RedRadishBagSeed=50,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 100
+    {
+        destroy 100pkRedRadishBagSeed,
+
+        Result:RedRadishBagSeed=100,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+
+    recipe Put Together
+    {
+        5pkRedRadishBagSeed=2,
+
+        Result  :10pkRedRadishBagSeed=1,
+        Time    :10.0
+    }
+
+
+    recipe Put Together
+    {
+        10pkRedRadishBagSeed=5,
+
+        Result  :50pkRedRadishBagSeed=1,
+        Time    :20.0
+    }
+
+
+    recipe Put Together
+    {
+        50pkRedRadishBagSeed=2,
+
+        Result  :100pkRedRadishBagSeed=1,
+        Time    :40.0
+    }
+
+
+    recipe Split in Two
+    {
+        10pkRedRadishBagSeed=1,
+
+        Result  :5pkRedRadishBagSeed=2,
+        Time    :10.0
+    }
+
+
+    recipe Split in Five
+    {
+        50pkRedRadishBagSeed=1,
+
+        Result  :10pkRedRadishBagSeed=5,
+        Time    :20.0
+    }
+
+
+    recipe Split in Two
+    {
+        100pkRedRadishBagSeed=1,
+
+        Result  :50pkRedRadishBagSeed=2,
+        Time    :40.0
+    }
+}

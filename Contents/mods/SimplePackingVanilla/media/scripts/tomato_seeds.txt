@@ -1,0 +1,164 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+
+    item 5pkTomatoBagSeed
+    {
+        DisplayName = 5x Tomato Seeds,
+        Weight = 0.05,
+        Type = Normal,
+        Icon = TZ_SeedpackTomatoes,
+        WorldStaticModel = TomatoSeedBag_Ground,
+    }
+
+    item 10pkTomatoBagSeed
+    {
+        DisplayName = 10x Tomato Seeds,
+        Weight = 0.1,
+        Type = Normal,
+        Icon = TZ_SeedpackTomatoes,
+        WorldStaticModel = TomatoSeedBag_Ground,
+    }
+
+    item 50pkTomatoBagSeed
+    {
+        DisplayName = 50x Tomato Seeds,
+        Weight = 0.5,
+        Type = Normal,
+        Icon = TZ_SeedpackTomatoes,
+        WorldStaticModel = TomatoSeedBag_Ground,
+    }
+
+    item 100pkTomatoBagSeed
+    {
+        DisplayName = 100x Tomato Seeds,
+        Weight = 1.0,
+        Type = Normal,
+        Icon = TZ_SeedpackTomatoes,
+        WorldStaticModel = TomatoSeedBag_Ground,
+    }
+
+    recipe Pack 5 Tomato Seeds
+    {
+        destroy TomatoBagSeed=5,
+        Result:5pkTomatoBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 10 Tomato Seeds
+    {
+        destroy TomatoBagSeed=10,
+        Result:10pkTomatoBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 50 Tomato Seeds
+    {
+        destroy TomatoBagSeed=50,
+        Result:50pkTomatoBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Pack 100 Tomato Seeds
+    {
+        destroy TomatoBagSeed=100,
+        Result:100pkTomatoBagSeed,
+        Time:45.0,
+        Category:Storage,
+    }
+
+    recipe Unpack 5
+    {
+        destroy 5pkTomatoBagSeed,
+
+        Result:TomatoBagSeed=5,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 10
+    {
+        destroy 10pkTomatoBagSeed,
+
+        Result:TomatoBagSeed=10,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 50
+    {
+        destroy 50pkTomatoBagSeed,
+
+        Result:TomatoBagSeed=50,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 100
+    {
+        destroy 100pkTomatoBagSeed,
+
+        Result:TomatoBagSeed=100,
+        Time:50.0,
+        Category:Storage
+    }
+
+    recipe Put Together
+    {
+        5pkTomatoBagSeed=2,
+
+        Result  :10pkTomatoBagSeed=1,
+        Time    :10.0
+    }
+
+
+    recipe Put Together
+    {
+        10pkTomatoBagSeed=5,
+
+        Result  :50pkTomatoBagSeed=1,
+        Time    :20.0
+    }
+
+
+    recipe Put Together
+    {
+        50pkTomatoBagSeed=2,
+
+        Result  :100pkTomatoBagSeed=1,
+        Time    :40.0
+    }
+
+    recipe Split in Two
+    {
+        10pkTomatoBagSeed=1,
+
+        Result  :5pkTomatoBagSeed=2,
+        Time    :10.0
+    }
+
+    recipe Split in Five
+    {
+        50pkTomatoBagSeed=1,
+
+        Result  :10pkTomatoBagSeed=5,
+        Time    :20.0
+    }
+
+    recipe Split in Two
+    {
+        100pkTomatoBagSeed=1,
+
+        Result  :50pkTomatoBagSeed=2,
+        Time    :40.0
+    }
+}

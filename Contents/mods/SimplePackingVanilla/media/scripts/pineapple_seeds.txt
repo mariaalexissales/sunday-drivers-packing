@@ -1,0 +1,180 @@
+module SP
+{
+	imports
+	{
+		Base,
+	}
+
+    item 5pkPineappleBagSeed
+    {
+        DisplayName = 5x Pineapple Seeds,
+        Weight = 0.05,
+        Type = Normal,
+        Icon = SeedPacket,
+        WorldStaticModel = SeedPacket,
+    }
+
+    item 10pkPineappleBagSeed
+    {
+        DisplayName = 10x Pineapple Seeds,
+        Weight = 0.1,
+        Type = Normal,
+        Icon = SeedPacket,
+        WorldStaticModel = SeedPacket,
+    }
+
+    item 50pkPineappleBagSeed
+    {
+        DisplayName = 50x Pineapple Seeds,
+        Weight = 0.5,
+        Type = Normal,
+        Icon = SeedPacket,
+        WorldStaticModel = SeedPacket,
+    }
+
+    item 100pkPineappleBagSeed
+    {
+        DisplayName = 100x Pineapple Seeds,
+        Weight = 1.0,
+        Type = Normal,
+        Icon = SeedPacket,
+        WorldStaticModel = SeedPacket,
+    }
+
+    recipe Pack 5
+    {
+        destroy PineappleBagSeed=5,
+
+        Result  :5pkPineappleBagSeed,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :50.0,
+        Category:Storage
+    }
+
+
+    recipe Pack 10
+    {
+        destroy PineappleBagSeed=10,
+
+        Result  :10pkPineappleBagSeed,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :75.0,
+        Category:Storage
+    }
+
+
+    recipe Pack 50
+    {
+        destroy PineappleBagSeed=50,
+
+        Result  :50pkPineappleBagSeed,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :100.0,
+        Category:Storage
+    }
+
+
+    recipe Pack 100
+    {
+        destroy PineappleBagSeed=100,
+
+        Result  :100pkPineappleBagSeed,
+        OnTest  :Recipe.OnTest.IsFavorite,
+        Time    :125.0,
+        Category:Storage
+    }
+
+    recipe Unpack 5
+    {
+        destroy 5pkPineappleBagSeed,
+
+        Result:PineappleBagSeed=5,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 10
+    {
+        destroy 10pkPineappleBagSeed,
+
+        Result:PineappleBagSeed=10,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 50
+    {
+        destroy 50pkPineappleBagSeed,
+
+        Result:PineappleBagSeed=50,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+    recipe Unpack 100
+    {
+        destroy 100pkPineappleBagSeed,
+
+        Result:PineappleBagSeed=100,
+        Time:50.0,
+        Category:Storage
+    }
+
+
+
+    recipe Put Together
+    {
+        5pkPineappleBagSeed=2,
+
+        Result  :10pkPineappleBagSeed=1,
+        Time    :10.0
+    }
+
+
+    recipe Put Together
+    {
+        10pkPineappleBagSeed=5,
+
+        Result  :50pkPineappleBagSeed=1,
+        Time    :20.0
+    }
+
+
+    recipe Put Together
+    {
+        50pkPineappleBagSeed=2,
+
+        Result  :100pkPineappleBagSeed=1,
+        Time    :40.0
+    }
+
+
+    recipe Split in Two
+    {
+        10pkPineappleBagSeed=1,
+
+        Result  :5pkPineappleBagSeed=2,
+        Time    :10.0
+    }
+
+
+    recipe Split in Five
+    {
+        50pkPineappleBagSeed=1,
+
+        Result  :10pkPineappleBagSeed=5,
+        Time    :20.0
+    }
+
+
+    recipe Split in Two
+    {
+        100pkPineappleBagSeed=1,
+
+        Result  :50pkPineappleBagSeed=2,
+        Time    :40.0
+    }
+}
