@@ -28,7 +28,7 @@ module SP
 		destroy WildGarlic2=10,
 		
 		Result	:10pkWildGarlic,
-		OnCreate:Recipe.OnCreate.SaveFood,
+		OnCreate:Recipe.OnCreate.SaveHerbs,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:45.0,
 		Category:Storage,
@@ -39,7 +39,7 @@ module SP
 		destroy 10pkWildGarlic,
 		
 		Result			:WildGarlic2=10,
-		OnCreate		:Recipe.OnCreate.LoadFood,
+		OnCreate		:Recipe.OnCreate.LoadHerbs,
 		RemoveResultItem:true,
 		Time			:45.0,
 		Category		:Storage,
@@ -50,7 +50,7 @@ module SP
 		destroy WildGarlic2=50,
 		
 		Result	:50pkWildGarlic,
-		OnCreate:Recipe.OnCreate.SaveFood,
+		OnCreate:Recipe.OnCreate.SaveHerbs,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:22.5,
 		Category:Storage,
@@ -61,7 +61,7 @@ module SP
 		destroy 50pkWildGarlic,
 		
 		Result			:WildGarlic2=50,
-		OnCreate		:Recipe.OnCreate.LoadFood,
+		OnCreate		:Recipe.OnCreate.LoadHerbs,
 		RemoveResultItem:true,
 		Time			:22.5,
 		Category		:Storage,

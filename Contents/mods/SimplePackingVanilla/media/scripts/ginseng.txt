@@ -1,97 +1,97 @@
 module SP
 {
-    imports
-    {
-        Base,
-    }
-
-    item 5pkComfrey
+	imports
 	{
-		DisplayName		= 5 x Comfrey,
+		Base,
+	}
+
+	item 5pkGinseng
+	{
+		DisplayName		= 5 x Ginseng,
 		Weight			= 0.25,
 		Type			= Normal,
-		Icon			= PkComfreySmallBox,
-		WorldStaticModel= SmallComfrey
+		Icon			= PkGinsengSmallBox,
+		WorldStaticModel= SmallGinseng
 	}
-	
-	item 10pkComfrey
+
+	item 10pkGinseng
 	{
-		DisplayName		= 10 x Comfrey,
+		DisplayName		= 10 x Ginseng,
 		Weight			= 0.5,
 		Type			= Normal,
-		Icon			= PkComfreySmallBox,
-		WorldStaticModel= SmallComfrey
+		Icon			= PkGinsengSmallBox,
+		WorldStaticModel= SmallGinseng
 	}
-	
-	item 50pkComfrey
+
+	item 50pkGinseng
 	{
-		DisplayName		= 50 x Comfrey,
+		DisplayName		= 50 x Ginseng,
 		Weight			= 2.8,
 		Type			= Normal,
-		Icon			= PkComfreyMediumBox,
-		WorldStaticModel= MediumComfrey
+		Icon			= PkGinsengMediumBox,
+		WorldStaticModel= MediumGinseng
 	}
 
-    recipe Pack 5
+	recipe Pack 5
 	{
-		destroy Comfrey=5,
+		destroy Ginseng=5,
 
-		Result:5pkComfrey,
+		Result:5pkGinseng,
 		OnCreate:Recipe.OnCreate.SaveHerbs,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:45.0,
 		Category:Storage,
 	}
 
-    recipe Unpack 5
+	recipe Unpack 5
 	{
-		destroy 5pkComfrey,
-		
-		Result	:Comfrey=5,
+		destroy 5pkGinseng,
+
+		Result	:Ginseng=5,
 		OnCreate:Recipe.OnCreate.LoadHerbs,
 		RemoveResultItem:true,
 		Time	:45.0,
 		Category:Storage,
 	}
-	
+
 	recipe Pack 10
 	{
-		destroy Comfrey=10,
-		
-		Result	:10pkComfrey,
+		destroy Ginseng=10,
+
+		Result	:10pkGinseng,
 		OnCreate:Recipe.OnCreate.SaveHerbs,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:45.0,
 		Category:Storage,
 	}
-	
+
 	recipe Unpack 10
 	{
-		destroy 10pkComfrey,
-		
-		Result	:Comfrey=10,
+		destroy 10pkGinseng,
+
+		Result	:Ginseng=10,
 		OnCreate:Recipe.OnCreate.LoadHerbs,
 		RemoveResultItem:true,
 		Time	:45.0,
 		Category:Storage,
 	}
-	
+
 	recipe Pack 50
 	{
-		destroy Comfrey=50,
-		
-		Result	:50pkComfrey,
+		destroy Ginseng=50,
+
+		Result	:50pkGinseng,
 		OnCreate:Recipe.OnCreate.SaveHerbs,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:22.5,
 		Category:Storage,
 	}
-	
+
 	recipe Unpack 50
 	{
-		destroy 50pkComfrey,
-		
-		Result	:Comfrey=50,
+		destroy 50pkGinseng,
+
+		Result	:Ginseng=50,
 		OnCreate:Recipe.OnCreate.LoadHerbs,
 		RemoveResultItem:true,
 		Time	:22.5,
@@ -100,17 +100,17 @@ module SP
 
 	recipe Put Together
 	{
-		10pkComfrey=5,
-		
-		Result	:10pkComfrey=1,
+		10pkGinseng=5,
+
+		Result	:10pkGinseng=1,
 		Time	:7.5,
 	}
 
 	recipe Split in Five
 	{
-		50pkComfrey=1,
-		
-		Result	:10pkComfrey=5,
+		50pkGinseng=1,
+
+		Result	:10pkGinseng=5,
 		Time	:7.5,
-	}
+    }
 }
