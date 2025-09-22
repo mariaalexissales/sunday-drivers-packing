@@ -91,6 +91,58 @@ module Packing
 		Category:Storage,
 	}
 
+    recipe Unrope 5
+	{
+		destroy 5pkRopePlasterPowder,
+		
+		Result:PlasterPowder=5,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack1Rope,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:115.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 10
+	{
+		destroy 10pkRopePlasterPowder,
+		
+		Result:PlasterPowder=10,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack2Rope,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:140.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 5
+	{
+		destroy 5pkSheetRopePlasterPowder,
+		
+		Result:PlasterPowder=5,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack1SheetRope,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:115.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 10
+	{
+		destroy 10pkSheetRopePlasterPowder,
+		
+		Result:PlasterPowder=10,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack2SheetRope,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:140.0,
+		Category:Storage,
+	}
+
 	model StackOfPlasterPowderRoped
 	{
 		mesh = WorldItems/stack_of_plaster_powder,

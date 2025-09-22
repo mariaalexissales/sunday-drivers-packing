@@ -91,6 +91,54 @@ module Packing
 		Category:Storage,
 	}
 
+    recipe Unrope 5
+	{
+		destroy 5pkRopeSandBag,
+		
+		CanBeDoneFromFloor:true,
+		Result:Sandbag=5,
+		RemoveResultItem:true,
+		OnCreate:Recipe.OnCreate.LoadUsesOneRope,
+		Time:75.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 10
+	{
+		destroy 10pkRopeSandBag,
+		
+		CanBeDoneFromFloor:true,
+		Result:Sandbag=10,
+		RemoveResultItem:true,
+		OnCreate:Recipe.OnCreate.LoadUsesTwoRope,
+		Time:100.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 5
+	{
+		destroy 5pkSheetRopeSandBag,
+		
+		CanBeDoneFromFloor:true,
+		Result:Sandbag=5,
+		RemoveResultItem:true,
+		OnCreate:Recipe.OnCreate.LoadUsesOneSheetRope,
+		Time:75.0,
+		Category:Storage,
+	}
+
+    recipe Unrope 10
+	{
+		destroy 10pkSheetRopeSandBag,
+		
+		CanBeDoneFromFloor:true,
+		Result:Sandbag=10,
+		RemoveResultItem:true,
+		OnCreate:Recipe.OnCreate.LoadUsesTwoSheetRope,
+		Time:100.0,
+		Category:Storage,
+	}
+
 	model StackOfSandbagsRoped
 	{
 		mesh = WorldItems/stack_of_dirt_bags,
