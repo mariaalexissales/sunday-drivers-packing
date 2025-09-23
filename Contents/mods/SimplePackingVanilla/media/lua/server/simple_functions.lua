@@ -218,9 +218,13 @@ function Recipe.OnCreate.LoadUses(items, result, player)
                     if recipeName then
                         local unpackNumber = string.match(recipeName, "Unpack (%d+)")
                         if unpackNumber then
-                            amount = tonumber(unpackNumber) or 1
-                            print(string.format("[LoadUses] found unpack amount in recipe name: %d", amount))
-                            break
+                            -- Check if this recipe's source matches our first item
+                            local recipeSource = recipe:getSource():get(0)
+                            if recipeSource and recipeSource:getOnlyItem() == firstItem:getFullType() then
+                                amount = tonumber(unpackNumber) or 1
+                                print(string.format("[LoadUses] found unpack amount in recipe name: %d", amount))
+                                break
+                            end
                         end
                     end
                 end

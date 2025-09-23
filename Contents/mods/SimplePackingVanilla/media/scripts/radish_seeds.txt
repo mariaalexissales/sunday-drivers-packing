@@ -10,7 +10,7 @@ module SP
         DisplayName = 5x Radish Seeds,
         Weight = 0.05,
         Type = Normal,
-        Icon = RadishSeedPacket,
+        Icon = TZ_SeedpackLRRadish,
         WorldStaticModel = SeedPacket,
     }
 
@@ -19,7 +19,7 @@ module SP
         DisplayName = 10x Radish Seeds,
         Weight = 0.1,
         Type = Normal,
-        Icon = RadishSeedPacket,
+        Icon = TZ_SeedpackLRRadish,
         WorldStaticModel = SeedPacket,
     }
 
@@ -28,7 +28,7 @@ module SP
         DisplayName = 50x Radish Seeds,
         Weight = 0.5,
         Type = Normal,
-        Icon = RadishSeedPacket,
+        Icon = TZ_SeedpackLRRadish,
         WorldStaticModel = SeedPacket,
     }
 
@@ -37,7 +37,7 @@ module SP
         DisplayName = 100x Radish Seeds,
         Weight = 1.0,
         Type = Normal,
-        Icon = RadishSeedPacket,
+        Icon = TZ_SeedpackLRRadish,
         WorldStaticModel = SeedPacket,
     }
 
