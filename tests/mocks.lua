@@ -1,217 +1,216 @@
--- Mock objects for Project Zomboid API
-local mocks = {}
+-- Mock objects for Project Zomboid environment
+-- Compatible with Lua 5.1
 
--- Mock Item class
-local MockItem = {}
-MockItem.__index = MockItem
+local Mocks = {}
 
-function MockItem:new(fullType, name)
-    local item = {
+-- Mock InventoryItem
+local MockInventoryItem = {}
+MockInventoryItem.__index = MockInventoryItem
+
+function MockInventoryItem.new(fullType, name)
+    local self = {
         fullType = fullType or "Base.TestItem",
         name = name or "Test Item",
-        delta = 1.0,
+        usedDelta = 1.0,
         condition = 100,
         conditionMax = 100,
-        usedDelta = 1.0,
-        age = 0,
-        calories = 100,
+        modData = {},
+        baseHunger = -10,
         hungerChange = -10,
+        calories = 100,
         thirstChange = 0,
         stressChange = 0,
         boredomChange = 0,
         poisonPower = 0,
+        age = 0,
         rotten = false,
         cooked = false,
         burnt = false,
         fresh = true,
-        baseHunger = 10,
         favorite = false,
-        modData = {},
-        customName = false,
-        container = nil
+        delta = 1.0
     }
-    setmetatable(item, self)
-    return item
+    setmetatable(self, MockInventoryItem)
+    return self
 end
 
-function MockItem:getFullType() return self.fullType end
-function MockItem:getName() return self.name end
-function MockItem:setName(name) self.name = name end
-function MockItem:getDelta() return self.delta end
-function MockItem:setDelta(delta) self.delta = delta end
-function MockItem:getUsedDelta() return self.usedDelta end
-function MockItem:setUsedDelta(delta) self.usedDelta = delta end
-function MockItem:getCondition() return self.condition end
-function MockItem:getConditionMax() return self.conditionMax end
-function MockItem:setCondition(condition) self.condition = condition end
-function MockItem:getAge() return self.age end
-function MockItem:setAge(age) self.age = age end
-function MockItem:getCalories() return self.calories end
-function MockItem:setCalories(calories) self.calories = calories end
-function MockItem:getHungerChange() return self.hungerChange end
-function MockItem:setHungerChange(hunger) self.hungerChange = hunger end
-function MockItem:getThirstChange() return self.thirstChange end
-function MockItem:setThirstChange(thirst) self.thirstChange = thirst end
-function MockItem:getStressChange() return self.stressChange end
-function MockItem:setStressChange(stress) self.stressChange = stress end
-function MockItem:getBoredomChange() return self.boredomChange end
-function MockItem:setBoredomChange(boredom) self.boredomChange = boredom end
-function MockItem:getPoisonPower() return self.poisonPower end
-function MockItem:setPoisonPower(poison) self.poisonPower = poison end
-function MockItem:isRotten() return self.rotten end
-function MockItem:setRotten(rotten) self.rotten = rotten end
-function MockItem:isCooked() return self.cooked end
-function MockItem:setCooked(cooked) self.cooked = cooked end
-function MockItem:isBurnt() return self.burnt end
-function MockItem:setBurnt(burnt) self.burnt = burnt end
-function MockItem:isFresh() return self.fresh end
-function MockItem:setFresh(fresh) self.fresh = fresh end
-function MockItem:getBaseHunger() return self.baseHunger end
-function MockItem:setBaseHunger(hunger) self.baseHunger = hunger end
-function MockItem:isFavorite() return self.favorite end
-function MockItem:setFavorite(favorite) self.favorite = favorite end
-function MockItem:getModData() return self.modData end
-function MockItem:setCustomName(custom) self.customName = custom end
+function MockInventoryItem:getFullType() return self.fullType end
+function MockInventoryItem:getName() return self.name end
+function MockInventoryItem:setName(name) self.name = name end
+function MockInventoryItem:getUsedDelta() return self.usedDelta end
+function MockInventoryItem:getCondition() return self.condition end
+function MockInventoryItem:getConditionMax() return self.conditionMax end
+function MockInventoryItem:getModData() return self.modData end
+function MockInventoryItem:getBaseHunger() return self.baseHunger end
+function MockInventoryItem:getHungerChange() return self.hungerChange end
+function MockInventoryItem:setHungerChange(value) self.hungerChange = value end
+function MockInventoryItem:getCalories() return self.calories end
+function MockInventoryItem:setCalories(value) self.calories = value end
+function MockInventoryItem:getThirstChange() return self.thirstChange end
+function MockInventoryItem:setThirstChange(value) self.thirstChange = value end
+function MockInventoryItem:getStressChange() return self.stressChange end
+function MockInventoryItem:setStressChange(value) self.stressChange = value end
+function MockInventoryItem:getBoredomChange() return self.boredomChange end
+function MockInventoryItem:setBoredomChange(value) self.boredomChange = value end
+function MockInventoryItem:getPoisonPower() return self.poisonPower end
+function MockInventoryItem:setPoisonPower(value) self.poisonPower = value end
+function MockInventoryItem:getAge() return self.age end
+function MockInventoryItem:setAge(value) self.age = value end
+function MockInventoryItem:isRotten() return self.rotten end
+function MockInventoryItem:setRotten(value) self.rotten = value end
+function MockInventoryItem:isCooked() return self.cooked end
+function MockInventoryItem:setCooked(value) self.cooked = value end
+function MockInventoryItem:isBurnt() return self.burnt end
+function MockInventoryItem:setBurnt(value) self.burnt = value end
+function MockInventoryItem:isFresh() return self.fresh end
+function MockInventoryItem:isFavorite() return self.favorite end
+function MockInventoryItem:getDelta() return self.delta end
+function MockInventoryItem:setDelta(value) self.delta = value end
+function MockInventoryItem:setCustomName(value) self.customName = value end
 
-function MockItem:getItemContainer()
-    return self.container
+-- Mock DrainableComboItem
+local MockDrainableComboItem = {}
+MockDrainableComboItem.__index = MockDrainableComboItem
+setmetatable(MockDrainableComboItem, MockInventoryItem)
+
+function MockDrainableComboItem.new(fullType, name)
+    local self = MockInventoryItem.new(fullType, name)
+    setmetatable(self, MockDrainableComboItem)
+    return self
 end
 
-function MockItem:setItemContainer(container)
-    self.container = container
-end
-
--- Mock Container class
-local MockContainer = {}
-MockContainer.__index = MockContainer
-
-function MockContainer:new()
-    local container = {
-        items = {}
-    }
-    setmetatable(container, self)
-    return container
-end
-
-function MockContainer:getItems()
-    return {
-        size = function() return #self.items end,
-        get = function(_, index) return self.items[index + 1] end,
-        add = function(_, item) table.insert(self.items, item) end
-    }
-end
-
--- Mock ItemContainer (list of items)
+-- Mock ItemContainer
 local MockItemContainer = {}
 MockItemContainer.__index = MockItemContainer
 
-function MockItemContainer:new()
-    local container = {
+function MockItemContainer.new()
+    local self = {
         items = {}
     }
-    setmetatable(container, self)
-    return container
+    setmetatable(self, MockItemContainer)
+    return self
 end
 
-function MockItemContainer:size() return #self.items end
-function MockItemContainer:get(index) return self.items[index + 1] end
-function MockItemContainer:add(item) table.insert(self.items, item) end
+function MockItemContainer:getItems() return self.items end
 
--- Mock Inventory class
+-- Mock ArrayList (Java-like)
+local MockArrayList = {}
+MockArrayList.__index = MockArrayList
+
+function MockArrayList.new()
+    local self = {
+        items = {}
+    }
+    setmetatable(self, MockArrayList)
+    return self
+end
+
+function MockArrayList:add(item)
+    table.insert(self.items, item)
+end
+
+function MockArrayList:get(index)
+    return self.items[index + 1] -- Convert from 0-based to 1-based indexing
+end
+
+function MockArrayList:size()
+    return #self.items
+end
+
+-- Mock Inventory
 local MockInventory = {}
 MockInventory.__index = MockInventory
 
-function MockInventory:new()
-    local inventory = {
-        items = {}
+function MockInventory.new()
+    local self = {
+        items = MockArrayList.new()
     }
-    setmetatable(inventory, self)
-    return inventory
+    setmetatable(self, MockInventory)
+    return self
 end
 
 function MockInventory:AddItem(itemType)
-    local item = MockItem:new(itemType, itemType)
-    table.insert(self.items, item)
+    local item = MockInventoryItem.new(itemType)
+    self.items:add(item)
     return item
 end
 
 function MockInventory:getItems()
-    local itemContainer = MockItemContainer:new()
-    itemContainer.items = self.items
-    return itemContainer
+    return self.items
 end
 
--- Mock Player class
+-- Mock Player
 local MockPlayer = {}
 MockPlayer.__index = MockPlayer
 
-function MockPlayer:new()
-    local player = {
-        inventory = MockInventory:new()
+function MockPlayer.new()
+    local self = {
+        inventory = MockInventory.new()
     }
-    setmetatable(player, self)
-    return player
+    setmetatable(self, MockPlayer)
+    return self
 end
 
-function MockPlayer:getInventory() return self.inventory end
+function MockPlayer:getInventory()
+    return self.inventory
+end
 
--- Mock Recipe class
+-- Mock Recipe
 local MockRecipe = {}
 MockRecipe.__index = MockRecipe
 
-function MockRecipe:new(name, resultType)
-    local recipe = {
-        name = name or "Test Recipe",
-        resultType = resultType or "Base.TestResult"
+function MockRecipe.new(result)
+    local self = {
+        result = result or MockInventoryItem.new()
     }
-    setmetatable(recipe, self)
-    return recipe
+    setmetatable(self, MockRecipe)
+    return self
 end
 
-function MockRecipe:getName() return self.name end
 function MockRecipe:getResult()
-    return MockItem:new(self.resultType, self.resultType)
+    return self.result
 end
 
--- Mock ScriptManager
-local MockScriptManager = {}
-MockScriptManager.__index = MockScriptManager
+-- Global mocks
+function Mocks.setup()
+    -- Mock instanceof function
+    _G.instanceof = function(obj, className)
+        if className == "DrainableComboItem" then
+            return getmetatable(obj) == MockDrainableComboItem
+        end
+        return false
+    end
 
-function MockScriptManager:new()
-    local manager = {
-        recipes = {},
-        items = {}
+    -- Mock Recipe.OnTest and Recipe.OnCreate namespaces
+    _G.Recipe = {
+        OnTest = {},
+        OnCreate = {},
+        OnCanPerform = {}
     }
-    setmetatable(manager, self)
-    return manager
-end
 
-function MockScriptManager:getAllRecipes()
-    return {
-        size = function() return #self.recipes end,
-        get = function(_, index) return self.recipes[index + 1] end
+    -- Mock Events
+    _G.Events = {
+        OnInitGlobalModData = {
+            Add = function(func) end
+        }
+    }
+
+    -- Mock ScriptManager
+    _G.ScriptManager = {
+        instance = {
+            getAllRecipes = function() return MockArrayList.new() end,
+            FindItem = function(name) return MockInventoryItem.new(name) end
+        }
     }
 end
 
-function MockScriptManager:FindItem(itemType)
-    return self.items[itemType] or MockItem:new(itemType, itemType)
-end
+-- Factory functions
+Mocks.MockInventoryItem = MockInventoryItem
+Mocks.MockDrainableComboItem = MockDrainableComboItem
+Mocks.MockItemContainer = MockItemContainer
+Mocks.MockArrayList = MockArrayList
+Mocks.MockInventory = MockInventory
+Mocks.MockPlayer = MockPlayer
+Mocks.MockRecipe = MockRecipe
 
-function MockScriptManager:addRecipe(recipe)
-    table.insert(self.recipes, recipe)
-end
-
-function MockScriptManager:addItem(itemType, item)
-    self.items[itemType] = item
-end
-
--- Export mocks
-mocks.MockItem = MockItem
-mocks.MockContainer = MockContainer
-mocks.MockItemContainer = MockItemContainer
-mocks.MockInventory = MockInventory
-mocks.MockPlayer = MockPlayer
-mocks.MockRecipe = MockRecipe
-mocks.MockScriptManager = MockScriptManager
-
-return mocks
+return Mocks

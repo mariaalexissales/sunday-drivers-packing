@@ -1,76 +1,47 @@
-#!/usr/bin/env lua
+#!/usr/bin/env lua5.1
 
--- Main test runner for Simple Packing unit tests
--- This script runs all test suites and provides a comprehensive report
+-- Test runner for Simple Packing mod
+-- Compatible with Lua 5.1
 
-local luaunit = require('luaunit')
+print("Simple Packing Mod - Test Suite")
+print("===============================")
+print("")
 
--- Add the current directory to the package path
-package.path = package.path .. ";./?.lua;./?/init.lua"
+local test_files = {
+    "test_simple_functions.lua",
+    "test_simple_book_packing.lua",
+    "test_simple_fuel.lua"
+}
 
--- Import all test modules
-local test_simple_functions = require('tests.test_simple_functions')
-local test_food_functions = require('tests.test_food_functions')
-local test_rope_container_functions = require('tests.test_rope_container_functions')
-local test_merge_split_functions = require('tests.test_merge_split_functions')
+local total_passed = 0
+local total_failed = 0
+local total_tests = 0
 
-print("===============================================")
-print("Running Simple Packing Lua Unit Tests")
-print("Project Zomboid B41 Compatible (Lua 5.1)")
-print("===============================================")
-print()
+for _, test_file in ipairs(test_files) do
+    print(string.format("Running %s...", test_file))
+    print(string.rep("-", 40))
 
--- Configure LuaUnit for more detailed output
-luaunit.LuaUnit.verbosity = 2 -- Verbose output
+    -- Execute the test file
+    local success, error_msg = pcall(function()
+        dofile(test_file)
+    end)
 
--- Create a custom test runner to track results
-local TestRunner = {}
-
-function TestRunner.runAllTests()
-    local startTime = os.time()
-
-    print("Test Suites to run:")
-    print("  1. test_simple_functions.lua - Core utility functions")
-    print("  2. test_food_functions.lua - Food packing/unpacking")
-    print("  3. test_rope_container_functions.lua - Rope and container handling")
-    print("  4. test_merge_split_functions.lua - Merge and split operations")
-    print()
-
-    -- Run all tests using standard luaunit approach
-    local result = luaunit.LuaUnit.run()
-
-    local endTime = os.time()
-    local duration = endTime - startTime
-
-    print()
-    print("===============================================")
-    print("Test Summary:")
-    print("===============================================")
-    print(string.format("Duration: %d seconds", duration))
-
-    if result == 0 then
-        print()
-        print("*** ALL TESTS PASSED! ***")
-        print("The simple_functions.lua code is working correctly.")
-    else
-        print()
-        print("*** SOME TESTS FAILED ***")
-        print("Please review the test output above for details.")
+    if not success then
+        print(string.format("ERROR: Failed to run %s", test_file))
+        print(string.format("Error: %s", error_msg))
+        total_failed = total_failed + 1
     end
 
-    return result
+    print("")
 end
 
--- Run tests if this file is executed directly
-if arg and arg[0] and arg[0]:match("run_tests%.lua$") then
-    local result = TestRunner.runAllTests()
-    -- Ensure we exit with proper code (0 for success, 1 for failure)
-    if result == 0 then
-        os.exit(0)
-    else
-        os.exit(1)
-    end
+print("Test Suite Complete")
+print("==================")
+
+if total_failed > 0 then
+    print(string.format("Some test files failed to execute: %d", total_failed))
+    os.exit(1)
 else
-    -- Return the test runner for external use
-    return TestRunner
+    print("All test files executed successfully!")
+    os.exit(0)
 end

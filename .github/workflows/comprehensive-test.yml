@@ -1,0 +1,203 @@
+name: Comprehensive Test Suite
+
+on:
+  push:
+    branches:
+      - 'test*'       # Any branch starting with 'test'
+      - 'test-*'      # Any branch starting with 'test-'
+      - 'test/**'     # Any branch in the test/ namespace
+  pull_request:
+    branches:
+      - 'test*'
+      - 'test-*'
+      - 'test/**'
+
+env:
+  LUA_VERSION: '5.1'
+
+jobs:
+  lua-validation:
+    name: Lua Syntax Validation
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install Lua 5.1
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y lua5.1 lua5.1-dev
+
+    - name: Validate Lua syntax
+      run: |
+        echo "Validating Lua syntax for all .lua files..."
+        find . -name "*.lua" -type f | while read file; do
+          echo "Checking: $file"
+          lua5.1 -p "$file" || exit 1
+        done
+
+    - name: Check for common Lua issues
+      run: |
+        echo "Checking for potential issues..."
+        # Check for print statements in production code (should use proper logging)
+        if grep -n "print(" Contents/mods/SimplePackingVanilla/media/lua/server/*.lua; then
+          echo "Warning: Found print statements in production code"
+        fi
+
+        # Check for TODO/FIXME comments
+        if grep -rn "TODO\|FIXME" Contents/mods/SimplePackingVanilla/media/lua/server/; then
+          echo "Info: Found TODO/FIXME comments"
+        fi
+
+  unit-tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    needs: lua-validation
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install Lua 5.1
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y lua5.1 lua5.1-dev
+
+    - name: Verify Lua installation
+      run: |
+        lua5.1 -v
+        which lua5.1
+
+    - name: List test files
+      run: |
+        echo "Available test files:"
+        ls -la tests/
+
+    - name: Run test framework validation
+      run: |
+        cd tests
+        echo "Testing framework itself..."
+        lua5.1 -c test_framework.lua
+        lua5.1 -c mocks.lua
+
+    - name: Run simple_functions tests
+      run: |
+        cd tests
+        echo "Running simple_functions tests..."
+        lua5.1 test_simple_functions.lua
+
+    - name: Run simple_book_packing tests
+      run: |
+        cd tests
+        echo "Running simple_book_packing tests..."
+        lua5.1 test_simple_book_packing.lua
+
+    - name: Run simple_fuel tests
+      run: |
+        cd tests
+        echo "Running simple_fuel tests..."
+        lua5.1 test_simple_fuel.lua
+
+    - name: Run comprehensive test suite
+      run: |
+        cd tests
+        echo "Running complete test suite..."
+        lua5.1 run_tests.lua
+
+    - name: Generate test summary
+      if: always()
+      run: |
+        echo "## Test Summary" >> $GITHUB_STEP_SUMMARY
+        echo "- Lua Version: 5.1" >> $GITHUB_STEP_SUMMARY
+        echo "- Test Files: $(ls tests/test_*.lua | wc -l)" >> $GITHUB_STEP_SUMMARY
+        echo "- Branch: ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+        echo "- Commit: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+
+    - name: Upload test artifacts
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-artifacts-${{ github.run_number }}
+        path: |
+          tests/
+          Contents/mods/SimplePackingVanilla/media/lua/server/
+        retention-days: 7
+
+  integration-test:
+    name: Integration Test
+    runs-on: ubuntu-latest
+    needs: unit-tests
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install Lua 5.1
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y lua5.1 lua5.1-dev
+
+    - name: Test mod loading simulation
+      run: |
+        cd tests
+        echo "Simulating mod loading..."
+        lua5.1 -e "
+        -- Simulate basic mod loading
+        package.path = package.path .. ';../Contents/mods/SimplePackingVanilla/media/lua/server/?.lua'
+
+        -- Load mocks first
+        local Mocks = require('mocks')
+        Mocks.setup()
+
+        -- Try to load all mod files
+        local success, err = pcall(function()
+          require('simple_functions')
+          require('simple_book_packing')
+          require('simple_fuel')
+        end)
+
+        if success then
+          print('✓ All mod files loaded successfully')
+        else
+          print('✗ Error loading mod files: ' .. tostring(err))
+          os.exit(1)
+        end
+        "
+
+    - name: Validate mod structure
+      run: |
+        echo "Validating mod directory structure..."
+
+        # Check required directories exist
+        [ -d "Contents/mods/SimplePackingVanilla/media/lua/server" ] || (echo "Missing server directory" && exit 1)
+
+        # Check required files exist
+        [ -f "Contents/mods/SimplePackingVanilla/media/lua/server/simple_functions.lua" ] || (echo "Missing simple_functions.lua" && exit 1)
+        [ -f "Contents/mods/SimplePackingVanilla/media/lua/server/simple_book_packing.lua" ] || (echo "Missing simple_book_packing.lua" && exit 1)
+        [ -f "Contents/mods/SimplePackingVanilla/media/lua/server/simple_fuel.lua" ] || (echo "Missing simple_fuel.lua" && exit 1)
+
+        echo "✓ Mod structure validation passed"
+
+  notify-status:
+    name: Notify Test Status
+    runs-on: ubuntu-latest
+    needs: [lua-validation, unit-tests, integration-test]
+    if: always()
+
+    steps:
+    - name: Test Status Summary
+      run: |
+        echo "## Test Execution Summary" >> $GITHUB_STEP_SUMMARY
+        echo "- Lua Validation: ${{ needs.lua-validation.result }}" >> $GITHUB_STEP_SUMMARY
+        echo "- Unit Tests: ${{ needs.unit-tests.result }}" >> $GITHUB_STEP_SUMMARY
+        echo "- Integration Tests: ${{ needs.integration-test.result }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+
+        if [ "${{ needs.lua-validation.result }}" = "success" ] &&
+           [ "${{ needs.unit-tests.result }}" = "success" ] &&
+           [ "${{ needs.integration-test.result }}" = "success" ]; then
+          echo "🎉 All tests passed!" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "❌ Some tests failed. Please check the logs above." >> $GITHUB_STEP_SUMMARY
+        fi
