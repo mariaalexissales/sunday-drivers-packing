@@ -1,0 +1,45 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item BundleReinforcedBats
+	{
+		Weight			= 15.0,
+		Type			= Normal,
+		DisplayName		= Bundle of Reinforced Bats,
+		DisplayCategory = Weapon,
+		Icon			= BundleReinforcedBats,
+		WorldStaticModel= BundleOfReinforcedBats,
+	}
+
+	recipe Pack Bundle
+	{
+		keep Stapler,
+		keep Paperclip,
+		keep YoYo,
+		BaseballBatNails=10,
+
+		Result:PR.BundleReinforcedBats,
+		Time:30.0,
+		Category:Storage,
+	}
+
+	recipe Unpack Bundle
+	{
+		BundleReinforcedBats,
+
+		Result:BaseballBatNails=10,
+		Time:30.0,
+		Category:Storage,
+	}
+
+	model BundleOfReinforcedBats
+	{
+		mesh = WorldItems/circle-lowpoly,
+		texture = WorldItems/BundleReinforcedBats,
+		scale = 1.0,
+	}
+}
