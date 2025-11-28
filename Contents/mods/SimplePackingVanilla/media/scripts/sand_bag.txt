@@ -74,7 +74,7 @@ module PR
 		Result:10pkRopeSandBag,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -86,7 +86,7 @@ module PR
 		Result:Sandbag=10,
 		RemoveResultItem:true,
 		OnCreate:Recipe.OnCreate.LoadUsesTwoRope,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -99,7 +99,7 @@ module PR
 		Result:5pkRopeSandBag,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -111,7 +111,7 @@ module PR
 		Result:Sandbag=5,
 		RemoveResultItem:true,
 		OnCreate:Recipe.OnCreate.LoadUsesOneRope,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -124,7 +124,7 @@ module PR
 		Result:10pkSheetRopeSandBag,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -136,7 +136,7 @@ module PR
 		Result:Sandbag=10,
 		RemoveResultItem:true,
 		OnCreate:Recipe.OnCreate.LoadUsesTwoSheetRope,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -149,7 +149,7 @@ module PR
 		Result:5pkSheetRopeSandBag,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -161,7 +161,7 @@ module PR
 		Result:Sandbag=5,
 		RemoveResultItem:true,
 		OnCreate:Recipe.OnCreate.LoadUsesOneSheetRope,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 
@@ -174,7 +174,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:330.0,
+		Time:165.0,
 		Category:Storage,
 	}
 
@@ -187,7 +187,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:380.0,
+		Time:190.0,
 		Category:Storage,
 	}
 
@@ -200,7 +200,7 @@ module PR
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnCreate:Recipe.OnCreate.Unpack1WoodenContainer,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:165.0,
+		Time:82.5,
 		Category:Storage,
 	}
 
@@ -213,7 +213,7 @@ module PR
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnCreate:Recipe.OnCreate.Unpack2WoodenContainer,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:190.0,
+		Time:95.0,
 		Category:Storage,
 	}
 	
@@ -223,7 +223,7 @@ module PR
 		
 		Result:10pkRopeSandBag=1,
 		OnCreate:Recipe.OnCreate.MergeUses,
-		Time:50.0,
+		Time:25.0,
 	}
 
 	recipe Put Together
@@ -232,7 +232,7 @@ module PR
 		
 		Result:10pkSheetRopeSandBag=1,
 		OnCreate:Recipe.OnCreate.MergeUses,
-		Time:50.0,
+		Time:25.0,
 	}
 
 	recipe Put Together
@@ -241,7 +241,7 @@ module PR
 	
 		Result:100pkWCSandbag=1,
 		CanBeDoneFromFloor:true,
-		Time:177.0,
+		Time:88.5,
 	}
 
 	recipe Split in Two
@@ -251,7 +251,7 @@ module PR
 		Result:5pkRopeSandBag,
 		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
 		RemoveResultItem:true,
-		Time:50.0,
+		Time:25.0,
 	}
 	
 	recipe Split in Two
@@ -261,7 +261,7 @@ module PR
 		Result:5pkSheetRopeSandBag,
 		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
 		RemoveResultItem:true,
-		Time:50.0,
+		Time:25.0,
 	}
 
 	recipe Split in Two
@@ -270,7 +270,7 @@ module PR
 	
 		Result:50pkWCSandbag=2,
 		CanBeDoneFromFloor:true,
-		Time:177.0,
+		Time:88.5,
 	}
 
 	model StackOfSandbagsRoped

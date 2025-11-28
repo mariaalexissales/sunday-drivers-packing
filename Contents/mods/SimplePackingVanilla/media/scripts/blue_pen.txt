@@ -30,7 +30,7 @@ module PR
 		
 		Result:10pkBluePen,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -39,7 +39,7 @@ module PR
 		destroy 10pkBluePen,
 		
 		Result:BluePen=10,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -49,7 +49,7 @@ module PR
 		
 		Result:5pkBluePen,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -58,7 +58,7 @@ module PR
 		destroy 5pkBluePen,
 		
 		Result:BluePen=5,
-		Time:25.0,
+		Time:12.5,
 		Category:Storage,
 	}
 
@@ -67,7 +67,7 @@ module PR
 		5pkBluePen=2,
 		
 		Result:10pkBluePen=1,
-		Time:30.0,
+		Time:15.0,
 	}
 
 	recipe Split in Two
@@ -75,7 +75,7 @@ module PR
 		10pkBluePen=1,
 		
 		Result:5pkBluePen=2,
-		Time:30.0,
+		Time:15.0,
 	}
 
 	model PackOfBluePens

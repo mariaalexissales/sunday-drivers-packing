@@ -51,7 +51,7 @@ module PR
 		
 		Result:10pkRag=1,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -60,7 +60,7 @@ module PR
 		destroy 10pkRag,
 		
 		Result:RippedSheets=10,
-		Time:25.0,
+		Time:12.5,
 		Category:Storage,
 	}
 	
@@ -70,7 +70,7 @@ module PR
 		
 		Result:50pkRag=1,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -79,7 +79,7 @@ module PR
 		destroy 50pkRag,
 		
 		Result:RippedSheets=50,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -89,7 +89,7 @@ module PR
 		
 		Result:100pkRag=1,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -98,7 +98,7 @@ module PR
 		destroy 100pkRag,
 		
 		Result:RippedSheets=100,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 
@@ -107,7 +107,7 @@ module PR
 		10pkRag=5,
 		
 		Result:50pkRag=1,
-		Time:40.0,
+		Time:20.0,
 	}
 	
 	recipe Put Together
@@ -115,7 +115,7 @@ module PR
 		50pkRag=2,
 		
 		Result:100pkRag=1,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Pack 500
@@ -150,7 +150,7 @@ module PR
 		100pkRag=1,
 		
 		Result:50pkRag=2,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Five
@@ -158,7 +158,7 @@ module PR
 		50pkRag=1,
 		
 		Result:10pkRag=5,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	model StripRollSheet

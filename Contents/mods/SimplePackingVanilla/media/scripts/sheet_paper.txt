@@ -31,7 +31,7 @@ module PR
 		
 		Result:10pkSheetPaper,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -40,7 +40,7 @@ module PR
 		destroy 10pkSheetPaper,
 		
 		Result:SheetPaper2=10,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -50,7 +50,7 @@ module PR
 		
 		Result:5pkSheetPaper,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -59,7 +59,7 @@ module PR
 		destroy 5pkSheetPaper,
 		
 		Result:SheetPaper2=5,
-		Time:25.0,
+		Time:12.5,
 		Category:Storage,
 	}
 
@@ -68,7 +68,7 @@ module PR
 		5pkSheetPaper=2,
 		
 		Result:10pkSheetPaper=1,
-		Time:30.0,
+		Time:15.0,
 	}
 
 	recipe Split in Two
@@ -76,7 +76,7 @@ module PR
 		10pkSheetPaper=1,
 		
 		Result:5pkSheetPaper=2,
-		Time:30.0,
+		Time:15.0,
 	}
 
 	model StackOfPaper

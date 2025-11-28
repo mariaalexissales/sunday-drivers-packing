@@ -21,7 +21,7 @@ module PR
 
 		Result:OS6pkPopDiet,
 		OnTest:Recipe.OnTest.WholeFood,
-		Time:60.0,
+		Time:30.0,
 		Category:Storage,
 	}
 
@@ -31,7 +31,7 @@ module PR
 
 		Result:Pop=6,
 		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:60.0,
+		Time:30.0,
 		Category:Storage,
 	}
 	
@@ -42,7 +42,7 @@ module PR
 		Result:Pop2=1,
 		OnTest:Recipe.OnTest.WholeFood,
 		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:25.0,
+		Time:12.5,
 	}
 	
 	recipe Change to Type 3
@@ -52,7 +52,7 @@ module PR
 		Result:Pop3=1,
 		OnTest:Recipe.OnTest.WholeFood,
 		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:25.0,
+		Time:12.5,
 	}
 
 	model PackOfPopDiet

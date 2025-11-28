@@ -20,7 +20,7 @@ module PR
 		WineEmpty=12,
 
 		Result:OS12pkWineEmpty,
-		Time:120.0,
+		Time:60.0,
 		Category:Storage,
 	}
 
@@ -29,7 +29,7 @@ module PR
 		OS12pkWineEmpty,
 
 		Result:WineEmpty=12,
-		Time:120.0,
+		Time:60.0,
 		Category:Storage,
 	}
 

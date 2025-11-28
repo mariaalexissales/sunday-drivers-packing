@@ -23,7 +23,7 @@ module PR
 		
 		Result:WoodenContainer,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:80.0,
+		Time:40.0,
 		Category:Storage,
 	}
 }

@@ -21,7 +21,7 @@ module PR
 		
 		Result:6pkCannedFruitCocktail,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
+		Time:30.0,
 		Category:Storage,
 	}
 	
@@ -31,7 +31,7 @@ module PR
 		
 		Result:CannedFruitCocktail=6,
 		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:40.0,
+		Time:20.0,
 		Category:Storage,
 	}
 

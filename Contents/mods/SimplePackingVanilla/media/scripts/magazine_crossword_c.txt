@@ -31,7 +31,7 @@ module PR
 		
 		Result:10pkMagazineCrosswordC,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -40,7 +40,7 @@ module PR
 		destroy 10pkMagazineCrosswordC,
 		
 		Result:MagazineCrossword3=10,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -50,7 +50,7 @@ module PR
 		
 		Result:5pkMagazineCrosswordC,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -59,7 +59,7 @@ module PR
 		destroy 5pkMagazineCrosswordC,
 		
 		Result:MagazineCrossword3=5,
-		Time:25.0,
+		Time:12.5,
 		Category:Storage,
 	}
 
@@ -68,7 +68,7 @@ module PR
 		5pkMagazineCrosswordC=2,
 		
 		Result:10pkMagazineCrosswordC=1,
-		Time:30.0,
+		Time:15.0,
 	}
 
 	recipe Split in Two
@@ -76,7 +76,7 @@ module PR
 		10pkMagazineCrosswordC=1,
 		
 		Result:5pkMagazineCrosswordC=2,
-		Time:30.0,
+		Time:15.0,
 	}
 	
 	recipe Change to Type 1
@@ -84,7 +84,7 @@ module PR
 		destroy MagazineCrossword3,
 		
 		Result:MagazineCrossword1=1,
-		Time:25.0,
+		Time:12.5,
 	}
 	
 	recipe Change to Type 2
@@ -92,7 +92,7 @@ module PR
 		destroy MagazineCrossword3,
 		
 		Result:MagazineCrossword2=1,
-		Time:25.0,
+		Time:12.5,
 	}
 
 	model StackOfMagazineCrosswordC

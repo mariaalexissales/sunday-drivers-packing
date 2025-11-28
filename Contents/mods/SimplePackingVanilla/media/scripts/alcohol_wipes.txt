@@ -23,7 +23,7 @@ module PR
 		Result:OS30pkAlcoholWipes,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
+		Time:30.0,
 		Category:Storage,
 	}
 
@@ -34,7 +34,7 @@ module PR
 		Result:AlcoholWipes,
 		OnCreate:Recipe.OnCreate.LoadUses,
 		RemoveResultItem:true,
-		Time:60.0,
+		Time:30.0,
 		Category:Storage,
 	}
 

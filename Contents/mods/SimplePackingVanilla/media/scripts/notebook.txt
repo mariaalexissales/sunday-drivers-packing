@@ -31,7 +31,7 @@ module PR
 		
 		Result:10pkNotebook,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:120.0,
+		Time:60.0,
 		Category:Storage,
 	}
 	
@@ -40,7 +40,7 @@ module PR
 		destroy 10pkNotebook,
 		
 		Result:Notebook=10,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -50,7 +50,7 @@ module PR
 		
 		Result:5pkNotebook,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -59,7 +59,7 @@ module PR
 		destroy 5pkNotebook,
 		
 		Result:Notebook=5,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 
@@ -68,7 +68,7 @@ module PR
 		5pkNotebook=2,
 		
 		Result:10pkNotebook=1,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Two
@@ -76,7 +76,7 @@ module PR
 		10pkNotebook=1,
 		
 		Result:5pkNotebook=2,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	model StackOfNotebook

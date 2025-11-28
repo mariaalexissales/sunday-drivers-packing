@@ -21,7 +21,7 @@ module PR
 
 		Result:OS12pkCottonBalls,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
+		Time:30.0,
 		Category:Storage,
 	}
 
@@ -30,7 +30,7 @@ module PR
 		OS12pkCottonBalls,
 
 		Result:CottonBalls=12,
-		Time:60.0,
+		Time:30.0,
 		Category:Storage,
 	}
 

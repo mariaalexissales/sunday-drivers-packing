@@ -21,7 +21,7 @@ module PR
 
 		Result:OS9pkBandages,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
+		Time:30.0,
 		Category:Storage,
 	}
 
@@ -30,7 +30,7 @@ module PR
 		OS9pkBandages,
 
 		Result:Bandage=9,
-		Time:60.0,
+		Time:30.0,
 		Category:Storage,
 	}
 

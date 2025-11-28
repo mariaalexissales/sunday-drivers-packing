@@ -31,7 +31,7 @@ module PR
 		
 		Result:10pkScrewsBox,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -40,7 +40,7 @@ module PR
 		destroy 10pkScrewsBox,
 		
 		Result:ScrewsBox=10,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -50,7 +50,7 @@ module PR
 		
 		Result:5pkScrewsBox,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -59,7 +59,7 @@ module PR
 		destroy 5pkScrewsBox,
 		
 		Result:ScrewsBox=5,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 
@@ -68,7 +68,7 @@ module PR
 		5pkScrewsBox=2,
 		
 		Result:10pkScrewsBox=1,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Two
@@ -77,7 +77,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:5pkScrewsBox=2,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	model BoxOfScrews

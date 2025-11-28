@@ -31,7 +31,7 @@ module PR
 		
 		Result:10pkCrispC,
 		OnTest:Recipe.OnTest.WholeFood,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -41,7 +41,7 @@ module PR
 		
 		Result:Crisps3=10,
 		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -51,7 +51,7 @@ module PR
 		
 		Result:5pkCrispC,
 		OnTest:Recipe.OnTest.WholeFood,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -61,7 +61,7 @@ module PR
 		
 		Result:Crisps3=5,
 		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -72,7 +72,7 @@ module PR
 		Result:Crisps=1,
 		OnTest:Recipe.OnTest.WholeFood,
 		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:25.0,
+		Time:12.5,
 	}
 	
 	recipe Change to Type 2
@@ -82,7 +82,7 @@ module PR
 		Result:Crisps2=1,
 		OnTest:Recipe.OnTest.WholeFood,
 		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:25.0,
+		Time:12.5,
 	}
 	
 	recipe Change to Type 4
@@ -92,7 +92,7 @@ module PR
 		Result:Crisps4=1,
 		OnTest:Recipe.OnTest.WholeFood,
 		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:25.0,
+		Time:12.5,
 	}
 
 	recipe Put Together
@@ -100,7 +100,7 @@ module PR
 		5pkCrispC=2,
 		
 		Result:10pkCrispC=1,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Two
@@ -109,6 +109,6 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:5pkCrispC=2,
-		Time:40.0,
+		Time:20.0,
 	}
 }

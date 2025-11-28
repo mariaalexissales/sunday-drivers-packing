@@ -72,7 +72,7 @@ module PR
 		
 		Result:10pkRopeTreeBranch,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -82,7 +82,7 @@ module PR
 		
 		Result:TreeBranch=10,
 		OnCreate:Recipe.OnCreate.Unpack2Rope,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -93,7 +93,7 @@ module PR
 		
 		Result:5pkRopeTreeBranch,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -103,7 +103,7 @@ module PR
 		
 		Result:TreeBranch=5,
 		OnCreate:Recipe.OnCreate.Unpack1Rope,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -114,7 +114,7 @@ module PR
 		
 		Result:10pkSheetRopeTreeBranch,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -124,7 +124,7 @@ module PR
 		
 		Result:TreeBranch=10,
 		OnCreate:Recipe.OnCreate.Unpack2SheetRope,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -135,7 +135,7 @@ module PR
 		
 		Result:5pkSheetRopeTreeBranch,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -145,7 +145,7 @@ module PR
 		
 		Result:TreeBranch=5,
 		OnCreate:Recipe.OnCreate.Unpack1SheetRope,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 
@@ -158,7 +158,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:320.0,
+		Time:160.0,
 		Category:Storage,
 	}
 
@@ -171,7 +171,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:370.0,
+		Time:185.0,
 		Category:Storage,
 	}
 
@@ -184,7 +184,7 @@ module PR
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnCreate:Recipe.OnCreate.Unpack1WoodenContainer,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:160.0,
+		Time:80.0,
 		Category:Storage,
 	}
 
@@ -197,7 +197,7 @@ module PR
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnCreate:Recipe.OnCreate.Unpack2WoodenContainer,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:185.0,
+		Time:92.5,
 		Category:Storage,
 	}
 
@@ -206,7 +206,7 @@ module PR
 		5pkRopeTreeBranch=2,
 		
 		Result:10pkRopeTreeBranch=1,
-		Time:30.0,
+		Time:15.0,
 	}
 
 	recipe Put Together
@@ -214,7 +214,7 @@ module PR
 		5pkSheetRopeTreeBranch=2,
 		
 		Result:10pkSheetRopeTreeBranch=1,
-		Time:30.0,
+		Time:15.0,
 	}
 
 	recipe Put Together
@@ -223,7 +223,7 @@ module PR
 
 		Result:100pkWCTreeBranch=1,
 		CanBeDoneFromFloor:true,
-		Time:172.0,
+		Time:86.0,
 	}
 
 	recipe Split in Two
@@ -232,7 +232,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:5pkSheetRopeTreeBranch=2,
-		Time:30.0,
+		Time:15.0,
 	}
 	
 	recipe Split in Two
@@ -241,7 +241,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:5pkRopeTreeBranch=2,
-		Time:30.0,
+		Time:15.0,
 	}
 
 	recipe Split in Two
@@ -250,7 +250,7 @@ module PR
 
 		Result:50pkWCTreeBranch=2,
 		CanBeDoneFromFloor:true,
-		Time:172.0,
+		Time:86.0,
 	}
 
 	model StackOfTreeBranchesRoped

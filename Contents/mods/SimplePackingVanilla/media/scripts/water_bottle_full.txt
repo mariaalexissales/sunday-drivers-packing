@@ -31,7 +31,7 @@ module PR
 		
 		Result:OS24pkWaterBottleFull,
 		OnTest:Recipe.OnTest.FullAndNotTainted,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 	
@@ -42,7 +42,7 @@ module PR
 		Result:WaterBottleFull=24,
 		OnTest:Recipe.OnTest.FullAndNotTainted,
 		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:120.0,
+		Time:60.0,
 		Category:Storage,
 	}
 

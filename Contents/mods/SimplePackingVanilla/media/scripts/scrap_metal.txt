@@ -51,7 +51,7 @@ module PR
 		
 		Result:5pkScrapMetal,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -60,7 +60,7 @@ module PR
 		destroy 5pkScrapMetal,
 		
 		Result:ScrapMetal=5,
-		Time:25.0,
+		Time:12.5,
 		Category:Storage,
 	}
 	
@@ -70,7 +70,7 @@ module PR
 		
 		Result:50pkScrapMetal,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:25.0,
+		Time:12.5,
 		Category:Storage,
 	}
 	
@@ -79,7 +79,7 @@ module PR
 		destroy 50pkScrapMetal,
 		
 		Result:ScrapMetal=50,
-		Time:25.0,
+		Time:12.5,
 		Category:Storage,
 	}
 	
@@ -89,7 +89,7 @@ module PR
 		
 		Result:10pkScrapMetal,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:25.0,
+		Time:12.5,
 		Category:Storage,
 	}
 	
@@ -98,7 +98,7 @@ module PR
 		destroy 10pkScrapMetal,
 		
 		Result:ScrapMetal=10,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 
@@ -108,7 +108,7 @@ module PR
 		
 		Result:100pkScrapMetal,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -117,7 +117,7 @@ module PR
 		destroy 100pkScrapMetal,
 		
 		Result:ScrapMetal=100,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 
@@ -126,7 +126,7 @@ module PR
 		50pkScrapMetal=2,
 		
 		Result:100pkScrapMetal=1,
-		Time:50.0,
+		Time:25.0,
 	}
 	
 	recipe Put Together
@@ -134,7 +134,7 @@ module PR
 		10pkScrapMetal=5,
 		
 		Result:50pkScrapMetal=1,
-		Time:40.0,
+		Time:20.0,
 	}
 	
 	recipe Put Together
@@ -142,7 +142,7 @@ module PR
 		5pkScrapMetal=2,
 		
 		Result:10pkScrapMetal=1,
-		Time:30.0,
+		Time:15.0,
 	}
 
 	recipe Split in Two
@@ -150,7 +150,7 @@ module PR
 		100pkScrapMetal=1,
 		
 		Result:50pkScrapMetal=2,
-		Time:50.0,
+		Time:25.0,
 	}
 	
 	recipe Split in Five
@@ -158,7 +158,7 @@ module PR
 		50pkScrapMetal=1,
 		
 		Result:10pkScrapMetal=5,
-		Time:40.0,
+		Time:20.0,
 	}
 	
 	recipe Split in Two
@@ -166,7 +166,7 @@ module PR
 		10pkScrapMetal=1,
 		
 		Result:5pkScrapMetal=2,
-		Time:30.0,
+		Time:15.0,
 	}
 
     item 500pkScrapMetal
@@ -192,7 +192,7 @@ module PR
 		destroy ScrapMetal=100,
 		Result:100pkScrapMetal,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:22.5,
+		Time:11.25,
 		Category:Storage,
 	}
 	
@@ -200,7 +200,7 @@ module PR
 	{
 		destroy 100pkScrapMetal,
 		Result:ScrapMetal=100,
-		Time:22.5,
+		Time:11.25,
 		Category:Storage,
 	}
 
@@ -209,7 +209,7 @@ module PR
 		100pkScrapMetal=5,
 		
 		Result:500pkScrapMetal=1,
-		Time:7.5,
+		Time:3.75,
 	}
 
 	recipe Split in Five
@@ -217,7 +217,7 @@ module PR
 		500pkScrapMetal=1,
 		
 		Result:100pkScrapMetal=5,
-		Time:7.5,
+		Time:3.75,
 	}
 
     recipe Pack 500
@@ -225,7 +225,7 @@ module PR
 		destroy ScrapMetal=500,
 		Result:500pkScrapMetal,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:45.0,
+		Time:22.5,
 		Category:Storage,
 	}
 	
@@ -233,7 +233,7 @@ module PR
 	{
 		destroy 500pkScrapMetal,
 		Result:ScrapMetal=500,
-		Time:45.0,
+		Time:22.5,
 		Category:Storage,
 	}
 

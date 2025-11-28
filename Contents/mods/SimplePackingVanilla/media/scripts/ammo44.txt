@@ -31,7 +31,7 @@ module PR
 		
 		Result:10pk44,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:140.0,
+		Time:70.0,
 		Category:Storage,
 		Sound:AmmoCan_Storage,
 	}
@@ -41,7 +41,7 @@ module PR
 		destroy 10pk44,
 		
 		Result:Bullets44Box=10,
-		Time:140.0,
+		Time:70.0,
 		Category:Storage,
 		Sound:AmmoCan_Storage,
 	}
@@ -52,7 +52,7 @@ module PR
 		
 		Result:5pk44,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 		Sound:AmmoCan_Storage,
 	}
@@ -62,7 +62,7 @@ module PR
 		destroy 5pk44,
 		
 		Result:Bullets44Box=5,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 		Sound:AmmoCan_Storage,
 	}
@@ -72,7 +72,7 @@ module PR
 		5pk44=2,
 		
 		Result:10pk44=1,
-		Time:70.0,
+		Time:35.0,
 		Sound:AmmoCan_Storage,
 	}
 
@@ -81,7 +81,7 @@ module PR
 		10pk44=1,
 		
 		Result:5pk44=2,
-		Time:70.0,
+		Time:35.0,
 		Sound:AmmoCan_Storage,
 	}
 }

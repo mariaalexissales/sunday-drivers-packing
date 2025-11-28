@@ -32,7 +32,7 @@ module PR
 		Result:10pkWoodGlue,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -43,7 +43,7 @@ module PR
 		Result:Woodglue,
 		OnCreate:Recipe.OnCreate.LoadUses,
 		RemoveResultItem:true,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -54,7 +54,7 @@ module PR
 		Result:5pkWoodGlue,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -65,7 +65,7 @@ module PR
 		Result:Woodglue,
 		OnCreate:Recipe.OnCreate.LoadUses,
 		RemoveResultItem:true,
-		Time:25.0,
+		Time:12.5,
 		Category:Storage,
 	}
 
@@ -75,7 +75,7 @@ module PR
 		
 		Result:10pkWoodGlue=1,
 		OnCreate:Recipe.OnCreate.MergeUses,
-		Time:30.0,
+		Time:15.0,
 	}
 
 	recipe Split in Two
@@ -85,7 +85,7 @@ module PR
 		Result:5pkWoodGlue,
 		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
 		RemoveResultItem:true,
-		Time:30.0,
+		Time:15.0,
 	}
 
 	model StackOfWoodGlue

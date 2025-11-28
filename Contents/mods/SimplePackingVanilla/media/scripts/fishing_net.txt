@@ -31,7 +31,7 @@ module PR
 		
 		Result:10pkFishingNet,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -40,7 +40,7 @@ module PR
 		destroy 10pkFishingNet,
 		
 		Result:FishingNet=10,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -50,7 +50,7 @@ module PR
 		
 		Result:5pkFishingNet,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -59,7 +59,7 @@ module PR
 		destroy 5pkFishingNet,
 		
 		Result:FishingNet=5,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 
@@ -68,7 +68,7 @@ module PR
 		5pkFishingNet=2,
 		
 		Result:10pkFishingNet=1,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Two
@@ -76,7 +76,7 @@ module PR
 		10pkFishingNet=1,
 		
 		Result:5pkFishingNet=2,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	model StackOfFishingNet

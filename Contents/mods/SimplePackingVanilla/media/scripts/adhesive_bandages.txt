@@ -21,7 +21,7 @@ module PR
 
 		Result:PR.OS12pkAdhesiveBandages,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
+		Time:30.0,
 		Category:Storage,
 	}
 
@@ -30,7 +30,7 @@ module PR
 		OS12pkAdhesiveBandages,
 
 		Result:Bandaid=12,
-		Time:60.0,
+		Time:30.0,
 		Category:Storage,
 	}
 

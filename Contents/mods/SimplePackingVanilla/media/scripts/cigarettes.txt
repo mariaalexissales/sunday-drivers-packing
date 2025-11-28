@@ -21,7 +21,7 @@ module PR
 		
 		Result:20pkCigarettes,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -33,7 +33,7 @@ module PR
 		OnCreate:recipe_opencigpack,
 		RemoveResultItem:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:25.0,
+		Time:12.5,
 	}
 
 	model PackOfCigarettes

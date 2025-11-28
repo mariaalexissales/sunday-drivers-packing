@@ -38,7 +38,7 @@ module PR
 		
 		Result:20pkWorm,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:45.0,
+		Time:22.5,
 		Category:Storage,
 	}
 	
@@ -47,7 +47,7 @@ module PR
 		destroy 20pkWorm,
 		
 		Result:Worm=20,
-		Time:45.0,
+		Time:22.5,
 		Category:Storage,
 	}
 	
@@ -57,7 +57,7 @@ module PR
 		
 		Result:100pkWorm,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:22.5,
+		Time:11.25,
 		Category:Storage,
 	}
 	
@@ -66,7 +66,7 @@ module PR
 		destroy 100pkWorm,
 		
 		Result:Worm=100,
-		Time:22.5,
+		Time:11.25,
 		Category:Storage,
 	}
 
@@ -76,7 +76,7 @@ module PR
 		
 		Result:500pkWorm,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:22.5,
+		Time:11.25,
 		Category:Storage,
 	}
 	
@@ -85,7 +85,7 @@ module PR
 		destroy 500pkWorm,
 		
 		Result:Worm=500,
-		Time:22.5,
+		Time:11.25,
 		Category:Storage,
 	}
 
@@ -94,7 +94,7 @@ module PR
 		20pkWorm=5,
 		
 		Result:100pkWorm=1,
-		Time:7.5,
+		Time:3.75,
 	}
 
 	recipe Split in Five
@@ -102,14 +102,14 @@ module PR
 		100pkWorm=1,
 		
 		Result:20pkWorm=5,
-		Time:7.5,
+		Time:3.75,
 	}
 	recipe Put Together
 	{
 		100pkWorm=5,
 		
 		Result:500pkWorm=1,
-		Time:7.5,
+		Time:3.75,
 	}
 
 	recipe Split in Five
@@ -117,6 +117,6 @@ module PR
 		500pkWorm=1,
 		
 		Result:100pkWorm=5,
-		Time:7.5,
+		Time:3.75,
 	}
 }

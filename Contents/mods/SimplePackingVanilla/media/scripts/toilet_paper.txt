@@ -22,7 +22,7 @@ module PR
 		Result:4pkToiletPaper,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -33,7 +33,7 @@ module PR
 		Result:ToiletPaper,
 		OnCreate:Recipe.OnCreate.LoadUses,
 		RemoveResultItem:true,
-		Time:25.0,
+		Time:12.5,
 		Category:Storage,
 	}
 

@@ -72,7 +72,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:10pkSheetMetal,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -82,7 +82,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:SheetMetal=10,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 
@@ -93,7 +93,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:5pkSheetMetal,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -103,7 +103,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:SheetMetal=5,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 
@@ -115,7 +115,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:10pkRopeSheetMetal,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -126,7 +126,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:SheetMetal=10,
 		OnCreate:Recipe.OnCreate.Unpack2Rope,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -138,7 +138,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:5pkRopeSheetMetal,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -149,7 +149,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:SheetMetal=5,
 		OnCreate:Recipe.OnCreate.Unpack1Rope,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -161,7 +161,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:10pkSheetRopeSheetMetal,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -172,7 +172,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:SheetMetal=10,
 		OnCreate:Recipe.OnCreate.Unpack2SheetRope,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -184,7 +184,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:5pkSheetRopeSheetMetal,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -195,7 +195,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:SheetMetal=5,
 		OnCreate:Recipe.OnCreate.Unpack1SheetRope,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -253,7 +253,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:10pkSheetMetal=1,
-		Time:50.0,
+		Time:25.0,
 	}
 
 	recipe Put Together
@@ -262,7 +262,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:10pkRopeSheetMetal=1,
-		Time:50.0,
+		Time:25.0,
 	}
 	
 	recipe Put Together
@@ -271,7 +271,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:10pkSheetRopeSheetMetal=1,
-		Time:50.0,
+		Time:25.0,
 	}
 
 	recipe Split in Two
@@ -280,7 +280,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:5pkSheetMetal=2,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Two
@@ -289,7 +289,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:5pkRopeSheetMetal=2,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Two
@@ -298,7 +298,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:5pkSheetRopeSheetMetal=2,
-		Time:40.0,
+		Time:20.0,
 	}
 	
 	model StackOfSheetMetal

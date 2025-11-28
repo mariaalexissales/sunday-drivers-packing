@@ -51,7 +51,7 @@ module PR
 		
 		Result:10pkDenim=1,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -60,7 +60,7 @@ module PR
 		destroy 10pkDenim,
 		
 		Result:DenimStrips=10,
-		Time:25.0,
+		Time:12.5,
 		Category:Storage,
 	}
 	
@@ -70,7 +70,7 @@ module PR
 		
 		Result:50pkDenim=1,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -79,7 +79,7 @@ module PR
 		destroy 50pkDenim,
 		
 		Result:DenimStrips=50,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -89,7 +89,7 @@ module PR
 		
 		Result:100pkDenim=1,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -98,7 +98,7 @@ module PR
 		destroy 100pkDenim,
 		
 		Result:DenimStrips=100,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 
@@ -107,7 +107,7 @@ module PR
 		10pkDenim=5,
 		
 		Result:50pkDenim=1,
-		Time:40.0,
+		Time:20.0,
 	}
 	
 	recipe Put Together
@@ -115,7 +115,7 @@ module PR
 		50pkDenim=2,
 		
 		Result:100pkDenim=1,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Two
@@ -123,7 +123,7 @@ module PR
 		100pkDenim=1,
 		
 		Result:50pkDenim=2,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Five
@@ -131,7 +131,7 @@ module PR
 		50pkDenim=1,
 		
 		Result:10pkDenim=5,
-		Time:40.0,
+		Time:20.0,
 	}
 
     recipe Pack 500

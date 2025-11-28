@@ -38,7 +38,7 @@ module PR
 		
 		Result:20pkYarn,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -47,7 +47,7 @@ module PR
 		destroy 20pkYarn,
 		
 		Result:Yarn=20,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -57,7 +57,7 @@ module PR
 		
 		Result:100pkYarn,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 
@@ -67,7 +67,7 @@ module PR
 		
 		Result:500pkYarn,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -76,7 +76,7 @@ module PR
 		destroy 100pkYarn,
 		
 		Result:Yarn=100,
-		Time:25.0,
+		Time:12.5,
 		Category:Storage,
 	}
 	
@@ -85,7 +85,7 @@ module PR
 		destroy 500pkYarn,
 		
 		Result:Yarn=500,
-		Time:25.0,
+		Time:12.5,
 		Category:Storage,
 	}
 
@@ -94,13 +94,13 @@ module PR
 		20pkYarn=5,
 		
 		Result:100pkYarn=1,
-		Time:30.0,
+		Time:15.0,
 	}
 
 	recipe Split in Five
 	{
 		100pkYarn=1,
 		Result:20pkYarn=5,
-		Time:30.0,
+		Time:15.0,
 	}
 }

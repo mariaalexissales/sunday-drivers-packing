@@ -20,7 +20,7 @@ module PR
 		WhiskeyEmpty=8,
 
 		Result:OS8pkWhiskeyEmpty,
-		Time:120.0,
+		Time:60.0,
 		Category:Storage,
 	}
 
@@ -29,7 +29,7 @@ module PR
 		OS8pkWhiskeyEmpty,
 
 		Result:WhiskeyEmpty=8,
-		Time:120.0,
+		Time:60.0,
 		Category:Storage,
 	}
 

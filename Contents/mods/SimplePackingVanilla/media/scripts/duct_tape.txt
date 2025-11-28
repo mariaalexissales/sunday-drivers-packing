@@ -21,7 +21,7 @@ module PR
 
 		Result:OS4pkDuctTape,
 		OnCreate:Recipe.OnCreate.SaveUses,
-		Time:60.0,
+		Time:30.0,
 		Category:Storage,
 	}
 	
@@ -32,7 +32,7 @@ module PR
 		Result:DuctTape,
 		OnCreate:Recipe.OnCreate.LoadUses,
 		RemoveResultItem:true,
-		Time:30.0,
+		Time:15.0,
 		Category:Storage,
 	}
 

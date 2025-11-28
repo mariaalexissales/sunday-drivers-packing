@@ -31,7 +31,7 @@ module PR
 		
 		Result:10pkWhiteWine,
 		OnCreate:Recipe.OnCreate.SaveFood,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -43,7 +43,7 @@ module PR
 		OnGiveXP:Recipe.OnGiveXP.None,
         OnCreate:Recipe.OnCreate.LoadFood,
         RemoveResultItem:true,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -53,7 +53,7 @@ module PR
 		
 		Result:5pkWhiteWine,
 		OnCreate:Recipe.OnCreate.SaveFood,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -65,7 +65,7 @@ module PR
 		OnGiveXP:Recipe.OnGiveXP.None,
         OnCreate:Recipe.OnCreate.LoadFood,
         RemoveResultItem:true,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 
@@ -74,7 +74,7 @@ module PR
 		5pkWhiteWine=2,
 		
 		Result:10pkWhiteWine=1,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Two
@@ -83,7 +83,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:5pkWhiteWine=2,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	model WoodenBoxOfWhiteWineBottle

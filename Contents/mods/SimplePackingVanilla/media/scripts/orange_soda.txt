@@ -31,7 +31,7 @@ module PR
 		
 		Result:10pkOrangeSoda,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -41,7 +41,7 @@ module PR
 		
 		Result:PopBottle=10,
 		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -51,7 +51,7 @@ module PR
 		
 		Result:5pkOrangeSoda,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -61,7 +61,7 @@ module PR
 		
 		Result:PopBottle=5,
 		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 
@@ -70,7 +70,7 @@ module PR
 		5pkOrangeSoda=2,
 		
 		Result:10pkOrangeSoda=1,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Two
@@ -79,7 +79,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:5pkOrangeSoda=2,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	model PackOfPopBottles

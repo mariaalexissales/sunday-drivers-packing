@@ -23,7 +23,7 @@ module PR
 		Result:OS50pkVitamins,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:120.0,
+		Time:60.0,
 		Category:Storage,
 	}
 	
@@ -35,7 +35,7 @@ module PR
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnCreate:Recipe.OnCreate.LoadUses,
 		RemoveResultItem:true,
-		Time:120.0,
+		Time:60.0,
 		Category:Storage,
 	}
 

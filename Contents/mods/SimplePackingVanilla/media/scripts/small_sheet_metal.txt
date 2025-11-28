@@ -32,7 +32,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:10pkSheetMetalSmall,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -42,7 +42,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:SmallSheetMetal=10,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -53,7 +53,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:5pkSheetMetalSmall,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -63,7 +63,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:SmallSheetMetal=5,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 
@@ -73,7 +73,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:10pkSheetMetalSmall=1,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Two
@@ -82,7 +82,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:5pkSheetMetalSmall=2,
-		Time:30.0,
+		Time:15.0,
 	}
 
 	model StackOfSmallMetalSheets

@@ -31,7 +31,7 @@ module PR
 		
 		Result:10pkSheetRope,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -40,7 +40,7 @@ module PR
 		destroy 10pkSheetRope,
 		
 		Result:SheetRope=10,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -50,7 +50,7 @@ module PR
 		
 		Result:5pkSheetRope,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -59,7 +59,7 @@ module PR
 		destroy 5pkSheetRope,
 		
 		Result:SheetRope=5,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 
@@ -68,7 +68,7 @@ module PR
 		5pkSheetRope=2,
 		
 		Result:10pkSheetRope=1,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Two
@@ -76,7 +76,7 @@ module PR
 		10pkSheetRope=1,
 		
 		Result:5pkSheetRope=2,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	model BundleOfSheetRope

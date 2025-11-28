@@ -53,7 +53,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -65,7 +65,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -77,7 +77,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -89,7 +89,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -102,7 +102,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:280.0,
+		Time:140.0,
 		Category:Storage,
 	}
 	
@@ -115,7 +115,7 @@ module PR
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnCreate:Recipe.OnCreate.Unpack1WoodenContainer,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:140.0,
+		Time:70.0,
 		Category:Storage,
 	}
 	
@@ -128,7 +128,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:330.0,
+		Time:165.0,
 		Category:Storage,
 	}
 	
@@ -141,7 +141,7 @@ module PR
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnCreate:Recipe.OnCreate.Unpack2WoodenContainer,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:165.0,
+		Time:82.5,
 		Category:Storage,
 	}
 
@@ -151,7 +151,7 @@ module PR
 		
 		Result:10pkBarbedWire=1,
 		CanBeDoneFromFloor:true,
-		Time:50.0,
+		Time:25.0,
 	}
 	
 	recipe Put Together
@@ -160,7 +160,7 @@ module PR
 		
 		Result:100pkWCBarbedWire=1,
 		CanBeDoneFromFloor:true,
-		Time:152.0,
+		Time:76.0,
 	}
 
 	recipe Split in Two
@@ -169,7 +169,7 @@ module PR
 		
 		Result:5pkBarbedWire=2,
 		CanBeDoneFromFloor:true,
-		Time:40.0,
+		Time:20.0,
 	}
 	
 	recipe Split in Two
@@ -178,7 +178,7 @@ module PR
 		
 		Result:50pkWCBarbedWire=2,
 		CanBeDoneFromFloor:true,
-		Time:152.0,
+		Time:76.0,
 	}
 
 	model StackOfBarbedWire

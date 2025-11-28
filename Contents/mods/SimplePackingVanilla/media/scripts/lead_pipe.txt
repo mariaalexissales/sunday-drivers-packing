@@ -31,7 +31,7 @@ module PR
 		
 		Result:10pkleadpipe,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:55.0,
+		Time:27.5,
 		Category:Storage,
 	}
 	
@@ -40,7 +40,7 @@ module PR
 		destroy 10pkleadpipe,
 		
 		Result:LeadPipe=10,
-		Time:55.0,
+		Time:27.5,
 		Category:Storage,
 	}
 
@@ -50,7 +50,7 @@ module PR
 		
 		Result:50pkleadpipe,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:55.0,
+		Time:27.5,
 		Category:Storage,
 	}
 	
@@ -59,7 +59,7 @@ module PR
 		destroy 50pkleadpipe,
 		
 		Result:LeadPipe=50,
-		Time:55.0,
+		Time:27.5,
 		Category:Storage,
 	}
 	
@@ -69,7 +69,7 @@ module PR
 		10pkleadpipe=5,
 		
 		Result:50pkleadpipe=1,
-		Time:37.5,
+		Time:18.75,
 	}
 
 	recipe Split in Five
@@ -77,6 +77,6 @@ module PR
 		50pkleadpipe=1,
 		
 		Result:10pkleadpipe=5,
-		Time:37.5,
+		Time:18.75,
 	}
 }

@@ -32,7 +32,7 @@ module PR
 		Result:10pkGarbage,
 		OnTest:Recipe.OnTest.IsEmpty,
         OnCanPerform: Recipe.OnCanPerform.HasEnoughEmpties,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -41,7 +41,7 @@ module PR
 		destroy 10pkGarbage,
 		
 		Result:Garbagebag=10,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -52,7 +52,7 @@ module PR
 		Result:5pkGarbage,
 		OnTest:Recipe.OnTest.IsEmpty,
         OnCanPerform: Recipe.OnCanPerform.HasEnoughEmpties,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -61,7 +61,7 @@ module PR
 		destroy 5pkGarbage,
 		
 		Result:Garbagebag=5,
-		Time:25.0,
+		Time:12.5,
 		Category:Storage,
 	}
 
@@ -70,7 +70,7 @@ module PR
 		5pkGarbage=2,
 		
 		Result:10pkGarbage=1,
-		Time:30.0,
+		Time:15.0,
 	}
 
 	recipe Split in Two
@@ -78,7 +78,7 @@ module PR
 		10pkGarbage=1,
 		
 		Result:5pkGarbage=2,
-		Time:30.0,
+		Time:15.0,
 	}
 
 	model PackOfGarbageBags

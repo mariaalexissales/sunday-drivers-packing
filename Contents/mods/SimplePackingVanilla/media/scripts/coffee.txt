@@ -21,7 +21,7 @@ module PR
 
 		Result:OS4pkCoffee,
 		OnTest:Recipe.OnTest.WholeFood,
-		Time:60.0,
+		Time:30.0,
 		Category:Storage,
 	}
 
@@ -31,7 +31,7 @@ module PR
 
 		Result:Coffee2=4,
 		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:60.0,
+		Time:30.0,
 		Category:Storage,
 	}
 

@@ -41,7 +41,7 @@ module PR
 		
 		Result:10pkAluminum=1,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -50,7 +50,7 @@ module PR
 		destroy 10pkAluminum,
 		
 		Result:Aluminum=10,
-		Time:25.0,
+		Time:12.5,
 		Category:Storage,
 	}
 	
@@ -60,7 +60,7 @@ module PR
 		
 		Result:50pkAluminum=1,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -69,7 +69,7 @@ module PR
 		destroy 50pkAluminum,
 		
 		Result:Aluminum=50,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -79,7 +79,7 @@ module PR
 		
 		Result:100pkAluminum=1,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -88,7 +88,7 @@ module PR
 		destroy 100pkAluminum,
 		
 		Result:Aluminum=100,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 
@@ -97,7 +97,7 @@ module PR
 		10pkAluminum=5,
 		
 		Result:50pkAluminum=1,
-		Time:40.0,
+		Time:20.0,
 	}
 	
 	recipe Put Together
@@ -105,7 +105,7 @@ module PR
 		50pkAluminum=2,
 		
 		Result:100pkAluminum=1,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Two
@@ -113,7 +113,7 @@ module PR
 		100pkAluminum=1,
 		
 		Result:50pkAluminum=2,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Five
@@ -121,6 +121,6 @@ module PR
 		50pkAluminum=1,
 		
 		Result:10pkAluminum=5,
-		Time:40.0,
+		Time:20.0,
 	}
 }

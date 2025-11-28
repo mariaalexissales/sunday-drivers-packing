@@ -74,7 +74,7 @@ module PR
 		Result:10pkRopePropaneTank,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:400.0,
+		Time:200.0,
 		Category:Storage,
 	}
 	
@@ -86,7 +86,7 @@ module PR
 		Result:PropaneTank,
 		OnCreate:Recipe.OnCreate.LoadUsesTwoRope,
 		RemoveResultItem:true,
-		Time:350.0,
+		Time:175.0,
 		Category:Storage,
 	}
 
@@ -99,7 +99,7 @@ module PR
 		Result:5pkRopePropaneTank,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:300.0,
+		Time:150.0,
 		Category:Storage,
 	}
 	
@@ -111,7 +111,7 @@ module PR
 		Result:PropaneTank,
 		OnCreate:Recipe.OnCreate.LoadUsesOneRope,
 		RemoveResultItem:true,
-		Time:250.0,
+		Time:125.0,
 		Category:Storage,
 	}
 
@@ -124,7 +124,7 @@ module PR
 		Result:10pkSheetRopePropaneTank,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:400.0,
+		Time:200.0,
 		Category:Storage,
 	}
 	
@@ -136,7 +136,7 @@ module PR
 		Result:PropaneTank,
 		OnCreate:Recipe.OnCreate.LoadUsesTwoSheetRope,
 		RemoveResultItem:true,
-		Time:350.0,
+		Time:175.0,
 		Category:Storage,
 	}
 
@@ -149,7 +149,7 @@ module PR
 		Result:5pkSheetRopePropaneTank,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:300.0,
+		Time:150.0,
 		Category:Storage,
 	}
 	
@@ -161,7 +161,7 @@ module PR
 		Result:PropaneTank,
 		OnCreate:Recipe.OnCreate.LoadUsesOneSheetRope,
 		RemoveResultItem:true,
-		Time:250.0,
+		Time:125.0,
 		Category:Storage,
 	}
 
@@ -174,7 +174,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:450.0,
+		Time:225.0,
 		Category:Storage,
 	}
 
@@ -187,7 +187,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:500.0,
+		Time:250.0,
 		Category:Storage,
 	}
 
@@ -200,7 +200,7 @@ module PR
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnCreate:Recipe.OnCreate.Unpack1WoodenContainer,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:225.0,
+		Time:112.5,
 		Category:Storage,
 	}
 
@@ -213,7 +213,7 @@ module PR
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnCreate:Recipe.OnCreate.Unpack2WoodenContainer,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:250.0,
+		Time:125.0,
 		Category:Storage,
 	}
 
@@ -224,7 +224,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:10pkRopePropaneTank=1,
 		OnCreate:Recipe.OnCreate.MergeUses,
-		Time:90.0,
+		Time:45.0,
 	}
 
 	recipe Put Together
@@ -234,7 +234,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:10pkSheetRopePropaneTank=1,
 		OnCreate:Recipe.OnCreate.MergeUses,
-		Time:90.0,
+		Time:45.0,
 	}
 
 	recipe Put Together
@@ -243,7 +243,7 @@ module PR
 	
 		Result:100pkWCPropaneTank=1,
 		CanBeDoneFromFloor:true,
-		Time:237.0,
+		Time:118.5,
 	}
 
 	recipe Split in Two
@@ -254,7 +254,7 @@ module PR
 		Result:5pkRopePropaneTank,
 		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
 		RemoveResultItem:true,
-		Time:60.0,
+		Time:30.0,
 	}
 
 	recipe Split in Two
@@ -265,7 +265,7 @@ module PR
 		Result:5pkSheetRopePropaneTank,
 		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
 		RemoveResultItem:true,
-		Time:60.0,
+		Time:30.0,
 	}
 
 	recipe Split in Two
@@ -274,7 +274,7 @@ module PR
 	
 		Result:50pkWCPropaneTank=2,
 		CanBeDoneFromFloor:true,
-		Time:237.0,
+		Time:118.5,
 	}
 	
 	model StackOfPropaneTankRoped

@@ -21,7 +21,7 @@ module PR
 
 		Result:OS6pkCannedMushSoup,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:60.0,
+		Time:30.0,
 		Category:Storage,
 	}
 
@@ -31,7 +31,7 @@ module PR
 
 		Result:CannedMushroomSoup=6,
 		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:60.0,
+		Time:30.0,
 		Category:Storage,
 	}
 

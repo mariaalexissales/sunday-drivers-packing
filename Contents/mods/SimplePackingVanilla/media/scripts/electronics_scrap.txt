@@ -41,7 +41,7 @@ module PR
 		
 		Result:10pkElectronicsScrap=1,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -50,7 +50,7 @@ module PR
 		destroy 10pkElectronicsScrap,
 		
 		Result:ElectronicsScrap=10,
-		Time:25.0,
+		Time:12.5,
 		Category:Storage,
 	}
 	
@@ -60,7 +60,7 @@ module PR
 		
 		Result:50pkElectronicsScrap=1,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -69,7 +69,7 @@ module PR
 		destroy 50pkElectronicsScrap,
 		
 		Result:ElectronicsScrap=50,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -79,7 +79,7 @@ module PR
 		
 		Result:100pkElectronicsScrap=1,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -88,7 +88,7 @@ module PR
 		destroy 100pkElectronicsScrap,
 		
 		Result:ElectronicsScrap=100,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 
@@ -97,7 +97,7 @@ module PR
 		50pkElectronicsScrap=2,
 		
 		Result:100pkElectronicsScrap=1,
-		Time:40.0,
+		Time:20.0,
 	}
 	
 	recipe Put Together
@@ -105,7 +105,7 @@ module PR
 		10pkElectronicsScrap=5,
 		
 		Result:50pkElectronicsScrap=1,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Two
@@ -113,7 +113,7 @@ module PR
 		100pkElectronicsScrap=1,
 		
 		Result:50pkElectronicsScrap=2,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Five
@@ -121,7 +121,7 @@ module PR
 		50pkElectronicsScrap=1,
 		
 		Result:10pkElectronicsScrap=5,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	model BoxOfElectronicScrap

@@ -31,7 +31,7 @@ module PR
 
         Result: 6pkAnkleSocks,
         OnTest:Recipe.OnTest.IsFavorite,
-        Time:45.0,
+        Time:22.5,
         Category:Storage,
     }
 
@@ -40,7 +40,7 @@ module PR
         destroy 6pkAnkleSocks,
 
         Result:Socks_Ankle=6,
-        Time:45.0,
+        Time:22.5,
         Category:Storage
     }
 
@@ -50,7 +50,7 @@ module PR
 
         Result:6pkLongSocks,
         OnTest:Recipe.OnTest.IsFavorite,
-        Time:45.0,
+        Time:22.5,
         Category:Storage,
     }
 
@@ -59,7 +59,7 @@ module PR
         destroy 6pkLongSocks,
 
         Result:Socks_Long=6,
-        Time:45.0,
+        Time:22.5,
         Category:Storage
     }
 }

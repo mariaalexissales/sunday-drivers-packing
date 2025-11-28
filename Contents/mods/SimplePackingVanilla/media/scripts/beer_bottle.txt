@@ -21,7 +21,7 @@ module PR
 		
 		Result:6pkBeer,
 		OnTest:Recipe.OnTest.WholeFood,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -31,7 +31,7 @@ module PR
 		
 		Result:BeerBottle=6,
 		OnGiveXP:Recipe.OnGiveXP.None,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	

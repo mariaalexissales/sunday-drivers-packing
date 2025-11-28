@@ -54,7 +54,7 @@ module PR
 		Result:10pkRopeGravelBag,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -66,7 +66,7 @@ module PR
 		Result:Gravelbag=10,
 		OnCreate:Recipe.OnCreate.LoadUsesTwoRope,
 		RemoveResultItem:true,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -79,7 +79,7 @@ module PR
 		Result:5pkRopeGravelBag,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -91,7 +91,7 @@ module PR
 		Result:Gravelbag=5,
 		OnCreate:Recipe.OnCreate.LoadUsesOneRope,
 		RemoveResultItem:true,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -104,7 +104,7 @@ module PR
 		Result:10pkSheetRopeGravelBag,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -116,7 +116,7 @@ module PR
 		Result:Gravelbag=10,
 		OnCreate:Recipe.OnCreate.LoadUsesTwoSheetRope,
 		RemoveResultItem:true,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -129,7 +129,7 @@ module PR
 		Result:5pkSheetRopeGravelBag,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -141,7 +141,7 @@ module PR
 		Result:Gravelbag=5,
 		OnCreate:Recipe.OnCreate.LoadUsesOneSheetRope,
 		RemoveResultItem:true,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -151,7 +151,7 @@ module PR
 		
 		Result:10pkRopeGravelBag=1,
 		OnCreate:Recipe.OnCreate.MergeUses,
-		Time:50.0,
+		Time:25.0,
 	}
 
 	recipe Put Together
@@ -160,7 +160,7 @@ module PR
 		
 		Result:10pkSheetRopeGravelBag=1,
 		OnCreate:Recipe.OnCreate.MergeUses,
-		Time:50.0,
+		Time:25.0,
 	}
 
 	recipe Split in Two
@@ -170,7 +170,7 @@ module PR
 		Result:5pkRopeGravelBag,
 		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
 		RemoveResultItem:true,
-		Time:50.0,
+		Time:25.0,
 	}
 	
 	recipe Split in Two
@@ -180,7 +180,7 @@ module PR
 		Result:5pkSheetRopeGravelBag,
 		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
 		RemoveResultItem:true,
-		Time:50.0,
+		Time:25.0,
 	}
 
 	model StackOfGravelBagRoped

@@ -9,7 +9,7 @@ module PR
     {
         destroy CabbageBagSeed=5,
         Result:5pkCabbageBagSeed,
-        Time:45.0,
+        Time:22.5,
         Category:Storage,
     }
 
@@ -17,7 +17,7 @@ module PR
     {
         destroy CabbageBagSeed=10,
         Result:10pkCabbageBagSeed,
-        Time:45.0,
+        Time:22.5,
         Category:Storage,
     }
 
@@ -25,7 +25,7 @@ module PR
     {
         destroy CabbageBagSeed=50,
         Result:50pkCabbageBagSeed,
-        Time:45.0,
+        Time:22.5,
         Category:Storage,
     }
 
@@ -33,7 +33,7 @@ module PR
     {
         destroy CabbageBagSeed=100,
         Result:100pkCabbageBagSeed,
-        Time:45.0,
+        Time:22.5,
         Category:Storage,
     }
 
@@ -42,7 +42,7 @@ module PR
         destroy 5pkCabbageBagSeed,
 
         Result:CabbageBagSeed=5,
-        Time:50.0,
+        Time:25.0,
         Category:Storage
     }
 
@@ -52,7 +52,7 @@ module PR
         destroy 10pkCabbageBagSeed,
 
         Result:CabbageBagSeed=10,
-        Time:50.0,
+        Time:25.0,
         Category:Storage
     }
 
@@ -62,7 +62,7 @@ module PR
         destroy 50pkCabbageBagSeed,
 
         Result:CabbageBagSeed=50,
-        Time:50.0,
+        Time:25.0,
         Category:Storage
     }
 
@@ -72,7 +72,7 @@ module PR
         destroy 100pkCabbageBagSeed,
 
         Result:CabbageBagSeed=100,
-        Time:50.0,
+        Time:25.0,
         Category:Storage
     }
 
@@ -135,7 +135,7 @@ module PR
     {
         destroy CarrotsBagSeed=5,
         Result:5pkCarrotsBagSeed,
-        Time:45.0,
+        Time:22.5,
         Category:Storage,
     }
 
@@ -143,7 +143,7 @@ module PR
     {
         destroy CarrotsBagSeed=10,
         Result:10pkCarrotsBagSeed,
-        Time:45.0,
+        Time:22.5,
         Category:Storage,
     }
 
@@ -151,7 +151,7 @@ module PR
     {
         destroy CarrotsBagSeed=50,
         Result:50pkCarrotsBagSeed,
-        Time:45.0,
+        Time:22.5,
         Category:Storage,
     }
 
@@ -159,7 +159,7 @@ module PR
     {
         destroy CarrotsBagSeed=100,
         Result:100pkCarrotsBagSeed,
-        Time:45.0,
+        Time:22.5,
         Category:Storage,
     }
 
@@ -168,7 +168,7 @@ module PR
         destroy 5pkCarrotsBagSeed,
 
         Result:CarrotsBagSeed=5,
-        Time:50.0,
+        Time:25.0,
         Category:Storage
     }
 
@@ -178,7 +178,7 @@ module PR
         destroy 10pkCarrotsBagSeed,
 
         Result:CarrotsBagSeed=10,
-        Time:50.0,
+        Time:25.0,
         Category:Storage
     }
 
@@ -188,7 +188,7 @@ module PR
         destroy 50pkCarrotsBagSeed,
 
         Result:CarrotsBagSeed=50,
-        Time:50.0,
+        Time:25.0,
         Category:Storage
     }
 
@@ -198,7 +198,7 @@ module PR
         destroy 100pkCarrotsBagSeed,
 
         Result:CarrotsBagSeed=100,
-        Time:50.0,
+        Time:25.0,
         Category:Storage
     }
 
@@ -261,7 +261,7 @@ module PR
     {
         destroy PotatoBagSeed=5,
         Result:5pkPotatoBagSeed,
-        Time:45.0,
+        Time:22.5,
         Category:Storage,
     }
 
@@ -269,7 +269,7 @@ module PR
     {
         destroy PotatoBagSeed=10,
         Result:10pkPotatoBagSeed,
-        Time:45.0,
+        Time:22.5,
         Category:Storage,
     }
 
@@ -277,7 +277,7 @@ module PR
     {
         destroy PotatoBagSeed=50,
         Result:50pkPotatoBagSeed,
-        Time:45.0,
+        Time:22.5,
         Category:Storage,
     }
 
@@ -285,7 +285,7 @@ module PR
     {
         destroy PotatoBagSeed=100,
         Result:100pkPotatoBagSeed,
-        Time:45.0,
+        Time:22.5,
         Category:Storage,
     }
 
@@ -294,7 +294,7 @@ module PR
         destroy 5pkPotatoBagSeed,
 
         Result:PotatoBagSeed=5,
-        Time:50.0,
+        Time:25.0,
         Category:Storage
     }
 
@@ -304,7 +304,7 @@ module PR
         destroy 10pkPotatoBagSeed,
 
         Result:PotatoBagSeed=10,
-        Time:50.0,
+        Time:25.0,
         Category:Storage
     }
 
@@ -314,7 +314,7 @@ module PR
         destroy 50pkPotatoBagSeed,
 
         Result:PotatoBagSeed=50,
-        Time:50.0,
+        Time:25.0,
         Category:Storage
     }
 
@@ -324,7 +324,7 @@ module PR
         destroy 100pkPotatoBagSeed,
 
         Result:PotatoBagSeed=100,
-        Time:50.0,
+        Time:25.0,
         Category:Storage
     }
 
@@ -431,7 +431,7 @@ module PR
         destroy 5pkPineappleBagSeed,
 
         Result:PineappleBagSeed=5,
-        Time:50.0,
+        Time:25.0,
         Category:Storage
     }
 
@@ -441,7 +441,7 @@ module PR
         destroy 10pkPineappleBagSeed,
 
         Result:PineappleBagSeed=10,
-        Time:50.0,
+        Time:25.0,
         Category:Storage
     }
 
@@ -451,7 +451,7 @@ module PR
         destroy 50pkPineappleBagSeed,
 
         Result:PineappleBagSeed=50,
-        Time:50.0,
+        Time:25.0,
         Category:Storage
     }
 
@@ -461,7 +461,7 @@ module PR
         destroy 100pkPineappleBagSeed,
 
         Result:PineappleBagSeed=100,
-        Time:50.0,
+        Time:25.0,
         Category:Storage
     }
 

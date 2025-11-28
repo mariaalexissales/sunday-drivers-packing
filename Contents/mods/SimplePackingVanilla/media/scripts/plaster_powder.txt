@@ -74,7 +74,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:280.0,
+		Time:140.0,
 		Category:Storage,
 	}
 	
@@ -87,7 +87,7 @@ module PR
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnCreate:Recipe.OnCreate.Unpack2Rope,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:140.0,
+		Time:70.0,
 		Category:Storage,
 	}
 	
@@ -100,7 +100,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:230.0,
+		Time:115.0,
 		Category:Storage,
 	}
 	
@@ -113,7 +113,7 @@ module PR
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnCreate:Recipe.OnCreate.Unpack1Rope,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:115.0,
+		Time:57.5,
 		Category:Storage,
 	}
 	
@@ -126,7 +126,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:280.0,
+		Time:140.0,
 		Category:Storage,
 	}
 	
@@ -139,7 +139,7 @@ module PR
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnCreate:Recipe.OnCreate.Unpack2SheetRope,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:140.0,
+		Time:70.0,
 		Category:Storage,
 	}
 	
@@ -152,7 +152,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:230.0,
+		Time:115.0,
 		Category:Storage,
 	}
 	
@@ -165,7 +165,7 @@ module PR
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnCreate:Recipe.OnCreate.Unpack1SheetRope,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:115.0,
+		Time:57.5,
 		Category:Storage,
 	}
 	
@@ -178,7 +178,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:400.0,
+		Time:200.0,
 		Category:Storage,
 	}
 	
@@ -191,7 +191,7 @@ module PR
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnCreate:Recipe.OnCreate.Unpack1WoodenContainer,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:200.0,
+		Time:100.0,
 		Category:Storage,
 	}
 	
@@ -204,7 +204,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:450.0,
+		Time:225.0,
 		Category:Storage,
 	}
 	
@@ -217,7 +217,7 @@ module PR
 		OnGiveXP:Recipe.OnGiveXP.None,
 		OnCreate:Recipe.OnCreate.Unpack2WoodenContainer,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:225.0,
+		Time:112.5,
 		Category:Storage,
 	}
 	
@@ -227,7 +227,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:10pkRopePlasterPowder=1,
-		Time:127.0,
+		Time:63.5,
 	}
 
 	recipe Put Together
@@ -236,7 +236,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:10pkSheetRopePlasterPowder=1,
-		Time:127.0,
+		Time:63.5,
 	}
 
 	recipe Put Together
@@ -245,7 +245,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:100pkWCPlasterPowder=1,
-		Time:212.0,
+		Time:106.0,
 	}
 
 	recipe Split in Two
@@ -254,7 +254,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:5pkRopePlasterPowder=2,
-		Time:127.0,
+		Time:63.5,
 	}
 	
 	recipe Split in Two
@@ -263,7 +263,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:5pkSheetRopePlasterPowder=2,
-		Time:127.0,
+		Time:63.5,
 	}
 
 	recipe Split in Two
@@ -272,7 +272,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:50pkWCPlasterPowder=2,
-		Time:212.0,
+		Time:106.0,
 	}
 
 	model StackOfPlasterPowderRoped

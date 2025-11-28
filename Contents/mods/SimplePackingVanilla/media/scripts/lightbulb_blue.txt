@@ -50,7 +50,7 @@ module PR
 		
 		Result:10pkLightBulbBlue=1,
 		OnTest:Recipe.OnTest.WholeItem,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -59,7 +59,7 @@ module PR
 		destroy 10pkLightBulbBlue,
 		
 		Result:LightBulbBlue=10,
-		Time:25.0,
+		Time:12.5,
 		Category:Storage,
 	}
 	
@@ -69,7 +69,7 @@ module PR
 		
 		Result:50pkLightBulbBlue=1,
 		OnTest:Recipe.OnTest.WholeItem,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -78,7 +78,7 @@ module PR
 		destroy 50pkLightBulbBlue,
 		
 		Result:LightBulbBlue=50,
-		Time:50.0,
+		Time:25.0,
 		Category:Storage,
 	}
 	
@@ -88,7 +88,7 @@ module PR
 		
 		Result:100pkLightBulbBlue=1,
 		OnTest:Recipe.OnTest.WholeItem,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -97,7 +97,7 @@ module PR
 		destroy 100pkLightBulbBlue,
 		
 		Result:LightBulbBlue=100,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 
@@ -106,7 +106,7 @@ module PR
 		10pkLightBulbBlue=5,
 		
 		Result:50pkLightBulbBlue=1,
-		Time:40.0,
+		Time:20.0,
 	}
 	
 	recipe Put Together
@@ -114,7 +114,7 @@ module PR
 		50pkLightBulbBlue=2,
 		
 		Result:100pkLightBulbBlue=1,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Two
@@ -122,7 +122,7 @@ module PR
 		100pkLightBulbBlue=1,
 		
 		Result:50pkLightBulbBlue=2,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Five
@@ -130,7 +130,7 @@ module PR
 		50pkLightBulbBlue=1,
 		
 		Result:10pkLightBulbBlue=5,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	model WIP

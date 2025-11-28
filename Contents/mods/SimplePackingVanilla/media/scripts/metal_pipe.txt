@@ -73,7 +73,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:10pkMetalPipe,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -83,7 +83,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:MetalPipe=10,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -94,7 +94,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:5pkMetalPipe,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -104,7 +104,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:MetalPipe=5,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 
@@ -116,7 +116,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:10pkRopeMetalPipe,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -127,7 +127,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:MetalPipe=10,
 		OnCreate:Recipe.OnCreate.Unpack2Rope,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -139,7 +139,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:5pkRopeMetalPipe,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -150,7 +150,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:MetalPipe=5,
 		OnCreate:Recipe.OnCreate.Unpack1Rope,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -162,7 +162,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:10pkSheetRopeMetalPipe,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -173,7 +173,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:MetalPipe=10,
 		OnCreate:Recipe.OnCreate.Unpack2SheetRope,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -185,7 +185,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:5pkSheetRopeMetalPipe,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -196,7 +196,7 @@ module PR
 		CanBeDoneFromFloor:true,
 		Result:MetalPipe=5,
 		OnCreate:Recipe.OnCreate.Unpack1SheetRope,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 
@@ -254,7 +254,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:10pkMetalPipe=1,
-		Time:50.0,
+		Time:25.0,
 	}
 
 	recipe Put Together
@@ -263,7 +263,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:10pkSheetRopeMetalPipe=1,
-		Time:50.0,
+		Time:25.0,
 	}
 	
 	recipe Put Together
@@ -272,7 +272,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:10pkRopeMetalPipe=1,
-		Time:50.0,
+		Time:25.0,
 	}
 
 	recipe Split in Two
@@ -281,7 +281,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:5pkMetalPipe=2,
-		Time:40.0,
+		Time:20.0,
 	}
 
 	recipe Split in Two
@@ -290,7 +290,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:5pkSheetRopeMetalPipe=2,
-		Time:40.0,
+		Time:20.0,
 	}
 	
 	recipe Split in Two
@@ -299,7 +299,7 @@ module PR
 		
 		CanBeDoneFromFloor:true,
 		Result:5pkRopeMetalPipe=2,
-		Time:40.0,
+		Time:20.0,
 	}
 	
 	model StackOfMetalPipes

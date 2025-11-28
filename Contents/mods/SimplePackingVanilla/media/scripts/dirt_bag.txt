@@ -54,7 +54,7 @@ module PR
 		Result:10pkRopeDirtBag,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -66,7 +66,7 @@ module PR
 		Result:Dirtbag=10,
 		RemoveResultItem:true,
 		OnCreate:Recipe.OnCreate.LoadUsesTwoRope,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -79,7 +79,7 @@ module PR
 		Result:5pkRopeDirtBag,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -91,7 +91,7 @@ module PR
 		Result:Dirtbag=5,
 		RemoveResultItem:true,
 		OnCreate:Recipe.OnCreate.LoadUsesOneRope,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -104,7 +104,7 @@ module PR
 		Result:10pkSheetRopeDirtBag,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -116,7 +116,7 @@ module PR
 		Result:Dirtbag=10,
 		RemoveResultItem:true,
 		OnCreate:Recipe.OnCreate.LoadUsesTwoSheetRope,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -129,7 +129,7 @@ module PR
 		Result:5pkSheetRopeDirtBag,
 		OnCreate:Recipe.OnCreate.SaveUses,
 		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -141,7 +141,7 @@ module PR
 		Result:Dirtbag=5,
 		RemoveResultItem:true,
 		OnCreate:Recipe.OnCreate.LoadUsesOneSheetRope,
-		Time:75.0,
+		Time:37.5,
 		Category:Storage,
 	}
 	
@@ -151,7 +151,7 @@ module PR
 		
 		Result:10pkRopeDirtBag=1,
 		OnCreate:Recipe.OnCreate.MergeUses,
-		Time:50.0,
+		Time:25.0,
 	}
 
 	recipe Put Together
@@ -160,7 +160,7 @@ module PR
 		
 		Result:10pkSheetRopeDirtBag=1,
 		OnCreate:Recipe.OnCreate.MergeUses,
-		Time:50.0,
+		Time:25.0,
 	}
 
 	recipe Split in Two
@@ -170,7 +170,7 @@ module PR
 		Result:5pkRopeDirtBag,
 		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
 		RemoveResultItem:true,
-		Time:50.0,
+		Time:25.0,
 	}
 	
 	recipe Split in Two
@@ -180,7 +180,7 @@ module PR
 		Result:5pkSheetRopeDirtBag,
 		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
 		RemoveResultItem:true,
-		Time:50.0,
+		Time:25.0,
 	}
 
 	model StackOfDirtBagRoped

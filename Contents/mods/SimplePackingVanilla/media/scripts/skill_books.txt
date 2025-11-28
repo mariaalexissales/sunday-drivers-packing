@@ -124,7 +124,7 @@ module PR
 		BookCarpentry5,
 		
 		Result:pkCarpentry,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -134,7 +134,7 @@ module PR
 		
 		Result:BookCarpentry1,
 		OnCreate:Recipe.OnCreate.UnpackCarpentrySkillBook,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -147,7 +147,7 @@ module PR
 		BookCooking5,
 		
 		Result:pkCooking,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -157,7 +157,7 @@ module PR
 		
 		Result:BookCooking1,
 		OnCreate:Recipe.OnCreate.UnpackCookingSkillBook,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -170,7 +170,7 @@ module PR
 		BookElectrician5,
 		
 		Result:pkElectricity,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -180,7 +180,7 @@ module PR
 		
 		Result:BookElectrician1,
 		OnCreate:Recipe.OnCreate.UnpackElectricitySkillBook,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -193,7 +193,7 @@ module PR
 		BookFarming5,
 		
 		Result:pkFarming,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -203,7 +203,7 @@ module PR
 		
 		Result:BookFarming1,
 		OnCreate:Recipe.OnCreate.UnpackFarmingSkillBook,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -216,7 +216,7 @@ module PR
 		BookFirstAid5,
 		
 		Result:pkFirstaid,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -226,7 +226,7 @@ module PR
 		
 		Result:BookFirstAid1,
 		OnCreate:Recipe.OnCreate.UnpackFirstaidSkillBook,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -239,7 +239,7 @@ module PR
 		BookFishing5,
 		
 		Result:pkFishing,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -249,7 +249,7 @@ module PR
 		
 		Result:BookFishing1,
 		OnCreate:Recipe.OnCreate.UnpackFishingSkillBook,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -262,7 +262,7 @@ module PR
 		BookForaging5,
 		
 		Result:pkForaging,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -272,7 +272,7 @@ module PR
 		
 		Result:BookForaging1,
 		OnCreate:Recipe.OnCreate.UnpackForagingSkillBook,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -285,7 +285,7 @@ module PR
 		BookMechanic5,
 		
 		Result:pkMechanics,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -295,7 +295,7 @@ module PR
 		
 		Result:BookMechanic1,
 		OnCreate:Recipe.OnCreate.UnpackMechanicsSkillBook,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -308,7 +308,7 @@ module PR
 		BookTailoring5,
 		
 		Result:pkTailoring,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -318,7 +318,7 @@ module PR
 		
 		Result:BookTailoring1,
 		OnCreate:Recipe.OnCreate.UnpackTailoringSkillBook,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -331,7 +331,7 @@ module PR
 		BookMetalWelding5,
 		
 		Result:pkMetalwork,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -341,7 +341,7 @@ module PR
 		
 		Result:BookMetalWelding1,
 		OnCreate:Recipe.OnCreate.UnpackMetalworkSkillBook,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	
@@ -354,7 +354,7 @@ module PR
 		BookTrapping5,
 		
 		Result:pkTrapping,
-		Time:150.0,
+		Time:75.0,
 		Category:Storage,
 	}
 	
@@ -364,7 +364,7 @@ module PR
 		
 		Result:BookTrapping1,
 		OnCreate:Recipe.OnCreate.UnpackTrappingSkillBook,
-		Time:100.0,
+		Time:50.0,
 		Category:Storage,
 	}
 	

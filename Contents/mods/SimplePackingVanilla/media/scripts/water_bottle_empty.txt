@@ -24,7 +24,7 @@ module PR
 		WaterBottleEmpty/PopBottleEmpty=24,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -34,7 +34,7 @@ module PR
 		PopBottleEmpty=23,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -44,7 +44,7 @@ module PR
 		PopBottleEmpty=22,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -54,7 +54,7 @@ module PR
 		PopBottleEmpty=21,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -64,7 +64,7 @@ module PR
 		PopBottleEmpty=20,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -74,7 +74,7 @@ module PR
 		PopBottleEmpty=19,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -84,7 +84,7 @@ module PR
 		PopBottleEmpty=18,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -94,7 +94,7 @@ module PR
 		PopBottleEmpty=17,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -104,7 +104,7 @@ module PR
 		PopBottleEmpty=16,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -114,7 +114,7 @@ module PR
 		PopBottleEmpty=15,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -124,7 +124,7 @@ module PR
 		PopBottleEmpty=14,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -134,7 +134,7 @@ module PR
 		PopBottleEmpty=13,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -144,7 +144,7 @@ module PR
 		PopBottleEmpty=12,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -154,7 +154,7 @@ module PR
 		PopBottleEmpty=11,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -164,7 +164,7 @@ module PR
 		PopBottleEmpty=10,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -174,7 +174,7 @@ module PR
 		PopBottleEmpty=9,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -184,7 +184,7 @@ module PR
 		PopBottleEmpty=8,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -194,7 +194,7 @@ module PR
 		PopBottleEmpty=7,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -204,7 +204,7 @@ module PR
 		PopBottleEmpty=6,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -214,7 +214,7 @@ module PR
 		PopBottleEmpty=5,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -224,7 +224,7 @@ module PR
 		PopBottleEmpty=4,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -234,7 +234,7 @@ module PR
 		PopBottleEmpty=3,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -244,7 +244,7 @@ module PR
 		PopBottleEmpty=2,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -254,7 +254,7 @@ module PR
 		PopBottleEmpty=1,
 
 		Result:OS24pkWaterBottleEmpty,
-		Time:240.0,
+		Time:120.0,
 		Category:Storage,
 	}
 
@@ -263,7 +263,7 @@ module PR
 		OS24pkWaterBottleEmpty,
 
 		Result:WaterBottleEmpty=24,
-		Time:120.0,
+		Time:60.0,
 		Category:Storage,
 	}
 	
@@ -274,7 +274,7 @@ module PR
 
 		Result:OS24pkWaterBottleFull,
 		CanBeDoneFromFloor:true,
-		Time:960.0,
+		Time:480.0,
 		Category:Storage,
 		OnTest:Recipe.OnTest.NotTaintedWater,
 	}
