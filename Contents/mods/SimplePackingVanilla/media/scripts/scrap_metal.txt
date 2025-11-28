@@ -1,37 +1,8 @@
-module SP
+module PR
 {
 	imports
 	{
 		Base,
-	}
-	item 100pkScrapMetal
-	{
-		Weight			= 5.0,
-		Type			= Normal,
-		DisplayName		= 100 x Scrap Metal,
-		DisplayCategory = Material,
-		Icon			= PScrapMetal,
-		WorldStaticModel= BoxOfScrapMetal,
-	}
-	
-	item 50pkScrapMetal
-	{
-		Weight			= 2.75,
-		Type			= Normal,
-		DisplayName		= 50 x Scrap Metal,
-		DisplayCategory = Material,
-		Icon			= PScrapMetal,
-		WorldStaticModel= BoxOfScrapMetal,
-	}
-	
-	item 10pkScrapMetal
-	{
-		Weight			= 0.6,
-		Type			= Normal,
-		DisplayName		= 10 x Scrap Metal,
-		DisplayCategory = Material,
-		Icon			= PScrapMetal,
-		WorldStaticModel= BoxOfScrapMetal,
 	}
 	
 	item 5pkScrapMetal
@@ -44,64 +15,37 @@ module SP
 		WorldStaticModel= BoxOfScrapMetal,
 	}
 
-	recipe Pack 100
+    item 10pkScrapMetal
 	{
-		destroy ScrapMetal=100,
-		
-		Result:100pkScrapMetal,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:150.0,
-		Category:Storage,
+		Weight			= 0.6,
+		Type			= Normal,
+		DisplayName		= 10 x Scrap Metal,
+		DisplayCategory = Material,
+		Icon			= PScrapMetal,
+		WorldStaticModel= BoxOfScrapMetal,
 	}
-	
-	recipe Unpack 100
+
+    item 50pkScrapMetal
 	{
-		destroy 100pkScrapMetal,
-		
-		Result:ScrapMetal=100,
-		Time:100.0,
-		Category:Storage,
+		Weight			= 2.75,
+		Type			= Normal,
+		DisplayName		= 50 x Scrap Metal,
+		DisplayCategory = Material,
+		Icon			= PScrapMetal,
+		WorldStaticModel= BoxOfScrapMetal,
 	}
-	
-	recipe Pack 50
+
+    item 100pkScrapMetal
 	{
-		destroy ScrapMetal=50,
-		
-		Result:50pkScrapMetal,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:100.0,
-		Category:Storage,
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 100 x Scrap Metal,
+		DisplayCategory = Material,
+		Icon			= PScrapMetal,
+		WorldStaticModel= BoxOfScrapMetal,
 	}
-	
-	recipe Unpack 50
-	{
-		destroy 50pkScrapMetal,
-		
-		Result:ScrapMetal=50,
-		Time:75.0,
-		Category:Storage,
-	}
-	
-	recipe Pack 10
-	{
-		destroy ScrapMetal=10,
-		
-		Result:10pkScrapMetal,
-		OnTest:Recipe.OnTest.IsFavorite,
-		Time:75.0,
-		Category:Storage,
-	}
-	
-	recipe Unpack 10
-	{
-		destroy 10pkScrapMetal,
-		
-		Result:ScrapMetal=10,
-		Time:50.0,
-		Category:Storage,
-	}
-	
-	recipe Pack 5
+
+    recipe Pack 5
 	{
 		destroy ScrapMetal=5,
 		
@@ -117,6 +61,63 @@ module SP
 		
 		Result:ScrapMetal=5,
 		Time:25.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 50
+	{
+		destroy ScrapMetal=50,
+		
+		Result:50pkScrapMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:25.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 50
+	{
+		destroy 50pkScrapMetal,
+		
+		Result:ScrapMetal=50,
+		Time:25.0,
+		Category:Storage,
+	}
+	
+	recipe Pack 10
+	{
+		destroy ScrapMetal=10,
+		
+		Result:10pkScrapMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:25.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 10
+	{
+		destroy 10pkScrapMetal,
+		
+		Result:ScrapMetal=10,
+		Time:50.0,
+		Category:Storage,
+	}
+
+    recipe Pack 100
+	{
+		destroy ScrapMetal=100,
+		
+		Result:100pkScrapMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:150.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 100
+	{
+		destroy 100pkScrapMetal,
+		
+		Result:ScrapMetal=100,
+		Time:100.0,
 		Category:Storage,
 	}
 
@@ -166,6 +167,74 @@ module SP
 		
 		Result:5pkScrapMetal=2,
 		Time:30.0,
+	}
+
+    item 500pkScrapMetal
+	{
+		DisplayName		= 500 x ScrapMetal,
+		Weight			= 25.0,
+		Type			= Normal,
+		Icon			= PkScrapMetalBigBox,
+		WorldStaticModel= BigScrapMetal
+	}
+	
+	item 100pkScrapMetal
+	{
+		DisplayName		= 100 x ScrapMetal,
+		Weight			= 5.0,
+		Type			= Normal,
+		Icon			= PkScrapMetalMediumBox,
+		WorldStaticModel= MediumScrapMetal
+	}
+	
+	recipe Pack 100
+	{
+		destroy ScrapMetal=100,
+		Result:100pkScrapMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:22.5,
+		Category:Storage,
+	}
+	
+	recipe Unpack 100
+	{
+		destroy 100pkScrapMetal,
+		Result:ScrapMetal=100,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		100pkScrapMetal=5,
+		
+		Result:500pkScrapMetal=1,
+		Time:7.5,
+	}
+
+	recipe Split in Five
+	{
+		500pkScrapMetal=1,
+		
+		Result:100pkScrapMetal=5,
+		Time:7.5,
+	}
+
+    recipe Pack 500
+	{
+		destroy ScrapMetal=500,
+		Result:500pkScrapMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:45.0,
+		Category:Storage,
+	}
+	
+	recipe Unpack 500
+	{
+		destroy 500pkScrapMetal,
+		Result:ScrapMetal=500,
+		Time:45.0,
+		Category:Storage,
 	}
 
 	model BoxOfScrapMetal

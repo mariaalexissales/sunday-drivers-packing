@@ -325,12 +325,12 @@ function Recipe.OnCreate.Unpack1Rope(items, result, player)
 end
 
 function Recipe.OnCreate.Unpack2WoodenContainer(items, result, player)
-    player:getInventory():AddItem("Packing.WoodenContainer")
-    player:getInventory():AddItem("Packing.WoodenContainer")
+    player:getInventory():AddItem("PR.WoodenContainer")
+    player:getInventory():AddItem("PR.WoodenContainer")
 end
 
 function Recipe.OnCreate.Unpack1WoodenContainer(items, result, player)
-    player:getInventory():AddItem("Packing.WoodenContainer")
+    player:getInventory():AddItem("PR.WoodenContainer")
 end
 
 -- ==========================

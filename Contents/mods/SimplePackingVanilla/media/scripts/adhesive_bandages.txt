@@ -1,4 +1,4 @@
-module SP
+module PR
 {
 	imports
 	{
@@ -19,7 +19,7 @@ module SP
 	{
 		Bandaid=12,
 
-		Result:SP.OS12pkAdhesiveBandages,
+		Result:PR.OS12pkAdhesiveBandages,
 		OnTest:Recipe.OnTest.IsFavorite,
 		Time:60.0,
 		Category:Storage,
