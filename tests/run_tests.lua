@@ -1,9 +1,9 @@
 #!/usr/bin/env lua5.1
 
--- Test runner for Simple Packing mod
+-- Test runner for Pack Rat mod
 -- Compatible with Lua 5.1
 
-print("Simple Packing Mod - Test Suite")
+print("Pack Rat Mod - Test Suite")
 print("===============================")
 print("")
 

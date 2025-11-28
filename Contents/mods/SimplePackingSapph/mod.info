@@ -1,5 +1,5 @@
-name=Simple Packing - Sapph's Cooking
+name=Pack Rat - Sapph's Cooking
 id=SimplePackingSapph
-description=Simple Packing recipes for Sapph's Cooking.
+description=Pack Rat recipes for Sapph's Cooking.
 poster=poster.png
 require=SimplePacking,sapphcooking

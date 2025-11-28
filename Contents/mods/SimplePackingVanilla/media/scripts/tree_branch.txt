@@ -1,10 +1,10 @@
-module SP
+module PR
 {
 	imports
 	{
 		Base,
 	}
-	/** Base Weight = 1.7 **/
+
 	item 10pkRopeTreeBranch
 	{
 		Weight			= 1.5,

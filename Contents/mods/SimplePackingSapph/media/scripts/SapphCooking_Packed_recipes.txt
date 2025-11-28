@@ -1,0 +1,853 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	/******************************  DRINK MIXES  ******************************/
+
+	recipe Pack 6
+	{
+		destroy SapphCooking.Drinkmix_Lemon=6,
+
+		Result				:6pkDrinkmix_Lemon,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkDrinkmix_Lemon,
+
+		Result				:SapphCooking.Drinkmix_Lemon=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy SapphCooking.Drinkmix_Lemon=12,
+
+		Result				:12pkDrinkmix_Lemon,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkDrinkmix_Lemon,
+
+		Result				:SapphCooking.Drinkmix_Lemon=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkDrinkmix_Lemon=2,
+
+		Result				:12pkDrinkmix_Lemon,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		12pkDrinkmix_Lemon,
+
+		Result				:6pkDrinkmix_Lemon=2,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy SapphCooking.Drinkmix_Orange=6,
+
+		Result				:6pkDrinkmix_Orange,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkDrinkmix_Orange,
+
+		Result				:SapphCooking.Drinkmix_Orange=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy SapphCooking.Drinkmix_Orange=12,
+
+		Result				:12pkDrinkmix_Orange,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkDrinkmix_Orange,
+
+		Result				:SapphCooking.Drinkmix_Orange=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkDrinkmix_Orange=2,
+
+		Result				:12pkDrinkmix_Orange,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		12pkDrinkmix_Orange,
+
+		Result				:6pkDrinkmix_Orange=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy SapphCooking.Drinkmix_Apple=6,
+
+		Result				:6pkDrinkmix_Apple,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkDrinkmix_Apple,
+
+		Result				:SapphCooking.Drinkmix_Apple=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy SapphCooking.Drinkmix_Apple=12,
+
+		Result				:12pkDrinkmix_Apple,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkDrinkmix_Apple,
+
+		Result				:SapphCooking.Drinkmix_Apple=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkDrinkmix_Apple=2,
+
+		Result				:12pkDrinkmix_Apple,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		12pkDrinkmix_Apple,
+
+		Result				:6pkDrinkmix_Apple=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy SapphCooking.Drinkmix_Grape=6,
+
+		Result				:6pkDrinkmix_Grape,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkDrinkmix_Grape,
+
+		Result				:SapphCooking.Drinkmix_Grape=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy SapphCooking.Drinkmix_Grape=12,
+
+		Result				:12pkDrinkmix_Grape,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkDrinkmix_Grape,
+
+		Result				:SapphCooking.Drinkmix_Grape=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkDrinkmix_Grape=2,
+
+		Result				:12pkDrinkmix_Grape,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		12pkDrinkmix_Grape,
+
+		Result				:6pkDrinkmix_Grape=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy SapphCooking.Drinkmix_Pineapple=6,
+
+		Result				:6pkDrinkmix_Pineapple,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkDrinkmix_Pineapple,
+
+		Result				:SapphCooking.Drinkmix_Pineapple=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy SapphCooking.Drinkmix_Pineapple=12,
+
+		Result				:12pkDrinkmix_Pineapple,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkDrinkmix_Pineapple,
+
+		Result				:SapphCooking.Drinkmix_Pineapple=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkDrinkmix_Pineapple=2,
+
+		Result				:12pkDrinkmix_Pineapple,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		12pkDrinkmix_Pineapple,
+
+		Result				:6pkDrinkmix_Pineapple=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy SapphCooking.Drinkmix_Strawberry=6,
+
+		Result				:6pkDrinkmix_Strawberry,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkDrinkmix_Strawberry,
+
+		Result				:SapphCooking.Drinkmix_Strawberry=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy SapphCooking.Drinkmix_Strawberry=12,
+
+		Result				:12pkDrinkmix_Strawberry,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkDrinkmix_Strawberry,
+
+		Result				:SapphCooking.Drinkmix_Strawberry=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkDrinkmix_Strawberry=2,
+
+		Result				:12pkDrinkmix_Strawberry,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		12pkDrinkmix_Strawberry,
+
+		Result				:6pkDrinkmix_Strawberry=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy SapphCooking.Drinkmix_Peach=6,
+
+		Result				:6pkDrinkmix_Peach,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkDrinkmix_Peach,
+
+		Result				:SapphCooking.Drinkmix_Peach=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy SapphCooking.Drinkmix_Peach=12,
+
+		Result				:12pkDrinkmix_Peach,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkDrinkmix_Peach,
+
+		Result				:SapphCooking.Drinkmix_Peach=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkDrinkmix_Peach=2,
+
+		Result				:12pkDrinkmix_Peach,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		12pkDrinkmix_Peach,
+
+		Result				:6pkDrinkmix_Peach=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy SapphCooking.Drinkmix_Watermelon=6,
+
+		Result				:6pkDrinkmix_Watermelon,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkDrinkmix_Watermelon,
+
+		Result				:SapphCooking.Drinkmix_Watermelon=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy SapphCooking.Drinkmix_Watermelon=12,
+
+		Result				:12pkDrinkmix_Watermelon,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkDrinkmix_Watermelon,
+
+		Result				:SapphCooking.Drinkmix_Watermelon=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkDrinkmix_Watermelon=2,
+
+		Result				:12pkDrinkmix_Watermelon,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		12pkDrinkmix_Watermelon,
+
+		Result				:6pkDrinkmix_Watermelon=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	/******************************  CANNED ITEMS  ******************************/
+
+	recipe Pack 6
+	{
+		destroy SapphCooking.CanofKernelCorn=6,
+
+		Result				:6pkCanofKernelCorn,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkCanofKernelCorn,
+
+		Result				:SapphCooking.CanofKernelCorn=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy SapphCooking.CanofKernelCorn=12,
+
+		Result				:12pkCanofKernelCorn,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkCanofKernelCorn,
+
+		Result				:SapphCooking.CanofKernelCorn=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkCanofKernelCorn=2,
+
+		Result				:12pkCanofKernelCorn,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		12pkCanofKernelCorn,
+
+		Result				:6pkCanofKernelCorn=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy SapphCooking.CanofPowderedMilk=6,
+
+		Result				:6pkCanofPowderedMilk,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkCanofPowderedMilk,
+
+		Result				:SapphCooking.CanofPowderedMilk=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy SapphCooking.CanofPowderedMilk=12,
+
+		Result				:12pkCanofPowderedMilk,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkCanofPowderedMilk,
+
+		Result				:SapphCooking.CanofPowderedMilk=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkCanofPowderedMilk=2,
+
+		Result				:12pkCanofPowderedMilk,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		12pkCanofPowderedMilk,
+
+		Result				:6pkCanofPowderedMilk=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy SapphCooking.CanofProteinPowder=6,
+
+		Result				:6pkCanofProteinPowder,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkCanofProteinPowder,
+
+		Result				:SapphCooking.CanofProteinPowder=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy SapphCooking.CanofProteinPowder=12,
+
+		Result				:12pkCanofProteinPowder,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkCanofProteinPowder,
+
+		Result				:SapphCooking.CanofProteinPowder=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkCanofProteinPowder=2,
+
+		Result				:12pkCanofProteinPowder,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		12pkCanofProteinPowder,
+
+		Result				:6pkCanofProteinPowder=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy SapphCooking.CanofRefriedBeans=6,
+
+		Result				:6pkCanofRefriedBeans,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkCanofRefriedBeans,
+
+		Result				:SapphCooking.CanofRefriedBeans=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy SapphCooking.CanofRefriedBeans=12,
+
+		Result				:12pkCanofRefriedBeans,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkCanofRefriedBeans,
+
+		Result				:SapphCooking.CanofRefriedBeans=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkCanofRefriedBeans=2,
+
+		Result				:12pkCanofRefriedBeans,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		12pkCanofRefriedBeans,
+
+		Result				:6pkCanofRefriedBeans=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 6
+	{
+		destroy SapphCooking.CanofBeets=6,
+
+		Result				:6pkCanofBeets,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkCanofBeets,
+
+		Result				:SapphCooking.CanofBeets=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy SapphCooking.CanofBeets=12,
+
+		Result				:12pkCanofBeets,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkCanofBeets,
+
+		Result				:SapphCooking.CanofBeets=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkCanofBeets=2,
+
+		Result				:12pkCanofBeets,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		12pkCanofBeets,
+
+		Result				:6pkCanofBeets=2,
+		Time				:75.0,
+		Category			:Storage,
+	}
+
+	/******************************  TIN OF CAVIAR  ******************************/
+
+	recipe Pack 6
+	{
+		destroy SapphCooking.TinofCaviar=6,
+
+		Result				:6pkTinofCaviar,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkTinofCaviar,
+
+		Result				:SapphCooking.TinofCaviar=6,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Pack 12
+	{
+		destroy SapphCooking.TinofCaviar=12,
+
+		Result				:12pkTinofCaviar,
+		OnTest				:Recipe.OnTest.IsFavorite,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		destroy 12pkTinofCaviar,
+
+		Result				:SapphCooking.TinofCaviar=12,
+		OnGiveXP			:Recipe.OnGiveXP.None,
+        RemoveResultItem    :true,
+		Time				:25.0,
+		Category			:Storage,
+	}
+
+	recipe Put Together
+	{
+		6pkTinofCaviar=2,
+
+		Result				:12pkTinofCaviar,
+		Time				:50.0,
+		Category			:Storage,
+	}
+
+	recipe Split
+	{
+		12pkTinofCaviar,
+
+		Result				:6pkTinofCaviar=2,
+		Time				:50.0,
+		Category			:Storage,
+	}
+}

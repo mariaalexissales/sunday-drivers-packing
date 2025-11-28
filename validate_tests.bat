@@ -1,5 +1,5 @@
 @echo off
-echo Simple Packing Mod - Test Validation
+echo Pack Rat Mod - Test Validation
 echo ===================================
 echo.
 

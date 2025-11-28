@@ -1,4 +1,4 @@
-module SP {
+module PR {
     imports {
         Base,
     }

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Test validation script for Simple Packing mod
+Test validation script for Pack Rat mod
 Validates Lua syntax and test structure without requiring Lua installation
 """
 
@@ -110,7 +110,7 @@ def validate_lua_files():
     return len(issues) == 0, f"Validated {len(lua_files)} Lua files" + (f" - Issues: {issues}" if issues else "")
 
 def main():
-    print("Simple Packing Mod - Test Validation")
+    print("Pack Rat Mod - Test Validation")
     print("=" * 40)
 
     validations = [

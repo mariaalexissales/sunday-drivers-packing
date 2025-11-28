@@ -1,6 +1,6 @@
-# Simple Packing Mod - Test Suite
+# Pack Rat Mod - Test Suite
 
-This directory contains the unit test suite for the Simple Packing Project Zomboid mod, designed to work with Lua 5.1 (the version supported by Project Zomboid).
+This directory contains the unit test suite for the Pack Rat Project Zomboid mod, designed to work with Lua 5.1 (the version supported by Project Zomboid).
 
 ## Test Structure
 
@@ -20,7 +20,7 @@ tests/
 ### Prerequisites
 
 - Lua 5.1 installed on your system
-- Access to the Simple Packing mod source code
+- Access to the Pack Rat mod source code
 
 ### Windows
 
@@ -63,11 +63,13 @@ lua5.1 test_simple_fuel.lua
 The project includes two GitHub Actions workflows:
 
 ### 1. Basic Test Workflow (`.github/workflows/test.yml`)
+
 - Runs on branches starting with `test-` or in the `test/` namespace
 - Executes all unit tests
 - Uploads test artifacts
 
 ### 2. Comprehensive Test Workflow (`.github/workflows/comprehensive-test.yml`)
+
 - More thorough validation including syntax checking
 - Integration tests
 - Test status notifications
@@ -76,11 +78,13 @@ The project includes two GitHub Actions workflows:
 ### Trigger Conditions
 
 Tests automatically run when you:
+
 - Push to any branch starting with `test-`
 - Push to any branch starting with `test`
 - Create a pull request targeting test branches
 
 Example branch names that trigger tests:
+
 - `test-new-feature`
 - `test-bugfix`
 - `test/experimental`
@@ -142,6 +146,7 @@ The `mocks.lua` file provides mock implementations of Project Zomboid objects:
 Current test coverage includes:
 
 ### simple_functions.lua
+
 - ✅ Utility functions (AMSI, recipe_opencigpack)
 - ✅ Recipe OnTest functions (IsFavorite, WholeFood, WholeItem, IsEmpty, etc.)
 - ✅ Save/Load functions (SaveUses, LoadUses, SaveFood, LoadFood)
@@ -149,10 +154,12 @@ Current test coverage includes:
 - ✅ Merge/Split functions
 
 ### simple_book_packing.lua
+
 - ✅ All skill book unpacking functions
 - ✅ Verification of correct book types and quantities
 
 ### simple_fuel.lua
+
 - ✅ Fuel type definitions
 - ✅ Value consistency across material types
 - ✅ Proper fuel value scaling
@@ -214,4 +221,4 @@ When adding new functionality:
 
 ## License
 
-This test suite is part of the Simple Packing mod and follows the same license terms.
+This test suite is part of the Pack Rat mod and follows the same license terms.
