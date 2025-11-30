@@ -1,0 +1,123 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 500
+	{
+		destroy LeatherStrips=500,
+        
+		Result  :500pkLeather=1,
+		OnTest  :Recipe.OnTest.IsFavorite,
+		Time    :75.0,
+		Category:Storage
+	}
+
+	recipe Put Together
+	{
+		100pkLeather=5,
+
+		Result  :500pkLeather=1,
+		Time    :75.0
+	}
+
+	recipe Pack 10
+	{
+		destroy LeatherStrips=10,
+		
+		Result:10pkLeather=1,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:12.5,
+		Category:Storage,
+	}
+
+	recipe Split in Five
+	{
+		50pkLeather=1,
+		
+		Result:10pkLeather=5,
+		Time:20.0,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkLeather,
+		
+		Result:LeatherStrips=10,
+		Time:12.5,
+		Category:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy LeatherStrips=50,
+		
+		Result:50pkLeather=1,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkLeather=5,
+		
+		Result:50pkLeather=1,
+		Time:20.0,
+	}
+
+	recipe Split in Two
+	{
+		100pkLeather=1,
+		
+		Result:50pkLeather=2,
+		Time:20.0,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkLeather,
+		
+		Result:LeatherStrips=50,
+		Time:20.0,
+		Category:Storage,
+	}
+
+	recipe Pack 100
+	{
+		destroy LeatherStrips=100,
+		
+		Result:100pkLeather=1,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		50pkLeather=2,
+		
+		Result:100pkLeather=1,
+		Time:20.0,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkLeather,
+		
+		Result:LeatherStrips=100,
+		Time:40.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 500
+	{
+		destroy 500pkLeather,
+
+		Result  :LeatherStrips=500,
+		Time    :75.0,
+		Category:Storage,
+	}
+}

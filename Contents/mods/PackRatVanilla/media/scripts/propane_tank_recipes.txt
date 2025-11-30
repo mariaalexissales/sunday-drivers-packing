@@ -1,0 +1,219 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Rope 5
+	{
+		destroy PropaneTank=5,
+		Rope=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkRopePropaneTank,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:150.0,
+		Category:Storage,
+	}
+
+	recipe Rope 5
+	{
+		destroy PropaneTank=5,
+		SheetRope=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetRopePropaneTank,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:150.0,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pkRopePropaneTank=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkRopePropaneTank,
+		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
+		RemoveResultItem:true,
+		Time:30.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkSheetRopePropaneTank=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetRopePropaneTank,
+		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
+		RemoveResultItem:true,
+		Time:30.0,
+	}
+
+	recipe Unrope 5
+	{
+		destroy 5pkRopePropaneTank,
+		
+		CanBeDoneFromFloor:true,
+		Result:PropaneTank,
+		OnCreate:Recipe.OnCreate.LoadUsesOneRope,
+		RemoveResultItem:true,
+		Time:125.0,
+		Category:Storage,
+	}
+
+	recipe Unrope 5
+	{
+		destroy 5pkSheetRopePropaneTank,
+		
+		CanBeDoneFromFloor:true,
+		Result:PropaneTank,
+		OnCreate:Recipe.OnCreate.LoadUsesOneSheetRope,
+		RemoveResultItem:true,
+		Time:125.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkRopePropaneTank=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkRopePropaneTank=1,
+		OnCreate:Recipe.OnCreate.MergeUses,
+		Time:45.0,
+	}
+
+	recipe Put Together
+	{
+		5pkSheetRopePropaneTank=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetRopePropaneTank=1,
+		OnCreate:Recipe.OnCreate.MergeUses,
+		Time:45.0,
+	}
+
+	recipe Rope 10
+	{
+		destroy PropaneTank=10,
+		Rope=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkRopePropaneTank,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:200.0,
+		Category:Storage,
+	}
+
+	recipe Rope 10
+	{
+		destroy PropaneTank=10,
+		SheetRope=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetRopePropaneTank,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:200.0,
+		Category:Storage,
+	}
+
+	recipe Unrope 10
+	{
+		destroy 10pkRopePropaneTank,
+		
+		CanBeDoneFromFloor:true,
+		Result:PropaneTank,
+		OnCreate:Recipe.OnCreate.LoadUsesTwoRope,
+		RemoveResultItem:true,
+		Time:175.0,
+		Category:Storage,
+	}
+
+	recipe Unrope 10
+	{
+		destroy 10pkSheetRopePropaneTank,
+		
+		CanBeDoneFromFloor:true,
+		Result:PropaneTank,
+		OnCreate:Recipe.OnCreate.LoadUsesTwoSheetRope,
+		RemoveResultItem:true,
+		Time:175.0,
+		Category:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy PropaneTank=50,
+		WoodenContainer=1,
+	
+		Result:50pkWCPropaneTank,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:225.0,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		100pkWCPropaneTank=1,
+	
+		Result:50pkWCPropaneTank=2,
+		CanBeDoneFromFloor:true,
+		Time:118.5,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkWCPropaneTank,
+	
+		Result:PropaneTank=50,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack1WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:112.5,
+		Category:Storage,
+	}
+
+	recipe Pack 100
+	{
+		destroy PropaneTank=100,
+		WoodenContainer=2,
+	
+		Result:100pkWCPropaneTank,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:250.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		50pkWCPropaneTank=2,
+	
+		Result:100pkWCPropaneTank=1,
+		CanBeDoneFromFloor:true,
+		Time:118.5,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkWCPropaneTank,
+	
+		Result:PropaneTank=100,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack2WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:125.0,
+		Category:Storage,
+	}
+}

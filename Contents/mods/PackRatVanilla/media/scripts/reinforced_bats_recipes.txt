@@ -1,0 +1,28 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack Bundle
+	{
+		keep Stapler,
+		keep Yoyo,
+		keep Paperclip,
+		destroy BaseballBatNails=10,
+
+		Result:BundleReinforcedBats,
+		Time:30.0,
+		Category:Storage,
+	}
+
+	recipe Unpack Bundle
+	{
+		BundleReinforcedBats,
+
+		Result:BaseballBatNails=10,
+		Time:30.0,
+		Category:Storage,
+	}
+}

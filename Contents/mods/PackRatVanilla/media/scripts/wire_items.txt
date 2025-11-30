@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkWire
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 5 x Wire,
+		DisplayCategory = Material,
+		Icon			= PWire,
+		WorldStaticModel= StackOfWire,
+	}
+
+	item 10pkWire
+	{
+		Weight			= 1.0,
+		Type			= Normal,
+		DisplayName		= 10 x Wire,
+		DisplayCategory = Material,
+		Icon			= PWire,
+		WorldStaticModel= StackOfWire,
+	}
+}

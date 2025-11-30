@@ -1,0 +1,67 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkRopeTreeBranch
+	{
+		Weight			= 1,
+		Type			= Normal,
+		DisplayName		= 5 x Branch (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeBranch,
+		WorldStaticModel= StackOfTreeBranchesRoped,
+	}
+
+	item 5pkSheetRopeTreeBranch
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 5 x Branch (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeBranch,
+		WorldStaticModel= StackOfTreeBranchesSheetRoped,
+	}
+
+	item 10pkRopeTreeBranch
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 10 x Branch (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeBranch,
+		WorldStaticModel= StackOfTreeBranchesRoped,
+	}
+
+	item 10pkSheetRopeTreeBranch
+	{
+		Weight			= 2.5,
+		Type			= Normal,
+		DisplayName		= 10 x Branch (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeBranch,
+		WorldStaticModel= StackOfTreeBranchesSheetRoped,
+	}
+
+	item 50pkWCTreeBranch
+	{
+		Weight			= 8.5,
+		Type			= Normal,
+		DisplayName		= 50 x Branch (Box),
+		DisplayCategory	= Material,
+		Icon			= WIP,
+		WorldStaticModel= WIP,
+	}
+
+	item 100pkWCTreeBranch
+	{
+		Weight			= 12.75,
+		Type			= Normal,
+		DisplayName		= 100 x Branch (Box),
+		DisplayCategory	= Material,
+		Icon			= WIP,
+		WorldStaticModel= WIP,
+	}
+}

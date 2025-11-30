@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkFishingLine
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Fishing Line,
+		DisplayCategory = Fishing,
+		Icon			= PFishingLine,
+		WorldStaticModel= FishingLineXL,
+	}
+
+	item 10pkFishingLine
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Fishing Line,
+		DisplayCategory = Fishing,
+		Icon			= PFishingLine,
+		WorldStaticModel= FishingLineXL,
+	}
+}

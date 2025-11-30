@@ -1,0 +1,26 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 5
+	{
+		destroy EmptySandbag=5,
+
+		Result:5pkSack,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:22.5,
+		Category:Storage
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkSack,
+    
+		Result:EmptySandbag=5,
+		Time:22.5,
+		Category:Storage
+	}
+}

@@ -1,0 +1,96 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 20
+	{
+		destroy Worm=20,
+		
+		Result:20pkWorm,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Split in Five
+	{
+		100pkWorm=1,
+		
+		Result:20pkWorm=5,
+		Time:3.75,
+	}
+
+	recipe Unpack 20
+	{
+		destroy 20pkWorm,
+		
+		Result:Worm=20,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Pack 100
+	{
+		destroy Worm=100,
+		
+		Result:100pkWorm,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:11.25,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		20pkWorm=5,
+		
+		Result:100pkWorm=1,
+		Time:3.75,
+	}
+
+	recipe Split in Five
+	{
+		500pkWorm=1,
+		
+		Result:100pkWorm=5,
+		Time:3.75,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkWorm,
+		
+		Result:Worm=100,
+		Time:11.25,
+		Category:Storage,
+	}
+
+	recipe Pack 500
+	{
+		destroy Worm=500,
+		
+		Result:500pkWorm,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:11.25,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		100pkWorm=5,
+		
+		Result:500pkWorm=1,
+		Time:3.75,
+	}
+
+	recipe Unpack 500
+	{
+		destroy 500pkWorm,
+		
+		Result:Worm=500,
+		Time:11.25,
+		Category:Storage,
+	}
+}

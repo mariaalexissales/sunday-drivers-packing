@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkRope
+	{
+		Weight			= 1.05,
+		Type			= Normal,
+		DisplayName		= 5 x Rope,
+		DisplayCategory = Material,
+		Icon			= PRope,
+		WorldStaticModel = StackOfRope,
+	}
+
+	item 10pkRope
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 10 x Rope,
+		DisplayCategory = Material,
+		Icon			= PRope,
+		WorldStaticModel = StackOfRope,
+	}
+}

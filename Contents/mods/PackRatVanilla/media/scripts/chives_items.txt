@@ -1,0 +1,25 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkChives
+	{
+		DisplayName		= 10 x Chives,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= HerbChives,
+		WorldStaticModel= HerbChives_Ground
+	}
+
+	item 50pkChives
+	{
+		DisplayName		= 50 x Chives,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= HerbChives,
+		WorldStaticModel= HerbChives_Ground
+	}
+}

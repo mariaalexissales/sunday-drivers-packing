@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 6
+	{
+		destroy CannedChili=6,
+
+		Result:OS6pkCannedChili,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:30.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy OS6pkCannedChili,
+
+		Result:CannedChili=6,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:30.0,
+		Category:Storage,
+	}
+}

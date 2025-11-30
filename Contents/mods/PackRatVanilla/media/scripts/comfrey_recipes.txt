@@ -1,0 +1,89 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 10
+	{
+		destroy Comfrey=10,
+		
+		Result	:10pkComfrey,
+		OnCreate:Recipe.OnCreate.SaveFood,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:45.0,
+		Category:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy Comfrey=50,
+		
+		Result	:50pkComfrey,
+		OnCreate:Recipe.OnCreate.SaveFood,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:22.5,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkComfrey=5,
+		
+		Result	:10pkComfrey=1,
+		Time	:7.5,
+	}
+
+	recipe Split in Five
+	{
+		50pkComfrey=1,
+		
+		Result	:10pkComfrey=5,
+		Time	:7.5,
+	}
+
+	recipe Pack 5
+	{
+		destroy Comfrey=5,
+
+		Result:5pkComfrey,
+		OnCreate:Recipe.OnCreate.SaveFood,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:45.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkComfrey,
+		
+		Result	:Comfrey=5,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
+		Time	:45.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkComfrey,
+		
+		Result	:Comfrey=10,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
+		Time	:45.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkComfrey,
+		
+		Result	:Comfrey=50,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
+		Time	:22.5,
+		Category:Storage,
+	}
+}

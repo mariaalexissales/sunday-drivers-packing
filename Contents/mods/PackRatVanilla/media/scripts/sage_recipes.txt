@@ -1,0 +1,67 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 10
+	{
+		destroy Sage=10,
+		
+		Result	:10pkSage,
+		OnCreate:Recipe.OnCreate.SaveFood,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:45.0,
+		Category:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy Sage=50,
+		
+		Result	:50pkSage,
+		OnCreate:Recipe.OnCreate.SaveFood,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:22.5,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkSage=5,
+		
+		Result	:50pkSage=1,
+		Time	:7.5,
+	}
+
+	recipe Split in Five
+	{
+		50pkSage=1,
+		
+		Result	:10pkSage=5,
+		Time	:7.5,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkSage,
+		
+		Result	:Sage=10,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
+		Time	:45.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkSage,
+		
+		Result	:Sage=50,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
+		Time	:22.5,
+		Category:Storage,
+	}
+}

@@ -1,0 +1,67 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkMetalBar
+	{
+		Weight			= 5.25,
+		Type			= Normal,
+		DisplayName		= 5 x Metal Bar,
+		DisplayCategory = Material,
+		Icon			= PMetalBar,
+		WorldStaticModel= StackOfMetalBars,
+	}
+
+	item 5pkRopeMetalBar
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 5 x Metal Bar (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeMetalBar,
+		WorldStaticModel= StackOfMetalBarsRoped,
+	}
+
+	item 5pkSheetRopeMetalBar
+	{
+		Weight			= 2.25,
+		Type			= Normal,
+		DisplayName		= 5 x Metal Bar (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeMetalBar,
+		WorldStaticModel= StackOfMetalBarsSheetRoped,
+	}
+
+	item 10pkMetalBar
+	{
+		Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 10 x Metal Bar,
+		DisplayCategory = Material,
+		Icon			= PMetalBar,
+		WorldStaticModel= StackOfMetalBars,
+	}
+
+	item 10pkRopeMetalBar
+	{
+		Weight			= 2.25,
+		Type			= Normal,
+		DisplayName		= 10 x Metal Bar (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeMetalBar,
+		WorldStaticModel= StackOfMetalBarsRoped,
+	}
+
+	item 10pkSheetRopeMetalBar
+	{
+		Weight			= 3.75,
+		Type			= Normal,
+		DisplayName		= 10 x Metal Bar (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeMetalBar,
+		WorldStaticModel= StackOfMetalBarsSheetRoped,
+	}
+}

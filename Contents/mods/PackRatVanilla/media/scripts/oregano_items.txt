@@ -1,0 +1,34 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkOregano
+	{
+		DisplayName		= 5 x Oregano,
+		Weight			= 0.25,
+		Type			= Normal,
+		Icon			= HerbOregano,
+		WorldStaticModel= HerbOregano_Ground,
+	}
+
+	item 10pkOregano
+	{
+		DisplayName		= 10 x Oregano,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= HerbOregano,
+		WorldStaticModel= HerbOregano_Ground,
+	}
+
+	item 50pkOregano
+	{
+		DisplayName		= 50 x Oregano,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= HerbOregano,
+		WorldStaticModel= HerbOregano_Ground,
+	}
+}

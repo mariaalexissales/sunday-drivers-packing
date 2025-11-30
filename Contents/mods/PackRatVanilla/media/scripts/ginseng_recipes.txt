@@ -1,0 +1,67 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 10
+	{
+		destroy Ginseng=10,
+
+		Result	:10pkGinseng,
+		OnCreate:Recipe.OnCreate.SaveFood,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:45.0,
+		Category:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy Ginseng=50,
+
+		Result	:50pkGinseng,
+		OnCreate:Recipe.OnCreate.SaveFood,
+		OnTest	:Recipe.OnTest.IsFavorite,
+		Time	:22.5,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkGinseng=5,
+
+		Result	:50pkGinseng=1,
+		Time	:7.5,
+	}
+
+	recipe Split in Five
+	{
+		50pkGinseng=1,
+
+		Result	:10pkGinseng=5,
+		Time	:7.5,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkGinseng,
+
+		Result	:Ginseng=10,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
+		Time	:45.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkGinseng,
+
+		Result	:Ginseng=50,
+		OnCreate:Recipe.OnCreate.LoadFood,
+		RemoveResultItem:true,
+		Time	:22.5,
+		Category:Storage,
+	}
+}

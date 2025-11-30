@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkScotchtape
+	{
+		DisplayName         = 5 x Adhesive Tape,
+		DisplayCategory     = Material,
+		Weight              = 1.5,
+		Type                = Normal,
+		Icon                = Scotchtape,
+		WorldStaticModel    = Scotchtape
+	}
+
+	item 10pkScotchtape
+	{
+		DisplayName         = 10 x Adhesive Tape,
+		DisplayCategory     = Material,
+		Weight              = 3.0,
+		Type                = Normal,
+		Icon                = Scotchtape,
+		WorldStaticModel    = Scotchtape
+	}
+}

@@ -1,0 +1,67 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkRopePlasterPowder
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 5 x Bag of Plaster Powder (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopePlasterPowder,
+		WorldStaticModel= StackOfPlasterPowderRoped,
+	}
+
+	item 5pkSheetRopePlasterPowder
+	{
+		Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 5 x Bag of Plaster Powder (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopePlasterPowder,
+		WorldStaticModel= StackOfPlasterPowderSheetRoped,
+	}
+
+	item 10pkRopePlasterPowder
+	{
+		Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 10 x Bag of Plaster Powder (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopePlasterPowder,
+		WorldStaticModel= StackOfPlasterPowderRoped,
+	}
+
+	item 10pkSheetRopePlasterPowder
+	{
+		Weight			= 12.5,
+		Type			= Normal,
+		DisplayName		= 10 x Bag of Plaster Powder (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopePlasterPowder,
+		WorldStaticModel= StackOfPlasterPowderSheetRoped,
+	}
+
+	item 50pkWCPlasterPowder
+	{
+		Weight			= 25.0,
+		Type			= Normal,
+		DisplayName		= 50 x Bag of Plaster Powder (Box),
+		DisplayCategory = Material,
+		Icon			= WIP,
+		WorldStaticModel= WIP,
+	}
+
+	item 100pkWCPlasterPowder
+	{
+		Weight			= 37.5,
+		Type			= Normal,
+		DisplayName		= 100 x Bag of Plaster Powder (Box),
+		DisplayCategory = Material,
+		Icon			= WIP,
+		WorldStaticModel= WIP,
+	}
+}

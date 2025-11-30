@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkCrispD
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 5 x Chips,
+		DisplayCategory = Food,
+		Icon			= Crisps4,
+		WorldStaticModel = WIP,
+	}
+
+	item 10pkCrispD
+	{
+		Weight			= 1.0,
+		Type			= Normal,
+		DisplayName		= 10 x Chips,
+		DisplayCategory = Food,
+		Icon			= Crisps4,
+		WorldStaticModel = WIP,
+	}
+}

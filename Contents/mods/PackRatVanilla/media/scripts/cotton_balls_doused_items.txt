@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkAlcoholedCottonBalls
+	{
+		DisplayName         = 5 x Cotton Balls Doused in Alcohol,
+		DisplayCategory     = FirstAid,
+		Weight              = 0.5,
+		Type                = Normal,
+		Icon                = CottonBalls,
+		WorldStaticModel    = CottonBalls,
+	}
+
+	item 10pkAlcoholedCottonBalls
+	{
+		DisplayName         = 10 x Cotton Balls Doused in Alcohol,
+		DisplayCategory     = FirstAid,
+		Weight              = 1.0,
+		Type                = Normal,
+		Icon                = CottonBalls,
+		WorldStaticModel    = CottonBalls,
+	}
+}

@@ -1,0 +1,123 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 500
+	{
+		destroy DenimStrips=500,
+        
+		Result  :500pkDenim=1,
+		OnTest  :Recipe.OnTest.IsFavorite,
+		Time    :75.0,
+		Category:Storage
+	}
+
+	recipe Put Together
+	{
+		100pkDenim=5,
+
+		Result  :500pkDenim=1,
+		Time    :75.0
+	}
+
+	recipe Pack 10
+	{
+		destroy DenimStrips=10,
+		
+		Result:10pkDenim=1,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Split in Five
+	{
+		50pkDenim=1,
+		
+		Result:10pkDenim=5,
+		Time:20.0,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkDenim,
+		
+		Result:DenimStrips=10,
+		Time:12.5,
+		Category:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy DenimStrips=50,
+		
+		Result:50pkDenim=1,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkDenim=5,
+		
+		Result:50pkDenim=1,
+		Time:20.0,
+	}
+
+	recipe Split in Two
+	{
+		100pkDenim=1,
+		
+		Result:50pkDenim=2,
+		Time:20.0,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkDenim,
+		
+		Result:DenimStrips=50,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Pack 100
+	{
+		destroy DenimStrips=100,
+		
+		Result:100pkDenim=1,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		50pkDenim=2,
+		
+		Result:100pkDenim=1,
+		Time:20.0,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkDenim,
+		
+		Result:DenimStrips=100,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Unpack 500
+	{
+		destroy 500pkDenim,
+
+		Result  :DenimStrips=500,
+		Time    :75.0,
+		Category:Storage,
+	}
+}

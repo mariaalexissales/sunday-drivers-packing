@@ -1,0 +1,18 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS30pkAlcoholWipes
+	{
+		Weight				= 0.9,
+		Type				= Normal,
+		UseWhileEquipped	= FALSE,
+		DisplayName			= 6 x Alcohol Wipes,
+		DisplayCategory 	= FirstAid,
+		Icon				= OS30pkAlcoholWipes,
+		WorldStaticModel    = PackOfAlchoholWipes,
+	}
+}

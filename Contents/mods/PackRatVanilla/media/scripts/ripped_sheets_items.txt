@@ -1,0 +1,47 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkRag
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 10 x Ripped Sheets,
+		DisplayCategory = Household,
+		Icon			= PRag,
+		WorldStaticModel= StripRollSheet,
+	}
+
+	item 50pkRag
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 50 x Ripped Sheets,
+		DisplayCategory = Household,
+		Icon			= PRag,
+		WorldStaticModel= StripRollSheet,
+	}
+
+	item 100pkRag
+	{
+		Weight			= 2.5,
+		Type			= Normal,
+		DisplayName		= 100 x Ripped Sheets,
+		DisplayCategory = Household,
+		Icon			= PRag,
+		WorldStaticModel= StripRollSheet,
+	}
+
+	item 500pkRag
+	{
+		DisplayName		= 500 x Ripped Sheets,
+		DisplayCategory = Household,
+		Weight			= 7.5,
+		Type			= Normal,
+		Icon			= PRag,
+		WorldStaticModel= StripRollSheet,
+	}
+}

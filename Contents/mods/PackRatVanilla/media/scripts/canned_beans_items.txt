@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS6pkCannedBeans
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 6 x Canned Beans,
+		DisplayCategory = Food,
+		Icon			= OS6pkCannedBeans,
+		WorldStaticModel= PackOfBeansCan,
+	}
+}

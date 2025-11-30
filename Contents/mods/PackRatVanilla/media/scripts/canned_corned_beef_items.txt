@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS6pkCannedCornedBeef
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 6 x Canned Corned Beef,
+		DisplayCategory = Food,
+		Icon			= OS6pkCannedCornedBeef,
+		WorldStaticModel= PackOfCornedBeef,
+	}
+}

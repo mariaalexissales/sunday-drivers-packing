@@ -1,0 +1,37 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkAluminum
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 10 x Aluminum,
+		DisplayCategory = Material,
+		Icon			= Aluminum,
+		WorldStaticModel = MediumAluminum,
+	}
+
+	item 50pkAluminum
+	{
+		Weight			= 3.0,
+		Type			= Normal,
+		DisplayName		= 50 x Aluminum,
+		DisplayCategory = Material,
+		Icon			= Aluminum,
+		WorldStaticModel = MediumAluminum,
+	}
+
+	item 100pkAluminum
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 100 x Aluminum,
+		DisplayCategory = Material,
+		Icon			= Aluminum,
+		WorldStaticModel = MediumAluminum,
+	}
+}

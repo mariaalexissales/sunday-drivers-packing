@@ -1,0 +1,79 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 20
+	{
+		destroy Yarn=20,
+		
+		Result:20pkYarn,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Split in Five
+	{
+		100pkYarn=1,
+		Result:20pkYarn=5,
+		Time:15.0,
+	}
+
+	recipe Unpack 20
+	{
+		destroy 20pkYarn,
+		
+		Result:Yarn=20,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Pack 100
+	{
+		destroy Yarn=100,
+		
+		Result:100pkYarn,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		20pkYarn=5,
+		
+		Result:100pkYarn=1,
+		Time:15.0,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkYarn,
+		
+		Result:Yarn=100,
+		Time:12.5,
+		Category:Storage,
+	}
+
+	recipe Pack 500
+	{
+		destroy Yarn=500,
+		
+		Result:500pkYarn,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 500
+	{
+		destroy 500pkYarn,
+		
+		Result:Yarn=500,
+		Time:12.5,
+		Category:Storage,
+	}
+}

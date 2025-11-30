@@ -1,0 +1,94 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Change to Type 1
+	{
+		destroy Crisps3,
+		
+		Result:Crisps=1,
+		OnTest:Recipe.OnTest.WholeFood,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:12.5,
+	}
+
+	recipe Change to Type 2
+	{
+		destroy Crisps3,
+		
+		Result:Crisps2=1,
+		OnTest:Recipe.OnTest.WholeFood,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:12.5,
+	}
+
+	recipe Change to Type 4
+	{
+		destroy Crisps3,
+		
+		Result:Crisps4=1,
+		OnTest:Recipe.OnTest.WholeFood,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:12.5,
+	}
+
+	recipe Pack 5
+	{
+		destroy Crisps3=5,
+		
+		Result:5pkCrispC,
+		OnTest:Recipe.OnTest.WholeFood,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pkCrispC=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkCrispC=2,
+		Time:20.0,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkCrispC,
+		
+		Result:Crisps3=5,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy Crisps3=10,
+		
+		Result:10pkCrispC,
+		OnTest:Recipe.OnTest.WholeFood,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkCrispC=2,
+		
+		Result:10pkCrispC=1,
+		Time:20.0,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkCrispC,
+		
+		Result:Crisps3=10,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:37.5,
+		Category:Storage,
+	}
+}

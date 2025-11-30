@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 6
+	{
+		destroy CannedPineapple=6,
+		
+		Result:6pkCannedPineapple,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:30.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkCannedPineapple,
+		
+		Result:CannedPineapple=6,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:20.0,
+		Category:Storage,
+	}
+}

@@ -1,0 +1,67 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 5
+	{
+		destroy Bullets38Box=5,
+		
+		Result:5pk38,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:45.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pk38=1,
+		
+		Result:5pk38=2,
+		Time:32.5,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pk38,
+		
+		Result:Bullets38Box=5,
+		Time:45.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy Bullets38Box=10,
+		
+		Result:10pk38,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:65.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Put Together
+	{
+		5pk38=2,
+		
+		Result:10pk38=1,
+		Time:32.5,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pk38,
+		
+		Result:Bullets38Box=10,
+		Time:65.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+}

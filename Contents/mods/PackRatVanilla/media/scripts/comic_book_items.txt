@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkComicBook
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Comic Book,
+		DisplayCategory = Literature,
+		Icon			= PComicBook,
+		WorldStaticModel= StackOfComicBook,
+	}
+
+	item 10pkComicBook
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Comic Book,
+		DisplayCategory = Literature,
+		Icon			= PComicBook,
+		WorldStaticModel= StackOfComicBook,
+	}
+}

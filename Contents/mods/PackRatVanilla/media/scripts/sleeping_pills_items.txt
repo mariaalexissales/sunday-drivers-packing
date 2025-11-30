@@ -1,0 +1,18 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS50pkSleepingPills
+	{
+		Weight				= 0.5,
+		Type				= Normal,
+		UseWhileEquipped	= FALSE,
+		DisplayName			= 5 x Sleeping Pills,
+		DisplayCategory 	= FirstAid,
+		Icon				= OS50pkSleepingPills,
+		WorldStaticModel    = BottleOfSleepingPills,
+	}
+}

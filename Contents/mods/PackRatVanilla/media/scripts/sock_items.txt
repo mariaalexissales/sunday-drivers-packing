@@ -1,0 +1,24 @@
+module PR
+{
+
+
+	item 6pkAnkleSocks
+	{
+		DisplayName = Pack of Ankle Socks,
+		DisplayCategory = Clothing,
+		Weight = 0.5,
+		Type = Normal,
+		Icon = SockPack,
+		WorldStaticModel = Sock_Ankle_Ground
+	}
+
+	item 6pkLongSocks
+	{
+		DisplayName = Pack of Long Socks,
+		DisplayCategory = Clothing,
+		Weight = 0.5,
+		Type = Normal,
+		Icon = SockPack,
+		WorldStaticModel = Sock_Long_Ground
+	}
+}

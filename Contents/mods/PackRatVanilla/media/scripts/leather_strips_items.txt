@@ -1,0 +1,47 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkLeather
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 10 x Leather Strips,
+		DisplayCategory = Material,
+		Icon			= PLeatherStrips,
+		WorldStaticModel = StripRollLeather,
+	}
+
+	item 50pkLeather
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 50 x Leather Strips,
+		DisplayCategory = Material,
+		Icon			= PLeatherStrips,
+		WorldStaticModel = StripRollLeather,
+	}
+
+	item 100pkLeather
+	{
+		Weight			= 2.5,
+		Type			= Normal,
+		DisplayName		= 100 x Leather Strips,
+		DisplayCategory = Material,
+		Icon			= PLeatherStrips,
+		WorldStaticModel = StripRollLeather,
+	}
+
+	item 500pkLeather
+	{
+		DisplayName		= 500 x Leather Strips,
+		DisplayCategory = Household,
+		Weight			= 7.5,
+		Type			= Normal,
+		Icon			= PLeatherStrips,
+		WorldStaticModel= StripRollLeather,
+	}
+}

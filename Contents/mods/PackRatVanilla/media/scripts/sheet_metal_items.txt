@@ -1,0 +1,67 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkRopeSheetMetal
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 5 x Metal Sheet (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeSheetMetal,
+		WorldStaticModel= StackOfSheetMetalRoped,
+	}
+
+	item 5pkSheetMetal
+	{
+		Weight			= 5.25,
+		Type			= Normal,
+		DisplayName		= 5 x Metal Sheet,
+		DisplayCategory = Material,
+		Icon			= PSheetMetal,
+		WorldStaticModel= StackOfSheetMetal,
+	}
+
+	item 5pkSheetRopeSheetMetal
+	{
+		Weight			= 2.25,
+		Type			= Normal,
+		DisplayName		= 5 x Metal Sheet (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeSheetMetal,
+		WorldStaticModel= StackOfSheetMetalSheetRoped,
+	}
+
+	item 10pkRopeSheetMetal
+	{
+		Weight			= 2.25,
+		Type			= Normal,
+		DisplayName		= 10 x Metal Sheet (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeSheetMetal,
+		WorldStaticModel= StackOfSheetMetalRoped,
+	}
+
+	item 10pkSheetMetal
+	{
+		Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 10 x Metal Sheet,
+		DisplayCategory = Material,
+		Icon			= PSheetMetal,
+		WorldStaticModel= StackOfSheetMetal,
+	}
+
+	item 10pkSheetRopeSheetMetal
+	{
+		Weight			= 3.75,
+		Type			= Normal,
+		DisplayName		= 10 x Metal Sheet (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeSheetMetal,
+		WorldStaticModel= StackOfSheetMetalSheetRoped,
+	}
+}

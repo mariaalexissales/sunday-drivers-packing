@@ -1,0 +1,46 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkLightBulbOrange
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 10 x Orange Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		ColorRed		= 255,
+		ColorGreen		= 128,
+		ColorBlue		= 0,
+		WorldStaticModel = WIP,
+	}
+
+	item 50pkLightBulbOrange
+	{
+		Weight			= 3.0,
+		Type			= Normal,
+		DisplayName		= 50 x Orange Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		ColorRed		= 255,
+		ColorGreen		= 128,
+		ColorBlue		= 0,
+		WorldStaticModel = WIP,
+	}
+
+	item 100pkLightBulbOrange
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 100 x Orange Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		ColorRed		= 255,
+		ColorGreen		= 128,
+		ColorBlue		= 0,
+		WorldStaticModel = WIP,
+	}
+}

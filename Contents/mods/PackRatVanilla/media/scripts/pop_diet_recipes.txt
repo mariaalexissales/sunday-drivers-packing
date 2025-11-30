@@ -1,0 +1,47 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Change to Type 2
+	{
+		destroy Pop,
+		
+		Result:Pop2=1,
+		OnTest:Recipe.OnTest.WholeFood,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:12.5,
+	}
+
+	recipe Change to Type 3
+	{
+		destroy Pop,
+		
+		Result:Pop3=1,
+		OnTest:Recipe.OnTest.WholeFood,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:12.5,
+	}
+
+	recipe Pack 6
+	{
+		destroy Pop=6,
+
+		Result:OS6pkPopDiet,
+		OnTest:Recipe.OnTest.WholeFood,
+		Time:30.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy OS6pkPopDiet,
+
+		Result:Pop=6,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:30.0,
+		Category:Storage,
+	}
+}

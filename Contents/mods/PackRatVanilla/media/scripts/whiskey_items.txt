@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkWhiskey
+	{
+		DisplayName		= 5 x Bourbon,
+		DisplayCategory = Food,
+		Weight			= 2.45,
+		Type			= Normal,
+		Icon			= PWhiskey,
+		WorldStaticModel= WoodenBoxOfWhiskey,
+	}
+
+	item 10pkWhiskey
+	{
+		DisplayName		= 10 x Bourbon,
+		DisplayCategory = Food,
+		Weight			= 3.5,
+		Type			= Normal,
+		Icon			= PWhiskey,
+		WorldStaticModel= WoodenBoxOfWhiskey,
+	}
+}

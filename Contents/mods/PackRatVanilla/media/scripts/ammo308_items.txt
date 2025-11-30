@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pk308
+	{
+		Weight			= 1.75,
+		Type			= Normal,
+		DisplayName		= 5 x Box of .308 Bullets,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+
+	item 10pk308
+	{
+		Weight			= 2.5,
+		Type			= Normal,
+		DisplayName		= 10 x Box of .308 Bullets,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+}

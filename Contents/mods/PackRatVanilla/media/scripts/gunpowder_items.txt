@@ -1,0 +1,25 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkGunpowder
+	{
+		Weight          = 0.35,
+		Type            = Normal,
+		DisplayName     = 5 x Gunpowder,
+		Icon            = PGunpowder,
+		WorldStaticModel= 10pkGunpowder_ground,
+	}
+
+	item 10pkGunpowder
+	{
+		Weight          = 0.5,
+		Type            = Normal,
+		DisplayName     = 10 x Gunpowder,
+		Icon            = PGunpowder,
+		WorldStaticModel= 10pkGunpowder_ground,
+	}
+}

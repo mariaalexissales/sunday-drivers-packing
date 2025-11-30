@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkRedPen
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Red Pen,
+		DisplayCategory = Household,
+		Icon			= PRedPen,
+		WorldStaticModel= PackOfRedPens,
+	}
+
+	item 10pkRedPen
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Red Pen,
+		DisplayCategory = Household,
+		Icon			= PRedPen,
+		WorldStaticModel= PackOfRedPens,
+	}
+}

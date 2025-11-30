@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS4pkCoffee
+	{
+		Weight			= 2,
+		Type			= Normal,
+		DisplayName		= 4 x Instant Coffee,
+		DisplayCategory = Food,
+		Icon			= OS4pkCoffee,
+		WorldStaticModel= StackOfCoffee,
+	}
+}

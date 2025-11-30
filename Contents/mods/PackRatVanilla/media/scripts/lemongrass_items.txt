@@ -1,0 +1,25 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkLemonGrass
+	{
+		DisplayName		= 10 x Lemon Grass,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= PkLemonGrassSmallBox,
+		WorldStaticModel= SmallLemonGrass
+	}
+
+	item 50pkLemonGrass
+	{
+		DisplayName		= 50 x Lemon Grass,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= PkLemonGrassMediumBox,
+		WorldStaticModel= MediumLemonGrass
+	}
+}

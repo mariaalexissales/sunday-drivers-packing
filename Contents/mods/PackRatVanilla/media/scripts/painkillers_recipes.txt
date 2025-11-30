@@ -1,0 +1,29 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Unpack 5
+	{
+		OS50pkPainkillers,
+
+		Result:Pills,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	recipe Pack 5
+	{
+		destroy Pills=5,
+
+		Result:OS50pkPainkillers,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:60.0,
+		Category:Storage,
+	}
+}

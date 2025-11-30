@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 6pkCannedMilk
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 6 x Canned Evaporated Milk,
+		DisplayCategory = Food,
+		Icon			= PCannedMilk,
+		WorldStaticModel= PackOfCondensedMilkCan,
+	}
+}

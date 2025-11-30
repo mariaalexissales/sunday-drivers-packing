@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS6pkFizz
+	{
+		Weight			= 0.9,
+		Type			= Normal,
+		DisplayName		= 6 x Fizz Pop,
+		DisplayCategory = Food,
+		Icon			= OS6pkFizz,
+		WorldStaticModel= PackOfPopFizz,
+	}
+}
