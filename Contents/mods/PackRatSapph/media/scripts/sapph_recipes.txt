@@ -24,7 +24,6 @@ module PR
 
 		Result				:Drinkmix_Lemon=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -45,7 +44,6 @@ module PR
 
 		Result				:Drinkmix_Lemon=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -84,7 +82,6 @@ module PR
 
 		Result				:Drinkmix_Orange=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -105,7 +102,6 @@ module PR
 
 		Result				:Drinkmix_Orange=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -144,7 +140,6 @@ module PR
 
 		Result				:Drinkmix_Apple=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -165,7 +160,6 @@ module PR
 
 		Result				:Drinkmix_Apple=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -204,7 +198,6 @@ module PR
 
 		Result				:Drinkmix_Grape=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -225,7 +218,6 @@ module PR
 
 		Result				:Drinkmix_Grape=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -264,7 +256,6 @@ module PR
 
 		Result				:Drinkmix_Pineapple=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -285,7 +276,6 @@ module PR
 
 		Result				:Drinkmix_Pineapple=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -324,7 +314,6 @@ module PR
 
 		Result				:Drinkmix_Strawberry=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -345,7 +334,6 @@ module PR
 
 		Result				:Drinkmix_Strawberry=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -384,7 +372,6 @@ module PR
 
 		Result				:Drinkmix_Peach=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -405,7 +392,6 @@ module PR
 
 		Result				:Drinkmix_Peach=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -444,7 +430,6 @@ module PR
 
 		Result				:Drinkmix_Watermelon=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -465,7 +450,6 @@ module PR
 
 		Result				:Drinkmix_Watermelon=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -506,7 +490,6 @@ module PR
 
 		Result				:CanofKernelCorn=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -527,7 +510,6 @@ module PR
 
 		Result				:CanofKernelCorn=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -566,7 +548,6 @@ module PR
 
 		Result				:CanofPowderedMilk=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -587,7 +568,6 @@ module PR
 
 		Result				:CanofPowderedMilk=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -626,7 +606,6 @@ module PR
 
 		Result				:CanofProteinPowder=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -647,7 +626,6 @@ module PR
 
 		Result				:CanofProteinPowder=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -686,7 +664,6 @@ module PR
 
 		Result				:CanofRefriedBeans=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -707,7 +684,6 @@ module PR
 
 		Result				:CanofRefriedBeans=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -746,7 +722,6 @@ module PR
 
 		Result				:CanofBeets=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -767,7 +742,6 @@ module PR
 
 		Result				:CanofBeets=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -808,7 +782,6 @@ module PR
 
 		Result				:TinofCaviar=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}
@@ -829,7 +802,6 @@ module PR
 
 		Result				:TinofCaviar=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
-        RemoveResultItem    :true,
 		Time				:25.0,
 		Category			:Storage,
 	}

@@ -8,7 +8,7 @@ module PR {
 		destroy Thistles=10,
 		
 		Result	:10pkThistles,
-		OnCreate:Recipe.OnCreate.SaveFood,
+		OnCreate:Recipe.OnCreate.SaveHerbs,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:45.0,
 		Category:Storage,
@@ -19,7 +19,7 @@ module PR {
 		destroy Thistles=50,
 		
 		Result	:50pkThistles,
-		OnCreate:Recipe.OnCreate.SaveFood,
+		OnCreate:Recipe.OnCreate.SaveHerbs,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:22.5,
 		Category:Storage,
@@ -46,7 +46,7 @@ module PR {
 		destroy 10pkThistles,
 		
 		Result	:Thistles=10,
-		OnCreate:Recipe.OnCreate.LoadFood,
+		OnCreate:Recipe.OnCreate.LoadHerbs,
 		RemoveResultItem:true,
 		Time	:45.0,
 		Category:Storage,
@@ -57,7 +57,7 @@ module PR {
 		destroy 50pkThistles,
 		
 		Result	:Thistles=50,
-		OnCreate:Recipe.OnCreate.LoadFood,
+		OnCreate:Recipe.OnCreate.LoadHerbs,
 		RemoveResultItem:true,
 		Time	:22.5,
 		Category:Storage,

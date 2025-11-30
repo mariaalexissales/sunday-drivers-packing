@@ -134,7 +134,7 @@ function Recipe.OnCreate.SaveUses(items, result, player)
 
     -- Only save if we have valid data
     if #remainingUses > 0 then
-        result:getModData().EasyPackingRemainingUses = remainingUses
+        result:getModData().PackRatRemainingUses = remainingUses
         print(string.format("[SaveUses] saved %d uses to modData", #remainingUses))
     else
         print("[SaveUses] no valid uses to save")
@@ -163,7 +163,7 @@ function Recipe.OnCreate.LoadUses(items, result, player)
 
     print(string.format("[LoadUses] first item: %s", firstItem:getFullType()))
     local modData = firstItem:getModData()
-    local savedUses = modData and modData.EasyPackingRemainingUses
+    local savedUses = modData and modData.PackRatRemainingUses
 
     if savedUses and #savedUses > 0 then
         print(string.format("[LoadUses] found saved uses: %d items", #savedUses))
@@ -275,7 +275,7 @@ function Recipe.OnCreate.SaveFood(items, result, player)
         end
     end
 
-    result:getModData().EasyPackingFoodPack = list
+    result:getModData().PackRatFoodPack = list
     print(string.format("[SaveFood] saved=%d", #list))
 end
 
@@ -299,7 +299,7 @@ function Recipe.OnCreate.LoadFood(items, result, player)
     local spawnType = result:getFullType()
 
     local md        = source and source.getModData and source:getModData() or nil
-    local payload   = md and md.EasyPackingFoodPack or nil
+    local payload   = md and md.PackRatFoodPack or nil
 
     if type(payload) == "table" then
         print(string.format("[LoadFood] restoring %d", #payload))
@@ -367,30 +367,30 @@ function Recipe.OnCreate.SaveHerbs(items, result, player)
         local it = items:get(i)
         if it then
             local entry = {
-                type        = it:getFullType(),
-                name        = it:getName(),
-                calories    = it.getCalories and it:getCalories() or 0,
-                hunger      = (it.getHungerChange and it:getHungerChange())
-                             or (it.getHungChange and it:getHungChange()) or 0,
-                thirst      = it.getThirstChange and it:getThirstChange() or 0,
-                stress      = it.getStressChange and it:getStressChange() or 0,
-                boredom     = it.getBoredomChange and it:getBoredomChange() or 0,
-                pain        = it.getPainReduction and it:getPainReduction() or 0,
+                type         = it:getFullType(),
+                name         = it:getName(),
+                calories     = it.getCalories and it:getCalories() or 0,
+                hunger       = (it.getHungerChange and it:getHungerChange())
+                    or (it.getHungChange and it:getHungChange()) or 0,
+                thirst       = it.getThirstChange and it:getThirstChange() or 0,
+                stress       = it.getStressChange and it:getStressChange() or 0,
+                boredom      = it.getBoredomChange and it:getBoredomChange() or 0,
+                pain         = it.getPainReduction and it:getPainReduction() or 0,
                 fluReduction = it.getFluReduction and it:getFluReduction() or 0,
                 foodSickness = it.getReduceFoodSickness and it:getReduceFoodSickness() or 0,
-                poison      = it.getPoisonPower and it:getPoisonPower() or 0,
-                age         = it.getAge and it:getAge() or 0,
-                rotten      = it.isRotten and it:isRotten() or false,
-                cooked      = it.isCooked and it:isCooked() or false,
-                burnt       = it.isBurnt and it:isBurnt() or false,
-                daysFresh   = it.getDaysFresh and it:getDaysFresh() or 6,
-                spice       = it.getSpice and it:getSpice() or false,
+                poison       = it.getPoisonPower and it:getPoisonPower() or 0,
+                age          = it.getAge and it:getAge() or 0,
+                rotten       = it.isRotten and it:isRotten() or false,
+                cooked       = it.isCooked and it:isCooked() or false,
+                burnt        = it.isBurnt and it:isBurnt() or false,
+                daysFresh    = it.getDaysFresh and it:getDaysFresh() or 6,
+                spice        = it.getSpice and it:getSpice() or false,
             }
             table.insert(list, entry)
         end
     end
 
-    result:getModData().EasyPackingHerbPack = list
+    result:getModData().PackRatHerbPack = list
     print(string.format("[SaveHerbs] saved=%d", #list))
 end
 
@@ -414,7 +414,7 @@ function Recipe.OnCreate.LoadHerbs(items, result, player)
     local spawnType = result:getFullType()
 
     local md        = source and source.getModData and source:getModData() or nil
-    local payload   = md and md.EasyPackingHerbPack or nil
+    local payload   = md and md.PackRatHerbPack or nil
 
     if type(payload) == "table" then
         print(string.format("[LoadHerbs] restoring %d", #payload))
@@ -516,7 +516,7 @@ end
 function Recipe.OnCreate.MergeUses(items, result, player)
     local toMerge = {}
     for i = 0, items:size() - 1 do
-        local savedUses = items:get(i):getModData().EasyPackingRemainingUses
+        local savedUses = items:get(i):getModData().PackRatRemainingUses
         if savedUses then
             for _, v in pairs(savedUses) do
                 table.insert(toMerge, v)
@@ -527,11 +527,11 @@ function Recipe.OnCreate.MergeUses(items, result, player)
             end
         end
     end
-    result:getModData().EasyPackingRemainingUses = toMerge
+    result:getModData().PackRatRemainingUses = toMerge
 end
 
 function Recipe.OnCreate.SplitUsesInTwo(items, result, player)
-    local savedUses = items:get(0):getModData().EasyPackingRemainingUses
+    local savedUses = items:get(0):getModData().PackRatRemainingUses
     local itemToAdd = result:getFullType()
     local inventory = player:getInventory()
     local unpackedModData = { {}, {} }
@@ -547,7 +547,7 @@ function Recipe.OnCreate.SplitUsesInTwo(items, result, player)
 
     for _, v in pairs(unpackedModData) do
         local newItem = inventory:AddItem(itemToAdd)
-        newItem:getModData().EasyPackingRemainingUses = v
+        newItem:getModData().PackRatRemainingUses = v
     end
 end
 

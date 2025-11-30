@@ -10,7 +10,7 @@ module PR
 		destroy Chives=10,
 		
 		Result	:10pkChives,
-		OnCreate:Recipe.OnCreate.SaveFood,
+		OnCreate:Recipe.OnCreate.SaveHerbs,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:45.0,
 		Category:Storage,
@@ -21,7 +21,7 @@ module PR
 		destroy Chives=50,
 		
 		Result	:50pkChives,
-		OnCreate:Recipe.OnCreate.SaveFood,
+		OnCreate:Recipe.OnCreate.SaveHerbs,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:22.5,
 		Category:Storage,
@@ -48,7 +48,7 @@ module PR
 		destroy 10pkChives,
 		
 		Result	:Chives=10,
-		OnCreate:Recipe.OnCreate.LoadFood,
+		OnCreate:Recipe.OnCreate.LoadHerbs,
 		RemoveResultItem:true,
 		Time	:45.0,
 		Category:Storage,
@@ -59,7 +59,7 @@ module PR
 		destroy 50pkChives,
 		
 		Result	:Chives=50,
-		OnCreate:Recipe.OnCreate.LoadFood,
+		OnCreate:Recipe.OnCreate.LoadHerbs,
 		RemoveResultItem:true,
 		Time	:22.5,
 		Category:Storage,

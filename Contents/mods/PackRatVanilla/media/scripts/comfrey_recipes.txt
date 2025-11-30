@@ -10,7 +10,7 @@ module PR
 		destroy Comfrey=10,
 		
 		Result	:10pkComfrey,
-		OnCreate:Recipe.OnCreate.SaveFood,
+		OnCreate:Recipe.OnCreate.SaveHerbs,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:45.0,
 		Category:Storage,
@@ -21,7 +21,7 @@ module PR
 		destroy Comfrey=50,
 		
 		Result	:50pkComfrey,
-		OnCreate:Recipe.OnCreate.SaveFood,
+		OnCreate:Recipe.OnCreate.SaveHerbs,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:22.5,
 		Category:Storage,
@@ -48,7 +48,7 @@ module PR
 		destroy Comfrey=5,
 
 		Result:5pkComfrey,
-		OnCreate:Recipe.OnCreate.SaveFood,
+		OnCreate:Recipe.OnCreate.SaveHerbs,
 		OnTest	:Recipe.OnTest.IsFavorite,
 		Time	:45.0,
 		Category:Storage,
@@ -59,7 +59,7 @@ module PR
 		destroy 5pkComfrey,
 		
 		Result	:Comfrey=5,
-		OnCreate:Recipe.OnCreate.LoadFood,
+		OnCreate:Recipe.OnCreate.LoadHerbs,
 		RemoveResultItem:true,
 		Time	:45.0,
 		Category:Storage,
@@ -70,7 +70,7 @@ module PR
 		destroy 10pkComfrey,
 		
 		Result	:Comfrey=10,
-		OnCreate:Recipe.OnCreate.LoadFood,
+		OnCreate:Recipe.OnCreate.LoadHerbs,
 		RemoveResultItem:true,
 		Time	:45.0,
 		Category:Storage,
@@ -81,7 +81,7 @@ module PR
 		destroy 50pkComfrey,
 		
 		Result	:Comfrey=50,
-		OnCreate:Recipe.OnCreate.LoadFood,
+		OnCreate:Recipe.OnCreate.LoadHerbs,
 		RemoveResultItem:true,
 		Time	:22.5,
 		Category:Storage,
