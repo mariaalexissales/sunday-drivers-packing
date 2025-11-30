@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pk9
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 5 x Box of 9mm Bullets,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+
+	item 10pk9
+	{
+		Weight			= 1.0,
+		Type			= Normal,
+		DisplayName		= 10 x Box of 9mm Bullets,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+}

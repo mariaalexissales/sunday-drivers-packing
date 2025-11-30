@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkSheetRope
+	{
+		Weight			= 2.8,
+		Type			= Normal,
+		DisplayName		= 5 x Sheet Rope,
+		DisplayCategory = Material,
+		Icon			= PSheetRope,
+		WorldStaticModel= BundleOfSheetRope,
+	}
+
+	item 10pkSheetRope
+	{
+		Weight			= 4,
+		Type			= Normal,
+		DisplayName		= 10 x Sheet Rope,
+		DisplayCategory = Material,
+		Icon			= PSheetRope,
+		WorldStaticModel= BundleOfSheetRope,
+	}
+}

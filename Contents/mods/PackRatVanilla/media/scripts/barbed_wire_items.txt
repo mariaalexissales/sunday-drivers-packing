@@ -1,0 +1,47 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkBarbedWire
+	{
+		Weight			= 3.5,
+		Type			= Normal,
+		DisplayName		= 5 x Barbed Wire,
+		DisplayCategory = Material,
+		Icon			= PBarbedWire,
+		WorldStaticModel= StackOfBarbedWire,
+	}
+
+	item 10pkBarbedWire
+	{
+		Weight			= 5,
+		Type			= Normal,
+		DisplayName		= 10 x Barbed Wire,
+		DisplayCategory = Material,
+		Icon			= PBarbedWire,
+		WorldStaticModel= StackOfBarbedWire,
+	}
+
+	item 50pkWCBarbedWire
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 50 x Barbed Wire (Box),
+		DisplayCategory = Material,
+		Icon			= PBarbedWire,
+		WorldStaticModel= WIP,
+	}
+
+	item 100pkWCBarbedWire
+	{
+		Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 100 x Barbed Wire (Box),
+		DisplayCategory = Material,
+		Icon			= PBarbedWire,
+		WorldStaticModel= WIP,
+	}
+}

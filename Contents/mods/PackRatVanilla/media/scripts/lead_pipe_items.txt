@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkleadpipe
+	{
+		DisplayName		= 10 x Lead Pipes,
+		DisplayCategory = Ammo,
+		Weight			= 7.5,
+		Type			= Normal,
+		Icon			= PkLeadPipeMediumBox,
+		WorldStaticModel= MediumLeadPipe
+	}
+
+	item 50pkleadpipe
+	{
+		DisplayName		= 50 x Lead Pipes,
+		DisplayCategory = Ammo,
+		Weight			= 32.5,
+		Type			= Normal,
+		Icon			= PkLeadPipeBigBox,
+		WorldStaticModel= BigLeadPipe
+	}
+}

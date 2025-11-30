@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkSheetPaper
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Sheet of Paper,
+		DisplayCategory = Literature,
+		Icon			= PSheetPaper,
+		WorldStaticModel= StackOfPaper,
+	}
+
+	item 10pkSheetPaper
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Sheet of Paper,
+		DisplayCategory = Literature,
+		Icon			= PSheetPaper,
+		WorldStaticModel= StackOfPaper,
+	}
+}

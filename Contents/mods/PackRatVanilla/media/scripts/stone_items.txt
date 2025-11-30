@@ -1,0 +1,16 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkStone
+	{
+		DisplayName		= 10 x Stones,
+		Weight			= 1.5,
+		Type			= Normal,
+		Icon			= PkStoneBox,
+		WorldStaticModel= MediumStone
+	}
+}

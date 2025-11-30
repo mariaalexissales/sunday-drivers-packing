@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkFishingNet
+	{
+		Weight			= 1.75,
+		Type			= Normal,
+		DisplayName		= 5 x Fishing Net Trap,
+		DisplayCategory = Fishing,
+		Icon			= PFishTrap,
+		WorldStaticModel= StackOfFishingNet,
+	}
+
+	item 10pkFishingNet
+	{
+		Weight			= 2.5,
+		Type			= Normal,
+		DisplayName		= 10 x Fishing Net Trap,
+		DisplayCategory = Fishing,
+		Icon			= PFishTrap,
+		WorldStaticModel= StackOfFishingNet,
+	}
+}

@@ -1,0 +1,87 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkRopeEmptyPetrolCan
+	{
+		Weight			= 1.6,
+		Type			= Normal,
+		DisplayName		= 5 x Empty Gas Can (Rope),
+		DisplayCategory = VehicleMaintenance,
+		Icon			= PRopePetrolCan,
+		WorldStaticModel= StackOfPetrolCansRoped,
+	}
+
+	item 5pkRopePetrolCan
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 5 x Gas Can (Rope),
+		DisplayCategory = VehicleMaintenance,
+		Icon			= PRopePetrolCan,
+		WorldStaticModel= StackOfPetrolCansRoped,
+	}
+
+	item 5pkSheetRopeEmptyPetrolCan
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 5 x Empty Gas Can (Sheet Rope),
+		DisplayCategory = VehicleMaintenance,
+		Icon			= PSheetRopePetrolCan,
+		WorldStaticModel= StackOfPetrolCansSheetRoped,
+	}
+
+	item 5pkSheetRopePetrolCan
+	{
+		Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 5 x Gas Can (Sheet Rope),
+		DisplayCategory = VehicleMaintenance,
+		Icon			= PSheetRopePetrolCan,
+		WorldStaticModel= StackOfPetrolCansSheetRoped,
+	}
+
+	item 10pkRopeEmptyPetrolCan
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 10 x Empty Gas Can (Rope),
+		DisplayCategory = VehicleMaintenance,
+		Icon			= PRopePetrolCan,
+		WorldStaticModel= StackOfPetrolCansRoped,
+	}
+
+	item 10pkRopePetrolCan
+	{
+		Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 10 x Gas Can (Rope),
+		DisplayCategory = VehicleMaintenance,
+		Icon			= PRopePetrolCan,
+		WorldStaticModel= StackOfPetrolCansRoped,
+	}
+
+	item 10pkSheetRopeEmptyPetrolCan
+	{
+		Weight			= 4.0,
+		Type			= Normal,
+		DisplayName		= 10 x Empty Gas Can (Sheet Rope),
+		DisplayCategory = VehicleMaintenance,
+		Icon			= PSheetRopePetrolCan,
+		WorldStaticModel= StackOfPetrolCansSheetRoped,
+	}
+
+	item 10pkSheetRopePetrolCan
+	{
+		Weight			= 12.5,
+		Type			= Normal,
+		DisplayName		= 10 x Gas Can (Sheet Rope),
+		DisplayCategory = VehicleMaintenance,
+		Icon			= PSheetRopePetrolCan,
+		WorldStaticModel= StackOfPetrolCansSheetRoped,
+	}
+}

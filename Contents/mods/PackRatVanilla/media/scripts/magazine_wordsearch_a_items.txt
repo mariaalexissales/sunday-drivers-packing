@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkMagazineWordsearchA
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 5 x Wordsearch Magazine,
+		DisplayCategory = Literature,
+		Icon			= PMagazineWordsearchA,
+		WorldStaticModel= StackOfMagazineWordsearchA,
+	}
+
+	item 10pkMagazineWordsearchA
+	{
+		Weight			= 1,
+		Type			= Normal,
+		DisplayName		= 10 x Wordsearch Magazine,
+		DisplayCategory = Literature,
+		Icon			= PMagazineWordsearchA,
+		WorldStaticModel= StackOfMagazineWordsearchA,
+	}
+}

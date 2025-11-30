@@ -1,0 +1,22 @@
+module PR 
+{
+
+
+	item 10pkCommonMallow
+	{
+		DisplayName		= 10 x Common Mallow,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= PkCommonMallowSmallBox,
+		WorldStaticModel= SmallCommonMallow
+	}
+
+	item 50pkCommonMallow
+	{
+		DisplayName		= 50 x Common Mallow,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= PkCommonMallowMediumBox,
+		WorldStaticModel= MediumCommonMallow
+	}
+}

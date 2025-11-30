@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkOrangeSoda
+	{
+		Weight			= 2.8,
+		Type			= Normal,
+		DisplayName		= 5 x Orange Soda,
+		DisplayCategory = Food,
+		Icon			= POrangeSoda,
+		WorldStaticModel= PackOfPopBottles,
+	}
+
+	item 10pkOrangeSoda
+	{
+		Weight			= 4,
+		Type			= Normal,
+		DisplayName		= 10 x Orange Soda,
+		DisplayCategory = Food,
+		Icon			= POrangeSoda,
+		WorldStaticModel= PackOfPopBottles,
+	}
+}

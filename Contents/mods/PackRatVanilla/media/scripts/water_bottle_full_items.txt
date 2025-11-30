@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS24pkWaterBottleFull
+	{
+		Weight					= 9.6,
+		Type					= Drainable,
+		DisplayName				= 24 x Full Water Bottles,
+		DisplayCategory 		= Water,
+		Icon					= OS24pkWaterBottleFull,
+		ReplaceOnDeplete		= OS24pkWaterBottleEmpty,
+		ReplaceOnUseOn			= WaterSource-OS24pkWaterBottleFull,
+		FillFromDispenserSound 	= GetWaterFromDispenserPlasticMedium,
+		FillFromTapSound 		= GetWaterFromTapPlasticMedium,
+		UseDelta 				= 0.00416,
+		UseWhileEquipped		= FALSE,
+		CanStoreWater 			= TRUE,
+		IsWaterSource			= TRUE,
+		UseWhileEquipped  		= FALSE,
+		ToolTip					= Tooltip_item_OnlyPurifyMicrowave,
+		WorldStaticModel        = PackOfWaterBottle
+	}
+}

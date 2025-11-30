@@ -1,0 +1,67 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 5
+	{
+		destroy SmallSheetMetal=5,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetMetalSmall,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pkSheetMetalSmall=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetMetalSmall=2,
+		Time:15.0,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkSheetMetalSmall,
+		
+		CanBeDoneFromFloor:true,
+		Result:SmallSheetMetal=5,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy SmallSheetMetal=10,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetMetalSmall,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkSheetMetalSmall=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetMetalSmall=1,
+		Time:20.0,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkSheetMetalSmall,
+		
+		CanBeDoneFromFloor:true,
+		Result:SmallSheetMetal=10,
+		Time:37.5,
+		Category:Storage,
+	}
+}

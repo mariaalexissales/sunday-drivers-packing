@@ -1,0 +1,37 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkLightBulb
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 10 x Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		WorldStaticModel = WIP,
+	}
+
+	item 50pkLightBulb
+	{
+		Weight			= 3.0,
+		Type			= Normal,
+		DisplayName		= 50 x Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		WorldStaticModel = WIP,
+	}
+
+	item 100pkLightBulb
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 100 x Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		WorldStaticModel = WIP,
+	}
+}

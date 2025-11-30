@@ -1,0 +1,22 @@
+module PR 
+{
+
+
+	item 10pkWildGarlic
+	{
+		DisplayName		= 10 x Wild Garlic,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= PkWildGarlicSmallBox,
+		WorldStaticModel= SmallWildGarlic
+	}
+
+	item 50pkWildGarlic
+	{
+		DisplayName		= 50 x Wild Garlic,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= PkWildGarlicMediumBox,
+		WorldStaticModel= MediumWildGarlic
+	}
+}

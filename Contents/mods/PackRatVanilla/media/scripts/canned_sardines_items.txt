@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS4pkSardines
+	{
+		Weight			= 1.6,
+		Type			= Normal,
+		DisplayName		= 4 x Canned Sardines,
+		DisplayCategory = Food,
+		Icon			= OS4pkSardines,
+		WorldStaticModel= PackOfSardines,
+	}
+}

@@ -1,0 +1,65 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkScrapMetal
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Scrap Metal,
+		DisplayCategory = Material,
+		Icon			= PScrapMetal,
+		WorldStaticModel= BoxOfScrapMetal,
+	}
+
+	item 10pkScrapMetal
+	{
+		Weight			= 0.6,
+		Type			= Normal,
+		DisplayName		= 10 x Scrap Metal,
+		DisplayCategory = Material,
+		Icon			= PScrapMetal,
+		WorldStaticModel= BoxOfScrapMetal,
+	}
+
+	item 50pkScrapMetal
+	{
+		Weight			= 2.75,
+		Type			= Normal,
+		DisplayName		= 50 x Scrap Metal,
+		DisplayCategory = Material,
+		Icon			= PScrapMetal,
+		WorldStaticModel= BoxOfScrapMetal,
+	}
+
+	item 100pkScrapMetal
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 100 x Scrap Metal,
+		DisplayCategory = Material,
+		Icon			= PScrapMetal,
+		WorldStaticModel= BoxOfScrapMetal,
+	}
+
+	item 100pkScrapMetal
+	{
+		DisplayName		= 100 x ScrapMetal,
+		Weight			= 5.0,
+		Type			= Normal,
+		Icon			= PkScrapMetalMediumBox,
+		WorldStaticModel= MediumScrapMetal
+	}
+
+	item 500pkScrapMetal
+	{
+		DisplayName		= 500 x ScrapMetal,
+		Weight			= 25.0,
+		Type			= Normal,
+		Icon			= PkScrapMetalBigBox,
+		WorldStaticModel= BigScrapMetal
+	}
+}

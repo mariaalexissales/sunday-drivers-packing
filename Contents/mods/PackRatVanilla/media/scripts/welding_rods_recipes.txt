@@ -1,0 +1,69 @@
+module PR
+{
+
+
+	recipe Pack 5
+	{
+		destroy WeldingRods=5,
+		
+		Result:5pkWeldingRods,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pkWeldingRods=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkWeldingRods,
+		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
+		RemoveResultItem:true,
+		Time:20.0,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkWeldingRods,
+		
+		Result:WeldingRods=5,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy WeldingRods=10,
+		
+		Result:10pkWeldingRods,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkWeldingRods=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkWeldingRods=1,
+		OnCreate:Recipe.OnCreate.MergeUses,
+		Time:25.0,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkWeldingRods,
+		
+		Result:WeldingRods=10,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:37.5,
+		Category:Storage,
+	}
+}

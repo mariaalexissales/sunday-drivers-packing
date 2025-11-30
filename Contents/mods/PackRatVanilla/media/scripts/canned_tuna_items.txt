@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS8pkCannedTuna
+	{
+		Weight			= 1.2,
+		Type			= Normal,
+		DisplayName		= 8 x Canned Tuna,
+		DisplayCategory = Food,
+		Icon			= OS8pkCannedTuna,
+		WorldStaticModel= PackOfTinnedTuna,
+	}
+}

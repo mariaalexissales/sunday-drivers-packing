@@ -1,0 +1,25 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Unpack 12
+	{
+		OS12pkWineEmpty,
+
+		Result:WineEmpty=12,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	recipe Pack 12
+	{
+		WineEmpty=12,
+
+		Result:OS12pkWineEmpty,
+		Time:60.0,
+		Category:Storage,
+	}
+}

@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 6
+	{
+		destroy TinnedSoup=6,
+
+		Result:OS6pkCannedSoup,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:30.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy OS6pkCannedSoup,
+
+		Result:TinnedSoup=6,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:30.0,
+		Category:Storage,
+	}
+}

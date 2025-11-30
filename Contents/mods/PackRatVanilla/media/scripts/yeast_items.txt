@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkYeast
+	{
+		DisplayName         = 5 x Yeast,
+		DisplayCategory     = Food,
+		Weight              = 3,
+		Type                = Normal,
+		Icon                = Yeast,
+		WorldStaticModel    = Yeast,
+	}
+
+	item 10pkYeast
+	{
+		DisplayName         = 10 x Yeast,
+		DisplayCategory     = Food,
+		Weight              = 5,
+		Type                = Normal,
+		Icon                = Yeast,
+		WorldStaticModel    = Yeast
+	}
+}

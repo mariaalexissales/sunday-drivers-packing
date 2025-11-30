@@ -1,0 +1,67 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkRopePropaneTank
+	{
+		Weight			= 10,
+		Type			= Normal,
+		DisplayName		= 5 x Propane Tank (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopePropaneTank,
+		WorldStaticModel= StackOfPropaneTankRoped,
+	}
+
+	item 5pkSheetRopePropaneTank
+	{
+		Weight			= 15,
+		Type			= Normal,
+		DisplayName		= 5 x Propane Tank (Sheet Rope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopePropaneTank,
+		WorldStaticModel= StackOfPropaneTankSheetRoped,
+	}
+
+	item 10pkRopePropaneTank
+	{
+		Weight			= 15,
+		Type			= Normal,
+		DisplayName		= 10 x Propane Tank (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopePropaneTank,
+		WorldStaticModel= StackOfPropaneTankRoped,
+	}
+
+	item 10pkSheetRopePropaneTank
+	{
+		Weight			= 25,
+		Type			= Normal,
+		DisplayName		= 10 x Propane Tank (Sheet Rope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopePropaneTank,
+		WorldStaticModel= StackOfPropaneTankSheetRoped,
+	}
+
+	item 50pkWCPropaneTank
+	{
+		Weight			= 50.0,
+		Type			= Normal,
+		DisplayName		= 50 x Propane Tank (Box),
+		DisplayCategory	= Material,
+		Icon			= WIP,
+		WorldStaticModel= WIP,
+	}
+
+	item 100pkWCPropaneTank
+	{
+		Weight			= 75.0,
+		Type			= Normal,
+		DisplayName		= 100 x Propane Tank (Box),
+		DisplayCategory	= Material,
+		Icon			= WIP,
+		WorldStaticModel= WIP,
+	}
+}

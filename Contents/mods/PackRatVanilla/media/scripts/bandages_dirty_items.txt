@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS9pkBandagesDirty
+	{
+		Weight			= 0.3,
+		Type			= Normal,
+		DisplayName		= 9 x Dirty Bandages,
+		DisplayCategory = FirstAid,
+		Icon			= OS9pkBandagesDirty,
+		WorldStaticModel= PackOfDirtyBandages,
+	}
+}

@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS12pkWineEmpty
+	{
+		Weight			= 1.8,
+		Type			= Normal,
+		DisplayName		= 12 x Empty Wine Bottles,
+		DisplayCategory = WaterContainer,
+		Icon			= OS12pkWineEmpty,
+		WorldStaticModel= WoodenBoxOfWhiteWineBottleEmpty,
+	}
+}

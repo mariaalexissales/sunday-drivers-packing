@@ -1,0 +1,293 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	/******************************  DRINK MIXES  ******************************/
+
+	item 6pkDrinkmix_Lemon
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 6 x Lemon Drink Mix,
+		Icon				= 6pkDrinkmix_Lemon,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 12pkDrinkmix_Lemon
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 1.2,
+		Type				= Normal,
+		DisplayName			= 12 x Lemon Drink Mix,
+		Icon				= 12pkDrinkmix_Lemon,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 6pkDrinkmix_Orange
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 6 x Orange Drink Mix,
+		Icon				= 6pkDrinkmix_Orange,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 12pkDrinkmix_Orange
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 1.2,
+		Type				= Normal,
+		DisplayName			= 12 x Orange Drink Mix,
+		Icon				= 12pkDrinkmix_Orange,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 6pkDrinkmix_Apple
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 6 x Apple Drink Mix,
+		Icon				= 6pkDrinkmix_Apple,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 12pkDrinkmix_Apple
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 1.2,
+		Type				= Normal,
+		DisplayName			= 12 x Apple Drink Mix,
+		Icon				= 12pkDrinkmix_Apple,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 6pkDrinkmix_Grape
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 6 x Grape Drink Mix,
+		Icon				= 6pkDrinkmix_Grape,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 12pkDrinkmix_Grape
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 1.2,
+		Type				= Normal,
+		DisplayName			= 12 x Grape Drink Mix,
+		Icon				= 12pkDrinkmix_Grape,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 6pkDrinkmix_Pineapple
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 6 x Pineapple Drink Mix,
+		Icon				= 6pkDrinkmix_Pineapple,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 12pkDrinkmix_Pineapple
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 1.2,
+		Type				= Normal,
+		DisplayName			= 12 x Pineapple Drink Mix,
+		Icon				= 12pkDrinkmix_Pineapple,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 6pkDrinkmix_Strawberry
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 6 x Strawberry Drink Mix,
+		Icon				= 6pkDrinkmix_Strawberry,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 12pkDrinkmix_Strawberry
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 1.2,
+		Type				= Normal,
+		DisplayName			= 12 x Strawberry Drink Mix,
+		Icon				= 12pkDrinkmix_Strawberry,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 6pkDrinkmix_Peach
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 6 x Peach Drink Mix,
+		Icon				= 6pkDrinkmix_Peach,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 12pkDrinkmix_Peach
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 1.2,
+		Type				= Normal,
+		DisplayName			= 12 x Peach Drink Mix,
+		Icon				= 12pkDrinkmix_Peach,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 6pkDrinkmix_Watermelon
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 0.6,
+		Type				= Normal,
+		DisplayName			= 6 x Watermelon Drink Mix,
+		Icon				= 6pkDrinkmix_Watermelon,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 12pkDrinkmix_Watermelon
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 1.2,
+		Type				= Normal,
+		DisplayName			= 12 x Watermelon Drink Mix,
+		Icon				= 12pkDrinkmix_Watermelon,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	/******************************  CANNED ITEMS  ******************************/
+
+	item 6pkCanofKernelCorn
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 6.0,
+		Type				= Normal,
+		DisplayName			= 6 x Can of Kernel Corn,
+		Icon				= 6pkCanofKernelCorn,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 12pkCanofKernelCorn
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 12.0,
+		Type				= Normal,
+		DisplayName			= 12 x Can of Kernel Corn,
+		Icon				= 12pkCanofKernelCorn,
+		WorldStaticModel	= PackingBig,
+	}
+
+	item 6pkCanofPowderedMilk
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 6.0,
+		Type				= Normal,
+		DisplayName			= 6 x Can of Powdered Milk,
+		Icon				= 6pkCanofPowderedMilk,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 12pkCanofPowderedMilk
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 12.0,
+		Type				= Normal,
+		DisplayName			= 12 x Can of Powdered Milk,
+		Icon				= 12pkCanofPowderedMilk,
+		WorldStaticModel	= PackingBig,
+	}
+
+	item 6pkCanofProteinPowder
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 6.0,
+		Type				= Normal,
+		DisplayName			= 6 x Can of Protein Powder,
+		Icon				= 6pkCanofProteinPowder,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 12pkCanofProteinPowder
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 12.0,
+		Type				= Normal,
+		DisplayName			= 12 x Can of Protein Powder,
+		Icon				= 12pkCanofProteinPowder,
+		WorldStaticModel	= PackingBig,
+	}
+
+	item 6pkCanofRefriedBeans
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 6.0,
+		Type				= Normal,
+		DisplayName			= 6 x Can of Refried Beans,
+		Icon				= 6pkCanofRefriedBeans,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 12pkCanofRefriedBeans
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 12.0,
+		Type				= Normal,
+		DisplayName			= 12 x Can of Refried Beans,
+		Icon				= 12pkCanofRefriedBeans,
+		WorldStaticModel	= PackingBig,
+	}
+
+	item 6pkCanofBeets
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 6.0,
+		Type				= Normal,
+		DisplayName			= 6 x Can of Beets,
+		Icon				= 6pkCanofBeets,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 12pkCanofBeets
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 12.0,
+		Type				= Normal,
+		DisplayName			= 12 x Can of Beets,
+		Icon				= 12pkCanofBeets,
+		WorldStaticModel	= PackingBig,
+	}
+
+	/******************************  TIN OF CAVIAR  ******************************/
+
+	item 6pkTinofCaviar
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 3.0,
+		Type				= Normal,
+		DisplayName			= 6 x Tin of Caviar,
+		Icon				= 6pkTinofCaviar,
+		WorldStaticModel	= PackingMedium,
+	}
+
+	item 12pkTinofCaviar
+	{
+		DisplayCategory 	= SapphCooking,
+		Weight				= 6.0,
+		Type				= Normal,
+		DisplayName			= 12 x Tin of Caviar,
+		Icon				= 12pkTinofCaviar,
+		WorldStaticModel	= PackingMedium,
+	}
+}

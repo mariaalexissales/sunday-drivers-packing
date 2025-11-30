@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkTissue
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Tissue,
+		DisplayCategory = FirstAid,
+		Icon			= PTissue,
+		WorldStaticModel= PackOfTissues,
+	}
+
+	item 10pkTissue
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Tissue,
+		DisplayCategory = FirstAid,
+		Icon			= PTissue,
+		WorldStaticModel= PackOfTissues,
+	}
+}

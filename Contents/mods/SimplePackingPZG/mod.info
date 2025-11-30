@@ -1,5 +1,0 @@
-name=Pack Rat - Project Grub
-id=SimplePackingPZG
-description=Pack Rat recipes for Project Grub. (Seed compatibility only)
-poster=poster.png
-require=SimplePacking,projectgrubFarm

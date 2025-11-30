@@ -1,0 +1,18 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS4pkDisinfectant
+	{
+		Weight				= 0.6,
+		Type				= Normal,
+		UseWhileEquipped	= FALSE,
+		DisplayName			= 4 x Full Disinfectant Bottles,
+		DisplayCategory 	= FirstAid,
+		Icon				= OS4pkDisinfectant,
+		WorldStaticModel= StackOfDisinfectant,
+	}
+}

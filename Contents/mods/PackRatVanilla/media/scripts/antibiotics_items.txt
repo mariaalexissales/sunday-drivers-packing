@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS30pkAntibiotics
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 30 x Antibiotics,
+		DisplayCategory = FirstAid,
+		Icon			= OS30pkAntibiotics,
+		WorldStaticModel= BottleOfAntibiotics,
+	}
+}

@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 6pkBeerCan
+	{
+		Weight			= 0.9,
+		Type			= Normal,
+		DisplayName		= 6 x Beer Can,
+		DisplayCategory = Food,
+		Icon			= PBeerCan,
+		WorldStaticModel= PackOfBeerCan,
+	}
+}

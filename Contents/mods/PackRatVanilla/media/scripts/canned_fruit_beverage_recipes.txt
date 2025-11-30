@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 6
+	{
+		destroy CannedFruitBeverage=6,
+		
+		Result:6pkCannedFruitBeverage,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:30.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkCannedFruitBeverage,
+		
+		Result:CannedFruitBeverage=6,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:20.0,
+		Category:Storage,
+	}
+}

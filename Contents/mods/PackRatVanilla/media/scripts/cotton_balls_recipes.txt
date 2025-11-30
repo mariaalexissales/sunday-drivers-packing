@@ -1,0 +1,26 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Unpack 12
+	{
+		OS12pkCottonBalls,
+
+		Result:CottonBalls=12,
+		Time:30.0,
+		Category:Storage,
+	}
+
+	recipe Pack 12
+	{
+		CottonBalls=12,
+
+		Result:OS12pkCottonBalls,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:30.0,
+		Category:Storage,
+	}
+}

@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 6pkCannedFruitBeverage
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 6 x Canned Fruit Beverage,
+		DisplayCategory = Food,
+		Icon			= PCannedJuice,
+		WorldStaticModel= PackOfGrapeJuiceCan,
+	}
+}

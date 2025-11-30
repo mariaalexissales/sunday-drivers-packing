@@ -1,0 +1,64 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 5
+	{
+		destroy PopBottle=5,
+		
+		Result:5pkOrangeSoda,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pkOrangeSoda=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkOrangeSoda=2,
+		Time:20.0,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkOrangeSoda,
+		
+		Result:PopBottle=5,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy PopBottle=10,
+		
+		Result:10pkOrangeSoda,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkOrangeSoda=2,
+		
+		Result:10pkOrangeSoda=1,
+		Time:20.0,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkOrangeSoda,
+		
+		Result:PopBottle=10,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:37.5,
+		Category:Storage,
+	}
+}

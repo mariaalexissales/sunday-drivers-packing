@@ -1,0 +1,25 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Unpack 8
+	{
+		OS8pkWhiskeyEmpty,
+
+		Result:WhiskeyEmpty=8,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	recipe Pack 8
+	{
+		WhiskeyEmpty=8,
+
+		Result:OS8pkWhiskeyEmpty,
+		Time:60.0,
+		Category:Storage,
+	}
+}

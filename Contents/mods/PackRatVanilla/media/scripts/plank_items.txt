@@ -1,0 +1,67 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkRopePlank
+	{
+		Weight			= 3,
+		Type			= Normal,
+		DisplayName		= 5 x Plank (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopePlank,
+		WorldStaticModel = StackOfWoodenPlanksRoped,
+	}
+
+	item 5pkSheetRopePlank
+	{
+		Weight			= 4.5,
+		Type			= Normal,
+		DisplayName		= 5 x Plank (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopePlank,
+		WorldStaticModel = StackOfWoodenPlanksSheetRoped,
+	}
+
+	item 10pkRopePlank
+	{
+		Weight			= 4.5,
+		Type			= Normal,
+		DisplayName		= 10 x Plank (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopePlank,
+		WorldStaticModel = StackOfWoodenPlanksRoped,
+	}
+
+	item 10pkSheetRopePlank
+	{
+		Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 10 x Plank (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopePlank,
+		WorldStaticModel = StackOfWoodenPlanksSheetRoped,
+	}
+
+	item 50pkWCPlank
+	{
+		Weight			= 15.0,
+		Type			= Normal,
+		DisplayName		= 50 x Plank (Box),
+		DisplayCategory	= Material,
+		Icon			= WIP,
+		WorldStaticModel= WIP,
+	}
+
+	item 100pkWCPlank
+	{
+		Weight			= 22.5,
+		Type			= Normal,
+		DisplayName		= 100 x Plank (Box),
+		DisplayCategory	= Material,
+		Icon			= WIP,
+		WorldStaticModel= WIP,
+	}
+}

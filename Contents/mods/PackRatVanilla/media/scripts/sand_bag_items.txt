@@ -1,0 +1,67 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkRopeSandBag
+	{
+		Weight			= 2.0,
+		Type			= Normal,
+		DisplayName		= 5 x Sand Bag (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeSandbag,
+		WorldStaticModel= StackOfSandbagsRoped,
+	}
+
+	item 5pkSheetRopeSandBag
+	{
+		Weight			= 3.0,
+		Type			= Normal,
+		DisplayName		= 5 x Sand Bag (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeSandbag,
+		WorldStaticModel= StackOfSandbagsSheetRoped,
+	}
+
+	item 10pkRopeSandBag
+	{
+		Weight			= 3.0,
+		Type			= Normal,
+		DisplayName		= 10 x Sand Bag (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeSandbag,
+		WorldStaticModel= StackOfSandbagsRoped,
+	}
+
+	item 10pkSheetRopeSandBag
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 10 x Sand Bag (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeSandbag,
+		WorldStaticModel= StackOfSandbagsSheetRoped,
+	}
+
+	item 50pkWCSandbag
+	{
+		Weight			= 10.0,
+		Type			= Normal,
+		DisplayName		= 50 x Sand Bag (Box),
+		DisplayCategory	= Material,
+		Icon			= WIP,
+		WorldStaticModel= WIP,
+	}
+
+	item 100pkWCSandbag
+	{
+		Weight			= 15.0,
+		Type			= Normal,
+		DisplayName		= 100 x Sand Bag (Box),
+		DisplayCategory	= Material,
+		Icon			= WIP,
+		WorldStaticModel= WIP,
+	}
+}

@@ -1,0 +1,61 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 5
+	{
+		destroy RedPen=5,
+		
+		Result:5pkRedPen,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pkRedPen=1,
+		
+		Result:5pkRedPen=2,
+		Time:15.0,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkRedPen,
+		
+		Result:RedPen=5,
+		Time:12.5,
+		Category:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy RedPen=10,
+		
+		Result:10pkRedPen,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkRedPen=2,
+		
+		Result:10pkRedPen=1,
+		Time:15.0,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkRedPen,
+		
+		Result:RedPen=10,
+		Time:25.0,
+		Category:Storage,
+	}
+}

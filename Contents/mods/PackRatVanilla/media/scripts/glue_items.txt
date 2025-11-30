@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkGlue
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Glue,
+		DisplayCategory = Material,
+		Icon			= PGlue,
+		WorldStaticModel= StackOfGlue,
+	}
+
+	item 10pkGlue
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Glue,
+		DisplayCategory = Material,
+		Icon			= PGlue,
+		WorldStaticModel= StackOfGlue,
+	}
+}

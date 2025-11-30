@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkSheetMetalSmall
+	{
+		Weight			= 1.4,
+		Type			= Normal,
+		DisplayName		= 5 x Small Metal Sheet,
+		DisplayCategory = Material,
+		Icon			= PSheetMetalSmall,
+		WorldStaticModel= StackOfSmallMetalSheets,
+	}
+
+	item 10pkSheetMetalSmall
+	{
+		Weight			= 2,
+		Type			= Normal,
+		DisplayName		= 10 x Small Metal Sheet,
+		DisplayCategory = Material,
+		Icon			= PSheetMetalSmall,
+		WorldStaticModel= StackOfSmallMetalSheets,
+	}
+}

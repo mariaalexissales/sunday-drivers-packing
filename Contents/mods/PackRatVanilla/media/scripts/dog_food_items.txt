@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 6pkDogFood
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 6 x Dog Food,
+		DisplayCategory = Food,
+		Icon			= PDogFood,
+		WorldStaticModel= PackOfDogFoodCan,
+	}
+}
