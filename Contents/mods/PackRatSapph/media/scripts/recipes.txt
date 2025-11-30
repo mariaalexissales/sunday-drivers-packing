@@ -3,13 +3,14 @@ module PR
 	imports
 	{
 		Base,
+		SapphCooking,
 	}
 
 	/******************************  DRINK MIXES  ******************************/
 
 	recipe Pack 6
 	{
-		destroy SapphCooking.Drinkmix_Lemon=6,
+		destroy Drinkmix_Lemon=6,
 
 		Result				:6pkDrinkmix_Lemon,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -21,7 +22,7 @@ module PR
 	{
 		destroy 6pkDrinkmix_Lemon,
 
-		Result				:SapphCooking.Drinkmix_Lemon=6,
+		Result				:Drinkmix_Lemon=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -30,7 +31,7 @@ module PR
 
 	recipe Pack 12
 	{
-		destroy SapphCooking.Drinkmix_Lemon=12,
+		destroy Drinkmix_Lemon=12,
 
 		Result				:12pkDrinkmix_Lemon,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -42,7 +43,7 @@ module PR
 	{
 		destroy 12pkDrinkmix_Lemon,
 
-		Result				:SapphCooking.Drinkmix_Lemon=12,
+		Result				:Drinkmix_Lemon=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -69,7 +70,7 @@ module PR
 
 	recipe Pack 6
 	{
-		destroy SapphCooking.Drinkmix_Orange=6,
+		destroy Drinkmix_Orange=6,
 
 		Result				:6pkDrinkmix_Orange,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -81,7 +82,7 @@ module PR
 	{
 		destroy 6pkDrinkmix_Orange,
 
-		Result				:SapphCooking.Drinkmix_Orange=6,
+		Result				:Drinkmix_Orange=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -90,7 +91,7 @@ module PR
 
 	recipe Pack 12
 	{
-		destroy SapphCooking.Drinkmix_Orange=12,
+		destroy Drinkmix_Orange=12,
 
 		Result				:12pkDrinkmix_Orange,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -102,7 +103,7 @@ module PR
 	{
 		destroy 12pkDrinkmix_Orange,
 
-		Result				:SapphCooking.Drinkmix_Orange=12,
+		Result				:Drinkmix_Orange=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -129,7 +130,7 @@ module PR
 
 	recipe Pack 6
 	{
-		destroy SapphCooking.Drinkmix_Apple=6,
+		destroy Drinkmix_Apple=6,
 
 		Result				:6pkDrinkmix_Apple,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -141,7 +142,7 @@ module PR
 	{
 		destroy 6pkDrinkmix_Apple,
 
-		Result				:SapphCooking.Drinkmix_Apple=6,
+		Result				:Drinkmix_Apple=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -150,7 +151,7 @@ module PR
 
 	recipe Pack 12
 	{
-		destroy SapphCooking.Drinkmix_Apple=12,
+		destroy Drinkmix_Apple=12,
 
 		Result				:12pkDrinkmix_Apple,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -162,7 +163,7 @@ module PR
 	{
 		destroy 12pkDrinkmix_Apple,
 
-		Result				:SapphCooking.Drinkmix_Apple=12,
+		Result				:Drinkmix_Apple=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -189,7 +190,7 @@ module PR
 
 	recipe Pack 6
 	{
-		destroy SapphCooking.Drinkmix_Grape=6,
+		destroy Drinkmix_Grape=6,
 
 		Result				:6pkDrinkmix_Grape,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -201,7 +202,7 @@ module PR
 	{
 		destroy 6pkDrinkmix_Grape,
 
-		Result				:SapphCooking.Drinkmix_Grape=6,
+		Result				:Drinkmix_Grape=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -210,7 +211,7 @@ module PR
 
 	recipe Pack 12
 	{
-		destroy SapphCooking.Drinkmix_Grape=12,
+		destroy Drinkmix_Grape=12,
 
 		Result				:12pkDrinkmix_Grape,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -222,7 +223,7 @@ module PR
 	{
 		destroy 12pkDrinkmix_Grape,
 
-		Result				:SapphCooking.Drinkmix_Grape=12,
+		Result				:Drinkmix_Grape=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -249,7 +250,7 @@ module PR
 
 	recipe Pack 6
 	{
-		destroy SapphCooking.Drinkmix_Pineapple=6,
+		destroy Drinkmix_Pineapple=6,
 
 		Result				:6pkDrinkmix_Pineapple,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -261,7 +262,7 @@ module PR
 	{
 		destroy 6pkDrinkmix_Pineapple,
 
-		Result				:SapphCooking.Drinkmix_Pineapple=6,
+		Result				:Drinkmix_Pineapple=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -270,7 +271,7 @@ module PR
 
 	recipe Pack 12
 	{
-		destroy SapphCooking.Drinkmix_Pineapple=12,
+		destroy Drinkmix_Pineapple=12,
 
 		Result				:12pkDrinkmix_Pineapple,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -282,7 +283,7 @@ module PR
 	{
 		destroy 12pkDrinkmix_Pineapple,
 
-		Result				:SapphCooking.Drinkmix_Pineapple=12,
+		Result				:Drinkmix_Pineapple=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -309,7 +310,7 @@ module PR
 
 	recipe Pack 6
 	{
-		destroy SapphCooking.Drinkmix_Strawberry=6,
+		destroy Drinkmix_Strawberry=6,
 
 		Result				:6pkDrinkmix_Strawberry,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -321,7 +322,7 @@ module PR
 	{
 		destroy 6pkDrinkmix_Strawberry,
 
-		Result				:SapphCooking.Drinkmix_Strawberry=6,
+		Result				:Drinkmix_Strawberry=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -330,7 +331,7 @@ module PR
 
 	recipe Pack 12
 	{
-		destroy SapphCooking.Drinkmix_Strawberry=12,
+		destroy Drinkmix_Strawberry=12,
 
 		Result				:12pkDrinkmix_Strawberry,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -342,7 +343,7 @@ module PR
 	{
 		destroy 12pkDrinkmix_Strawberry,
 
-		Result				:SapphCooking.Drinkmix_Strawberry=12,
+		Result				:Drinkmix_Strawberry=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -369,7 +370,7 @@ module PR
 
 	recipe Pack 6
 	{
-		destroy SapphCooking.Drinkmix_Peach=6,
+		destroy Drinkmix_Peach=6,
 
 		Result				:6pkDrinkmix_Peach,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -381,7 +382,7 @@ module PR
 	{
 		destroy 6pkDrinkmix_Peach,
 
-		Result				:SapphCooking.Drinkmix_Peach=6,
+		Result				:Drinkmix_Peach=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -390,7 +391,7 @@ module PR
 
 	recipe Pack 12
 	{
-		destroy SapphCooking.Drinkmix_Peach=12,
+		destroy Drinkmix_Peach=12,
 
 		Result				:12pkDrinkmix_Peach,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -402,7 +403,7 @@ module PR
 	{
 		destroy 12pkDrinkmix_Peach,
 
-		Result				:SapphCooking.Drinkmix_Peach=12,
+		Result				:Drinkmix_Peach=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -429,7 +430,7 @@ module PR
 
 	recipe Pack 6
 	{
-		destroy SapphCooking.Drinkmix_Watermelon=6,
+		destroy Drinkmix_Watermelon=6,
 
 		Result				:6pkDrinkmix_Watermelon,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -441,7 +442,7 @@ module PR
 	{
 		destroy 6pkDrinkmix_Watermelon,
 
-		Result				:SapphCooking.Drinkmix_Watermelon=6,
+		Result				:Drinkmix_Watermelon=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -450,7 +451,7 @@ module PR
 
 	recipe Pack 12
 	{
-		destroy SapphCooking.Drinkmix_Watermelon=12,
+		destroy Drinkmix_Watermelon=12,
 
 		Result				:12pkDrinkmix_Watermelon,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -462,7 +463,7 @@ module PR
 	{
 		destroy 12pkDrinkmix_Watermelon,
 
-		Result				:SapphCooking.Drinkmix_Watermelon=12,
+		Result				:Drinkmix_Watermelon=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -491,7 +492,7 @@ module PR
 
 	recipe Pack 6
 	{
-		destroy SapphCooking.CanofKernelCorn=6,
+		destroy CanofKernelCorn=6,
 
 		Result				:6pkCanofKernelCorn,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -503,7 +504,7 @@ module PR
 	{
 		destroy 6pkCanofKernelCorn,
 
-		Result				:SapphCooking.CanofKernelCorn=6,
+		Result				:CanofKernelCorn=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -512,7 +513,7 @@ module PR
 
 	recipe Pack 12
 	{
-		destroy SapphCooking.CanofKernelCorn=12,
+		destroy CanofKernelCorn=12,
 
 		Result				:12pkCanofKernelCorn,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -524,7 +525,7 @@ module PR
 	{
 		destroy 12pkCanofKernelCorn,
 
-		Result				:SapphCooking.CanofKernelCorn=12,
+		Result				:CanofKernelCorn=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -551,7 +552,7 @@ module PR
 
 	recipe Pack 6
 	{
-		destroy SapphCooking.CanofPowderedMilk=6,
+		destroy CanofPowderedMilk=6,
 
 		Result				:6pkCanofPowderedMilk,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -563,7 +564,7 @@ module PR
 	{
 		destroy 6pkCanofPowderedMilk,
 
-		Result				:SapphCooking.CanofPowderedMilk=6,
+		Result				:CanofPowderedMilk=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -572,7 +573,7 @@ module PR
 
 	recipe Pack 12
 	{
-		destroy SapphCooking.CanofPowderedMilk=12,
+		destroy CanofPowderedMilk=12,
 
 		Result				:12pkCanofPowderedMilk,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -584,7 +585,7 @@ module PR
 	{
 		destroy 12pkCanofPowderedMilk,
 
-		Result				:SapphCooking.CanofPowderedMilk=12,
+		Result				:CanofPowderedMilk=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -611,7 +612,7 @@ module PR
 
 	recipe Pack 6
 	{
-		destroy SapphCooking.CanofProteinPowder=6,
+		destroy CanofProteinPowder=6,
 
 		Result				:6pkCanofProteinPowder,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -623,7 +624,7 @@ module PR
 	{
 		destroy 6pkCanofProteinPowder,
 
-		Result				:SapphCooking.CanofProteinPowder=6,
+		Result				:CanofProteinPowder=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -632,7 +633,7 @@ module PR
 
 	recipe Pack 12
 	{
-		destroy SapphCooking.CanofProteinPowder=12,
+		destroy CanofProteinPowder=12,
 
 		Result				:12pkCanofProteinPowder,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -644,7 +645,7 @@ module PR
 	{
 		destroy 12pkCanofProteinPowder,
 
-		Result				:SapphCooking.CanofProteinPowder=12,
+		Result				:CanofProteinPowder=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -671,7 +672,7 @@ module PR
 
 	recipe Pack 6
 	{
-		destroy SapphCooking.CanofRefriedBeans=6,
+		destroy CanofRefriedBeans=6,
 
 		Result				:6pkCanofRefriedBeans,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -683,7 +684,7 @@ module PR
 	{
 		destroy 6pkCanofRefriedBeans,
 
-		Result				:SapphCooking.CanofRefriedBeans=6,
+		Result				:CanofRefriedBeans=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -692,7 +693,7 @@ module PR
 
 	recipe Pack 12
 	{
-		destroy SapphCooking.CanofRefriedBeans=12,
+		destroy CanofRefriedBeans=12,
 
 		Result				:12pkCanofRefriedBeans,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -704,7 +705,7 @@ module PR
 	{
 		destroy 12pkCanofRefriedBeans,
 
-		Result				:SapphCooking.CanofRefriedBeans=12,
+		Result				:CanofRefriedBeans=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -731,7 +732,7 @@ module PR
 
 	recipe Pack 6
 	{
-		destroy SapphCooking.CanofBeets=6,
+		destroy CanofBeets=6,
 
 		Result				:6pkCanofBeets,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -743,7 +744,7 @@ module PR
 	{
 		destroy 6pkCanofBeets,
 
-		Result				:SapphCooking.CanofBeets=6,
+		Result				:CanofBeets=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -752,7 +753,7 @@ module PR
 
 	recipe Pack 12
 	{
-		destroy SapphCooking.CanofBeets=12,
+		destroy CanofBeets=12,
 
 		Result				:12pkCanofBeets,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -764,7 +765,7 @@ module PR
 	{
 		destroy 12pkCanofBeets,
 
-		Result				:SapphCooking.CanofBeets=12,
+		Result				:CanofBeets=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -793,7 +794,7 @@ module PR
 
 	recipe Pack 6
 	{
-		destroy SapphCooking.TinofCaviar=6,
+		destroy TinofCaviar=6,
 
 		Result				:6pkTinofCaviar,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -805,7 +806,7 @@ module PR
 	{
 		destroy 6pkTinofCaviar,
 
-		Result				:SapphCooking.TinofCaviar=6,
+		Result				:TinofCaviar=6,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,
@@ -814,7 +815,7 @@ module PR
 
 	recipe Pack 12
 	{
-		destroy SapphCooking.TinofCaviar=12,
+		destroy TinofCaviar=12,
 
 		Result				:12pkTinofCaviar,
 		OnTest				:Recipe.OnTest.IsFavorite,
@@ -826,7 +827,7 @@ module PR
 	{
 		destroy 12pkTinofCaviar,
 
-		Result				:SapphCooking.TinofCaviar=12,
+		Result				:TinofCaviar=12,
 		OnGiveXP			:Recipe.OnGiveXP.None,
         RemoveResultItem    :true,
 		Time				:25.0,

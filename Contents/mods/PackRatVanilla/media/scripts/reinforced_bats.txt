@@ -18,11 +18,11 @@ module PR
 	recipe Pack Bundle
 	{
 		keep Stapler,
-		keep Paperclip,
-		keep YoYo,
-		BaseballBatNails=10,
+        keep Yoyo,
+        keep Paperclip,
+		destroy BaseballBatNails=10,
 
-		Result:PR.BundleReinforcedBats,
+		Result:BundleReinforcedBats,
 		Time:30.0,
 		Category:Storage,
 	}
