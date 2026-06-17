@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 4
+	{
+		destroy CannedSardines=4,
+
+		Result:OS4pkSardines,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:20.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 4
+	{
+		destroy OS4pkSardines,
+
+		Result:CannedSardines=4,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:20.0,
+		Category:Storage,
+	}
+}

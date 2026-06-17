@@ -1,0 +1,34 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkNettles
+	{
+		DisplayName		= 5 x Nettles,
+		Weight			= 0.25,
+		Type			= Normal,
+		Icon			= Nettle,
+		WorldStaticModel= Nettles_Ground,
+	}
+
+	item 10pkNettles
+	{
+		DisplayName		= 10 x Nettles,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= Nettle,
+		WorldStaticModel= Nettles_Ground
+	}
+
+	item 50pkNettles
+	{
+		DisplayName		= 50 x Nettles,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= Nettle,
+		WorldStaticModel= Nettles_Ground
+	}
+}

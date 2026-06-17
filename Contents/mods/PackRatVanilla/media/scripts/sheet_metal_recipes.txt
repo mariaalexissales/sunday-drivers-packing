@@ -1,0 +1,243 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 5
+	{
+		destroy SheetMetal=5,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Rope 5
+	{
+		destroy SheetMetal=5,
+		Rope=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkRopeSheetMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Rope 5
+	{
+		destroy SheetMetal=5,
+		SheetRope=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetRopeSheetMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Rope 5
+	{
+		destroy 5pkSheetMetal,
+		Rope=1,
+		
+		CanBeDoneFromFloor:true,
+		Result: 5pkRopeSheetMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time: 50.0,
+		Category:Storage,
+	}
+
+	recipe Rope 5
+	{
+		destroy 5pkSheetMetal,
+		SheetRope=1,
+		
+		CanBeDoneFromFloor:true,
+		Result: 5pkSheetRopeSheetMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time: 50.0,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pkSheetMetal=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetMetal=2,
+		Time:20.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkRopeSheetMetal=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkRopeSheetMetal=2,
+		Time:20.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkSheetRopeSheetMetal=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetRopeSheetMetal=2,
+		Time:20.0,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkSheetMetal,
+		
+		CanBeDoneFromFloor:true,
+		Result:SheetMetal=5,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Unrope 5
+	{
+		destroy 5pkRopeSheetMetal,
+		
+		CanBeDoneFromFloor:true,
+		Result:SheetMetal=5,
+		OnCreate:Recipe.OnCreate.Unpack1Rope,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Unrope 5
+	{
+		destroy 5pkSheetRopeSheetMetal,
+		
+		CanBeDoneFromFloor:true,
+		Result:SheetMetal=5,
+		OnCreate:Recipe.OnCreate.Unpack1SheetRope,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy SheetMetal=10,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkSheetMetal=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetMetal=1,
+		Time:25.0,
+	}
+
+	recipe Put Together
+	{
+		5pkRopeSheetMetal=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkRopeSheetMetal=1,
+		Time:25.0,
+	}
+
+	recipe Put Together
+	{
+		5pkSheetRopeSheetMetal=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetRopeSheetMetal=1,
+		Time:25.0,
+	}
+
+	recipe Rope 10
+	{
+		destroy SheetMetal=10,
+		Rope=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkRopeSheetMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Rope 10
+	{
+		destroy SheetMetal=10,
+		SheetRope=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetRopeSheetMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Rope 10
+	{
+		destroy 10pkSheetMetal,
+		Rope=2,
+		
+		CanBeDoneFromFloor:true,
+		Result: 10pkRopeSheetMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time: 50.0,
+		Category:Storage,
+	}
+
+	recipe Rope 10
+	{
+		destroy 10pkSheetMetal,
+		SheetRope=2,
+		
+		CanBeDoneFromFloor:true,
+		Result: 10pkSheetRopeSheetMetal,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time: 50.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkSheetMetal,
+		
+		CanBeDoneFromFloor:true,
+		Result:SheetMetal=10,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Unrope 10
+	{
+		destroy 10pkRopeSheetMetal,
+		
+		CanBeDoneFromFloor:true,
+		Result:SheetMetal=10,
+		OnCreate:Recipe.OnCreate.Unpack2Rope,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Unrope 10
+	{
+		destroy 10pkSheetRopeSheetMetal,
+		
+		CanBeDoneFromFloor:true,
+		Result:SheetMetal=10,
+		OnCreate:Recipe.OnCreate.Unpack2SheetRope,
+		Time:50.0,
+		Category:Storage,
+	}
+}

@@ -1,0 +1,19 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Make Wooden Container
+	{
+		Plank=1,
+		keep [Recipe.GetItemTypes.Saw],
+		keep [Recipe.GetItemTypes.Hammer],
+		
+		Result:WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:40.0,
+		Category:Storage,
+	}
+}

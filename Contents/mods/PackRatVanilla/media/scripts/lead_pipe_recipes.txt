@@ -1,0 +1,61 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 10
+	{
+		destroy LeadPipe=10,
+		
+		Result:10pkleadpipe,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:27.5,
+		Category:Storage,
+	}
+
+	recipe Split in Five
+	{
+		50pkleadpipe=1,
+		
+		Result:10pkleadpipe=5,
+		Time:18.75,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkleadpipe,
+		
+		Result:LeadPipe=10,
+		Time:27.5,
+		Category:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy LeadPipe=50,
+		
+		Result:50pkleadpipe,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:27.5,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		10pkleadpipe=5,
+		
+		Result:50pkleadpipe=1,
+		Time:18.75,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkleadpipe,
+		
+		Result:LeadPipe=50,
+		Time:27.5,
+		Category:Storage,
+	}
+}

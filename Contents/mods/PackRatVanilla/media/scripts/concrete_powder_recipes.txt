@@ -1,0 +1,205 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Rope 5
+	{
+		destroy ConcretePowder=5,
+		Rope=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkRopeConcretePowder,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:125.0,
+		Category:Storage,
+	}
+
+	recipe Rope 5
+	{
+		destroy ConcretePowder=5,
+		SheetRope=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetRopeConcretePowder,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:125.0,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pkRopeConcretePowder=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkRopeConcretePowder=2,
+		Time:25.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkSheetRopeConcretePowder=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetRopeConcretePowder=2,
+		Time:25.0,
+	}
+
+	recipe Unrope 5
+	{
+		destroy 5pkRopeConcretePowder,
+		
+		CanBeDoneFromFloor:true,
+		Result:ConcretePowder=5,
+		OnCreate:Recipe.OnCreate.Unpack1Rope,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Unrope 5
+	{
+		destroy 5pkSheetRopeConcretePowder,
+		
+		CanBeDoneFromFloor:true,
+		Result:ConcretePowder=5,
+		OnCreate:Recipe.OnCreate.Unpack1SheetRope,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkRopeConcretePowder=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkRopeConcretePowder=1,
+		Time:35.0,
+	}
+
+	recipe Put Together
+	{
+		5pkSheetRopeConcretePowder=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetRopeConcretePowder=1,
+		Time:35.0,
+	}
+
+	recipe Rope 10
+	{
+		destroy ConcretePowder=10,
+		Rope=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkRopeConcretePowder,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:150.0,
+		Category:Storage,
+	}
+
+	recipe Rope 10
+	{
+		destroy ConcretePowder=10,
+		SheetRope=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetRopeConcretePowder,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:150.0,
+		Category:Storage,
+	}
+
+	recipe Unrope 10
+	{
+		destroy 10pkRopeConcretePowder,
+		
+		CanBeDoneFromFloor:true,
+		Result:ConcretePowder=10,
+		OnCreate:Recipe.OnCreate.Unpack2Rope,
+		Time:125.0,
+		Category:Storage,
+	}
+
+	recipe Unrope 10
+	{
+		destroy 10pkSheetRopeConcretePowder,
+		
+		CanBeDoneFromFloor:true,
+		Result:ConcretePowder=10,
+		OnCreate:Recipe.OnCreate.Unpack2SheetRope,
+		Time:125.0,
+		Category:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy ConcretePowder=50,
+		WoodenContainer=1,
+	
+		Result:50pkWCConcretePowder,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:200.0,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		100pkWCConcretePowder=1,
+	
+		Result:50pkWCConcretePowder=2,
+		CanBeDoneFromFloor:true,
+		Time:106.0,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkWCConcretePowder,
+	
+		Result:ConcretePowder=50,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack1WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Pack 100
+	{
+		destroy ConcretePowder=100,
+		WoodenContainer=2,
+	
+		Result:100pkWCConcretePowder,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:225.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		50pkWCConcretePowder=2,
+	
+		Result:100pkWCConcretePowder=1,
+		CanBeDoneFromFloor:true,
+		Time:106.0,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkWCConcretePowder,
+	
+		Result:ConcretePowder=100,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack2WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:112.5,
+		Category:Storage,
+	}
+}

@@ -1,0 +1,47 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkRopeGravelBag
+	{
+		Weight			= 2.0,
+		Type			= Normal,
+		DisplayName		= 5 x Gravel Bag (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeSandbag,
+		WorldStaticModel= StackOfGravelBagRoped,
+	}
+
+	item 5pkSheetRopeGravelBag
+	{
+		Weight			= 3.0,
+		Type			= Normal,
+		DisplayName		= 5 x Gravel Bag (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeSandbag,
+		WorldStaticModel= StackOfGravelBagSheetRoped,
+	}
+
+	item 10pkRopeGravelBag
+	{
+		Weight			= 3.0,
+		Type			= Normal,
+		DisplayName		= 10 x Gravel Bag (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeSandbag,
+		WorldStaticModel= StackOfGravelBagRoped,
+	}
+
+	item 10pkSheetRopeGravelBag
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 10 x Gravel Bag (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeSandbag,
+		WorldStaticModel= StackOfGravelBagSheetRoped,
+	}
+}

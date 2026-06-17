@@ -1,0 +1,25 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkViolets
+	{
+		DisplayName		= 10 x Violets,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= Violets,
+		WorldStaticModel= Violets
+	}
+
+	item 50pkViolets
+	{
+		DisplayName		= 50 x Violets,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= Violets,
+		WorldStaticModel= Violets
+	}
+}

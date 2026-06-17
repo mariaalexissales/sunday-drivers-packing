@@ -1,0 +1,355 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 10 Radish Seeds
+	{
+		destroy RadishBagSeed=10,
+		Result:10pkRadishBagSeed,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Pack 10 Strawberry Seeds
+	{
+		destroy StrawberryBagSeed=10,
+		Result:10pkStrawberryBagSeed,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Pack 10 Tomato Seeds
+	{
+		destroy TomatoBagSeed=10,
+		Result:10pkTomatoBagSeed,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Pack 100 Radish Seeds
+	{
+		destroy RadishBagSeed=100,
+		Result:100pkRadishBagSeed,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Pack 100 Strawberry Seeds
+	{
+		destroy StrawberryBagSeed=100,
+		Result:100pkStrawberryBagSeed,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Pack 100 Tomato Seeds
+	{
+		destroy TomatoBagSeed=100,
+		Result:100pkTomatoBagSeed,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Pack 5 Radish Seeds
+	{
+		destroy RadishBagSeed=5,
+		Result:5pkRadishBagSeed,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Pack 5 Strawberry Seeds
+	{
+		destroy StrawberryBagSeed=5,
+		Result:5pkStrawberryBagSeed,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Pack 5 Tomato Seeds
+	{
+		destroy TomatoBagSeed=5,
+		Result:5pkTomatoBagSeed,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Pack 50 Radish Seeds
+	{
+		destroy RadishBagSeed=50,
+		Result:50pkRadishBagSeed,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Pack 50 Strawberry Seeds
+	{
+		destroy StrawberryBagSeed=50,
+		Result:50pkStrawberryBagSeed,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Pack 50 Tomato Seeds
+	{
+		destroy TomatoBagSeed=50,
+		Result:50pkTomatoBagSeed,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkRadishBagSeed=2,
+
+		Result  :10pkRadishBagSeed=1,
+		Time    :10.0
+	}
+
+	recipe Put Together
+	{
+		10pkRadishBagSeed=5,
+
+		Result  :50pkRadishBagSeed=1,
+		Time    :20.0
+	}
+
+	recipe Put Together
+	{
+		50pkRadishBagSeed=2,
+
+		Result  :100pkRadishBagSeed=1,
+		Time    :40.0
+	}
+
+	recipe Put Together
+	{
+		5pkStrawberryBagSeed=2,
+
+		Result  :10pkStrawberryBagSeed=1,
+		Time    :10.0
+	}
+
+	recipe Put Together
+	{
+		10pkStrawberryBagSeed=5,
+
+		Result  :50pkStrawberryBagSeed=1,
+		Time    :20.0
+	}
+
+	recipe Put Together
+	{
+		50pkStrawberryBagSeed=2,
+
+		Result  :100pkStrawberryBagSeed=1,
+		Time    :40.0
+	}
+
+	recipe Put Together
+	{
+		5pkTomatoBagSeed=2,
+
+		Result  :10pkTomatoBagSeed=1,
+		Time    :10.0
+	}
+
+	recipe Put Together
+	{
+		10pkTomatoBagSeed=5,
+
+		Result  :50pkTomatoBagSeed=1,
+		Time    :20.0
+	}
+
+	recipe Put Together
+	{
+		50pkTomatoBagSeed=2,
+
+		Result  :100pkTomatoBagSeed=1,
+		Time    :40.0
+	}
+
+	recipe Split in Five
+	{
+		50pkRadishBagSeed=1,
+
+		Result  :10pkRadishBagSeed=5,
+		Time    :20.0
+	}
+
+	recipe Split in Five
+	{
+		50pkStrawberryBagSeed=1,
+
+		Result  :10pkStrawberryBagSeed=5,
+		Time    :20.0
+	}
+
+	recipe Split in Five
+	{
+		50pkTomatoBagSeed=1,
+
+		Result  :10pkTomatoBagSeed=5,
+		Time    :20.0
+	}
+
+	recipe Split in Two
+	{
+		10pkRadishBagSeed=1,
+
+		Result  :5pkRadishBagSeed=2,
+		Time    :10.0
+	}
+
+	recipe Split in Two
+	{
+		100pkRadishBagSeed=1,
+
+		Result  :50pkRadishBagSeed=2,
+		Time    :40.0
+	}
+
+	recipe Split in Two
+	{
+		10pkStrawberryBagSeed=1,
+
+		Result  :5pkStrawberryBagSeed=2,
+		Time    :10.0
+	}
+
+	recipe Split in Two
+	{
+		100pkStrawberryBagSeed=1,
+
+		Result  :50pkStrawberryBagSeed=2,
+		Time    :40.0
+	}
+
+	recipe Split in Two
+	{
+		10pkTomatoBagSeed=1,
+
+		Result  :5pkTomatoBagSeed=2,
+		Time    :10.0
+	}
+
+	recipe Split in Two
+	{
+		100pkTomatoBagSeed=1,
+
+		Result  :50pkTomatoBagSeed=2,
+		Time    :40.0
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkRadishBagSeed,
+
+		Result:RadishBagSeed=10,
+		Time:25.0,
+		Category:Storage
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkStrawberryBagSeed,
+
+		Result:StrawberryBagSeed=10,
+		Time:25.0,
+		Category:Storage
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkTomatoBagSeed,
+
+		Result:TomatoBagSeed=10,
+		Time:25.0,
+		Category:Storage
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkRadishBagSeed,
+
+		Result:RadishBagSeed=100,
+		Time:25.0,
+		Category:Storage
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkStrawberryBagSeed,
+
+		Result:StrawberryBagSeed=100,
+		Time:25.0,
+		Category:Storage
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkTomatoBagSeed,
+
+		Result:TomatoBagSeed=100,
+		Time:25.0,
+		Category:Storage
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkRadishBagSeed,
+
+		Result:RadishBagSeed=5,
+		Time:25.0,
+		Category:Storage
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkStrawberryBagSeed,
+
+		Result:StrawberryBagSeed=5,
+		Time:25.0,
+		Category:Storage
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkTomatoBagSeed,
+
+		Result:TomatoBagSeed=5,
+		Time:25.0,
+		Category:Storage
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkRadishBagSeed,
+
+		Result:RadishBagSeed=50,
+		Time:25.0,
+		Category:Storage
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkStrawberryBagSeed,
+
+		Result:StrawberryBagSeed=50,
+		Time:25.0,
+		Category:Storage
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkTomatoBagSeed,
+
+		Result:TomatoBagSeed=50,
+		Time:25.0,
+		Category:Storage
+	}
+}

@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS6pkCannedBolognese
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 6 x Canned Bolognese,
+		DisplayCategory = Food,
+		Icon			= OS6pkCannedBolognese,
+		WorldStaticModel= PackOfBologneseCan,
+	}
+}

@@ -1,0 +1,46 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkLightBulbMagenta
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 10 x Magenta Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		ColorRed		= 255,
+		ColorGreen		= 0,
+		ColorBlue		= 255,
+		WorldStaticModel = WIP,
+	}
+
+	item 50pkLightBulbMagenta
+	{
+		Weight			= 3.0,
+		Type			= Normal,
+		DisplayName		= 50 x Magenta Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		ColorRed		= 255,
+		ColorGreen		= 0,
+		ColorBlue		= 255,
+		WorldStaticModel = WIP,
+	}
+
+	item 100pkLightBulbMagenta
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 100 x Magenta Light Bulb,
+		DisplayCategory = Electronics,
+		Icon			= LightBulb,
+		ColorRed		= 255,
+		ColorGreen		= 0,
+		ColorBlue		= 255,
+		WorldStaticModel = WIP,
+	}
+}

@@ -1,0 +1,37 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkThread
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Thread,
+		DisplayCategory = Material,
+		Icon			= PThread,
+		WorldStaticModel= ThreadXL,
+	}
+
+	item 10pkThread
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Thread,
+		DisplayCategory = Material,
+		Icon			= PThread,
+		WorldStaticModel= ThreadXL,
+	}
+
+	item 50pkThread
+	{
+		Weight			= 0.75,
+		Type			= Normal,
+		DisplayName		= 50 x Thread,
+		DisplayCategory = Material,
+		Icon			= PThread,
+		WorldStaticModel= ThreadXL,
+	}
+}

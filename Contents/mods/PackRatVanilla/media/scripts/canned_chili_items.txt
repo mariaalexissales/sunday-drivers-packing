@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS6pkCannedChili
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 6 x Canned Chili,
+		DisplayCategory = Food,
+		Icon			= OS6pkCannedChili,
+		WorldStaticModel= PackOfChiliCan,
+	}
+}

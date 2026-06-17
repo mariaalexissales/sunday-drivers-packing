@@ -1,0 +1,5 @@
+name=Pack Rat - Sapph's Cooking
+id=PackRatSapph
+description=Pack Rat recipes for Sapph's Cooking.
+poster=poster.png
+require=PackRat,sapphcooking

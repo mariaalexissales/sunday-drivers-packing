@@ -1,0 +1,67 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkRopeConcretePowder
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 5 x Bag of Concrete Powder (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeConcretePowder,
+		WorldStaticModel= StackOfConcretePowderRoped
+	}
+
+	item 5pkSheetRopeConcretePowder
+	{
+		Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 5 x Bag of Concrete Powder (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeConcretePowder,
+		WorldStaticModel= StackOfConcretePowderSheetRoped
+	}
+
+	item 10pkRopeConcretePowder
+	{
+		Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 10 x Bag of Concrete Powder (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeConcretePowder,
+		WorldStaticModel= StackOfConcretePowderRoped
+	}
+
+	item 10pkSheetRopeConcretePowder
+	{
+		Weight			= 12.5,
+		Type			= Normal,
+		DisplayName		= 10 x Bag of Concrete Powder (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeConcretePowder,
+		WorldStaticModel= StackOfConcretePowderSheetRoped
+	}
+
+	item 50pkWCConcretePowder
+	{
+		Weight			= 25.0,
+		Type			= Normal,
+		DisplayName		= 50 x Bag of Concrete Powder (Box),
+		DisplayCategory	= Material,
+		Icon			= WIP,
+		WorldStaticModel= WIP,
+	}
+
+	item 100pkWCConcretePowder
+	{
+		Weight			= 37.5,
+		Type			= Normal,
+		DisplayName		= 100 x Bag of Concrete Powder (Box),
+		DisplayCategory	= Material,
+		Icon			= WIP,
+		WorldStaticModel= WIP,
+	}
+}

@@ -1,0 +1,47 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkDenim
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 10 x Denim Strips,
+		DisplayCategory = Material,
+		Icon			= PDenimStrips,
+		WorldStaticModel= StripRollDenim,
+	}
+
+	item 50pkDenim
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 50 x Denim Strips,
+		DisplayCategory = Material,
+		Icon			= PDenimStrips,
+		WorldStaticModel= StripRollDenim,
+	}
+
+	item 100pkDenim
+	{
+		Weight			= 2.5,
+		Type			= Normal,
+		DisplayName		= 100 x Denim Strips,
+		DisplayCategory = Material,
+		Icon			= PDenimStrips,
+		WorldStaticModel= StripRollDenim,
+	}
+
+	item 500pkDenim
+	{
+		DisplayName		= 500 x Denim Strips,
+		DisplayCategory = Material,
+		Weight			= 7.5,
+		Type			= Normal,
+		Icon			= PDenimStrips,
+		WorldStaticModel= StripRollDenim,
+	}
+}

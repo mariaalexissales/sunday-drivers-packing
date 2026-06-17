@@ -1,0 +1,67 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 5
+	{
+		destroy ShotgunShellsBox=5,
+		
+		Result:5pkShotgun,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:100.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pkShotgun=1,
+		
+		Result:5pkShotgun=2,
+		Time:70.0,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkShotgun,
+		
+		Result:ShotgunShellsBox=5,
+		Time:100.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy ShotgunShellsBox=10,
+		
+		Result:10pkShotgun,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:140.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkShotgun=2,
+		
+		Result:10pkShotgun=1,
+		Time:70.0,
+		Sound:AmmoCan_Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkShotgun,
+		
+		Result:ShotgunShellsBox=10,
+		Time:140.0,
+		Category:Storage,
+		Sound:AmmoCan_Storage,
+	}
+}

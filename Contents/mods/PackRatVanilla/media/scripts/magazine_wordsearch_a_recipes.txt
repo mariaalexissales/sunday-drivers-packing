@@ -1,0 +1,77 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Change to Type 2
+	{
+		destroy MagazineWordsearch1,
+		
+		Result:MagazineWordsearch2=1,
+		Time:12.5,
+	}
+
+	recipe Change to Type 3
+	{
+		destroy MagazineWordsearch1,
+		
+		Result:MagazineWordsearch3=1,
+		Time:12.5,
+	}
+
+	recipe Pack 5
+	{
+		destroy MagazineWordsearch1=5,
+		
+		Result:5pkMagazineWordsearchA,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pkMagazineWordsearchA=1,
+		
+		Result:5pkMagazineWordsearchA=2,
+		Time:15.0,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkMagazineWordsearchA,
+		
+		Result:MagazineWordsearch1=5,
+		Time:12.5,
+		Category:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy MagazineWordsearch1=10,
+		
+		Result:10pkMagazineWordsearchA,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkMagazineWordsearchA=2,
+		
+		Result:10pkMagazineWordsearchA=1,
+		Time:15.0,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkMagazineWordsearchA,
+		
+		Result:MagazineWordsearch1=10,
+		Time:25.0,
+		Category:Storage,
+	}
+}

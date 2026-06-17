@@ -1,0 +1,29 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 4
+	{
+		destroy ToiletPaper=4,
+		
+		Result:4pkToiletPaper,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 4
+	{
+		destroy 4pkToiletPaper,
+		
+		Result:ToiletPaper,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:12.5,
+		Category:Storage,
+	}
+}

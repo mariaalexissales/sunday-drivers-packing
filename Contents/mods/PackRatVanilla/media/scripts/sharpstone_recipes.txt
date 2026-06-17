@@ -1,0 +1,26 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 10
+	{
+		destroy SharpedStone=10,
+		
+		Result:10pkSharpedStone,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkSharpedStone,
+		
+		Result:SharpedStone=10,
+		Time:22.5,
+		Category:Storage,
+	}
+}

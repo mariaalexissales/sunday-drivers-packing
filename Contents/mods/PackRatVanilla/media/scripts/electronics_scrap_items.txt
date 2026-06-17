@@ -1,0 +1,37 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkElectronicsScrap
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 10 x Electronics Scrap,
+		DisplayCategory = Electronics,
+		Icon			= PElectronicsScrap,
+		WorldStaticModel= BoxOfElectronicScrap,
+	}
+
+	item 50pkElectronicsScrap
+	{
+		Weight			= 3,
+		Type			= Normal,
+		DisplayName		= 50 x Electronics Scrap,
+		DisplayCategory = Electronics,
+		Icon			= PElectronicsScrap,
+		WorldStaticModel= BoxOfElectronicScrap,
+	}
+
+	item 100pkElectronicsScrap
+	{
+		Weight			= 5,
+		Type			= Normal,
+		DisplayName		= 100 x Electronics Scrap,
+		DisplayCategory = Electronics,
+		Icon			= PElectronicsScrap,
+		WorldStaticModel= BoxOfElectronicScrap,
+	}
+}

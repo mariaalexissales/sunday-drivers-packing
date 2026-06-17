@@ -1,0 +1,26 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Unpack 9
+	{
+		OS9pkSterileBandages,
+
+		Result:AlcoholBandage=9,
+		Time:30.0,
+		Category:Storage,
+	}
+
+	recipe Pack 9
+	{
+		AlcoholBandage=9,
+
+		Result:OS9pkSterileBandages,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:30.0,
+		Category:Storage,
+	}
+}

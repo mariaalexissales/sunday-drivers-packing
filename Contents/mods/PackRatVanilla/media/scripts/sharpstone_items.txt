@@ -1,0 +1,16 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkSharpedStone
+	{
+		DisplayName		= 10 x Chipped Stones,
+		Weight			= 1.5,
+		Type			= Normal,
+		Icon			= PkSharpedStoneBox,
+		WorldStaticModel= MediumSharpedStone
+	}
+}

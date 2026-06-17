@@ -1,0 +1,24 @@
+module PR
+{
+
+
+	item 5pkWeldingRods
+	{
+		Weight			= 5.25,
+		Type			= Normal,
+		DisplayName		= 5 x Welding Rods,
+		DisplayCategory = Material,
+		Icon			= PWeldingRods,
+		WorldStaticModel= PackOfWeldingRods,
+	}
+
+	item 10pkWeldingRods
+	{
+		Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 10 x Welding Rods,
+		DisplayCategory = Material,
+		Icon			= PWeldingRods,
+		WorldStaticModel= PackOfWeldingRods,
+	}
+}

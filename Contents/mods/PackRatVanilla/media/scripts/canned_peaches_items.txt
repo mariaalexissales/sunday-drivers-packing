@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 6pkCannedPeaches
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 6 x Canned Peaches,
+		DisplayCategory = Food,
+		Icon			= PCannedPeaches,
+		WorldStaticModel= PackOfPeachesCan,
+	}
+}

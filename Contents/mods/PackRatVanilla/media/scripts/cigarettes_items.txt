@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 20pkCigarettes
+	{
+		Weight			= 0.05,
+		Type			= Normal,
+		DisplayName		= 20 x Cigarettes,
+		DisplayCategory = FirstAid,
+		Icon			= PCigarettes,
+		WorldStaticModel= PackOfCigarettes,
+	}
+}

@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkRedWine
+	{
+		Weight			= 3.5,
+		Type			= Normal,
+		DisplayName		= 5 x Red Wine,
+		DisplayCategory = Food,
+		Icon			= PRedWine,
+		WorldStaticModel= WoodenBoxOfRedWineBottle,
+	}
+
+	item 10pkRedWine
+	{
+		Weight			= 5,
+		Type			= Normal,
+		DisplayName		= 10 x Red Wine,
+		DisplayCategory = Food,
+		Icon			= PRedWine,
+		WorldStaticModel= WoodenBoxOfRedWineBottle,
+	}
+}

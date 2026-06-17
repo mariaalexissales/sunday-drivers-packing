@@ -1,0 +1,25 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkSage
+	{
+		DisplayName		= 10 x Sage,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= HerbSage,
+		WorldStaticModel= HerbSage_Ground
+	}
+
+	item 50pkSage
+	{
+		DisplayName		= 50 x Sage,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= HerbSage,
+		WorldStaticModel= HerbSage_Ground
+	}
+}

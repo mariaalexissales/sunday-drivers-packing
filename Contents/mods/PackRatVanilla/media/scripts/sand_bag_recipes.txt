@@ -1,0 +1,215 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Rope 5
+	{
+		destroy Sandbag=5,
+		Rope=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkRopeSandBag,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Rope 5
+	{
+		destroy Sandbag=5,
+		SheetRope=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetRopeSandBag,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pkRopeSandBag=1,
+		
+		Result:5pkRopeSandBag,
+		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
+		RemoveResultItem:true,
+		Time:25.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkSheetRopeSandBag=1,
+		
+		Result:5pkSheetRopeSandBag,
+		OnCreate:Recipe.OnCreate.SplitUsesInTwo,
+		RemoveResultItem:true,
+		Time:25.0,
+	}
+
+	recipe Unrope 5
+	{
+		destroy 5pkRopeSandBag,
+		
+		CanBeDoneFromFloor:true,
+		Result:Sandbag=5,
+		RemoveResultItem:true,
+		OnCreate:Recipe.OnCreate.LoadUsesOneRope,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Unrope 5
+	{
+		destroy 5pkSheetRopeSandBag,
+		
+		CanBeDoneFromFloor:true,
+		Result:Sandbag=5,
+		RemoveResultItem:true,
+		OnCreate:Recipe.OnCreate.LoadUsesOneSheetRope,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkRopeSandBag=2,
+		
+		Result:10pkRopeSandBag=1,
+		OnCreate:Recipe.OnCreate.MergeUses,
+		Time:25.0,
+	}
+
+	recipe Put Together
+	{
+		5pkSheetRopeSandBag=2,
+		
+		Result:10pkSheetRopeSandBag=1,
+		OnCreate:Recipe.OnCreate.MergeUses,
+		Time:25.0,
+	}
+
+	recipe Rope 10
+	{
+		destroy Sandbag=10,
+		Rope=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkRopeSandBag,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Rope 10
+	{
+		destroy Sandbag=10,
+		SheetRope=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetRopeSandBag,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:75.0,
+		Category:Storage,
+	}
+
+	recipe Unrope 10
+	{
+		destroy 10pkRopeSandBag,
+		
+		CanBeDoneFromFloor:true,
+		Result:Sandbag=10,
+		RemoveResultItem:true,
+		OnCreate:Recipe.OnCreate.LoadUsesTwoRope,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Unrope 10
+	{
+		destroy 10pkSheetRopeSandBag,
+		
+		CanBeDoneFromFloor:true,
+		Result:Sandbag=10,
+		RemoveResultItem:true,
+		OnCreate:Recipe.OnCreate.LoadUsesTwoSheetRope,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy Sandbag=50,
+		WoodenContainer=1,
+	
+		Result:50pkWCSandbag,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:165.0,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		100pkWCSandbag=1,
+	
+		Result:50pkWCSandbag=2,
+		CanBeDoneFromFloor:true,
+		Time:88.5,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkWCSandbag,
+	
+		Result:Sandbag=50,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack1WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:82.5,
+		Category:Storage,
+	}
+
+	recipe Pack 100
+	{
+		destroy Sandbag=100,
+		WoodenContainer=2,
+	
+		Result:100pkWCSandbag,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:190.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		50pkWCSandbag=2,
+	
+		Result:100pkWCSandbag=1,
+		CanBeDoneFromFloor:true,
+		Time:88.5,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkWCSandbag,
+	
+		Result:Sandbag=100,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack2WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:95.0,
+		Category:Storage,
+	}
+}

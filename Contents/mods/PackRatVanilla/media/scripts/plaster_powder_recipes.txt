@@ -1,0 +1,217 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Rope 5
+	{
+		destroy PlasterPowder=5,
+		Rope=1,
+		
+		Result:5pkRopePlasterPowder,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:115.0,
+		Category:Storage,
+	}
+
+	recipe Rope 5
+	{
+		destroy PlasterPowder=5,
+		SheetRope=1,
+		
+		Result:5pkSheetRopePlasterPowder,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:115.0,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pkRopePlasterPowder=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkRopePlasterPowder=2,
+		Time:63.5,
+	}
+
+	recipe Split in Two
+	{
+		10pkSheetRopePlasterPowder=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetRopePlasterPowder=2,
+		Time:63.5,
+	}
+
+	recipe Unrope 5
+	{
+		destroy 5pkRopePlasterPowder,
+		
+		Result:PlasterPowder=5,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack1Rope,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:57.5,
+		Category:Storage,
+	}
+
+	recipe Unrope 5
+	{
+		destroy 5pkSheetRopePlasterPowder,
+		
+		Result:PlasterPowder=5,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack1SheetRope,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:57.5,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkRopePlasterPowder=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkRopePlasterPowder=1,
+		Time:63.5,
+	}
+
+	recipe Put Together
+	{
+		5pkSheetRopePlasterPowder=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetRopePlasterPowder=1,
+		Time:63.5,
+	}
+
+	recipe Rope 10
+	{
+		destroy PlasterPowder=10,
+		Rope=2,
+		
+		Result:10pkRopePlasterPowder,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:140.0,
+		Category:Storage,
+	}
+
+	recipe Rope 10
+	{
+		destroy PlasterPowder=10,
+		SheetRope=2,
+		
+		Result:10pkSheetRopePlasterPowder,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:140.0,
+		Category:Storage,
+	}
+
+	recipe Unrope 10
+	{
+		destroy 10pkRopePlasterPowder,
+		
+		Result:PlasterPowder=10,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack2Rope,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:70.0,
+		Category:Storage,
+	}
+
+	recipe Unrope 10
+	{
+		destroy 10pkSheetRopePlasterPowder,
+		
+		Result:PlasterPowder=10,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack2SheetRope,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:70.0,
+		Category:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy PlasterPowder=50,
+		WoodenContainer=1,
+		
+		Result:50pkWCPlasterPowder,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:200.0,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		100pkWCPlasterPowder=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:50pkWCPlasterPowder=2,
+		Time:106.0,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkWCPlasterPowder,
+		
+		Result:PlasterPowder=50,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack1WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:100.0,
+		Category:Storage,
+	}
+
+	recipe Pack 100
+	{
+		destroy PlasterPowder=100,
+		WoodenContainer=2,
+		
+		Result:100pkWCPlasterPowder,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:225.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		50pkWCPlasterPowder=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:100pkWCPlasterPowder=1,
+		Time:106.0,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkWCPlasterPowder,
+		
+		Result:PlasterPowder=100,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack2WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:112.5,
+		Category:Storage,
+	}
+}

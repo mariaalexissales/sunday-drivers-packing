@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 6
+	{
+		destroy BeerCan=6,
+		
+		Result:6pkBeerCan,
+		OnTest:Recipe.OnTest.WholeFood,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Unpack 6
+	{
+		destroy 6pkBeerCan,
+		
+		Result:BeerCan=6,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Time:25.0,
+		Category:Storage,
+	}
+}

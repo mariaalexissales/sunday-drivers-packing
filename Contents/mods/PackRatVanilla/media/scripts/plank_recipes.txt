@@ -1,0 +1,213 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Rope 5
+	{
+		destroy Plank=5,
+		Rope,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkRopePlank,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Rope 5
+	{
+		destroy Plank=5,
+		SheetRope,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetRopePlank,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pkSheetRopePlank=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkSheetRopePlank=2,
+		Time:25.0,
+	}
+
+	recipe Split in Two
+	{
+		10pkRopePlank=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:5pkRopePlank=2,
+		Time:25.0,
+	}
+
+	recipe Unrope 5
+	{
+		destroy 5pkRopePlank,
+		
+		CanBeDoneFromFloor:true,
+		Result:Plank=5,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack1Rope,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Unrope 5
+	{
+		destroy 5pkSheetRopePlank,
+		
+		CanBeDoneFromFloor:true,
+		Result:Plank=5,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack1SheetRope,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkSheetRopePlank=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetRopePlank=1,
+		Time:25.0,
+	}
+
+	recipe Put Together
+	{
+		5pkRopePlank=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkRopePlank=1,
+		Time:25.0,
+	}
+
+	recipe Rope 10
+	{
+		destroy Plank=10,
+		Rope=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkRopePlank,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:87.5,
+		Category:Storage,
+	}
+
+	recipe Rope 10
+	{
+		destroy Plank=10,
+		SheetRope=2,
+		
+		CanBeDoneFromFloor:true,
+		Result:10pkSheetRopePlank,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:87.5,
+		Category:Storage,
+	}
+
+	recipe Unrope 10
+	{
+		destroy 10pkRopePlank,
+		
+		CanBeDoneFromFloor:true,
+		Result:Plank=10,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack2Rope,
+		Time:62.5,
+		Category:Storage,
+	}
+
+	recipe Unrope 10
+	{
+		destroy 10pkSheetRopePlank,
+		
+		CanBeDoneFromFloor:true,
+		Result:Plank=10,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack2SheetRope,
+		Time:62.5,
+		Category:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy Plank=50,
+		WoodenContainer=1,
+	
+		Result:50pkWCPlank,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:180.0,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		100pkWCPlank=1,
+	
+		Result:50pkWCPlank=2,
+		CanBeDoneFromFloor:true,
+		Time:96.0,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkWCPlank,
+	
+		Result:Plank=50,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack1WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:90.0,
+		Category:Storage,
+	}
+
+	recipe Pack 100
+	{
+		destroy Plank=100,
+		WoodenContainer=2,
+	
+		Result:100pkWCPlank,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:205.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		50pkWCPlank=2,
+	
+		Result:100pkWCPlank=1,
+		CanBeDoneFromFloor:true,
+		Time:96.0,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkWCPlank,
+	
+		Result:Plank=100,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack2WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:102.5,
+		Category:Storage,
+	}
+}

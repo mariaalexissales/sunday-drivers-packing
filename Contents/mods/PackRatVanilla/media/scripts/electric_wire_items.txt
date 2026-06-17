@@ -1,0 +1,33 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkElectricWire
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Electric Wire,
+		DisplayCategory = Electronics,
+		Icon			= PWire,
+		ColorRed = 244,
+		ColorGreen = 164,
+		ColorBlue = 96,
+		WorldStaticModel= StackOfElectricWire,
+	}
+
+	item 10pkElectricWire
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Electric Wire,
+		DisplayCategory = Electronics,
+		Icon			= PWire,
+		ColorRed = 244,
+		ColorGreen = 164,
+		ColorBlue = 96,
+		WorldStaticModel= StackOfElectricWire,
+	}
+}

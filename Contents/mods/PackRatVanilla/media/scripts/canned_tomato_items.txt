@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS6pkCannedTomato
+	{
+		Weight			= 2.4,
+		Type			= Normal,
+		DisplayName		= 6 x Canned Tomato,
+		DisplayCategory = Food,
+		Icon			= OS6pkCannedTomato,
+		WorldStaticModel= PackOfTomatoCan,
+	}
+}

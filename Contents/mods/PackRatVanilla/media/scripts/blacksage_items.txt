@@ -1,0 +1,25 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkBlackSage
+	{
+		DisplayName		= 10 x Black Sage,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= PkBlackSageSmallBox,
+		WorldStaticModel= SmallBlackSage
+	}
+
+	item 50pkBlackSage
+	{
+		DisplayName		= 50 x Black Sage,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= PkBlackSageMediumBox,
+		WorldStaticModel= MediumBlackSage
+	}
+}

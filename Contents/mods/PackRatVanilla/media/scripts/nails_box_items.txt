@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkNailsBox
+	{
+		Weight			= 1.05,
+		Type			= Normal,
+		DisplayName		= 5 x Box of Nails,
+		DisplayCategory = Material,
+		Icon			= PNailsBox,
+		WorldStaticModel= PackOfNails,
+	}
+
+	item 10pkNailsBox
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 10 x Box of Nails,
+		DisplayCategory = Material,
+		Icon			= PNailsBox,
+		WorldStaticModel= PackOfNails,
+	}
+}

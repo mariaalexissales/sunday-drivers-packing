@@ -1,0 +1,143 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 5
+	{
+		destroy BarbedWire=5,
+		
+		Result:5pkBarbedWire,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		10pkBarbedWire=1,
+		
+		Result:5pkBarbedWire=2,
+		CanBeDoneFromFloor:true,
+		Time:20.0,
+	}
+
+	recipe Unpack 5
+	{
+		destroy 5pkBarbedWire,
+		
+		Result:BarbedWire=5,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:25.0,
+		Category:Storage,
+	}
+
+	recipe Pack 10
+	{
+		destroy BarbedWire=10,
+		
+		Result:10pkBarbedWire,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:50.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		5pkBarbedWire=2,
+		
+		Result:10pkBarbedWire=1,
+		CanBeDoneFromFloor:true,
+		Time:25.0,
+	}
+
+	recipe Unpack 10
+	{
+		destroy 10pkBarbedWire,
+		
+		Result:BarbedWire=10,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:37.5,
+		Category:Storage,
+	}
+
+	recipe Pack 50
+	{
+		destroy BarbedWire=50,
+		WoodenContainer=1,
+		
+		Result:50pkWCBarbedWire,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:140.0,
+		Category:Storage,
+	}
+
+	recipe Split in Two
+	{
+		100pkWCBarbedWire=1,
+		
+		Result:50pkWCBarbedWire=2,
+		CanBeDoneFromFloor:true,
+		Time:76.0,
+	}
+
+	recipe Unpack 50
+	{
+		destroy 50pkWCBarbedWire,
+		
+		Result:BarbedWire=50,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack1WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:70.0,
+		Category:Storage,
+	}
+
+	recipe Pack 100
+	{
+		destroy BarbedWire=100,
+		WoodenContainer=2,
+		
+		Result:100pkWCBarbedWire,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:165.0,
+		Category:Storage,
+	}
+
+	recipe Put Together
+	{
+		50pkWCBarbedWire=2,
+		
+		Result:100pkWCBarbedWire=1,
+		CanBeDoneFromFloor:true,
+		Time:76.0,
+	}
+
+	recipe Unpack 100
+	{
+		destroy 100pkWCBarbedWire,
+		
+		Result:BarbedWire=100,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.Unpack2WoodenContainer,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:82.5,
+		Category:Storage,
+	}
+}

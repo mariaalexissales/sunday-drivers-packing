@@ -1,0 +1,34 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 20pkWorm
+	{
+		DisplayName		= 20 x Worms,
+		Weight			= 0.10,
+		Type			= Normal,
+		Icon			= PkWormSmallBox,
+		WorldStaticModel= SmallWorm
+	}
+
+	item 100pkWorm
+	{
+		DisplayName		= 100 x Worms,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= PkWormMediumBox,
+		WorldStaticModel= MediumWorm
+	}
+
+	item 500pkWorm
+	{
+		Weight			= 2.5,
+		Type			= Normal,
+		DisplayName		= 500 x Worms,
+		Icon			= PkWormBigBox,
+		WorldStaticModel= BigWorm
+	}
+}

@@ -1,0 +1,34 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkPlantain
+	{
+		DisplayName		= 5 x Plantain,
+		Weight			= 0.25,
+		Type			= Normal,
+		Icon			= PkPlantainSmallBox,
+		WorldStaticModel= SmallPlantain
+	}
+
+	item 10pkPlantain
+	{
+		DisplayName		= 10 x Plantain,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= PkPlantainSmallBox,
+		WorldStaticModel= SmallPlantain
+	}
+
+	item 50pkPlantain
+	{
+		DisplayName		= 50 x Plantain,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= PkPlantainMediumBox,
+		WorldStaticModel= MediumPlantain
+	}
+}

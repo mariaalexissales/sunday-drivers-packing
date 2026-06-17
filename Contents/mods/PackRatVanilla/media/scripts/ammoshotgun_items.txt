@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkShotgun
+	{
+		Weight			= 2.625,
+		Type			= Normal,
+		DisplayName		= 5 x Box of Shotgun Shells,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+
+	item 10pkShotgun
+	{
+		Weight			= 3.75,
+		Type			= Normal,
+		DisplayName		= 10 x Box of Shotgun Shells,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+}

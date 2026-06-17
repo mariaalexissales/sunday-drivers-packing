@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkMagazine
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 5 x Magazine,
+		DisplayCategory = Literature,
+		Icon			= PMagazine,
+		WorldStaticModel= StackOfMagazine,
+	}
+
+	item 10pkMagazine
+	{
+		Weight			= 1,
+		Type			= Normal,
+		DisplayName		= 10 x Magazine,
+		DisplayCategory = Literature,
+		Icon			= PMagazine,
+		WorldStaticModel= StackOfMagazine,
+	}
+}

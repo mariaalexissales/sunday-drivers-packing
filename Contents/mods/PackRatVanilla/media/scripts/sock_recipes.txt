@@ -1,0 +1,42 @@
+module PR
+{
+
+
+	recipe Pack Ankle Socks
+	{
+		destroy Socks_Ankle=6,
+
+		Result: 6pkAnkleSocks,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Pack Long Socks
+	{
+		destroy Socks_Long=6,
+
+		Result:6pkLongSocks,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:22.5,
+		Category:Storage,
+	}
+
+	recipe Unpack Ankle Socks
+	{
+		destroy 6pkAnkleSocks,
+
+		Result:Socks_Ankle=6,
+		Time:22.5,
+		Category:Storage
+	}
+
+	recipe Unpack Long Socks
+	{
+		destroy 6pkLongSocks,
+
+		Result:Socks_Long=6,
+		Time:22.5,
+		Category:Storage
+	}
+}

@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkWoodGlue
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Wood Glue,
+		DisplayCategory = Material,
+		Icon			= PWoodGlue,
+		WorldStaticModel= StackOfWoodGlue,
+	}
+
+	item 10pkWoodGlue
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Wood Glue,
+		DisplayCategory = Material,
+		Icon			= PWoodGlue,
+		WorldStaticModel= StackOfWoodGlue,
+	}
+}

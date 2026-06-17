@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkLighter
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Lighter,
+		DisplayCategory = LightSource,
+		Icon			= PLighter,
+		WorldStaticModel= StackOfZippo,
+	}
+
+	item 10pkLighter
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Lighter,
+		DisplayCategory = LightSource,
+		Icon			= PLighter,
+		WorldStaticModel= StackOfZippo,
+	}
+}

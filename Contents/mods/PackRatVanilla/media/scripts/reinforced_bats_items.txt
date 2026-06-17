@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item BundleReinforcedBats
+	{
+		Weight			= 15.0,
+		Type			= Normal,
+		DisplayName		= Bundle of Reinforced Bats,
+		DisplayCategory = Weapon,
+		Icon			= BundleReinforcedBats,
+		WorldStaticModel= BundleOfReinforcedBats,
+	}
+}

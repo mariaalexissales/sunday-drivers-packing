@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS12pkAdhesiveBandages
+	{
+		Weight			= 0.3,
+		Type			= Normal,
+		DisplayName		= 12 x Adhesive Bandages,
+		DisplayCategory = FirstAid,
+		Icon			= OS12pkAdhesiveBandages,
+		WorldStaticModel= PackOfAdhesiveBandages,
+	}
+}

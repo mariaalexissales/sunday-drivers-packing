@@ -1,0 +1,46 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkRadioTransmitter
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 10 x Radio Transmitter,
+		DisplayCategory = Electronics,
+		Icon			= Receiver,
+		ColorRed		= 220,
+		ColorGreen		= 20,
+		ColorBlue		= 60,
+		WorldStaticModel = WIP,
+	}
+
+	item 50pkRadioTransmitter
+	{
+		Weight			= 3.0,
+		Type			= Normal,
+		DisplayName		= 50 x Radio Transmitter,
+		DisplayCategory = Electronics,
+		Icon			= Receiver,
+		ColorRed		= 220,
+		ColorGreen		= 20,
+		ColorBlue		= 60,
+		WorldStaticModel = WIP,
+	}
+
+	item 100pkRadioTransmitter
+	{
+		Weight			= 5.0,
+		Type			= Normal,
+		DisplayName		= 100 x Radio Transmitter,
+		DisplayCategory = Electronics,
+		Icon			= Receiver,
+		ColorRed		= 220,
+		ColorGreen		= 20,
+		ColorBlue		= 60,
+		WorldStaticModel = WIP,
+	}
+}

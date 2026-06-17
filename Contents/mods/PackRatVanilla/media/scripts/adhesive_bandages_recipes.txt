@@ -1,0 +1,26 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Pack 12
+	{
+		Bandaid=12,
+
+		Result:PR.OS12pkAdhesiveBandages,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:30.0,
+		Category:Storage,
+	}
+
+	recipe Unpack 12
+	{
+		OS12pkAdhesiveBandages,
+
+		Result:Bandaid=12,
+		Time:30.0,
+		Category:Storage,
+	}
+}

@@ -1,0 +1,68 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkMetalPipe
+	{
+		Weight			= 5.25,
+		Type			= Normal,
+		DisplayName		= 5 x Metal Pipe,
+		DisplayCategory = Material,
+		Icon			= PMetalPipe,
+		WorldStaticModel= StackOfMetalPipes,
+		
+	}
+
+	item 5pkRopeMetalPipe
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 5 x Metal Pipe (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeMetalPipe,
+		WorldStaticModel= StackOfMetalPipesRoped,
+	}
+
+	item 5pkSheetRopeMetalPipe
+	{
+		Weight			= 2.25,
+		Type			= Normal,
+		DisplayName		= 5 x Metal Pipe (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeMetalPipe,
+		WorldStaticModel= StackOfMetalPipesSheetRoped,
+	}
+
+	item 10pkMetalPipe
+	{
+		Weight			= 7.5,
+		Type			= Normal,
+		DisplayName		= 10 x Metal Pipe,
+		DisplayCategory = Material,
+		Icon			= PMetalPipe,
+		WorldStaticModel= StackOfMetalPipes,
+	}
+
+	item 10pkRopeMetalPipe
+	{
+		Weight			= 2.25,
+		Type			= Normal,
+		DisplayName		= 10 x Metal Pipe (Rope),
+		DisplayCategory = Material,
+		Icon			= PRopeMetalPipe,
+		WorldStaticModel= StackOfMetalPipesRoped,
+	}
+
+	item 10pkSheetRopeMetalPipe
+	{
+		Weight			= 3.75,
+		Type			= Normal,
+		DisplayName		= 10 x Metal Pipe (SheetRope),
+		DisplayCategory = Material,
+		Icon			= PSheetRopeMetalPipe,
+		WorldStaticModel= StackOfMetalPipesSheetRoped,
+	}
+}

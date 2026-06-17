@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkScrewsBox
+	{
+		Weight			= 1.05,
+		Type			= Normal,
+		DisplayName		= 5 x Box of Screws,
+		DisplayCategory = Material,
+		Icon			= PScrewsBox,
+		WorldStaticModel= BoxOfScrews,
+	}
+
+	item 10pkScrewsBox
+	{
+		Weight			= 1.5,
+		Type			= Normal,
+		DisplayName		= 10 x Box of Screws,
+		DisplayCategory = Material,
+		Icon			= PScrewsBox,
+		WorldStaticModel= BoxOfScrews,
+	}
+}

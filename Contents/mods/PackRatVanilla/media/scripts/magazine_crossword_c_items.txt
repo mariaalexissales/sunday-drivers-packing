@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkMagazineCrosswordC
+	{
+		Weight			= 0.7,
+		Type			= Normal,
+		DisplayName		= 5 x Crossword Magazine,
+		DisplayCategory = Literature,
+		Icon			= PMagazineCrosswordC,
+		WorldStaticModel= StackOfMagazineCrosswordC,
+	}
+
+	item 10pkMagazineCrosswordC
+	{
+		Weight			= 1,
+		Type			= Normal,
+		DisplayName		= 10 x Crossword Magazine,
+		DisplayCategory = Literature,
+		Icon			= PMagazineCrosswordC,
+		WorldStaticModel= StackOfMagazineCrosswordC,
+	}
+}

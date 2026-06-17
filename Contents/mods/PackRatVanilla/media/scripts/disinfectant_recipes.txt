@@ -1,0 +1,29 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Unpack 4
+	{
+		OS4pkDisinfectant,
+
+		Result:Disinfectant,
+		OnCreate:Recipe.OnCreate.LoadUses,
+		RemoveResultItem:true,
+		Time:60.0,
+		Category:Storage,
+	}
+
+	recipe Pack 4
+	{
+		destroy Disinfectant=4,
+
+		Result:OS4pkDisinfectant,
+		OnCreate:Recipe.OnCreate.SaveUses,
+		OnTest:Recipe.OnTest.IsFavorite,
+		Time:60.0,
+		Category:Storage,
+	}
+}

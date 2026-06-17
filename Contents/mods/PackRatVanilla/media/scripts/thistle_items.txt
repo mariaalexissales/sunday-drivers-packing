@@ -1,0 +1,23 @@
+module PR {
+	imports
+		Base,
+		}
+
+		item 10pkThistles
+{
+		DisplayName		= 10 x Thistles,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= Thistle,
+		WorldStaticModel= Thistles_Ground
+}
+
+		item 50pkThistles
+{
+		DisplayName		= 50 x Thistles,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= Thistle,
+		WorldStaticModel= Thistles_Ground
+}
+	}

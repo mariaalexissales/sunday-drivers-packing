@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkTwine
+	{
+		Weight			= 0.35,
+		Type			= Normal,
+		DisplayName		= 5 x Twine,
+		DisplayCategory = Material,
+		Icon			= PTwine,
+		WorldStaticModel= TwineXL,
+	}
+
+	item 10pkTwine
+	{
+		Weight			= 0.5,
+		Type			= Normal,
+		DisplayName		= 10 x Twine,
+		DisplayCategory = Material,
+		Icon			= PTwine,
+		WorldStaticModel= TwineXL,
+	}
+}

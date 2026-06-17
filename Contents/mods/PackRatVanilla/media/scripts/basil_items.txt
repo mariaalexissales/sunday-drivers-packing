@@ -1,0 +1,25 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkBasil
+	{
+		DisplayName		= 10 x Basil,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= HerbBasil,
+		WorldStaticModel= Basil_Ground
+	}
+
+	item 50pkBasil
+	{
+		DisplayName		= 50 x Basil,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= HerbBasil,
+		WorldStaticModel= Basil_Ground
+	}
+}

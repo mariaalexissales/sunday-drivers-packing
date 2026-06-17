@@ -1,0 +1,27 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pk45
+	{
+		Weight			= 2.275,
+		Type			= Normal,
+		DisplayName		= 5 x Box of .45 Auto Bullets,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+
+	item 10pk45
+	{
+		Weight			= 3.25,
+		Type			= Normal,
+		DisplayName		= 10 x Box of .45 Auto Bullets,
+		DisplayCategory = Ammo,
+		Icon			= PAmmoBox,
+		WorldStaticModel = pkAmmoCan_Ground,
+	}
+}

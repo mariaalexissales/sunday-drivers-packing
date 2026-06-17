@@ -1,0 +1,21 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS24pkWaterBottleEmpty
+	{
+		Weight			= 1.2,
+		Type			= Normal,
+		DisplayName		= 24 x Empty Water Bottles,
+		DisplayCategory = WaterContainer,
+		Icon			= OS24pkWaterBottleEmpty,
+		CanStoreWater 	= TRUE,
+		ReplaceOnUseOn 	= WaterSource-OS24pkWaterBottleFull,
+		ReplaceTypes	= WaterSource OS24pkWaterBottleFull,
+		ToolTip = Tooltip_item_OnlyPurifyMicrowave,
+		WorldStaticModel= PackOfWaterBottleEmpty,
+	}
+}

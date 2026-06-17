@@ -1,0 +1,18 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS50pkAntidepressants
+	{
+		Weight				= 0.5,
+		Type				= Normal,
+		UseWhileEquipped	= FALSE,
+		DisplayName			= 5 x Antidepressants,
+		DisplayCategory 	= FirstAid,
+		Icon				= OS50pkAntidepressants,
+		WorldStaticModel    = BottleOfAntidepressants,
+	}
+}

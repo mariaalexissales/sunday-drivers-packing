@@ -1,0 +1,25 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkGinseng
+	{
+		DisplayName		= 10 x Ginseng,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= PkGinsengSmallBox,
+		WorldStaticModel= SmallGinseng
+	}
+
+	item 50pkGinseng
+	{
+		DisplayName		= 50 x Ginseng,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= PkGinsengMediumBox,
+		WorldStaticModel= MediumGinseng
+	}
+}

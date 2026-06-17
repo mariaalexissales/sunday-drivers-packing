@@ -1,0 +1,17 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item OS12pkCottonBalls
+	{
+		Weight			= 0.6,
+		Type			= Normal,
+		DisplayName		= 12 x Cotton Balls,
+		DisplayCategory = FirstAid,
+		Icon			= OS12pkCottonBalls,
+		WorldStaticModel= PackOfCottonBalls,
+	}
+}

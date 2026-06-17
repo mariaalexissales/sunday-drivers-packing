@@ -1,0 +1,34 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 5pkComfrey
+	{
+		DisplayName		= 5 x Comfrey,
+		Weight			= 0.25,
+		Type			= Normal,
+		Icon			= PkComfreySmallBox,
+		WorldStaticModel= SmallComfrey
+	}
+
+	item 10pkComfrey
+	{
+		DisplayName		= 10 x Comfrey,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= PkComfreySmallBox,
+		WorldStaticModel= SmallComfrey
+	}
+
+	item 50pkComfrey
+	{
+		DisplayName		= 50 x Comfrey,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= PkComfreyMediumBox,
+		WorldStaticModel= MediumComfrey
+	}
+}

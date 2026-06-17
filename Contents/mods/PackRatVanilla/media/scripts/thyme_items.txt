@@ -1,0 +1,25 @@
+module PR
+{
+	imports
+	{
+		Base,
+	}
+
+	item 10pkThyme
+	{
+		DisplayName		= 10 x Thyme,
+		Weight			= 0.5,
+		Type			= Normal,
+		Icon			= HerbThyme,
+		WorldStaticModel= HerbThyme_Ground
+	}
+
+	item 50pkThyme
+	{
+		DisplayName		= 50 x Thyme,
+		Weight			= 2.8,
+		Type			= Normal,
+		Icon			= HerbThyme,
+		WorldStaticModel= HerbThyme_Ground
+	}
+}
